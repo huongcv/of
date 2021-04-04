@@ -1,1 +1,0 @@
-{"version":3,"file":"numbers-only.directive.d.ts","sourceRoot":"","sources":["../../../../projects/of/src/lib/directives/numbers-only.directive.ts"],"names":[],"mappings":"AAAA,OAAO,EAAa,UAAU,EAAgB,MAAM,eAAe,CAAC;;AAEpE,qBAGa,oBAAoB;IAGnB,OAAO,CAAC,GAAG;gBAAH,GAAG,EAAE,UAAU;IAGA,aAAa,CAAC,KAAK,KAAA;iCAN3C,oBAAoB;2CAApB,oBAAoB;CAchC"}

@@ -2,8 +2,8 @@
   "name": "@huongcv/of",
   "version": "1.0.1",
   "peerDependencies": {
-    "@angular/common": "^9.1.11",
-    "@angular/core": "^9.1.11",
+    "@angular/common": ">=9.1.11",
+    "@angular/core": ">=9.1.11",
     "@abp/ng.core": ">=3.2.1",
     "@abp/ng.theme.shared": ">=3.2.1",
     "date-fns": ">=2.16.1",
@@ -32,8 +32,6 @@
   "esm2015": "esm2015/of.js",
   "fesm2015": "fesm2015/of.js",
   "typings": "of.d.ts",
-  "sideEffects": false,
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
-  }
+  "metadata": "of.metadata.json",
+  "sideEffects": false
 }
