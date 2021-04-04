@@ -1,5 +1,5 @@
 export * from './of-control.model';
-export * from './of-extend-control.model.js';
+export * from './of-extend-control.model';
 export * from './of-schema.model';
 export * from './of-type';
 export * from '../components/index';
