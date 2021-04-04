@@ -32188,7 +32188,7 @@ class OfComponent {
         this.selectSp = selectSp;
         this.searchSp = searchSp;
         this.formDisable$ = new BehaviorSubject(false);
-        this.ngaySinhMin$ = new BehaviorSubject(new Date(2021, 2, 27));
+        this.ngaySinhMin$ = new BehaviorSubject(new Date(1991, 2, 27));
         this.danTocOption$ = new BehaviorSubject([{
                 displayText: 'Kinh',
                 value: '1'
@@ -34385,4 +34385,4 @@ OfModule.decorators = [
  */
 
 export { OfCheckBoxModel, OfComponent, OfComponentRefModel, OfContentHtmlModel, OfControlModel, OfCurrencyModel, OfDateModel, OfDynamicComponent, OfExtendControlModel, OfFieldComponent, OfModule, OfNumberModel, OfPwdModel, OfRadioModel, OfSchemaModel, OfSelectApiModel, OfSelectAsyncModel, OfSelectCascadeModel, OfSelectModel, OfSelectSearchServerModel, OfService, OfSwitchModel, OfTemplateRefModel, OfTextAreaModel, OfTextModel, SelectoptionServiceProxy as ɵa, SelectsearchserverServiceProxy as ɵb, OfSelectCascadeComponent as ɵba, OfRoutingModule as ɵbb, Icon as ɵbc, AntDesignModule as ɵbd, OfControlModel as ɵbe, OfSelectBaseModel as ɵbg, DestroyRxjsService as ɵc, OfCreateControlFormService as ɵd, OfValidatorService as ɵe, DynamicFieldDirective as ɵf, OfTextComponent as ɵg, ShowValidationErrorPipe as ɵh, OfCheckBoxComponent as ɵi, OfCurrencyComponent as ɵj, OfDatePickerComponent as ɵk, OfDataPickerControlComponent as ɵl, OfTextAreaComponent as ɵm, OfContentHtmlComponent as ɵn, OfNumberInputComponent as ɵo, NumbersOnlyDirective as ɵp, OfPasswordComponent as ɵq, OfRadioComponent as ɵr, OfSwitchComponent as ɵs, OfOptionSelectedPipe as ɵt, OfSelectRenderOptionPipe as ɵu, OfSelectSearchServerComponent as ɵv, OfTemplateRefComponent as ɵw, OfSelectComponent as ɵx, OfSelectAsyncComponent as ɵy, OfSelectApiComponent as ɵz };
-//# sourceMappingURL=of.js.map
+//# sourceMappingURL=huongcv-of.js.map

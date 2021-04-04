@@ -1,11 +1,11 @@
 {
-  "main": "../bundles/of-config.umd.js",
-  "module": "../fesm2015/of-config.js",
-  "es2015": "../fesm2015/of-config.js",
-  "esm2015": "../esm2015/config/of-config.js",
-  "fesm2015": "../fesm2015/of-config.js",
-  "typings": "of-config.d.ts",
-  "metadata": "of-config.metadata.json",
+  "main": "../bundles/huongcv-of-config.umd.js",
+  "module": "../fesm2015/huongcv-of-config.js",
+  "es2015": "../fesm2015/huongcv-of-config.js",
+  "esm2015": "../esm2015/config/huongcv-of-config.js",
+  "fesm2015": "../fesm2015/huongcv-of-config.js",
+  "typings": "huongcv-of-config.d.ts",
+  "metadata": "huongcv-of-config.metadata.json",
   "sideEffects": false,
-  "name": "@of/config"
+  "name": "@huongcv/of/config"
 }

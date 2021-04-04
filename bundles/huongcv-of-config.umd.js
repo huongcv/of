@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@abp/ng.core')) :
-    typeof define === 'function' && define.amd ? define('@of/config', ['exports', '@angular/core', '@abp/ng.core'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.of = global.of || {}, global.of.config = {}), global.ng.core, global.ng_core));
+    typeof define === 'function' && define.amd ? define('@huongcv/of/config', ['exports', '@angular/core', '@abp/ng.core'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.huongcv = global.huongcv || {}, global.huongcv.of = global.huongcv.of || {}, global.huongcv.of.config = {}), global.ng.core, global.ng_core));
 }(this, (function (exports, core, ng_core) { 'use strict';
 
     var OF_ROUTE_PROVIDERS = [
@@ -54,4 +54,4 @@
     Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=of-config.umd.js.map
+//# sourceMappingURL=huongcv-of-config.umd.js.map

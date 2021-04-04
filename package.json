@@ -1,6 +1,6 @@
 {
   "name": "@huongcv/of",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "peerDependencies": {
     "@angular/common": ">=9.1.11",
     "@angular/core": ">=9.1.11",
@@ -26,12 +26,12 @@
     "ng2-currency-mask": "^9.0.2",
     "angular2-text-mask": "^9.0.0"
   },
-  "main": "bundles/of.umd.js",
-  "module": "fesm2015/of.js",
-  "es2015": "fesm2015/of.js",
-  "esm2015": "esm2015/of.js",
-  "fesm2015": "fesm2015/of.js",
-  "typings": "of.d.ts",
-  "metadata": "of.metadata.json",
+  "main": "bundles/huongcv-of.umd.js",
+  "module": "fesm2015/huongcv-of.js",
+  "es2015": "fesm2015/huongcv-of.js",
+  "esm2015": "esm2015/huongcv-of.js",
+  "fesm2015": "fesm2015/huongcv-of.js",
+  "typings": "huongcv-of.d.ts",
+  "metadata": "huongcv-of.metadata.json",
   "sideEffects": false
 }

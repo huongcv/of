@@ -40,4 +40,4 @@ OfConfigModule.decorators = [
  */
 
 export { OF_ROUTE_PROVIDERS, OfConfigModule, configureRoutes, OF_ROUTE_PROVIDERS as ɵa, configureRoutes as ɵb };
-//# sourceMappingURL=of-config.js.map
+//# sourceMappingURL=huongcv-of-config.js.map
