@@ -1,0 +1,10 @@
+{
+  "main": "../bundles/of-config.umd.js",
+  "module": "../fesm2015/of-config.js",
+  "es2015": "../fesm2015/of-config.js",
+  "esm2015": "../esm2015/config/of-config.js",
+  "fesm2015": "../fesm2015/of-config.js",
+  "typings": "of-config.d.ts",
+  "sideEffects": false,
+  "name": "@of/config"
+}

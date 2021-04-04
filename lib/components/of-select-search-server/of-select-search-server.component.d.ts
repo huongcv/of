@@ -1,0 +1,45 @@
+import { AfterViewInit, ChangeDetectorRef, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { DestroyRxjsService } from '../../services/destroy-rxjs.service';
+import { IOfSelectOptionDto, OfSchemaModel } from '../../models';
+import { OfSelectSearchServerModel } from './of-select-search-server.model';
+import { BehaviorSubject, Subject } from 'rxjs';
+import * as i0 from "@angular/core";
+export declare class OfSelectSearchServerComponent implements OnInit, AfterViewInit {
+    private destroy$;
+    private cdr;
+    schemaModel: OfSchemaModel;
+    field: OfSelectSearchServerModel;
+    group: FormGroup;
+    options: IOfSelectOptionDto[];
+    option$: BehaviorSubject<IOfSelectOptionDto[]>;
+    backUpItems: IOfSelectOptionDto[];
+    optionDebound$: import("rxjs").Observable<IOfSelectOptionDto[]>;
+    txtSearch: string;
+    txtSearch$: Subject<string>;
+    skipCount: number;
+    totalItems: number;
+    nzPageIndex: number;
+    firstOptions: IOfSelectOptionDto[];
+    firstTotal: number;
+    isLoading: boolean;
+    maxResultCount: number;
+    constructor(destroy$: DestroyRxjsService, cdr: ChangeDetectorRef);
+    ngOnInit(): void;
+    handlerSearch(): void;
+    search(txt: string): void;
+    nzOpenChange(open: boolean): void;
+    trackBySelect(index: number, item: IOfSelectOptionDto): string;
+    loadFirstOption(): void;
+    getOptionsFromBE(filter?: string, value?: string | null, isFirst?: boolean): void;
+    setOptions(options: any): void;
+    getItemSelected(): void;
+    get f(): import("@angular/forms").AbstractControl;
+    ngAfterViewInit(): void;
+    triggerDetectChanges(): void;
+    loadMore(): void;
+    nzPageIndexChange(): void;
+    static ɵfac: i0.ɵɵFactoryDef<OfSelectSearchServerComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<OfSelectSearchServerComponent, "of-select-search-server", never, {}, {}, never, never>;
+}
+//# sourceMappingURL=of-select-search-server.component.d.ts.map

@@ -1,0 +1,40 @@
+import { ModuleWithProviders, NgModuleFactory } from '@angular/core';
+import * as i0 from "@angular/core";
+import * as i1 from "./components/of.component";
+import * as i2 from "./components/of-dynamic/of-dynamic.component";
+import * as i3 from "./directives/dynamic-field.directive";
+import * as i4 from "./components/of-text/of-text.component";
+import * as i5 from "./pipes/show-validation-error.pipe";
+import * as i6 from "./components/of-check-box/of-check-box.component";
+import * as i7 from "./components/of-currency/of-currency.component";
+import * as i8 from "./components/of-date-picker/of-date-picker.component";
+import * as i9 from "./components/of-date-picker/of-data-picker-control.component";
+import * as i10 from "./components/of-text-area/of-text-area.component";
+import * as i11 from "./components/of-content-html/of-content-html.component";
+import * as i12 from "./components/of-number-input/of-number-input.component";
+import * as i13 from "./directives/numbers-only.directive";
+import * as i14 from "./components/of-password/of-password.component";
+import * as i15 from "./components/of-radio/of-radio.component";
+import * as i16 from "./components/of-switch/of-switch.component";
+import * as i17 from "./pipes/of-option-selected.pipe";
+import * as i18 from "./pipes/of-select-render-option.pipe";
+import * as i19 from "./components/of-select-search-server/of-select-search-server.component";
+import * as i20 from "./components/of-template-ref/of-template-ref.component";
+import * as i21 from "./components/of-template-ref/of-field.component";
+import * as i22 from "./components/of-select/of-select.component";
+import * as i23 from "./components/of-select-async/of-select-async.component";
+import * as i24 from "./components/of-select-api/of-select-api.component";
+import * as i25 from "./components/of-select-cascade/of-select-cascade.component";
+import * as i26 from "@abp/ng.core";
+import * as i27 from "@abp/ng.theme.shared";
+import * as i28 from "./of-routing.module";
+import * as i29 from "../ant-design.module";
+import * as i30 from "ng2-currency-mask";
+import * as i31 from "angular2-text-mask";
+export declare class OfModule {
+    static forChild(): ModuleWithProviders<OfModule>;
+    static forLazy(): NgModuleFactory<OfModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<OfModule, [typeof i1.OfComponent, typeof i2.OfDynamicComponent, typeof i3.DynamicFieldDirective, typeof i4.OfTextComponent, typeof i5.ShowValidationErrorPipe, typeof i6.OfCheckBoxComponent, typeof i7.OfCurrencyComponent, typeof i8.OfDatePickerComponent, typeof i9.OfDataPickerControlComponent, typeof i10.OfTextAreaComponent, typeof i11.OfContentHtmlComponent, typeof i12.OfNumberInputComponent, typeof i13.NumbersOnlyDirective, typeof i14.OfPasswordComponent, typeof i15.OfRadioComponent, typeof i16.OfSwitchComponent, typeof i17.OfOptionSelectedPipe, typeof i18.OfSelectRenderOptionPipe, typeof i19.OfSelectSearchServerComponent, typeof i20.OfTemplateRefComponent, typeof i21.OfFieldComponent, typeof i22.OfSelectComponent, typeof i23.OfSelectAsyncComponent, typeof i24.OfSelectApiComponent, typeof i25.OfSelectCascadeComponent], [typeof i26.CoreModule, typeof i27.ThemeSharedModule, typeof i28.OfRoutingModule, typeof i29.AntDesignModule, typeof i30.CurrencyMaskModule, typeof i31.TextMaskModule], [typeof i1.OfComponent, typeof i2.OfDynamicComponent, typeof i21.OfFieldComponent]>;
+    static ɵinj: i0.ɵɵInjectorDef<OfModule>;
+}
+//# sourceMappingURL=of.module.d.ts.map

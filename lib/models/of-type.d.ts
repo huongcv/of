@@ -1,0 +1,2 @@
+export declare type OfType = 'text' | 'select' | 'selectAsync' | 'selectApi' | 'selectApiCascade' | 'selectSearchApi' | 'selectSearchServer' | 'checkBox' | 'currencyInput' | 'datePicker' | 'numberInput' | 'onlyNumberInput' | 'passWordInput' | 'radio' | 'switch' | 'textArea' | 'componentRef' | 'templateRef' | 'contentHtml';
+//# sourceMappingURL=of-type.d.ts.map

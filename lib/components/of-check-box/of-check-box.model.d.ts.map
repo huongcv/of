@@ -1,0 +1,1 @@
+{"version":3,"file":"of-check-box.model.d.ts","sourceRoot":"","sources":["../../../../../projects/of/src/lib/components/of-check-box/of-check-box.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,oBAAoB,EAAE,MAAM,cAAc,CAAC;AAGpE,MAAM,WAAW,mBAAoB,SAAQ,oBAAoB;IAC/D,aAAa,EAAE,MAAM,CAAC;CACvB;AAGD,qBAAa,eAAgB,SAAQ,cAAc;IACjD,aAAa,SAAM;gBAEP,MAAM,EAAE,mBAAmB;CAMxC"}
