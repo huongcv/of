@@ -15,4 +15,3 @@ export * from './of-switch/of-switch.model';
 export * from './of-template-ref/of-template-ref.model';
 export * from './of-text/of-text.model';
 export * from './of-text-area/of-text-area.model';
-//# sourceMappingURL=index.d.ts.map

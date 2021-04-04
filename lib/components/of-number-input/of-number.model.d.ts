@@ -14,4 +14,3 @@ export declare class OfNumberModel extends OfControlModel {
     maxlength: number | null;
     constructor(config: OfNumberModelConfig);
 }
-//# sourceMappingURL=of-number.model.d.ts.map

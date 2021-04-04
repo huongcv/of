@@ -19,4 +19,3 @@ export declare class OfSelectBaseModel extends OfControlModel {
     itemSelected: IOfSelectOptionDto;
     constructor(config: OfSelectBaseModelConfig);
 }
-//# sourceMappingURL=of-select-base.model.d.ts.map

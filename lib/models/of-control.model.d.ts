@@ -43,4 +43,3 @@ export declare abstract class OfControlModel {
     controls: OfExtendControlModel[];
     protected constructor(config: OfControlModelConfig);
 }
-//# sourceMappingURL=of-control.model.d.ts.map

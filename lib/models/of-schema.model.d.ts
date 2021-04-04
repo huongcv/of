@@ -43,4 +43,3 @@ export declare class OfSchemaModel {
     rebuilder(): void;
     search(): void;
 }
-//# sourceMappingURL=of-schema.model.d.ts.map

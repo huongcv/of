@@ -3,7 +3,6 @@ import { FormGroup } from '@angular/forms';
 import { DestroyRxjsService } from '../services/destroy-rxjs.service';
 import { OfControlModel, OfSchemaModel } from '../models';
 import { OfFieldComponent } from '../components/of-template-ref/of-field.component';
-import * as i0 from "@angular/core";
 export declare class DynamicFieldDirective implements OnInit {
     private resolver;
     private container;
@@ -21,7 +20,4 @@ export declare class DynamicFieldDirective implements OnInit {
     get f(): import("@angular/forms").AbstractControl;
     private init$;
     private disableExtendControl;
-    static ɵfac: i0.ɵɵFactoryDef<DynamicFieldDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDefWithMeta<DynamicFieldDirective, "[ofDynamicField]", never, { "schemaModel": "schemaModel"; "field": "field"; "group": "group"; "ofFieldTempates": "ofFieldTempates"; }, { "searchEvent": "searchEvent"; }, never>;
 }
-//# sourceMappingURL=dynamic-field.directive.d.ts.map

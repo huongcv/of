@@ -18,4 +18,3 @@ export declare class OfExtendControlModel {
     errorEmpty: string;
     constructor(config: OfExtendControlModelConfig);
 }
-//# sourceMappingURL=of-extend-control.model.d.ts.map

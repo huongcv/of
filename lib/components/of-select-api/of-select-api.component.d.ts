@@ -5,7 +5,6 @@ import { FormGroup } from '@angular/forms';
 import { DestroyRxjsService } from '../../services/destroy-rxjs.service';
 import { OfSelectApiModel } from './of-select-api-model';
 import { Observable } from 'rxjs';
-import * as i0 from "@angular/core";
 export declare class OfSelectApiComponent implements AfterViewInit {
     private destroy$;
     vcSelect: OfSelectComponent;
@@ -17,7 +16,4 @@ export declare class OfSelectApiComponent implements AfterViewInit {
     get key(): string;
     getOptionsFromApi(): Observable<IOfSelectOptionDto[]>;
     ngAfterViewInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<OfSelectApiComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<OfSelectApiComponent, "lib-of-select-api", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=of-select-api.component.d.ts.map

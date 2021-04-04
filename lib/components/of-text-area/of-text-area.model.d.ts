@@ -8,4 +8,3 @@ export declare class OfTextAreaModel extends OfControlModel {
     rows: number;
     constructor(config: OfTextAreaModelConfig);
 }
-//# sourceMappingURL=of-text-area.model.d.ts.map

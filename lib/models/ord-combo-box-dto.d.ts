@@ -5,4 +5,3 @@ export interface IOfSelectOptionDto {
     isActive?: boolean;
     fts?: string;
 }
-//# sourceMappingURL=ord-combo-box-dto.d.ts.map

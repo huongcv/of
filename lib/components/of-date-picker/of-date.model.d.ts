@@ -20,4 +20,3 @@ export declare class OfDateModel extends OfControlModel {
     denNgayDataField?: string;
     constructor(config: OfDateModelConfig);
 }
-//# sourceMappingURL=of-date.model.d.ts.map

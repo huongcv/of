@@ -10,4 +10,3 @@ export declare class OfRadioModel extends OfControlModel {
     items: IRadioItem[];
     constructor(config: OfRadioModelConfig);
 }
-//# sourceMappingURL=of-radio.model.d.ts.map

@@ -20,4 +20,3 @@ export declare class OfSelectSearchServerModel extends OfSelectBaseModel {
     functionService: (ISelectSearchServerDto: any) => Observable<PagedResultDtoOfSelectOption>;
     constructor(config: OfSelectSearchServerModelConfig);
 }
-//# sourceMappingURL=of-select-search-server.model.d.ts.map

@@ -8,4 +8,3 @@ export declare class OfTextModel extends OfControlModel {
     minLength?: number | null;
     constructor(config: OrdTextModelConfig);
 }
-//# sourceMappingURL=of-text.model.d.ts.map

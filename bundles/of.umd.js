@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('lodash'), require('rxjs'), require('rxjs/operators'), require('@angular/common/http'), require('moment'), require('@angular/forms'), require('jquery'), require('ng-zorro-antd/input'), require('ng-zorro-antd/select'), require('@angular/common'), require('@abp/ng.core'), require('@abp/ng.theme.shared'), require('@angular/router'), require('ng-zorro-antd/affix'), require('ng-zorro-antd/alert'), require('ng-zorro-antd/anchor'), require('ng-zorro-antd/auto-complete'), require('ng-zorro-antd/avatar'), require('ng-zorro-antd/back-top'), require('ng-zorro-antd/badge'), require('ng-zorro-antd/breadcrumb'), require('ng-zorro-antd/button'), require('ng-zorro-antd/calendar'), require('ng-zorro-antd/card'), require('ng-zorro-antd/carousel'), require('ng-zorro-antd/cascader'), require('ng-zorro-antd/checkbox'), require('ng-zorro-antd/collapse'), require('ng-zorro-antd/comment'), require('ng-zorro-antd/core/no-animation'), require('ng-zorro-antd/core/trans-button'), require('ng-zorro-antd/core/wave'), require('ng-zorro-antd/date-picker'), require('ng-zorro-antd/descriptions'), require('ng-zorro-antd/divider'), require('ng-zorro-antd/drawer'), require('ng-zorro-antd/dropdown'), require('ng-zorro-antd/empty'), require('ng-zorro-antd/form'), require('ng-zorro-antd/grid'), require('ng-zorro-antd/i18n'), require('ng-zorro-antd/icon'), require('ng-zorro-antd/input-number'), require('ng-zorro-antd/layout'), require('ng-zorro-antd/list'), require('ng-zorro-antd/mention'), require('ng-zorro-antd/menu'), require('ng-zorro-antd/message'), require('ng-zorro-antd/modal'), require('ng-zorro-antd/notification'), require('ng-zorro-antd/page-header'), require('ng-zorro-antd/pagination'), require('ng-zorro-antd/popconfirm'), require('ng-zorro-antd/popover'), require('ng-zorro-antd/progress'), require('ng-zorro-antd/radio'), require('ng-zorro-antd/rate'), require('ng-zorro-antd/result'), require('ng-zorro-antd/skeleton'), require('ng-zorro-antd/slider'), require('ng-zorro-antd/spin'), require('ng-zorro-antd/statistic'), require('ng-zorro-antd/steps'), require('ng-zorro-antd/switch'), require('ng-zorro-antd/table'), require('ng-zorro-antd/tabs'), require('ng-zorro-antd/tag'), require('ng-zorro-antd/time-picker'), require('ng-zorro-antd/timeline'), require('ng-zorro-antd/tooltip'), require('ng-zorro-antd/transfer'), require('ng-zorro-antd/tree'), require('ng-zorro-antd/tree-select'), require('ng-zorro-antd/typography'), require('ng-zorro-antd/upload'), require('ng-zorro-antd/resizable'), require('date-fns/locale'), require('@angular/common/locales/vi'), require('@ant-design/icons-angular/icons'), require('ng-zorro-antd/space'), require('ng2-currency-mask'), require('date-fns/differenceInCalendarDays'), require('angular2-text-mask'), require('ng-zorro-antd/core/transition-patch')) :
-    typeof define === 'function' && define.amd ? define('@of', ['exports', '@angular/core', 'lodash', 'rxjs', 'rxjs/operators', '@angular/common/http', 'moment', '@angular/forms', 'jquery', 'ng-zorro-antd/input', 'ng-zorro-antd/select', '@angular/common', '@abp/ng.core', '@abp/ng.theme.shared', '@angular/router', 'ng-zorro-antd/affix', 'ng-zorro-antd/alert', 'ng-zorro-antd/anchor', 'ng-zorro-antd/auto-complete', 'ng-zorro-antd/avatar', 'ng-zorro-antd/back-top', 'ng-zorro-antd/badge', 'ng-zorro-antd/breadcrumb', 'ng-zorro-antd/button', 'ng-zorro-antd/calendar', 'ng-zorro-antd/card', 'ng-zorro-antd/carousel', 'ng-zorro-antd/cascader', 'ng-zorro-antd/checkbox', 'ng-zorro-antd/collapse', 'ng-zorro-antd/comment', 'ng-zorro-antd/core/no-animation', 'ng-zorro-antd/core/trans-button', 'ng-zorro-antd/core/wave', 'ng-zorro-antd/date-picker', 'ng-zorro-antd/descriptions', 'ng-zorro-antd/divider', 'ng-zorro-antd/drawer', 'ng-zorro-antd/dropdown', 'ng-zorro-antd/empty', 'ng-zorro-antd/form', 'ng-zorro-antd/grid', 'ng-zorro-antd/i18n', 'ng-zorro-antd/icon', 'ng-zorro-antd/input-number', 'ng-zorro-antd/layout', 'ng-zorro-antd/list', 'ng-zorro-antd/mention', 'ng-zorro-antd/menu', 'ng-zorro-antd/message', 'ng-zorro-antd/modal', 'ng-zorro-antd/notification', 'ng-zorro-antd/page-header', 'ng-zorro-antd/pagination', 'ng-zorro-antd/popconfirm', 'ng-zorro-antd/popover', 'ng-zorro-antd/progress', 'ng-zorro-antd/radio', 'ng-zorro-antd/rate', 'ng-zorro-antd/result', 'ng-zorro-antd/skeleton', 'ng-zorro-antd/slider', 'ng-zorro-antd/spin', 'ng-zorro-antd/statistic', 'ng-zorro-antd/steps', 'ng-zorro-antd/switch', 'ng-zorro-antd/table', 'ng-zorro-antd/tabs', 'ng-zorro-antd/tag', 'ng-zorro-antd/time-picker', 'ng-zorro-antd/timeline', 'ng-zorro-antd/tooltip', 'ng-zorro-antd/transfer', 'ng-zorro-antd/tree', 'ng-zorro-antd/tree-select', 'ng-zorro-antd/typography', 'ng-zorro-antd/upload', 'ng-zorro-antd/resizable', 'date-fns/locale', '@angular/common/locales/vi', '@ant-design/icons-angular/icons', 'ng-zorro-antd/space', 'ng2-currency-mask', 'date-fns/differenceInCalendarDays', 'angular2-text-mask', 'ng-zorro-antd/core/transition-patch'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.of = {}, global.ng.core, global._, global.rxjs, global.rxjs.operators, global.ng.common.http, global.moment, global.ng.forms, global.$, global.i2, global.i3, global.ng.common, global.i1$2, global.ng_theme_shared, global.ng.router, global.affix, global.alert, global.anchor, global.autoComplete, global.avatar, global.backTop, global.badge, global.breadcrumb, global.i6, global.calendar, global.card, global.carousel, global.cascader, global.i2$1, global.collapse, global.comment, global.noAnimation, global.transButton, global.i7, global.i1$4, global.descriptions, global.i5, global.drawer, global.dropdown, global.empty, global.i4$1, global.i2$2, global.i18n, global.i4$2, global.i5$1, global.layout, global.list, global.mention, global.menu, global.message, global.modal, global.notification, global.pageHeader, global.i5$2, global.popconfirm, global.popover, global.progress, global.i2$3, global.rate, global.result, global.skeleton, global.slider, global.i2$4, global.statistic, global.steps, global.i2$5, global.table, global.tabs, global.tag, global.timePicker, global.timeline, global.tooltip, global.transfer, global.tree, global.treeSelect, global.typography, global.upload, global.resizable, global.locale, global.ng.common.locales.vi, global.AllIcons, global.space, global.i3$1, global.differenceInCalendarDays, global.i4$3, global.i3$2));
-}(this, (function (exports, i0, _, rxjs, operators, i1, moment, i1$1, $, i2, i3, i4, i1$2, ng_theme_shared, i1$3, affix, alert, anchor, autoComplete, avatar, backTop, badge, breadcrumb, i6, calendar, card, carousel, cascader, i2$1, collapse, comment, noAnimation, transButton, i7, i1$4, descriptions, i5, drawer, dropdown, empty, i4$1, i2$2, i18n, i4$2, i5$1, layout, list, mention, menu, message, modal, notification, pageHeader, i5$2, popconfirm, popover, progress, i2$3, rate, result, skeleton, slider, i2$4, statistic, steps, i2$5, table, tabs, tag, timePicker, timeline, tooltip, transfer, tree, treeSelect, typography, upload, resizable, locale, vi, AllIcons, space, i3$1, differenceInCalendarDays, i4$3, i3$2) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('lodash'), require('rxjs'), require('rxjs/operators'), require('@angular/common/http'), require('moment'), require('@angular/forms'), require('jquery'), require('@abp/ng.core'), require('@abp/ng.theme.shared'), require('@angular/router'), require('ng-zorro-antd/affix'), require('ng-zorro-antd/alert'), require('ng-zorro-antd/anchor'), require('ng-zorro-antd/auto-complete'), require('ng-zorro-antd/avatar'), require('ng-zorro-antd/back-top'), require('ng-zorro-antd/badge'), require('ng-zorro-antd/breadcrumb'), require('ng-zorro-antd/button'), require('ng-zorro-antd/calendar'), require('ng-zorro-antd/card'), require('ng-zorro-antd/carousel'), require('ng-zorro-antd/cascader'), require('ng-zorro-antd/checkbox'), require('ng-zorro-antd/collapse'), require('ng-zorro-antd/comment'), require('ng-zorro-antd/core/no-animation'), require('ng-zorro-antd/core/trans-button'), require('ng-zorro-antd/core/wave'), require('ng-zorro-antd/date-picker'), require('ng-zorro-antd/descriptions'), require('ng-zorro-antd/divider'), require('ng-zorro-antd/drawer'), require('ng-zorro-antd/dropdown'), require('ng-zorro-antd/empty'), require('ng-zorro-antd/form'), require('ng-zorro-antd/grid'), require('ng-zorro-antd/i18n'), require('ng-zorro-antd/icon'), require('ng-zorro-antd/input'), require('ng-zorro-antd/input-number'), require('ng-zorro-antd/layout'), require('ng-zorro-antd/list'), require('ng-zorro-antd/mention'), require('ng-zorro-antd/menu'), require('ng-zorro-antd/message'), require('ng-zorro-antd/modal'), require('ng-zorro-antd/notification'), require('ng-zorro-antd/page-header'), require('ng-zorro-antd/pagination'), require('ng-zorro-antd/popconfirm'), require('ng-zorro-antd/popover'), require('ng-zorro-antd/progress'), require('ng-zorro-antd/radio'), require('ng-zorro-antd/rate'), require('ng-zorro-antd/result'), require('ng-zorro-antd/select'), require('ng-zorro-antd/skeleton'), require('ng-zorro-antd/slider'), require('ng-zorro-antd/spin'), require('ng-zorro-antd/statistic'), require('ng-zorro-antd/steps'), require('ng-zorro-antd/switch'), require('ng-zorro-antd/table'), require('ng-zorro-antd/tabs'), require('ng-zorro-antd/tag'), require('ng-zorro-antd/time-picker'), require('ng-zorro-antd/timeline'), require('ng-zorro-antd/tooltip'), require('ng-zorro-antd/transfer'), require('ng-zorro-antd/tree'), require('ng-zorro-antd/tree-select'), require('ng-zorro-antd/typography'), require('ng-zorro-antd/upload'), require('ng-zorro-antd/resizable'), require('date-fns/locale'), require('@angular/common'), require('@angular/common/locales/vi'), require('@ant-design/icons-angular/icons'), require('ng-zorro-antd/space'), require('date-fns/differenceInCalendarDays'), require('ng2-currency-mask'), require('angular2-text-mask')) :
+    typeof define === 'function' && define.amd ? define('@of', ['exports', '@angular/core', 'lodash', 'rxjs', 'rxjs/operators', '@angular/common/http', 'moment', '@angular/forms', 'jquery', '@abp/ng.core', '@abp/ng.theme.shared', '@angular/router', 'ng-zorro-antd/affix', 'ng-zorro-antd/alert', 'ng-zorro-antd/anchor', 'ng-zorro-antd/auto-complete', 'ng-zorro-antd/avatar', 'ng-zorro-antd/back-top', 'ng-zorro-antd/badge', 'ng-zorro-antd/breadcrumb', 'ng-zorro-antd/button', 'ng-zorro-antd/calendar', 'ng-zorro-antd/card', 'ng-zorro-antd/carousel', 'ng-zorro-antd/cascader', 'ng-zorro-antd/checkbox', 'ng-zorro-antd/collapse', 'ng-zorro-antd/comment', 'ng-zorro-antd/core/no-animation', 'ng-zorro-antd/core/trans-button', 'ng-zorro-antd/core/wave', 'ng-zorro-antd/date-picker', 'ng-zorro-antd/descriptions', 'ng-zorro-antd/divider', 'ng-zorro-antd/drawer', 'ng-zorro-antd/dropdown', 'ng-zorro-antd/empty', 'ng-zorro-antd/form', 'ng-zorro-antd/grid', 'ng-zorro-antd/i18n', 'ng-zorro-antd/icon', 'ng-zorro-antd/input', 'ng-zorro-antd/input-number', 'ng-zorro-antd/layout', 'ng-zorro-antd/list', 'ng-zorro-antd/mention', 'ng-zorro-antd/menu', 'ng-zorro-antd/message', 'ng-zorro-antd/modal', 'ng-zorro-antd/notification', 'ng-zorro-antd/page-header', 'ng-zorro-antd/pagination', 'ng-zorro-antd/popconfirm', 'ng-zorro-antd/popover', 'ng-zorro-antd/progress', 'ng-zorro-antd/radio', 'ng-zorro-antd/rate', 'ng-zorro-antd/result', 'ng-zorro-antd/select', 'ng-zorro-antd/skeleton', 'ng-zorro-antd/slider', 'ng-zorro-antd/spin', 'ng-zorro-antd/statistic', 'ng-zorro-antd/steps', 'ng-zorro-antd/switch', 'ng-zorro-antd/table', 'ng-zorro-antd/tabs', 'ng-zorro-antd/tag', 'ng-zorro-antd/time-picker', 'ng-zorro-antd/timeline', 'ng-zorro-antd/tooltip', 'ng-zorro-antd/transfer', 'ng-zorro-antd/tree', 'ng-zorro-antd/tree-select', 'ng-zorro-antd/typography', 'ng-zorro-antd/upload', 'ng-zorro-antd/resizable', 'date-fns/locale', '@angular/common', '@angular/common/locales/vi', '@ant-design/icons-angular/icons', 'ng-zorro-antd/space', 'date-fns/differenceInCalendarDays', 'ng2-currency-mask', 'angular2-text-mask'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.of = {}, global.ng.core, global._, global.rxjs, global.rxjs.operators, global.ng.common.http, global.moment, global.ng.forms, global.$, global.i1$1, global.ng_theme_shared, global.ng.router, global.affix, global.alert, global.anchor, global.autoComplete, global.avatar, global.backTop, global.badge, global.breadcrumb, global.button, global.calendar, global.card, global.carousel, global.cascader, global.checkbox, global.collapse, global.comment, global.noAnimation, global.transButton, global.wave, global.datePicker, global.descriptions, global.divider, global.drawer, global.dropdown, global.empty, global.form, global.grid, global.i18n, global.icon, global.input, global.inputNumber, global.layout, global.list, global.mention, global.menu, global.message, global.modal, global.notification, global.pageHeader, global.pagination, global.popconfirm, global.popover, global.progress, global.radio, global.rate, global.result, global.select, global.skeleton, global.slider, global.spin, global.statistic, global.steps, global._switch, global.table, global.tabs, global.tag, global.timePicker, global.timeline, global.tooltip, global.transfer, global.tree, global.treeSelect, global.typography, global.upload, global.resizable, global.locale, global.ng.common, global.ng.common.locales.vi, global.AllIcons, global.space, global.differenceInCalendarDays, global.ng2CurrencyMask, global.angular2TextMask));
+}(this, (function (exports, i0, _, rxjs, operators, http, moment, i1, $, i1$1, ng_theme_shared, router, affix, alert, anchor, autoComplete, avatar, backTop, badge, breadcrumb, button, calendar, card, carousel, cascader, checkbox, collapse, comment, noAnimation, transButton, wave, datePicker, descriptions, divider, drawer, dropdown, empty, form, grid, i18n, icon, input, inputNumber, layout, list, mention, menu, message, modal, notification, pageHeader, pagination, popconfirm, popover, progress, radio, rate, result, select, skeleton, slider, spin, statistic, steps, _switch, table, tabs, tag, timePicker, timeline, tooltip, transfer, tree, treeSelect, typography, upload, resizable, locale, common, vi, AllIcons, space, differenceInCalendarDays, ng2CurrencyMask, angular2TextMask) { 'use strict';
 
     function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -28,34 +28,13 @@
 
     var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
     var ___namespace = /*#__PURE__*/_interopNamespace(_);
-    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
     var moment__namespace = /*#__PURE__*/_interopNamespace(moment);
-    var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
     var $__namespace = /*#__PURE__*/_interopNamespace($);
-    var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
-    var i3__namespace = /*#__PURE__*/_interopNamespace(i3);
-    var i4__namespace = /*#__PURE__*/_interopNamespace(i4);
-    var i1__namespace$2 = /*#__PURE__*/_interopNamespace(i1$2);
-    var i1__namespace$3 = /*#__PURE__*/_interopNamespace(i1$3);
-    var i6__namespace = /*#__PURE__*/_interopNamespace(i6);
-    var i2__namespace$1 = /*#__PURE__*/_interopNamespace(i2$1);
-    var i7__namespace = /*#__PURE__*/_interopNamespace(i7);
-    var i1__namespace$4 = /*#__PURE__*/_interopNamespace(i1$4);
-    var i5__namespace$2 = /*#__PURE__*/_interopNamespace(i5);
-    var i4__namespace$3 = /*#__PURE__*/_interopNamespace(i4$1);
-    var i2__namespace$5 = /*#__PURE__*/_interopNamespace(i2$2);
-    var i4__namespace$2 = /*#__PURE__*/_interopNamespace(i4$2);
-    var i5__namespace = /*#__PURE__*/_interopNamespace(i5$1);
-    var i5__namespace$1 = /*#__PURE__*/_interopNamespace(i5$2);
-    var i2__namespace$3 = /*#__PURE__*/_interopNamespace(i2$3);
-    var i2__namespace$2 = /*#__PURE__*/_interopNamespace(i2$4);
-    var i2__namespace$4 = /*#__PURE__*/_interopNamespace(i2$5);
+    var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
     var vi__default = /*#__PURE__*/_interopDefaultLegacy(vi);
     var AllIcons__namespace = /*#__PURE__*/_interopNamespace(AllIcons);
-    var i3__namespace$1 = /*#__PURE__*/_interopNamespace(i3$1);
     var differenceInCalendarDays__default = /*#__PURE__*/_interopDefaultLegacy(differenceInCalendarDays);
-    var i4__namespace$1 = /*#__PURE__*/_interopNamespace(i4$3);
-    var i3__namespace$2 = /*#__PURE__*/_interopNamespace(i3$2);
 
     var OfControlModel = /** @class */ (function () {
         function OfControlModel(config) {
@@ -715,19 +694,19 @@
             // return !(typeof input !== 'undefined' && input && input !== '' && input !== null);
         };
         AppUtilityService.isNotNull = function (input) {
-            return !this.isNullOrEmpty(input);
+            return !AppUtilityService.isNullOrEmpty(input);
         };
         AppUtilityService.getFullTextSearch = function (str) {
-            if (this.isNullOrEmpty(str)) {
+            if (AppUtilityService.isNullOrEmpty(str)) {
                 return str;
             }
             str += '';
-            str = this.removeDau(str);
+            str = AppUtilityService.removeDau(str);
             str = str.replace(/\s\s+/g, ' ');
             return str;
         };
         AppUtilityService.removeDau = function (str) {
-            if (this.isNullOrEmpty(str)) {
+            if (AppUtilityService.isNullOrEmpty(str)) {
                 return str;
             }
             str = str.toLowerCase();
@@ -744,35 +723,32 @@
             return str;
         };
         AppUtilityService.isNotAnyItem = function (input) {
-            return this.isNullOrEmpty(input) || input.length === 0;
+            return AppUtilityService.isNullOrEmpty(input) || input.length === 0;
         };
         AppUtilityService.isWhitespace = function (value) {
             return (value || '').trim().length === 0;
         };
         AppUtilityService.searchVietTat = function (str) {
-            if (this.isNullOrEmpty(str)) {
+            if (AppUtilityService.isNullOrEmpty(str)) {
                 return str;
             }
             var ret = '';
             var spl = str.split(' ');
-            if (this.isNotAnyItem(spl) === false) {
+            if (AppUtilityService.isNotAnyItem(spl) === false) {
                 spl.forEach(function (s) {
                     if (s.length > 0) {
                         ret = ret + s[0];
                     }
                 });
             }
-            return this.getFullTextSearch(___namespace.cloneDeep(ret));
+            return AppUtilityService.getFullTextSearch(___namespace.cloneDeep(ret));
         };
         return AppUtilityService;
     }());
-    AppUtilityService.ɵfac = function AppUtilityService_Factory(t) { return new (t || AppUtilityService)(); };
-    AppUtilityService.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: AppUtilityService, factory: AppUtilityService.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(AppUtilityService, [{
-                type: i0.Injectable
-            }], function () { return []; }, null);
-    })();
+    AppUtilityService.decorators = [
+        { type: i0.Injectable }
+    ];
+    AppUtilityService.ctorParameters = function () { return []; };
 
     var OfSelectBaseModel = /** @class */ (function (_super) {
         __extends(OfSelectBaseModel, _super);
@@ -938,14 +914,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processApiDefinition(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processApiDefinition(response_);
                     }
@@ -961,7 +937,7 @@
             var e_1, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1053,14 +1029,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processApplicationConfiguration(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processApplicationConfiguration(response_);
                     }
@@ -1076,7 +1052,7 @@
             var e_2, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1160,23 +1136,13 @@
         };
         return AbpServiceProxy;
     }());
-    AbpServiceProxy.ɵfac = function AbpServiceProxy_Factory(t) { return new (t || AbpServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    AbpServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: AbpServiceProxy, factory: AbpServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(AbpServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    AbpServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    AbpServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var TenantsServiceProxy = /** @class */ (function () {
         function TenantsServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -1196,14 +1162,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processByName(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processByName(response_);
                     }
@@ -1219,7 +1185,7 @@
             var e_3, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1314,14 +1280,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processById(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processById(response_);
                     }
@@ -1337,7 +1303,7 @@
             var e_4, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1421,23 +1387,13 @@
         };
         return TenantsServiceProxy;
     }());
-    TenantsServiceProxy.ɵfac = function TenantsServiceProxy_Factory(t) { return new (t || TenantsServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    TenantsServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: TenantsServiceProxy, factory: TenantsServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(TenantsServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    TenantsServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    TenantsServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var BenhvienServiceProxy = /** @class */ (function () {
         function BenhvienServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -1457,7 +1413,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -1465,7 +1421,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -1481,7 +1437,7 @@
             var e_5, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1528,7 +1484,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -1536,7 +1492,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCosoyteautocompletedatasource(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCosoyteautocompletedatasource(response_);
                     }
@@ -1552,7 +1508,7 @@
             var e_6, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1599,7 +1555,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -1607,7 +1563,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCosoytedacodailyautocompletedatasource(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCosoytedacodailyautocompletedatasource(response_);
                     }
@@ -1623,7 +1579,7 @@
             var e_7, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1670,14 +1626,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSearchbenhvienidbyma(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSearchbenhvienidbyma(response_);
                     }
@@ -1693,7 +1649,7 @@
             var e_8, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1737,14 +1693,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetdanhsachbenhvien(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetdanhsachbenhvien(response_);
                     }
@@ -1760,7 +1716,7 @@
             var e_9, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1823,14 +1779,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processComboboxbenhvienordichvu(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processComboboxbenhvienordichvu(response_);
                     }
@@ -1846,7 +1802,7 @@
             var e_11, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1909,14 +1865,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processLoaibenhvienbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processLoaibenhvienbyid(response_);
                     }
@@ -1932,7 +1888,7 @@
             var e_13, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -1979,14 +1935,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -2002,7 +1958,7 @@
             var e_14, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2049,7 +2005,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -2057,7 +2013,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -2073,7 +2029,7 @@
             var e_15, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2123,7 +2079,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -2131,7 +2087,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -2147,7 +2103,7 @@
             var e_16, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2194,12 +2150,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -2214,7 +2170,7 @@
         BenhvienServiceProxy.prototype.processRemovebyid = function (response) {
             var e_17, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2247,23 +2203,13 @@
         };
         return BenhvienServiceProxy;
     }());
-    BenhvienServiceProxy.ɵfac = function BenhvienServiceProxy_Factory(t) { return new (t || BenhvienServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    BenhvienServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: BenhvienServiceProxy, factory: BenhvienServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(BenhvienServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    BenhvienServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    BenhvienServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhdichvusokhamServiceProxy = /** @class */ (function () {
         function CauhinhdichvusokhamServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -2283,14 +2229,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreateordelete(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreateordelete(response_);
                     }
@@ -2305,7 +2251,7 @@
         CauhinhdichvusokhamServiceProxy.prototype.processCreateordelete = function (response) {
             var e_18, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2349,7 +2295,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -2357,7 +2303,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -2373,7 +2319,7 @@
             var e_19, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2420,14 +2366,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -2443,7 +2389,7 @@
             var e_20, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2490,7 +2436,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -2498,7 +2444,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -2514,7 +2460,7 @@
             var e_21, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2564,7 +2510,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -2572,7 +2518,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -2588,7 +2534,7 @@
             var e_22, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2635,12 +2581,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -2655,7 +2601,7 @@
         CauhinhdichvusokhamServiceProxy.prototype.processRemovebyid = function (response) {
             var e_23, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2688,23 +2634,13 @@
         };
         return CauhinhdichvusokhamServiceProxy;
     }());
-    CauhinhdichvusokhamServiceProxy.ɵfac = function CauhinhdichvusokhamServiceProxy_Factory(t) { return new (t || CauhinhdichvusokhamServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhdichvusokhamServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhdichvusokhamServiceProxy, factory: CauhinhdichvusokhamServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhdichvusokhamServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhdichvusokhamServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhdichvusokhamServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhdoituongkhoduocServiceProxy = /** @class */ (function () {
         function CauhinhdoituongkhoduocServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -2726,14 +2662,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetkhodoituong(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetkhodoituong(response_);
                     }
@@ -2749,7 +2685,7 @@
             var e_24, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2796,14 +2732,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processLuucauhinh(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processLuucauhinh(response_);
                     }
@@ -2818,7 +2754,7 @@
         CauhinhdoituongkhoduocServiceProxy.prototype.processLuucauhinh = function (response) {
             var e_25, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2851,23 +2787,13 @@
         };
         return CauhinhdoituongkhoduocServiceProxy;
     }());
-    CauhinhdoituongkhoduocServiceProxy.ɵfac = function CauhinhdoituongkhoduocServiceProxy_Factory(t) { return new (t || CauhinhdoituongkhoduocServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhdoituongkhoduocServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhdoituongkhoduocServiceProxy, factory: CauhinhdoituongkhoduocServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhdoituongkhoduocServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhdoituongkhoduocServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhdoituongkhoduocServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhgiadichvuServiceProxy = /** @class */ (function () {
         function CauhinhgiadichvuServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -2887,7 +2813,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -2895,7 +2821,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -2911,7 +2837,7 @@
             var e_26, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -2955,12 +2881,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGettreeview(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGettreeview(response_);
                     }
@@ -2975,7 +2901,7 @@
         CauhinhgiadichvuServiceProxy.prototype.processGettreeview = function (response) {
             var e_27, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3019,7 +2945,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3027,7 +2953,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdateserviceprices(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdateserviceprices(response_);
                     }
@@ -3043,7 +2969,7 @@
             var e_28, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3090,7 +3016,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3098,7 +3024,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processReleaseserviceprices(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processReleaseserviceprices(response_);
                     }
@@ -3114,7 +3040,7 @@
             var e_29, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3161,7 +3087,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3169,7 +3095,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processReleaseservicepricestoall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processReleaseservicepricestoall(response_);
                     }
@@ -3185,7 +3111,7 @@
             var e_30, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3232,7 +3158,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3240,7 +3166,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processPricelistexpires(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processPricelistexpires(response_);
                     }
@@ -3256,7 +3182,7 @@
             var e_31, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3303,7 +3229,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3311,7 +3237,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdateeffectivedate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdateeffectivedate(response_);
                     }
@@ -3327,7 +3253,7 @@
             var e_32, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3374,7 +3300,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3382,7 +3308,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdateeffectivedatetoall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdateeffectivedatetoall(response_);
                     }
@@ -3398,7 +3324,7 @@
             var e_33, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3445,7 +3371,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3453,7 +3379,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processImportservice(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processImportservice(response_);
                     }
@@ -3469,7 +3395,7 @@
             var e_34, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3516,7 +3442,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3524,7 +3450,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processValidateexistsimportservice(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processValidateexistsimportservice(response_);
                     }
@@ -3540,7 +3466,7 @@
             var e_35, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3600,14 +3526,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processExportexceldichvudangsoanthao(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processExportexceldichvudangsoanthao(response_);
                     }
@@ -3623,7 +3549,7 @@
             var e_37, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3667,14 +3593,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processExportexceldichvudangsoanthaosample(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processExportexceldichvudangsoanthaosample(response_);
                     }
@@ -3690,7 +3616,7 @@
             var e_38, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3737,14 +3663,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -3760,7 +3686,7 @@
             var e_39, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3807,7 +3733,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3815,7 +3741,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -3831,7 +3757,7 @@
             var e_40, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3881,7 +3807,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -3889,7 +3815,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -3905,7 +3831,7 @@
             var e_41, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -3952,12 +3878,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -3972,7 +3898,7 @@
         CauhinhgiadichvuServiceProxy.prototype.processRemovebyid = function (response) {
             var e_42, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4005,23 +3931,13 @@
         };
         return CauhinhgiadichvuServiceProxy;
     }());
-    CauhinhgiadichvuServiceProxy.ɵfac = function CauhinhgiadichvuServiceProxy_Factory(t) { return new (t || CauhinhgiadichvuServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhgiadichvuServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhgiadichvuServiceProxy, factory: CauhinhgiadichvuServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhgiadichvuServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhgiadichvuServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhgiadichvuServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhmautinnhanServiceProxy = /** @class */ (function () {
         function CauhinhmautinnhanServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -4038,14 +3954,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetall(response_);
                     }
@@ -4061,7 +3977,7 @@
             var e_43, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4124,7 +4040,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -4132,7 +4048,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSaveurl(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSaveurl(response_);
                     }
@@ -4148,7 +4064,7 @@
             var e_45, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4195,7 +4111,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -4203,7 +4119,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -4219,7 +4135,7 @@
             var e_46, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4266,14 +4182,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -4289,7 +4205,7 @@
             var e_47, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4336,7 +4252,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -4344,7 +4260,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -4360,7 +4276,7 @@
             var e_48, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4410,7 +4326,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -4418,7 +4334,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -4434,7 +4350,7 @@
             var e_49, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4481,12 +4397,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -4501,7 +4417,7 @@
         CauhinhmautinnhanServiceProxy.prototype.processRemovebyid = function (response) {
             var e_50, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4534,23 +4450,13 @@
         };
         return CauhinhmautinnhanServiceProxy;
     }());
-    CauhinhmautinnhanServiceProxy.ɵfac = function CauhinhmautinnhanServiceProxy_Factory(t) { return new (t || CauhinhmautinnhanServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhmautinnhanServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhmautinnhanServiceProxy, factory: CauhinhmautinnhanServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhmautinnhanServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhmautinnhanServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhmautinnhanServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhphongbandichvuServiceProxy = /** @class */ (function () {
         function CauhinhphongbandichvuServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -4570,14 +4476,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreateordelete(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreateordelete(response_);
                     }
@@ -4592,7 +4498,7 @@
         CauhinhphongbandichvuServiceProxy.prototype.processCreateordelete = function (response) {
             var e_51, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4636,7 +4542,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -4644,7 +4550,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -4660,7 +4566,7 @@
             var e_52, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4707,14 +4613,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -4730,7 +4636,7 @@
             var e_53, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4777,7 +4683,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -4785,7 +4691,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -4801,7 +4707,7 @@
             var e_54, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4851,7 +4757,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -4859,7 +4765,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -4875,7 +4781,7 @@
             var e_55, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4922,12 +4828,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -4942,7 +4848,7 @@
         CauhinhphongbandichvuServiceProxy.prototype.processRemovebyid = function (response) {
             var e_56, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -4975,23 +4881,13 @@
         };
         return CauhinhphongbandichvuServiceProxy;
     }());
-    CauhinhphongbandichvuServiceProxy.ɵfac = function CauhinhphongbandichvuServiceProxy_Factory(t) { return new (t || CauhinhphongbandichvuServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhphongbandichvuServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhphongbandichvuServiceProxy, factory: CauhinhphongbandichvuServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhphongbandichvuServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhphongbandichvuServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhphongbandichvuServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhquanlyhosobccsServiceProxy = /** @class */ (function () {
         function CauhinhquanlyhosobccsServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -5008,14 +4904,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetall(response_);
                     }
@@ -5031,7 +4927,7 @@
             var e_57, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5094,7 +4990,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -5102,7 +4998,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSaveurl(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSaveurl(response_);
                     }
@@ -5118,7 +5014,7 @@
             var e_59, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5165,7 +5061,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -5173,7 +5069,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -5189,7 +5085,7 @@
             var e_60, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5236,14 +5132,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -5259,7 +5155,7 @@
             var e_61, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5306,7 +5202,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -5314,7 +5210,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -5330,7 +5226,7 @@
             var e_62, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5380,7 +5276,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -5388,7 +5284,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -5404,7 +5300,7 @@
             var e_63, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5451,12 +5347,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -5471,7 +5367,7 @@
         CauhinhquanlyhosobccsServiceProxy.prototype.processRemovebyid = function (response) {
             var e_64, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5504,23 +5400,13 @@
         };
         return CauhinhquanlyhosobccsServiceProxy;
     }());
-    CauhinhquanlyhosobccsServiceProxy.ɵfac = function CauhinhquanlyhosobccsServiceProxy_Factory(t) { return new (t || CauhinhquanlyhosobccsServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhquanlyhosobccsServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhquanlyhosobccsServiceProxy, factory: CauhinhquanlyhosobccsServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhquanlyhosobccsServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhquanlyhosobccsServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhquanlyhosobccsServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhtaikhoanbulksmsServiceProxy = /** @class */ (function () {
         function CauhinhtaikhoanbulksmsServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -5537,14 +5423,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetall(response_);
                     }
@@ -5560,7 +5446,7 @@
             var e_65, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5623,7 +5509,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -5631,7 +5517,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSaveurl(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSaveurl(response_);
                     }
@@ -5647,7 +5533,7 @@
             var e_67, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5694,7 +5580,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -5702,7 +5588,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -5718,7 +5604,7 @@
             var e_68, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5765,14 +5651,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -5788,7 +5674,7 @@
             var e_69, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5835,7 +5721,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -5843,7 +5729,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -5859,7 +5745,7 @@
             var e_70, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5909,7 +5795,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -5917,7 +5803,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -5933,7 +5819,7 @@
             var e_71, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -5980,12 +5866,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -6000,7 +5886,7 @@
         CauhinhtaikhoanbulksmsServiceProxy.prototype.processRemovebyid = function (response) {
             var e_72, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6033,23 +5919,13 @@
         };
         return CauhinhtaikhoanbulksmsServiceProxy;
     }());
-    CauhinhtaikhoanbulksmsServiceProxy.ɵfac = function CauhinhtaikhoanbulksmsServiceProxy_Factory(t) { return new (t || CauhinhtaikhoanbulksmsServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhtaikhoanbulksmsServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhtaikhoanbulksmsServiceProxy, factory: CauhinhtaikhoanbulksmsServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhtaikhoanbulksmsServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhtaikhoanbulksmsServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhtaikhoanbulksmsServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhtaikhoandichvuthecaoServiceProxy = /** @class */ (function () {
         function CauhinhtaikhoandichvuthecaoServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -6066,14 +5942,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetall(response_);
                     }
@@ -6089,7 +5965,7 @@
             var e_73, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6152,7 +6028,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -6160,7 +6036,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSaveurl(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSaveurl(response_);
                     }
@@ -6176,7 +6052,7 @@
             var e_75, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6223,7 +6099,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -6231,7 +6107,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -6247,7 +6123,7 @@
             var e_76, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6294,14 +6170,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -6317,7 +6193,7 @@
             var e_77, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6364,7 +6240,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -6372,7 +6248,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -6388,7 +6264,7 @@
             var e_78, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6438,7 +6314,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -6446,7 +6322,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -6462,7 +6338,7 @@
             var e_79, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6509,12 +6385,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -6529,7 +6405,7 @@
         CauhinhtaikhoandichvuthecaoServiceProxy.prototype.processRemovebyid = function (response) {
             var e_80, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6562,23 +6438,13 @@
         };
         return CauhinhtaikhoandichvuthecaoServiceProxy;
     }());
-    CauhinhtaikhoandichvuthecaoServiceProxy.ɵfac = function CauhinhtaikhoandichvuthecaoServiceProxy_Factory(t) { return new (t || CauhinhtaikhoandichvuthecaoServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhtaikhoandichvuthecaoServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhtaikhoandichvuthecaoServiceProxy, factory: CauhinhtaikhoandichvuthecaoServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhtaikhoandichvuthecaoServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhtaikhoandichvuthecaoServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhtaikhoandichvuthecaoServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhtaikhoanlienthongServiceProxy = /** @class */ (function () {
         function CauhinhtaikhoanlienthongServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -6598,14 +6464,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -6621,7 +6487,7 @@
             var e_81, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6665,14 +6531,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetall(response_);
                     }
@@ -6688,7 +6554,7 @@
             var e_82, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6751,14 +6617,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyloaitaikhoan(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyloaitaikhoan(response_);
                     }
@@ -6774,7 +6640,7 @@
             var e_84, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6821,7 +6687,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -6829,7 +6695,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -6845,7 +6711,7 @@
             var e_85, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6892,7 +6758,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -6900,7 +6766,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processTest(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processTest(response_);
                     }
@@ -6916,7 +6782,7 @@
             var e_86, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -6963,7 +6829,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -6971,7 +6837,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSaveurl(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSaveurl(response_);
                     }
@@ -6987,7 +6853,7 @@
             var e_87, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7034,7 +6900,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -7042,7 +6908,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -7058,7 +6924,7 @@
             var e_88, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7108,7 +6974,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -7116,7 +6982,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -7132,7 +6998,7 @@
             var e_89, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7179,12 +7045,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -7199,7 +7065,7 @@
         CauhinhtaikhoanlienthongServiceProxy.prototype.processRemovebyid = function (response) {
             var e_90, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7232,23 +7098,13 @@
         };
         return CauhinhtaikhoanlienthongServiceProxy;
     }());
-    CauhinhtaikhoanlienthongServiceProxy.ɵfac = function CauhinhtaikhoanlienthongServiceProxy_Factory(t) { return new (t || CauhinhtaikhoanlienthongServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhtaikhoanlienthongServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhtaikhoanlienthongServiceProxy, factory: CauhinhtaikhoanlienthongServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhtaikhoanlienthongServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhtaikhoanlienthongServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhtaikhoanlienthongServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhtaikhoanviettelpayServiceProxy = /** @class */ (function () {
         function CauhinhtaikhoanviettelpayServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -7265,14 +7121,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetall(response_);
                     }
@@ -7288,7 +7144,7 @@
             var e_91, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7351,7 +7207,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -7359,7 +7215,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSaveurl(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSaveurl(response_);
                     }
@@ -7375,7 +7231,7 @@
             var e_93, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7422,7 +7278,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -7430,7 +7286,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -7446,7 +7302,7 @@
             var e_94, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7493,14 +7349,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -7516,7 +7372,7 @@
             var e_95, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7563,7 +7419,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -7571,7 +7427,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -7587,7 +7443,7 @@
             var e_96, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7637,7 +7493,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -7645,7 +7501,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -7661,7 +7517,7 @@
             var e_97, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7708,12 +7564,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -7728,7 +7584,7 @@
         CauhinhtaikhoanviettelpayServiceProxy.prototype.processRemovebyid = function (response) {
             var e_98, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7761,23 +7617,13 @@
         };
         return CauhinhtaikhoanviettelpayServiceProxy;
     }());
-    CauhinhtaikhoanviettelpayServiceProxy.ɵfac = function CauhinhtaikhoanviettelpayServiceProxy_Factory(t) { return new (t || CauhinhtaikhoanviettelpayServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhtaikhoanviettelpayServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhtaikhoanviettelpayServiceProxy, factory: CauhinhtaikhoanviettelpayServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhtaikhoanviettelpayServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhtaikhoanviettelpayServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhtaikhoanviettelpayServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CauhinhtinnhandichvuServiceProxy = /** @class */ (function () {
         function CauhinhtinnhandichvuServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -7794,14 +7640,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetall(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetall(response_);
                     }
@@ -7817,7 +7663,7 @@
             var e_99, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7880,7 +7726,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -7888,7 +7734,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSaveurl(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSaveurl(response_);
                     }
@@ -7904,7 +7750,7 @@
             var e_101, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -7951,7 +7797,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -7959,7 +7805,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -7975,7 +7821,7 @@
             var e_102, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8022,14 +7868,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -8045,7 +7891,7 @@
             var e_103, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8092,7 +7938,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -8100,7 +7946,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -8116,7 +7962,7 @@
             var e_104, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8166,7 +8012,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -8174,7 +8020,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -8190,7 +8036,7 @@
             var e_105, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8237,12 +8083,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -8257,7 +8103,7 @@
         CauhinhtinnhandichvuServiceProxy.prototype.processRemovebyid = function (response) {
             var e_106, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8290,23 +8136,13 @@
         };
         return CauhinhtinnhandichvuServiceProxy;
     }());
-    CauhinhtinnhandichvuServiceProxy.ɵfac = function CauhinhtinnhandichvuServiceProxy_Factory(t) { return new (t || CauhinhtinnhandichvuServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CauhinhtinnhandichvuServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CauhinhtinnhandichvuServiceProxy, factory: CauhinhtinnhandichvuServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CauhinhtinnhandichvuServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CauhinhtinnhandichvuServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CauhinhtinnhandichvuServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var ChuongtrinhServiceProxy = /** @class */ (function () {
         function ChuongtrinhServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -8326,7 +8162,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -8334,7 +8170,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -8350,7 +8186,7 @@
             var e_107, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8397,14 +8233,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -8420,7 +8256,7 @@
             var e_108, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8467,7 +8303,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -8475,7 +8311,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -8491,7 +8327,7 @@
             var e_109, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8541,7 +8377,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -8549,7 +8385,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -8565,7 +8401,7 @@
             var e_110, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8612,12 +8448,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -8632,7 +8468,7 @@
         ChuongtrinhServiceProxy.prototype.processRemovebyid = function (response) {
             var e_111, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8665,23 +8501,13 @@
         };
         return ChuongtrinhServiceProxy;
     }());
-    ChuongtrinhServiceProxy.ɵfac = function ChuongtrinhServiceProxy_Factory(t) { return new (t || ChuongtrinhServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    ChuongtrinhServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: ChuongtrinhServiceProxy, factory: ChuongtrinhServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(ChuongtrinhServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    ChuongtrinhServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    ChuongtrinhServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var CombodataServiceProxy = /** @class */ (function () {
         function CombodataServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -8701,7 +8527,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -8709,7 +8535,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetfromdatabase(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetfromdatabase(response_);
                     }
@@ -8725,7 +8551,7 @@
             var e_112, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8788,14 +8614,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetfromdatabasetreeview(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetfromdatabasetreeview(response_);
                     }
@@ -8810,7 +8636,7 @@
         CombodataServiceProxy.prototype.processGetfromdatabasetreeview = function (response) {
             var e_114, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8854,14 +8680,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processAppenum(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processAppenum(response_);
                     }
@@ -8877,7 +8703,7 @@
             var e_115, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -8929,23 +8755,13 @@
         };
         return CombodataServiceProxy;
     }());
-    CombodataServiceProxy.ɵfac = function CombodataServiceProxy_Factory(t) { return new (t || CombodataServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    CombodataServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: CombodataServiceProxy, factory: CombodataServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(CombodataServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    CombodataServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    CombodataServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var DichvukhamchuabenhServiceProxy = /** @class */ (function () {
         function DichvukhamchuabenhServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -8965,7 +8781,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -8973,7 +8789,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -8989,7 +8805,7 @@
             var e_117, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9036,14 +8852,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -9059,7 +8875,7 @@
             var e_118, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9103,12 +8919,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGettreeview(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGettreeview(response_);
                     }
@@ -9123,7 +8939,7 @@
         DichvukhamchuabenhServiceProxy.prototype.processGettreeview = function (response) {
             var e_119, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9167,7 +8983,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -9175,7 +8991,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -9191,7 +9007,7 @@
             var e_120, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9238,14 +9054,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreatebatch(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreatebatch(response_);
                     }
@@ -9261,7 +9077,7 @@
             var e_121, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9311,7 +9127,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -9319,7 +9135,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -9335,7 +9151,7 @@
             var e_122, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9382,7 +9198,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -9390,7 +9206,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processExport(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processExport(response_);
                     }
@@ -9406,7 +9222,7 @@
             var e_123, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9453,12 +9269,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -9473,7 +9289,7 @@
         DichvukhamchuabenhServiceProxy.prototype.processRemovebyid = function (response) {
             var e_124, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9506,23 +9322,13 @@
         };
         return DichvukhamchuabenhServiceProxy;
     }());
-    DichvukhamchuabenhServiceProxy.ɵfac = function DichvukhamchuabenhServiceProxy_Factory(t) { return new (t || DichvukhamchuabenhServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    DichvukhamchuabenhServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DichvukhamchuabenhServiceProxy, factory: DichvukhamchuabenhServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DichvukhamchuabenhServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    DichvukhamchuabenhServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    DichvukhamchuabenhServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var DoituongServiceProxy = /** @class */ (function () {
         function DoituongServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -9539,14 +9345,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processTreedatadoituong(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processTreedatadoituong(response_);
                     }
@@ -9562,7 +9368,7 @@
             var e_125, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9625,7 +9431,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -9633,7 +9439,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -9649,7 +9455,7 @@
             var e_127, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9699,7 +9505,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -9707,7 +9513,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -9723,7 +9529,7 @@
             var e_128, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9770,7 +9576,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -9778,7 +9584,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -9794,7 +9600,7 @@
             var e_129, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9841,14 +9647,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -9864,7 +9670,7 @@
             var e_130, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9911,12 +9717,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -9931,7 +9737,7 @@
         DoituongServiceProxy.prototype.processRemovebyid = function (response) {
             var e_131, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -9964,23 +9770,13 @@
         };
         return DoituongServiceProxy;
     }());
-    DoituongServiceProxy.ɵfac = function DoituongServiceProxy_Factory(t) { return new (t || DoituongServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    DoituongServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DoituongServiceProxy, factory: DoituongServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DoituongServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    DoituongServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    DoituongServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var DoituongkhoduocnoitruServiceProxy = /** @class */ (function () {
         function DoituongkhoduocnoitruServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -10000,7 +9796,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10008,7 +9804,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGettreedatadoituongkhoduocnoitru(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGettreedatadoituongkhoduocnoitru(response_);
                     }
@@ -10024,7 +9820,7 @@
             var e_132, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10087,7 +9883,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10095,7 +9891,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreateorupdatedoituongnoitru(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreateorupdatedoituongnoitru(response_);
                     }
@@ -10111,7 +9907,7 @@
             var e_134, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10158,7 +9954,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10166,7 +9962,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -10182,7 +9978,7 @@
             var e_135, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10229,14 +10025,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -10252,7 +10048,7 @@
             var e_136, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10299,7 +10095,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10307,7 +10103,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -10323,7 +10119,7 @@
             var e_137, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10373,7 +10169,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10381,7 +10177,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -10397,7 +10193,7 @@
             var e_138, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10444,12 +10240,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -10464,7 +10260,7 @@
         DoituongkhoduocnoitruServiceProxy.prototype.processRemovebyid = function (response) {
             var e_139, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10497,23 +10293,13 @@
         };
         return DoituongkhoduocnoitruServiceProxy;
     }());
-    DoituongkhoduocnoitruServiceProxy.ɵfac = function DoituongkhoduocnoitruServiceProxy_Factory(t) { return new (t || DoituongkhoduocnoitruServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    DoituongkhoduocnoitruServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DoituongkhoduocnoitruServiceProxy, factory: DoituongkhoduocnoitruServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DoituongkhoduocnoitruServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    DoituongkhoduocnoitruServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    DoituongkhoduocnoitruServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var DoituongloaigiaServiceProxy = /** @class */ (function () {
         function DoituongloaigiaServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -10533,7 +10319,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10541,7 +10327,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGettreedatadoituongloaigia(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGettreedatadoituongloaigia(response_);
                     }
@@ -10557,7 +10343,7 @@
             var e_140, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10620,7 +10406,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10628,7 +10414,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreateorupdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreateorupdate(response_);
                     }
@@ -10644,7 +10430,7 @@
             var e_142, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10691,7 +10477,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10699,7 +10485,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -10715,7 +10501,7 @@
             var e_143, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10762,14 +10548,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -10785,7 +10571,7 @@
             var e_144, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10832,7 +10618,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10840,7 +10626,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -10856,7 +10642,7 @@
             var e_145, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10906,7 +10692,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -10914,7 +10700,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -10930,7 +10716,7 @@
             var e_146, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -10977,12 +10763,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -10997,7 +10783,7 @@
         DoituongloaigiaServiceProxy.prototype.processRemovebyid = function (response) {
             var e_147, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11030,23 +10816,13 @@
         };
         return DoituongloaigiaServiceProxy;
     }());
-    DoituongloaigiaServiceProxy.ɵfac = function DoituongloaigiaServiceProxy_Factory(t) { return new (t || DoituongloaigiaServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    DoituongloaigiaServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DoituongloaigiaServiceProxy, factory: DoituongloaigiaServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DoituongloaigiaServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    DoituongloaigiaServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    DoituongloaigiaServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var DonvihanhchinhServiceProxy = /** @class */ (function () {
         function DonvihanhchinhServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -11066,14 +10842,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -11089,7 +10865,7 @@
             var e_148, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11136,7 +10912,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -11144,7 +10920,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -11160,7 +10936,7 @@
             var e_149, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11210,7 +10986,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -11218,7 +10994,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -11234,7 +11010,7 @@
             var e_150, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11281,7 +11057,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -11289,7 +11065,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -11305,7 +11081,7 @@
             var e_151, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11352,12 +11128,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -11372,7 +11148,7 @@
         DonvihanhchinhServiceProxy.prototype.processRemovebyid = function (response) {
             var e_152, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11405,23 +11181,13 @@
         };
         return DonvihanhchinhServiceProxy;
     }());
-    DonvihanhchinhServiceProxy.ɵfac = function DonvihanhchinhServiceProxy_Factory(t) { return new (t || DonvihanhchinhServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    DonvihanhchinhServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DonvihanhchinhServiceProxy, factory: DonvihanhchinhServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DonvihanhchinhServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    DonvihanhchinhServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    DonvihanhchinhServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var DonvitinhduocphamServiceProxy = /** @class */ (function () {
         function DonvitinhduocphamServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -11441,7 +11207,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -11449,7 +11215,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -11465,7 +11231,7 @@
             var e_153, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11512,14 +11278,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -11535,7 +11301,7 @@
             var e_154, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11582,7 +11348,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -11590,7 +11356,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -11606,7 +11372,7 @@
             var e_155, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11656,7 +11422,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -11664,7 +11430,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -11680,7 +11446,7 @@
             var e_156, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11727,12 +11493,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -11747,7 +11513,7 @@
         DonvitinhduocphamServiceProxy.prototype.processRemovebyid = function (response) {
             var e_157, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11780,23 +11546,13 @@
         };
         return DonvitinhduocphamServiceProxy;
     }());
-    DonvitinhduocphamServiceProxy.ɵfac = function DonvitinhduocphamServiceProxy_Factory(t) { return new (t || DonvitinhduocphamServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    DonvitinhduocphamServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DonvitinhduocphamServiceProxy, factory: DonvitinhduocphamServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DonvitinhduocphamServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    DonvitinhduocphamServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    DonvitinhduocphamServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var DuocbenhvienServiceProxy = /** @class */ (function () {
         function DuocbenhvienServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -11816,14 +11572,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processBulkthongtinthaubyduocid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processBulkthongtinthaubyduocid(response_);
                     }
@@ -11838,7 +11594,7 @@
         DuocbenhvienServiceProxy.prototype.processBulkthongtinthaubyduocid = function (response) {
             var e_158, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11882,14 +11638,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processThongtinthaubyduocid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processThongtinthaubyduocid(response_);
                     }
@@ -11905,7 +11661,7 @@
             var e_159, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -11968,7 +11724,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -11976,7 +11732,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetpagedlistduocdungchung(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetpagedlistduocdungchung(response_);
                     }
@@ -11992,7 +11748,7 @@
             var e_161, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12039,14 +11795,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processThemthuoctudanhmucchung(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processThemthuoctudanhmucchung(response_);
                     }
@@ -12061,7 +11817,7 @@
         DuocbenhvienServiceProxy.prototype.processThemthuoctudanhmucchung = function (response) {
             var e_162, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12105,7 +11861,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -12113,7 +11869,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processExportexcelmaumacdinh(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processExportexcelmaumacdinh(response_);
                     }
@@ -12129,7 +11885,7 @@
             var e_163, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12176,7 +11932,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -12184,7 +11940,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processExportexcelmau917(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processExportexcelmau917(response_);
                     }
@@ -12200,7 +11956,7 @@
             var e_164, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12247,7 +12003,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -12255,7 +12011,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -12271,7 +12027,7 @@
             var e_165, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12321,7 +12077,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -12329,7 +12085,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -12345,7 +12101,7 @@
             var e_166, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12392,14 +12148,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -12415,7 +12171,7 @@
             var e_167, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12465,14 +12221,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processChecktrungvacxin(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processChecktrungvacxin(response_);
                     }
@@ -12488,7 +12244,7 @@
             var e_168, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12535,7 +12291,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -12543,7 +12299,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -12559,7 +12315,7 @@
             var e_169, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12606,12 +12362,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -12626,7 +12382,7 @@
         DuocbenhvienServiceProxy.prototype.processRemovebyid = function (response) {
             var e_170, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12659,23 +12415,13 @@
         };
         return DuocbenhvienServiceProxy;
     }());
-    DuocbenhvienServiceProxy.ɵfac = function DuocbenhvienServiceProxy_Factory(t) { return new (t || DuocbenhvienServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    DuocbenhvienServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DuocbenhvienServiceProxy, factory: DuocbenhvienServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DuocbenhvienServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    DuocbenhvienServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    DuocbenhvienServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var DuocthongtinthauServiceProxy = /** @class */ (function () {
         function DuocthongtinthauServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -12695,7 +12441,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -12703,7 +12449,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -12719,7 +12465,7 @@
             var e_171, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12766,14 +12512,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -12789,7 +12535,7 @@
             var e_172, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12836,7 +12582,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -12844,7 +12590,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -12860,7 +12606,7 @@
             var e_173, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12910,7 +12656,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -12918,7 +12664,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -12934,7 +12680,7 @@
             var e_174, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -12981,12 +12727,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -13001,7 +12747,7 @@
         DuocthongtinthauServiceProxy.prototype.processRemovebyid = function (response) {
             var e_175, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13034,23 +12780,13 @@
         };
         return DuocthongtinthauServiceProxy;
     }());
-    DuocthongtinthauServiceProxy.ɵfac = function DuocthongtinthauServiceProxy_Factory(t) { return new (t || DuocthongtinthauServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    DuocthongtinthauServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DuocthongtinthauServiceProxy, factory: DuocthongtinthauServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DuocthongtinthauServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    DuocthongtinthauServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    DuocthongtinthauServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var FileServiceProxy = /** @class */ (function () {
         function FileServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -13070,12 +12806,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processDownloadtempfile(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processDownloadtempfile(response_);
                     }
@@ -13090,7 +12826,7 @@
         FileServiceProxy.prototype.processDownloadtempfile = function (response) {
             var e_176, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13140,12 +12876,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processNhanvienimg(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processNhanvienimg(response_);
                     }
@@ -13160,7 +12896,7 @@
         FileServiceProxy.prototype.processNhanvienimg = function (response) {
             var e_177, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13207,14 +12943,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUploadanh(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUploadanh(response_);
                     }
@@ -13230,7 +12966,7 @@
             var e_178, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13274,14 +13010,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUploaexcel(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUploaexcel(response_);
                     }
@@ -13297,7 +13033,7 @@
             var e_179, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13333,23 +13069,13 @@
         };
         return FileServiceProxy;
     }());
-    FileServiceProxy.ɵfac = function FileServiceProxy_Factory(t) { return new (t || FileServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    FileServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: FileServiceProxy, factory: FileServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(FileServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    FileServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    FileServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var GetentitycommonServiceProxy = /** @class */ (function () {
         function GetentitycommonServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -13369,7 +13095,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -13377,7 +13103,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -13393,7 +13119,7 @@
             var e_180, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13429,23 +13155,13 @@
         };
         return GetentitycommonServiceProxy;
     }());
-    GetentitycommonServiceProxy.ɵfac = function GetentitycommonServiceProxy_Factory(t) { return new (t || GetentitycommonServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    GetentitycommonServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: GetentitycommonServiceProxy, factory: GetentitycommonServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(GetentitycommonServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    GetentitycommonServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    GetentitycommonServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var GiuongbenhServiceProxy = /** @class */ (function () {
         function GiuongbenhServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -13465,7 +13181,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -13473,7 +13189,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -13489,7 +13205,7 @@
             var e_181, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13539,7 +13255,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -13547,7 +13263,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -13563,7 +13279,7 @@
             var e_182, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13610,7 +13326,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -13618,7 +13334,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -13634,7 +13350,7 @@
             var e_183, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13681,14 +13397,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -13704,7 +13420,7 @@
             var e_184, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13751,12 +13467,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -13771,7 +13487,7 @@
         GiuongbenhServiceProxy.prototype.processRemovebyid = function (response) {
             var e_185, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13804,23 +13520,13 @@
         };
         return GiuongbenhServiceProxy;
     }());
-    GiuongbenhServiceProxy.ɵfac = function GiuongbenhServiceProxy_Factory(t) { return new (t || GiuongbenhServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    GiuongbenhServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: GiuongbenhServiceProxy, factory: GiuongbenhServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(GiuongbenhServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    GiuongbenhServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    GiuongbenhServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var HethongdanhmucServiceProxy = /** @class */ (function () {
         function HethongdanhmucServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -13840,7 +13546,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -13848,7 +13554,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -13864,7 +13570,7 @@
             var e_186, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13914,7 +13620,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -13922,7 +13628,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -13938,7 +13644,7 @@
             var e_187, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -13985,7 +13691,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -13993,7 +13699,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetListDictionaryByListTypeCode(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetListDictionaryByListTypeCode(response_);
                     }
@@ -14009,7 +13715,7 @@
             var e_188, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14072,7 +13778,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -14080,7 +13786,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -14096,7 +13802,7 @@
             var e_190, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14143,14 +13849,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -14166,7 +13872,7 @@
             var e_191, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14213,12 +13919,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -14233,7 +13939,7 @@
         HethongdanhmucServiceProxy.prototype.processRemovebyid = function (response) {
             var e_192, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14266,23 +13972,13 @@
         };
         return HethongdanhmucServiceProxy;
     }());
-    HethongdanhmucServiceProxy.ɵfac = function HethongdanhmucServiceProxy_Factory(t) { return new (t || HethongdanhmucServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    HethongdanhmucServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: HethongdanhmucServiceProxy, factory: HethongdanhmucServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(HethongdanhmucServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    HethongdanhmucServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    HethongdanhmucServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var HethongdanhmucdinhnghiaServiceProxy = /** @class */ (function () {
         function HethongdanhmucdinhnghiaServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -14299,12 +13995,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGettreeview(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGettreeview(response_);
                     }
@@ -14319,7 +14015,7 @@
         HethongdanhmucdinhnghiaServiceProxy.prototype.processGettreeview = function (response) {
             var e_193, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14363,7 +14059,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -14371,7 +14067,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -14387,7 +14083,7 @@
             var e_194, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14437,7 +14133,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -14445,7 +14141,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -14461,7 +14157,7 @@
             var e_195, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14508,12 +14204,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -14528,7 +14224,7 @@
         HethongdanhmucdinhnghiaServiceProxy.prototype.processRemovebyid = function (response) {
             var e_196, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14572,12 +14268,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyids(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyids(response_);
                     }
@@ -14592,7 +14288,7 @@
         HethongdanhmucdinhnghiaServiceProxy.prototype.processRemovebyids = function (response) {
             var e_197, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14636,7 +14332,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -14644,7 +14340,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -14660,7 +14356,7 @@
             var e_198, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14707,14 +14403,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -14730,7 +14426,7 @@
             var e_199, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14766,23 +14462,13 @@
         };
         return HethongdanhmucdinhnghiaServiceProxy;
     }());
-    HethongdanhmucdinhnghiaServiceProxy.ɵfac = function HethongdanhmucdinhnghiaServiceProxy_Factory(t) { return new (t || HethongdanhmucdinhnghiaServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    HethongdanhmucdinhnghiaServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: HethongdanhmucdinhnghiaServiceProxy, factory: HethongdanhmucdinhnghiaServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(HethongdanhmucdinhnghiaServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    HethongdanhmucdinhnghiaServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    HethongdanhmucdinhnghiaServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var HoatchatServiceProxy = /** @class */ (function () {
         function HoatchatServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -14802,7 +14488,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -14810,7 +14496,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -14826,7 +14512,7 @@
             var e_200, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14873,14 +14559,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -14896,7 +14582,7 @@
             var e_201, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -14943,7 +14629,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -14951,7 +14637,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -14967,7 +14653,7 @@
             var e_202, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15017,7 +14703,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -15025,7 +14711,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -15041,7 +14727,7 @@
             var e_203, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15088,12 +14774,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -15108,7 +14794,7 @@
         HoatchatServiceProxy.prototype.processRemovebyid = function (response) {
             var e_204, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15141,23 +14827,13 @@
         };
         return HoatchatServiceProxy;
     }());
-    HoatchatServiceProxy.ɵfac = function HoatchatServiceProxy_Factory(t) { return new (t || HoatchatServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    HoatchatServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: HoatchatServiceProxy, factory: HoatchatServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(HoatchatServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    HoatchatServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    HoatchatServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var ImportduocphamServiceProxy = /** @class */ (function () {
         function ImportduocphamServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -15177,7 +14853,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -15185,7 +14861,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processKiemtrathuoc(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processKiemtrathuoc(response_);
                     }
@@ -15201,7 +14877,7 @@
             var e_205, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15248,7 +14924,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -15256,7 +14932,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processInsertthuochople(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processInsertthuochople(response_);
                     }
@@ -15272,7 +14948,7 @@
             var e_206, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15319,7 +14995,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -15327,7 +15003,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdatethuochople(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdatethuochople(response_);
                     }
@@ -15343,7 +15019,7 @@
             var e_207, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15379,23 +15055,13 @@
         };
         return ImportduocphamServiceProxy;
     }());
-    ImportduocphamServiceProxy.ɵfac = function ImportduocphamServiceProxy_Factory(t) { return new (t || ImportduocphamServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    ImportduocphamServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: ImportduocphamServiceProxy, factory: ImportduocphamServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(ImportduocphamServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    ImportduocphamServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    ImportduocphamServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var KhangnguyenServiceProxy = /** @class */ (function () {
         function KhangnguyenServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -15415,7 +15081,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -15423,7 +15089,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -15439,7 +15105,7 @@
             var e_208, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15489,7 +15155,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -15497,7 +15163,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -15513,7 +15179,7 @@
             var e_209, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15557,14 +15223,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processComboboxdata(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processComboboxdata(response_);
                     }
@@ -15580,7 +15246,7 @@
             var e_210, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15643,14 +15309,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processChecktrungid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processChecktrungid(response_);
                     }
@@ -15666,7 +15332,7 @@
             var e_212, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15713,12 +15379,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -15733,7 +15399,7 @@
         KhangnguyenServiceProxy.prototype.processRemovebyid = function (response) {
             var e_213, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15774,14 +15440,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processListkhangnguyencombo(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processListkhangnguyencombo(response_);
                     }
@@ -15797,7 +15463,7 @@
             var e_214, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15860,14 +15526,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -15883,7 +15549,7 @@
             var e_216, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15930,7 +15596,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -15938,7 +15604,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -15954,7 +15620,7 @@
             var e_217, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -15990,23 +15656,13 @@
         };
         return KhangnguyenServiceProxy;
     }());
-    KhangnguyenServiceProxy.ɵfac = function KhangnguyenServiceProxy_Factory(t) { return new (t || KhangnguyenServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    KhangnguyenServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: KhangnguyenServiceProxy, factory: KhangnguyenServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(KhangnguyenServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    KhangnguyenServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    KhangnguyenServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var KhoduocServiceProxy = /** @class */ (function () {
         function KhoduocServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -16026,7 +15682,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16034,7 +15690,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -16050,7 +15706,7 @@
             var e_218, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16097,7 +15753,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16105,7 +15761,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -16121,7 +15777,7 @@
             var e_219, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16171,7 +15827,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16179,7 +15835,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -16195,7 +15851,7 @@
             var e_220, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16242,14 +15898,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -16265,7 +15921,7 @@
             var e_221, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16312,12 +15968,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -16332,7 +15988,7 @@
         KhoduocServiceProxy.prototype.processRemovebyid = function (response) {
             var e_222, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16365,23 +16021,13 @@
         };
         return KhoduocServiceProxy;
     }());
-    KhoduocServiceProxy.ɵfac = function KhoduocServiceProxy_Factory(t) { return new (t || KhoduocServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    KhoduocServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: KhoduocServiceProxy, factory: KhoduocServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(KhoduocServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    KhoduocServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    KhoduocServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var LoaiduocServiceProxy = /** @class */ (function () {
         function LoaiduocServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -16401,7 +16047,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16409,7 +16055,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -16425,7 +16071,7 @@
             var e_223, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16472,14 +16118,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -16495,7 +16141,7 @@
             var e_224, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16542,7 +16188,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16550,7 +16196,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -16566,7 +16212,7 @@
             var e_225, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16616,7 +16262,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16624,7 +16270,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -16640,7 +16286,7 @@
             var e_226, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16687,12 +16333,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -16707,7 +16353,7 @@
         LoaiduocServiceProxy.prototype.processRemovebyid = function (response) {
             var e_227, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16740,23 +16386,13 @@
         };
         return LoaiduocServiceProxy;
     }());
-    LoaiduocServiceProxy.ɵfac = function LoaiduocServiceProxy_Factory(t) { return new (t || LoaiduocServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    LoaiduocServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LoaiduocServiceProxy, factory: LoaiduocServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LoaiduocServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    LoaiduocServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    LoaiduocServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var LoaigiaServiceProxy = /** @class */ (function () {
         function LoaigiaServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -16776,7 +16412,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16784,7 +16420,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -16800,7 +16436,7 @@
             var e_228, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16850,7 +16486,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16858,7 +16494,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -16874,7 +16510,7 @@
             var e_229, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16921,7 +16557,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -16929,7 +16565,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -16945,7 +16581,7 @@
             var e_230, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -16992,14 +16628,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -17015,7 +16651,7 @@
             var e_231, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17062,12 +16698,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -17082,7 +16718,7 @@
         LoaigiaServiceProxy.prototype.processRemovebyid = function (response) {
             var e_232, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17115,23 +16751,13 @@
         };
         return LoaigiaServiceProxy;
     }());
-    LoaigiaServiceProxy.ɵfac = function LoaigiaServiceProxy_Factory(t) { return new (t || LoaigiaServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    LoaigiaServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LoaigiaServiceProxy, factory: LoaigiaServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LoaigiaServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    LoaigiaServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    LoaigiaServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var LoaivattuServiceProxy = /** @class */ (function () {
         function LoaivattuServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -17151,7 +16777,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -17159,7 +16785,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -17175,7 +16801,7 @@
             var e_233, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17222,14 +16848,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -17245,7 +16871,7 @@
             var e_234, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17292,7 +16918,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -17300,7 +16926,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -17316,7 +16942,7 @@
             var e_235, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17366,7 +16992,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -17374,7 +17000,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -17390,7 +17016,7 @@
             var e_236, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17437,12 +17063,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -17457,7 +17083,7 @@
         LoaivattuServiceProxy.prototype.processRemovebyid = function (response) {
             var e_237, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17490,23 +17116,13 @@
         };
         return LoaivattuServiceProxy;
     }());
-    LoaivattuServiceProxy.ɵfac = function LoaivattuServiceProxy_Factory(t) { return new (t || LoaivattuServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    LoaivattuServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: LoaivattuServiceProxy, factory: LoaivattuServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(LoaivattuServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    LoaivattuServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    LoaivattuServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var NhacungcapServiceProxy = /** @class */ (function () {
         function NhacungcapServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -17526,7 +17142,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -17534,7 +17150,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -17550,7 +17166,7 @@
             var e_238, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17600,7 +17216,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -17608,7 +17224,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -17624,7 +17240,7 @@
             var e_239, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17671,7 +17287,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -17679,7 +17295,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -17695,7 +17311,7 @@
             var e_240, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17742,14 +17358,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -17765,7 +17381,7 @@
             var e_241, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17812,12 +17428,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -17832,7 +17448,7 @@
         NhacungcapServiceProxy.prototype.processRemovebyid = function (response) {
             var e_242, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17865,23 +17481,13 @@
         };
         return NhacungcapServiceProxy;
     }());
-    NhacungcapServiceProxy.ɵfac = function NhacungcapServiceProxy_Factory(t) { return new (t || NhacungcapServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    NhacungcapServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: NhacungcapServiceProxy, factory: NhacungcapServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(NhacungcapServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    NhacungcapServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    NhacungcapServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var NhanlucServiceProxy = /** @class */ (function () {
         function NhanlucServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -17908,12 +17514,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUploadanh(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUploadanh(response_);
                     }
@@ -17928,7 +17534,7 @@
         NhanlucServiceProxy.prototype.processUploadanh = function (response) {
             var e_243, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -17972,14 +17578,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processNhanlucbybenhvienid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processNhanlucbybenhvienid(response_);
                     }
@@ -17995,7 +17601,7 @@
             var e_244, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18058,7 +17664,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -18066,7 +17672,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -18082,7 +17688,7 @@
             var e_246, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18129,14 +17735,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -18152,7 +17758,7 @@
             var e_247, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18199,7 +17805,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -18207,7 +17813,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -18223,7 +17829,7 @@
             var e_248, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18273,7 +17879,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -18281,7 +17887,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -18297,7 +17903,7 @@
             var e_249, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18344,12 +17950,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -18364,7 +17970,7 @@
         NhanlucServiceProxy.prototype.processRemovebyid = function (response) {
             var e_250, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18397,23 +18003,13 @@
         };
         return NhanlucServiceProxy;
     }());
-    NhanlucServiceProxy.ɵfac = function NhanlucServiceProxy_Factory(t) { return new (t || NhanlucServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    NhanlucServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: NhanlucServiceProxy, factory: NhanlucServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(NhanlucServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    NhanlucServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    NhanlucServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var NhomduocServiceProxy = /** @class */ (function () {
         function NhomduocServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -18433,7 +18029,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -18441,7 +18037,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -18457,7 +18053,7 @@
             var e_251, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18504,14 +18100,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -18527,7 +18123,7 @@
             var e_252, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18574,7 +18170,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -18582,7 +18178,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -18598,7 +18194,7 @@
             var e_253, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18648,7 +18244,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -18656,7 +18252,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -18672,7 +18268,7 @@
             var e_254, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18719,12 +18315,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -18739,7 +18335,7 @@
         NhomduocServiceProxy.prototype.processRemovebyid = function (response) {
             var e_255, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18772,23 +18368,13 @@
         };
         return NhomduocServiceProxy;
     }());
-    NhomduocServiceProxy.ɵfac = function NhomduocServiceProxy_Factory(t) { return new (t || NhomduocServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    NhomduocServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: NhomduocServiceProxy, factory: NhomduocServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(NhomduocServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    NhomduocServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    NhomduocServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var NhomdvktbhytServiceProxy = /** @class */ (function () {
         function NhomdvktbhytServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -18808,7 +18394,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -18816,7 +18402,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -18832,7 +18418,7 @@
             var e_256, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18879,14 +18465,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -18902,7 +18488,7 @@
             var e_257, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -18949,7 +18535,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -18957,7 +18543,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -18973,7 +18559,7 @@
             var e_258, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19023,7 +18609,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -19031,7 +18617,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -19047,7 +18633,7 @@
             var e_259, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19094,12 +18680,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -19114,7 +18700,7 @@
         NhomdvktbhytServiceProxy.prototype.processRemovebyid = function (response) {
             var e_260, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19147,23 +18733,13 @@
         };
         return NhomdvktbhytServiceProxy;
     }());
-    NhomdvktbhytServiceProxy.ɵfac = function NhomdvktbhytServiceProxy_Factory(t) { return new (t || NhomdvktbhytServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    NhomdvktbhytServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: NhomdvktbhytServiceProxy, factory: NhomdvktbhytServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(NhomdvktbhytServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    NhomdvktbhytServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    NhomdvktbhytServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var PermissionmanagementServiceProxy = /** @class */ (function () {
         function PermissionmanagementServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -19183,7 +18759,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -19191,7 +18767,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyrole(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyrole(response_);
                     }
@@ -19207,7 +18783,7 @@
             var e_261, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19243,23 +18819,13 @@
         };
         return PermissionmanagementServiceProxy;
     }());
-    PermissionmanagementServiceProxy.ɵfac = function PermissionmanagementServiceProxy_Factory(t) { return new (t || PermissionmanagementServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    PermissionmanagementServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: PermissionmanagementServiceProxy, factory: PermissionmanagementServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(PermissionmanagementServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    PermissionmanagementServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    PermissionmanagementServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var PhacdodieutriServiceProxy = /** @class */ (function () {
         function PhacdodieutriServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -19279,7 +18845,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -19287,7 +18853,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -19303,7 +18869,7 @@
             var e_262, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19350,14 +18916,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -19373,7 +18939,7 @@
             var e_263, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19420,7 +18986,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -19428,7 +18994,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -19444,7 +19010,7 @@
             var e_264, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19494,7 +19060,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -19502,7 +19068,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -19518,7 +19084,7 @@
             var e_265, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19565,12 +19131,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -19585,7 +19151,7 @@
         PhacdodieutriServiceProxy.prototype.processRemovebyid = function (response) {
             var e_266, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19618,23 +19184,13 @@
         };
         return PhacdodieutriServiceProxy;
     }());
-    PhacdodieutriServiceProxy.ɵfac = function PhacdodieutriServiceProxy_Factory(t) { return new (t || PhacdodieutriServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    PhacdodieutriServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: PhacdodieutriServiceProxy, factory: PhacdodieutriServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(PhacdodieutriServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    PhacdodieutriServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    PhacdodieutriServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var PhannhomduocServiceProxy = /** @class */ (function () {
         function PhannhomduocServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -19654,7 +19210,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -19662,7 +19218,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -19678,7 +19234,7 @@
             var e_267, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19725,14 +19281,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -19748,7 +19304,7 @@
             var e_268, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19795,7 +19351,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -19803,7 +19359,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -19819,7 +19375,7 @@
             var e_269, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19869,7 +19425,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -19877,7 +19433,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -19893,7 +19449,7 @@
             var e_270, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19940,12 +19496,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -19960,7 +19516,7 @@
         PhannhomduocServiceProxy.prototype.processRemovebyid = function (response) {
             var e_271, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -19993,23 +19549,13 @@
         };
         return PhannhomduocServiceProxy;
     }());
-    PhannhomduocServiceProxy.ɵfac = function PhannhomduocServiceProxy_Factory(t) { return new (t || PhannhomduocServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    PhannhomduocServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: PhannhomduocServiceProxy, factory: PhannhomduocServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(PhannhomduocServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    PhannhomduocServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    PhannhomduocServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var PhongbanServiceProxy = /** @class */ (function () {
         function PhongbanServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -20026,14 +19572,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processTreesource(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processTreesource(response_);
                     }
@@ -20049,7 +19595,7 @@
             var e_272, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20112,7 +19658,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -20120,7 +19666,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -20136,7 +19682,7 @@
             var e_274, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20183,14 +19729,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -20206,7 +19752,7 @@
             var e_275, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20253,7 +19799,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -20261,7 +19807,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -20277,7 +19823,7 @@
             var e_276, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20327,7 +19873,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -20335,7 +19881,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -20351,7 +19897,7 @@
             var e_277, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20398,12 +19944,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -20418,7 +19964,7 @@
         PhongbanServiceProxy.prototype.processRemovebyid = function (response) {
             var e_278, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20451,23 +19997,13 @@
         };
         return PhongbanServiceProxy;
     }());
-    PhongbanServiceProxy.ɵfac = function PhongbanServiceProxy_Factory(t) { return new (t || PhongbanServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    PhongbanServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: PhongbanServiceProxy, factory: PhongbanServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(PhongbanServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    PhongbanServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    PhongbanServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var SearchservercombodataServiceProxy = /** @class */ (function () {
         function SearchservercombodataServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -20487,7 +20023,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -20495,7 +20031,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processBenhicdselect(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processBenhicdselect(response_);
                     }
@@ -20511,7 +20047,7 @@
             var e_279, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20558,7 +20094,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -20566,7 +20102,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processBenhicdtable(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processBenhicdtable(response_);
                     }
@@ -20582,7 +20118,7 @@
             var e_280, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20618,23 +20154,13 @@
         };
         return SearchservercombodataServiceProxy;
     }());
-    SearchservercombodataServiceProxy.ɵfac = function SearchservercombodataServiceProxy_Factory(t) { return new (t || SearchservercombodataServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    SearchservercombodataServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: SearchservercombodataServiceProxy, factory: SearchservercombodataServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(SearchservercombodataServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    SearchservercombodataServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    SearchservercombodataServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var SelectoptionServiceProxy = /** @class */ (function () {
         function SelectoptionServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -20654,7 +20180,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain',
                     'Authorization': "Bearer " + localStorage.getItem('access_token')
@@ -20663,7 +20189,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetoptions(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetoptions(response_);
                     }
@@ -20679,7 +20205,7 @@
             var e_281, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20731,23 +20257,13 @@
         };
         return SelectoptionServiceProxy;
     }());
-    SelectoptionServiceProxy.ɵfac = function SelectoptionServiceProxy_Factory(t) { return new (t || SelectoptionServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    SelectoptionServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: SelectoptionServiceProxy, factory: SelectoptionServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(SelectoptionServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    SelectoptionServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    SelectoptionServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var SelectsearchserverServiceProxy = /** @class */ (function () {
         function SelectsearchserverServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -20767,7 +20283,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain',
                     'Authorization': "Bearer " + localStorage.getItem('access_token')
@@ -20776,7 +20292,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetoptions(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetoptions(response_);
                     }
@@ -20792,7 +20308,7 @@
             var e_283, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20828,23 +20344,13 @@
         };
         return SelectsearchserverServiceProxy;
     }());
-    SelectsearchserverServiceProxy.ɵfac = function SelectsearchserverServiceProxy_Factory(t) { return new (t || SelectsearchserverServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    SelectsearchserverServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: SelectsearchserverServiceProxy, factory: SelectsearchserverServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(SelectsearchserverServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    SelectsearchserverServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    SelectsearchserverServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var SokhamServiceProxy = /** @class */ (function () {
         function SokhamServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -20864,7 +20370,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -20872,7 +20378,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -20888,7 +20394,7 @@
             var e_284, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -20935,14 +20441,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -20958,7 +20464,7 @@
             var e_285, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21005,7 +20511,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -21013,7 +20519,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -21029,7 +20535,7 @@
             var e_286, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21079,7 +20585,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -21087,7 +20593,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -21103,7 +20609,7 @@
             var e_287, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21150,12 +20656,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -21170,7 +20676,7 @@
         SokhamServiceProxy.prototype.processRemovebyid = function (response) {
             var e_288, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21203,23 +20709,13 @@
         };
         return SokhamServiceProxy;
     }());
-    SokhamServiceProxy.ɵfac = function SokhamServiceProxy_Factory(t) { return new (t || SokhamServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    SokhamServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: SokhamServiceProxy, factory: SokhamServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(SokhamServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    SokhamServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    SokhamServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var StaticroleServiceProxy = /** @class */ (function () {
         function StaticroleServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -21239,7 +20735,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -21247,7 +20743,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -21263,7 +20759,7 @@
             var e_289, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21312,14 +20808,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -21335,7 +20831,7 @@
             var e_290, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21382,7 +20878,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -21390,7 +20886,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpsert(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpsert(response_);
                     }
@@ -21406,7 +20902,7 @@
             var e_291, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21453,7 +20949,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -21461,7 +20957,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSetpermissionableforadminrole(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSetpermissionableforadminrole(response_);
                     }
@@ -21477,7 +20973,7 @@
             var e_292, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21526,14 +21022,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetpermissionableforadminrole(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetpermissionableforadminrole(response_);
                     }
@@ -21549,7 +21045,7 @@
             var e_293, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21614,14 +21110,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processPermissionloaibenhvien(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processPermissionloaibenhvien(response_);
                     }
@@ -21637,7 +21133,7 @@
             var e_295, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21700,7 +21196,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -21708,7 +21204,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSetpermissionloaibenhvien(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSetpermissionloaibenhvien(response_);
                     }
@@ -21724,7 +21220,7 @@
             var e_297, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21760,23 +21256,13 @@
         };
         return StaticroleServiceProxy;
     }());
-    StaticroleServiceProxy.ɵfac = function StaticroleServiceProxy_Factory(t) { return new (t || StaticroleServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    StaticroleServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: StaticroleServiceProxy, factory: StaticroleServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(StaticroleServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    StaticroleServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    StaticroleServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var SysroleServiceProxy = /** @class */ (function () {
         function SysroleServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -21796,7 +21282,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -21804,7 +21290,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSetpermissionforsysrole(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSetpermissionforsysrole(response_);
                     }
@@ -21820,7 +21306,7 @@
             var e_298, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21869,14 +21355,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetpermissiongranted(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetpermissiongranted(response_);
                     }
@@ -21892,7 +21378,7 @@
             var e_299, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -21939,7 +21425,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -21947,7 +21433,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlistrolecoso(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlistrolecoso(response_);
                     }
@@ -21963,7 +21449,7 @@
             var e_300, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22010,7 +21496,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -22018,7 +21504,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpsertrolecoso(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpsertrolecoso(response_);
                     }
@@ -22034,7 +21520,7 @@
             var e_301, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22083,14 +21569,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -22106,7 +21592,7 @@
             var e_302, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22153,14 +21639,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processXoarolecoso(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processXoarolecoso(response_);
                     }
@@ -22176,7 +21662,7 @@
             var e_303, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22212,23 +21698,13 @@
         };
         return SysroleServiceProxy;
     }());
-    SysroleServiceProxy.ɵfac = function SysroleServiceProxy_Factory(t) { return new (t || SysroleServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    SysroleServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: SysroleServiceProxy, factory: SysroleServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(SysroleServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    SysroleServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    SysroleServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var TaikhoanadminServiceProxy = /** @class */ (function () {
         function TaikhoanadminServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -22248,7 +21724,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -22256,7 +21732,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -22272,7 +21748,7 @@
             var e_304, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22316,14 +21792,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetsysroleadmincoso(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetsysroleadmincoso(response_);
                     }
@@ -22339,7 +21815,7 @@
             var e_305, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22402,7 +21878,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -22410,7 +21886,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processTaotaikhoanadmincoso(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processTaotaikhoanadmincoso(response_);
                     }
@@ -22426,7 +21902,7 @@
             var e_307, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22473,7 +21949,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -22481,7 +21957,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCapnhapthongtin(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCapnhapthongtin(response_);
                     }
@@ -22497,7 +21973,7 @@
             var e_308, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22544,7 +22020,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -22552,7 +22028,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processDoimatkhau(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processDoimatkhau(response_);
                     }
@@ -22568,7 +22044,7 @@
             var e_309, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22615,14 +22091,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processXoataikhoan(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processXoataikhoan(response_);
                     }
@@ -22638,7 +22114,7 @@
             var e_310, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22685,14 +22161,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processLock(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processLock(response_);
                     }
@@ -22708,7 +22184,7 @@
             var e_311, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22755,14 +22231,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUnlock(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUnlock(response_);
                     }
@@ -22778,7 +22254,7 @@
             var e_312, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22814,23 +22290,13 @@
         };
         return TaikhoanadminServiceProxy;
     }());
-    TaikhoanadminServiceProxy.ɵfac = function TaikhoanadminServiceProxy_Factory(t) { return new (t || TaikhoanadminServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    TaikhoanadminServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: TaikhoanadminServiceProxy, factory: TaikhoanadminServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(TaikhoanadminServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    TaikhoanadminServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    TaikhoanadminServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var TaikhoancosoServiceProxy = /** @class */ (function () {
         function TaikhoancosoServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -22850,7 +22316,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -22858,7 +22324,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -22874,7 +22340,7 @@
             var e_313, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22921,7 +22387,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -22929,7 +22395,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processTaotaikhoancoso(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processTaotaikhoancoso(response_);
                     }
@@ -22945,7 +22411,7 @@
             var e_314, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -22992,7 +22458,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -23000,7 +22466,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCapnhapthongtin(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCapnhapthongtin(response_);
                     }
@@ -23016,7 +22482,7 @@
             var e_315, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23065,14 +22531,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -23088,7 +22554,7 @@
             var e_316, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23132,14 +22598,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetdanhsachrole(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetdanhsachrole(response_);
                     }
@@ -23155,7 +22621,7 @@
             var e_317, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23218,7 +22684,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -23226,7 +22692,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSetroleforuser(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSetroleforuser(response_);
                     }
@@ -23242,7 +22708,7 @@
             var e_319, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23291,14 +22757,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetuserrole(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetuserrole(response_);
                     }
@@ -23314,7 +22780,7 @@
             var e_320, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23377,7 +22843,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -23385,7 +22851,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processDoimatkhau(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processDoimatkhau(response_);
                     }
@@ -23401,7 +22867,7 @@
             var e_322, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23445,14 +22911,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlistcauhinhsysappprivate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlistcauhinhsysappprivate(response_);
                     }
@@ -23468,7 +22934,7 @@
             var e_323, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23517,14 +22983,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlistdacauhinhsysapp(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlistdacauhinhsysapp(response_);
                     }
@@ -23540,7 +23006,7 @@
             var e_324, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23603,7 +23069,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -23611,7 +23077,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processLuusysappprivateroleuser(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processLuusysappprivateroleuser(response_);
                     }
@@ -23627,7 +23093,7 @@
             var e_326, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23674,14 +23140,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processXoataikhoan(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processXoataikhoan(response_);
                     }
@@ -23697,7 +23163,7 @@
             var e_327, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23744,14 +23210,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processLock(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processLock(response_);
                     }
@@ -23767,7 +23233,7 @@
             var e_328, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23814,14 +23280,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUnlock(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUnlock(response_);
                     }
@@ -23837,7 +23303,7 @@
             var e_329, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23873,23 +23339,13 @@
         };
         return TaikhoancosoServiceProxy;
     }());
-    TaikhoancosoServiceProxy.ɵfac = function TaikhoancosoServiceProxy_Factory(t) { return new (t || TaikhoancosoServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    TaikhoancosoServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: TaikhoancosoServiceProxy, factory: TaikhoancosoServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(TaikhoancosoServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    TaikhoancosoServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    TaikhoancosoServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var ThamsobenhvienServiceProxy = /** @class */ (function () {
         function ThamsobenhvienServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -23909,14 +23365,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdatevalue(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdatevalue(response_);
                     }
@@ -23931,7 +23387,7 @@
         ThamsobenhvienServiceProxy.prototype.processUpdatevalue = function (response) {
             var e_330, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -23975,14 +23431,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdatechanged(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdatechanged(response_);
                     }
@@ -23997,7 +23453,7 @@
         ThamsobenhvienServiceProxy.prototype.processUpdatechanged = function (response) {
             var e_331, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24038,14 +23494,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processDongbothamsohethong(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processDongbothamsohethong(response_);
                     }
@@ -24061,7 +23517,7 @@
             var e_332, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24110,14 +23566,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCauhinhthamsohethong(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCauhinhthamsohethong(response_);
                     }
@@ -24133,7 +23589,7 @@
             var e_333, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24180,7 +23636,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -24188,7 +23644,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -24204,7 +23660,7 @@
             var e_334, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24251,14 +23707,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -24274,7 +23730,7 @@
             var e_335, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24321,7 +23777,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -24329,7 +23785,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -24345,7 +23801,7 @@
             var e_336, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24395,7 +23851,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -24403,7 +23859,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -24419,7 +23875,7 @@
             var e_337, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24466,12 +23922,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -24486,7 +23942,7 @@
         ThamsobenhvienServiceProxy.prototype.processRemovebyid = function (response) {
             var e_338, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24519,23 +23975,13 @@
         };
         return ThamsobenhvienServiceProxy;
     }());
-    ThamsobenhvienServiceProxy.ɵfac = function ThamsobenhvienServiceProxy_Factory(t) { return new (t || ThamsobenhvienServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    ThamsobenhvienServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: ThamsobenhvienServiceProxy, factory: ThamsobenhvienServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(ThamsobenhvienServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    ThamsobenhvienServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    ThamsobenhvienServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var ThamsohethongServiceProxy = /** @class */ (function () {
         function ThamsohethongServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -24555,7 +24001,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -24563,7 +24009,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -24579,7 +24025,7 @@
             var e_339, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24626,14 +24072,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -24649,7 +24095,7 @@
             var e_340, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24696,7 +24142,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -24704,7 +24150,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -24720,7 +24166,7 @@
             var e_341, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24770,7 +24216,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -24778,7 +24224,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -24794,7 +24240,7 @@
             var e_342, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24841,12 +24287,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -24861,7 +24307,7 @@
         ThamsohethongServiceProxy.prototype.processRemovebyid = function (response) {
             var e_343, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -24894,23 +24340,13 @@
         };
         return ThamsohethongServiceProxy;
     }());
-    ThamsohethongServiceProxy.ɵfac = function ThamsohethongServiceProxy_Factory(t) { return new (t || ThamsohethongServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    ThamsohethongServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: ThamsohethongServiceProxy, factory: ThamsohethongServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(ThamsohethongServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    ThamsohethongServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    ThamsohethongServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var ThietbiServiceProxy = /** @class */ (function () {
         function ThietbiServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -24930,7 +24366,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -24938,7 +24374,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -24954,7 +24390,7 @@
             var e_344, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25001,14 +24437,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -25024,7 +24460,7 @@
             var e_345, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25071,7 +24507,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -25079,7 +24515,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -25095,7 +24531,7 @@
             var e_346, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25145,7 +24581,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -25153,7 +24589,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -25169,7 +24605,7 @@
             var e_347, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25216,12 +24652,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -25236,7 +24672,7 @@
         ThietbiServiceProxy.prototype.processRemovebyid = function (response) {
             var e_348, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25269,23 +24705,13 @@
         };
         return ThietbiServiceProxy;
     }());
-    ThietbiServiceProxy.ɵfac = function ThietbiServiceProxy_Factory(t) { return new (t || ThietbiServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    ThietbiServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: ThietbiServiceProxy, factory: ThietbiServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(ThietbiServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    ThietbiServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    ThietbiServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var TienteServiceProxy = /** @class */ (function () {
         function TienteServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -25305,7 +24731,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -25313,7 +24739,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -25329,7 +24755,7 @@
             var e_349, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25379,7 +24805,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -25387,7 +24813,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -25403,7 +24829,7 @@
             var e_350, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25450,7 +24876,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -25458,7 +24884,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -25474,7 +24900,7 @@
             var e_351, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25521,14 +24947,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -25544,7 +24970,7 @@
             var e_352, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25591,12 +25017,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -25611,7 +25037,7 @@
         TienteServiceProxy.prototype.processRemovebyid = function (response) {
             var e_353, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25644,23 +25070,13 @@
         };
         return TienteServiceProxy;
     }());
-    TienteServiceProxy.ɵfac = function TienteServiceProxy_Factory(t) { return new (t || TienteServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    TienteServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: TienteServiceProxy, factory: TienteServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(TienteServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    TienteServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    TienteServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var TientetygiaServiceProxy = /** @class */ (function () {
         function TientetygiaServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -25680,7 +25096,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -25688,7 +25104,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -25704,7 +25120,7 @@
             var e_354, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25751,14 +25167,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -25774,7 +25190,7 @@
             var e_355, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25821,7 +25237,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -25829,7 +25245,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -25845,7 +25261,7 @@
             var e_356, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25895,7 +25311,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -25903,7 +25319,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -25919,7 +25335,7 @@
             var e_357, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -25966,12 +25382,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -25986,7 +25402,7 @@
         TientetygiaServiceProxy.prototype.processRemovebyid = function (response) {
             var e_358, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26019,23 +25435,13 @@
         };
         return TientetygiaServiceProxy;
     }());
-    TientetygiaServiceProxy.ɵfac = function TientetygiaServiceProxy_Factory(t) { return new (t || TientetygiaServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    TientetygiaServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: TientetygiaServiceProxy, factory: TientetygiaServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(TientetygiaServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    TientetygiaServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    TientetygiaServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var ToathuocmauServiceProxy = /** @class */ (function () {
         function ToathuocmauServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -26055,7 +25461,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -26063,7 +25469,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -26079,7 +25485,7 @@
             var e_359, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26126,14 +25532,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -26149,7 +25555,7 @@
             var e_360, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26196,7 +25602,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -26204,7 +25610,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -26220,7 +25626,7 @@
             var e_361, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26270,7 +25676,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -26278,7 +25684,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -26294,7 +25700,7 @@
             var e_362, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26341,12 +25747,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -26361,7 +25767,7 @@
         ToathuocmauServiceProxy.prototype.processRemovebyid = function (response) {
             var e_363, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26394,23 +25800,13 @@
         };
         return ToathuocmauServiceProxy;
     }());
-    ToathuocmauServiceProxy.ɵfac = function ToathuocmauServiceProxy_Factory(t) { return new (t || ToathuocmauServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    ToathuocmauServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: ToathuocmauServiceProxy, factory: ToathuocmauServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(ToathuocmauServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    ToathuocmauServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    ToathuocmauServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var ToathuocmauchitietServiceProxy = /** @class */ (function () {
         function ToathuocmauchitietServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -26430,12 +25826,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebycode(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebycode(response_);
                     }
@@ -26450,7 +25846,7 @@
         ToathuocmauchitietServiceProxy.prototype.processRemovebycode = function (response) {
             var e_364, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26494,14 +25890,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCheckcode(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCheckcode(response_);
                     }
@@ -26517,7 +25913,7 @@
             var e_365, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26564,7 +25960,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -26572,7 +25968,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSavetoathuocmauchitiet(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSavetoathuocmauchitiet(response_);
                     }
@@ -26588,7 +25984,7 @@
             var e_366, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26635,7 +26031,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -26643,7 +26039,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -26659,7 +26055,7 @@
             var e_367, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26706,14 +26102,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -26729,7 +26125,7 @@
             var e_368, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26776,7 +26172,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -26784,7 +26180,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -26800,7 +26196,7 @@
             var e_369, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26850,7 +26246,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -26858,7 +26254,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -26874,7 +26270,7 @@
             var e_370, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26921,12 +26317,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -26941,7 +26337,7 @@
         ToathuocmauchitietServiceProxy.prototype.processRemovebyid = function (response) {
             var e_371, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -26974,23 +26370,13 @@
         };
         return ToathuocmauchitietServiceProxy;
     }());
-    ToathuocmauchitietServiceProxy.ɵfac = function ToathuocmauchitietServiceProxy_Factory(t) { return new (t || ToathuocmauchitietServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    ToathuocmauchitietServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: ToathuocmauchitietServiceProxy, factory: ToathuocmauchitietServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(ToathuocmauchitietServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    ToathuocmauchitietServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    ToathuocmauchitietServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var UserextensionServiceProxy = /** @class */ (function () {
         function UserextensionServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -27007,14 +26393,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUsersession(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUsersession(response_);
                     }
@@ -27030,7 +26416,7 @@
             var e_372, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27074,12 +26460,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processClearusersessioncache(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processClearusersessioncache(response_);
                     }
@@ -27094,7 +26480,7 @@
         UserextensionServiceProxy.prototype.processClearusersessioncache = function (response) {
             var e_373, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27138,12 +26524,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processSwitchbenhvienid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processSwitchbenhvienid(response_);
                     }
@@ -27158,7 +26544,7 @@
         UserextensionServiceProxy.prototype.processSwitchbenhvienid = function (response) {
             var e_374, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27191,23 +26577,13 @@
         };
         return UserextensionServiceProxy;
     }());
-    UserextensionServiceProxy.ɵfac = function UserextensionServiceProxy_Factory(t) { return new (t || UserextensionServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    UserextensionServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: UserextensionServiceProxy, factory: UserextensionServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(UserextensionServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    UserextensionServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    UserextensionServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var VacxinServiceProxy = /** @class */ (function () {
         function VacxinServiceProxy(http, baseUrl) {
             this.jsonParseReviver = undefined;
@@ -27227,7 +26603,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -27235,7 +26611,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetlist(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetlist(response_);
                     }
@@ -27251,7 +26627,7 @@
             var e_375, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27298,14 +26674,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processGetbyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processGetbyid(response_);
                     }
@@ -27321,7 +26697,7 @@
             var e_376, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27368,7 +26744,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -27376,7 +26752,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processCreate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processCreate(response_);
                     }
@@ -27392,7 +26768,7 @@
             var e_377, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27442,7 +26818,7 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json',
                     'Accept': 'text/plain'
                 })
@@ -27450,7 +26826,7 @@
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processUpdate(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processUpdate(response_);
                     }
@@ -27466,7 +26842,7 @@
             var e_378, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27513,14 +26889,14 @@
                 body: content_,
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Content-Type': 'application/json-patch+json'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processEditvacxinkhangnguyen(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processEditvacxinkhangnguyen(response_);
                     }
@@ -27535,7 +26911,7 @@
         VacxinServiceProxy.prototype.processEditvacxinkhangnguyen = function (response) {
             var e_379, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27579,14 +26955,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processChecktrungid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processChecktrungid(response_);
                     }
@@ -27602,7 +26978,7 @@
             var e_380, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27649,12 +27025,12 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({})
+                headers: new http.HttpHeaders({})
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processRemovebyid(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processRemovebyid(response_);
                     }
@@ -27669,7 +27045,7 @@
         VacxinServiceProxy.prototype.processRemovebyid = function (response) {
             var e_381, _a;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27710,14 +27086,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('get', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processComboboxdata(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processComboboxdata(response_);
                     }
@@ -27733,7 +27109,7 @@
             var e_382, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27793,14 +27169,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processVacxinextend(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processVacxinextend(response_);
                     }
@@ -27816,7 +27192,7 @@
             var e_384, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27881,14 +27257,14 @@
             var options_ = {
                 observe: 'response',
                 responseType: 'blob',
-                headers: new i1.HttpHeaders({
+                headers: new http.HttpHeaders({
                     'Accept': 'text/plain'
                 })
             };
             return this.http.request('post', url_, options_).pipe(operators.mergeMap(function (response_) {
                 return _this.processVacxinlapkehoach(response_);
             })).pipe(operators.catchError(function (response_) {
-                if (response_ instanceof i1.HttpResponseBase) {
+                if (response_ instanceof http.HttpResponseBase) {
                     try {
                         return _this.processVacxinlapkehoach(response_);
                     }
@@ -27904,7 +27280,7 @@
             var e_386, _a;
             var _this = this;
             var status = response.status;
-            var responseBlob = response instanceof i1.HttpResponse ? response.body :
+            var responseBlob = response instanceof http.HttpResponse ? response.body :
                 response.error instanceof Blob ? response.error : undefined;
             var _headers = {};
             if (response.headers) {
@@ -27956,23 +27332,13 @@
         };
         return VacxinServiceProxy;
     }());
-    VacxinServiceProxy.ɵfac = function VacxinServiceProxy_Factory(t) { return new (t || VacxinServiceProxy)(i0__namespace.ɵɵinject(i1.HttpClient), i0__namespace.ɵɵinject(API_BASE_URL, 8)); };
-    VacxinServiceProxy.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: VacxinServiceProxy, factory: VacxinServiceProxy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(VacxinServiceProxy, [{
-                type: i0.Injectable
-            }], function () {
-            return [{ type: i1__namespace.HttpClient, decorators: [{
-                            type: i0.Inject,
-                            args: [i1.HttpClient]
-                        }] }, { type: undefined, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.Inject,
-                            args: [API_BASE_URL]
-                        }] }];
-        }, null);
-    })();
+    VacxinServiceProxy.decorators = [
+        { type: i0.Injectable }
+    ];
+    VacxinServiceProxy.ctorParameters = function () { return [
+        { type: http.HttpClient, decorators: [{ type: i0.Inject, args: [http.HttpClient,] }] },
+        { type: String, decorators: [{ type: i0.Optional }, { type: i0.Inject, args: [API_BASE_URL,] }] }
+    ]; };
     var ControllerInterfaceApiDescriptionModel = /** @class */ (function () {
         function ControllerInterfaceApiDescriptionModel(data) {
             if (data) {
@@ -40665,470 +40031,6 @@
         });
     }
 
-    var DestroyRxjsService = /** @class */ (function (_super) {
-        __extends(DestroyRxjsService, _super);
-        function DestroyRxjsService() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        DestroyRxjsService.prototype.ngOnDestroy = function () {
-            this.next();
-            this.complete();
-        };
-        return DestroyRxjsService;
-    }(rxjs.Subject));
-    DestroyRxjsService.ɵfac = function DestroyRxjsService_Factory(t) { return ɵDestroyRxjsService_BaseFactory(t || DestroyRxjsService); };
-    DestroyRxjsService.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: DestroyRxjsService, factory: DestroyRxjsService.ɵfac });
-    var ɵDestroyRxjsService_BaseFactory = /*@__PURE__*/ i0__namespace.ɵɵgetInheritedFactory(DestroyRxjsService);
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DestroyRxjsService, [{
-                type: i0.Injectable
-            }], null, null);
-    })();
-
-    var OfValidatorService = /** @class */ (function () {
-        function OfValidatorService() {
-        }
-        OfValidatorService.prototype.noWhitespaceValidator = function (control) {
-            if (AppUtilityService.isNullOrEmpty(control.value)) {
-                return { whiteSpace: true };
-            }
-            var v = '' + control.value;
-            var isWhitespace = v.trim().length === 0;
-            var isValid = !isWhitespace;
-            return isValid ? null : { whiteSpace: true };
-        };
-        OfValidatorService.prototype.emailValidator = function (control) {
-            var value = (control === null || control === void 0 ? void 0 : control.value) || '';
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            var isValid = re.test(value);
-            return isValid ? null : { email: true };
-        };
-        OfValidatorService.prototype.passwordValidator = function (control) {
-            var value = (control === null || control === void 0 ? void 0 : control.value) || '';
-            var check = value.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/);
-            var isValid = !!check;
-            return isValid ? null : { password: true };
-        };
-        OfValidatorService.prototype.phoneValidator = function (control) {
-            var value = (control === null || control === void 0 ? void 0 : control.value) || '';
-            var check = value.match(/(09|01[2|6|8|9])+([0-9]{8})\b/);
-            var isValid = !!check;
-            return isValid ? null : { phone: true };
-        };
-        OfValidatorService.prototype.focusControlItem = function (id) {
-            var arr = $__namespace('#' + id).find('.ord-form-control');
-            var flag = true;
-            arr.each(function () {
-                var txt = $__namespace(this).find('.form-control-err').text();
-                if (txt) {
-                    txt = txt.replace(/ /g, '');
-                }
-                if (flag && AppUtilityService.isNotNull(txt)) {
-                    $__namespace(this).find('.ord-dynamic-input').focus();
-                    $__namespace(this).find('.ant-input-number-input').focus();
-                    $__namespace(this).find('.ant-input').focus();
-                    $__namespace(this).find('.ant-select-selection-search-input').focus();
-                    if ($__namespace(this).find('.ant-radio-input')[0]) {
-                        $__namespace(this).find('.ant-radio-input')[0].focus();
-                    }
-                    flag = false;
-                }
-            });
-        };
-        OfValidatorService.prototype.focusFirst = function (id) {
-            var arr = $__namespace('#' + id).find('.ord-form-control');
-            var flag = true;
-            arr.each(function () {
-                if (flag) {
-                    $__namespace(this).find('.ord-dynamic-input').focus();
-                    $__namespace(this).find('.ant-input-number-input').focus();
-                    $__namespace(this).find('.ant-input').focus();
-                    $__namespace(this).find('.ant-select-selection-search-input').focus();
-                    if ($__namespace(this).find('.ant-radio-input')[0]) {
-                        $__namespace(this).find('.ant-radio-input')[0].focus();
-                    }
-                    flag = false;
-                }
-            });
-        };
-        return OfValidatorService;
-    }());
-    OfValidatorService.ɵfac = function OfValidatorService_Factory(t) { return new (t || OfValidatorService)(); };
-    OfValidatorService.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: OfValidatorService, factory: OfValidatorService.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfValidatorService, [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root'
-                    }]
-            }], function () { return []; }, null);
-    })();
-
-    var OfCreateControlFormService = /** @class */ (function () {
-        function OfCreateControlFormService(fb, validatorService) {
-            this.fb = fb;
-            this.validatorService = validatorService;
-        }
-        OfCreateControlFormService.prototype.createControl = function (fields) {
-            var _this = this;
-            var group = this.fb.group({});
-            ___namespace.forEach(fields, function (field) {
-                _this.createField(field, group);
-            });
-            return group;
-        };
-        OfCreateControlFormService.prototype.createExtendControl = function (group, controls) {
-            var _this = this;
-            ___namespace.forEach(controls, function (field) {
-                var f = group.get(field.dataField);
-                if (f) {
-                    return;
-                }
-                _this.createValidations(field);
-                var control = _this.fb.control(field.value, _this.bindValidations(field));
-                if (field.disabled) {
-                    control.disable({ onlySelf: true });
-                }
-                group.addControl(field.dataField, control);
-            });
-        };
-        OfCreateControlFormService.prototype.updateControl = function (fields, group) {
-            var _this = this;
-            Object.keys(group.controls).forEach(function (key) {
-                var fDataField = fields.find(function (x) { return x.dataField === key; });
-                if (!fDataField) {
-                    group.removeControl(key);
-                }
-            });
-            ___namespace.forEach(fields, function (field) {
-                var f = group.get(field.dataField);
-                if (f) {
-                    return;
-                }
-                _this.createField(field, group);
-            });
-        };
-        OfCreateControlFormService.prototype.createField = function (field, group) {
-            var ignoreType = ['contentHtml', 'componentRef', 'templateRef'];
-            if (ignoreType.indexOf(field.type) > 0) {
-                return;
-            }
-            this.createValidations(field);
-            var control = this.fb.control(field.value, this.bindValidations(field));
-            if (field.disabled) {
-                control.disable({ onlySelf: true });
-            }
-            group.addControl(field.dataField, control);
-        };
-        OfCreateControlFormService.prototype.createValidations = function (field) {
-            var _this = this;
-            field.validations = field.validations || [];
-            field.validations.forEach(function (valid) {
-                if (valid.name === 'email') {
-                    valid.validator = _this.validatorService.emailValidator;
-                    valid.message = valid.message || 'Email sai định dạng!';
-                    return;
-                }
-                if (valid.name === 'phone') {
-                    valid.validator = _this.validatorService.phoneValidator;
-                    valid.message = valid.message || 'Số điện thoại không đúng định dạng!';
-                    return;
-                }
-                if (valid.name === 'password') {
-                    valid.validator = _this.validatorService.passwordValidator;
-                    valid.message = valid.message || 'Mật khẩu tối thiểu 8 ký tự, bao gồm chữ in hoa/ thường , số và ký tự đặc biệt!';
-                    return;
-                }
-            });
-            if (field.required) {
-                field.validations.push({
-                    name: 'whiteSpace',
-                    validator: this.validatorService.noWhitespaceValidator,
-                    message: field.errorEmpty
-                });
-            }
-        };
-        OfCreateControlFormService.prototype.bindValidations = function (field) {
-            var validations = field.validations || [];
-            if (validations.length > 0) {
-                var validList_1 = [];
-                validations.forEach(function (valid) {
-                    validList_1.push(valid.validator);
-                });
-                return i1$1.Validators.compose(validList_1);
-            }
-            return null;
-        };
-        return OfCreateControlFormService;
-    }());
-    OfCreateControlFormService.ɵfac = function OfCreateControlFormService_Factory(t) { return new (t || OfCreateControlFormService)(i0__namespace.ɵɵinject(i1__namespace$1.FormBuilder), i0__namespace.ɵɵinject(OfValidatorService)); };
-    OfCreateControlFormService.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: OfCreateControlFormService, factory: OfCreateControlFormService.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfCreateControlFormService, [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root'
-                    }]
-            }], function () { return [{ type: i1__namespace$1.FormBuilder }, { type: OfValidatorService }]; }, null);
-    })();
-
-    function OfDynamicComponent_ng_container_3_div_1_Template(rf, ctx) {
-        if (rf & 1) {
-            var _r5_1 = i0__namespace.ɵɵgetCurrentView();
-            i0__namespace.ɵɵelementStart(0, "div", 5);
-            i0__namespace.ɵɵelementStart(1, "nz-form-label", 6);
-            i0__namespace.ɵɵelement(2, "span", 7);
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelementStart(3, "div", 8);
-            i0__namespace.ɵɵlistener("searchEvent", function OfDynamicComponent_ng_container_3_div_1_Template_div_searchEvent_3_listener($event) { i0__namespace.ɵɵrestoreView(_r5_1); var ctx_r4 = i0__namespace.ɵɵnextContext(2); return ctx_r4.searchEvent.emit($event); });
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelementStart(4, "span", 9);
-            i0__namespace.ɵɵtext(5);
-            i0__namespace.ɵɵpipe(6, "showValidationError");
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelement(7, "div", 7);
-            i0__namespace.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var field_r2 = i0__namespace.ɵɵnextContext().$implicit;
-            var ctx_r3 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("nzSpan", field_r2.width)("ngClass", field_r2.css);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("nzRequired", field_r2.required)("hidden", field_r2.hiddenLabel);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("innerHTML", field_r2.label, i0__namespace.ɵɵsanitizeHtml);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("schemaModel", ctx_r3.schemaModel)("field", field_r2)("group", ctx_r3.form)("ofFieldTempates", ctx_r3.ofFieldTempates);
-            i0__namespace.ɵɵadvance(2);
-            i0__namespace.ɵɵtextInterpolate1(" ", i0__namespace.ɵɵpipeBind3(6, 11, ctx_r3.form.controls[field_r2.dataField] == null ? null : ctx_r3.form.controls[field_r2.dataField].errors, field_r2 == null ? null : field_r2.validations, ctx_r3.schemaModel.submitted), " ");
-            i0__namespace.ɵɵadvance(2);
-            i0__namespace.ɵɵproperty("innerHTML", field_r2.bottomHtml, i0__namespace.ɵɵsanitizeHtml);
-        }
-    }
-    function OfDynamicComponent_ng_container_3_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelementContainerStart(0);
-            i0__namespace.ɵɵtemplate(1, OfDynamicComponent_ng_container_3_div_1_Template, 8, 15, "div", 4);
-            i0__namespace.ɵɵelementContainerEnd();
-        }
-        if (rf & 2) {
-            var field_r2 = ctx.$implicit;
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("ngIf", !field_r2.hidden);
-        }
-    }
-    function OfDynamicComponent_div_4_Template(rf, ctx) {
-        if (rf & 1) {
-            var _r8_1 = i0__namespace.ɵɵgetCurrentView();
-            i0__namespace.ɵɵelementStart(0, "div", 10);
-            i0__namespace.ɵɵelementStart(1, "button", 11);
-            i0__namespace.ɵɵlistener("click", function OfDynamicComponent_div_4_Template_button_click_1_listener() { i0__namespace.ɵɵrestoreView(_r8_1); var ctx_r7 = i0__namespace.ɵɵnextContext(); return ctx_r7.onClickSearchBtn(); });
-            i0__namespace.ɵɵtext(2, "T\u00ECm ki\u1EBFm ");
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var ctx_r1 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("nzSpan", 2);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("nzLoading", ctx_r1.schemaModel.searchBtnBusy);
-        }
-    }
-    var _c0$7 = [[["", "topContent", ""]], [["", "bottomContent", ""]]];
-    var _c1$2 = function () { return [18, 6]; };
-    var _c2$1 = ["[topContent]", "[bottomContent]"];
-    var OfDynamicComponent = /** @class */ (function () {
-        function OfDynamicComponent(fb, createCtrlService, validatorService, destroy$) {
-            this.fb = fb;
-            this.createCtrlService = createCtrlService;
-            this.validatorService = validatorService;
-            this.destroy$ = destroy$;
-            this.submitValueEvent = new i0.EventEmitter();
-            this.searchEvent = new i0.EventEmitter();
-            this.fields = [];
-            this.ofFieldTempates = [];
-        }
-        Object.defineProperty(OfDynamicComponent.prototype, "value", {
-            get: function () {
-                var _a;
-                return (_a = this.form) === null || _a === void 0 ? void 0 : _a.getRawValue();
-            },
-            enumerable: false,
-            configurable: true
-        });
-        OfDynamicComponent.prototype.ngOnInit = function () {
-            this.fields = this.schemaModel.fields || [];
-            this.form = this.createCtrlService.createControl(this.fields);
-            this.schemaModel.form = this.form;
-            this.init$();
-        };
-        OfDynamicComponent.prototype.reBuilderForm = function () {
-            this.fields = this.schemaModel.fields || [];
-            this.createCtrlService.updateControl(this.fields, this.form);
-            this.schemaModel.form = this.form;
-        };
-        OfDynamicComponent.prototype.init$ = function () {
-            var _this = this;
-            this.schemaModel.rebuilder$.pipe(operators.takeUntil(this.destroy$), operators.distinctUntilChanged(), operators.filter(function (x) { return x > 0; }))
-                .subscribe(function () {
-                _this.reBuilderForm();
-            });
-        };
-        OfDynamicComponent.prototype.trackByField = function (index, field) {
-            return field.dataField;
-        };
-        OfDynamicComponent.prototype.onSubmit = function (isCheckValid) {
-            var _this = this;
-            if (isCheckValid === void 0) { isCheckValid = true; }
-            this.schemaModel.submitted = true;
-            if (!isCheckValid) {
-                this.submitValueEvent.emit(this.value);
-                return this.value;
-            }
-            ___namespace.forEach(this.fields, function (field) {
-                var f = _this.form.controls[field.dataField];
-                if (f) {
-                    if (field.hidden) {
-                        f.setValidators(null);
-                    }
-                    else {
-                        f.setValidators(_this.createCtrlService.bindValidations(field));
-                    }
-                }
-            });
-            if (this.form.valid) {
-                this.submitValueEvent.emit(this.value);
-                return this.value;
-            }
-            else {
-                setTimeout(function () {
-                    _this.validatorService.focusControlItem(_this.schemaModel.id);
-                }, 500);
-                return null;
-            }
-        };
-        OfDynamicComponent.prototype.ngAfterViewInit = function () {
-            var _this = this;
-            setTimeout(function () {
-                _this.validatorService.focusFirst(_this.schemaModel.id);
-            }, 500);
-        };
-        OfDynamicComponent.prototype.onClickSearchBtn = function () {
-            this.schemaModel.searchBtnBusy = true;
-            this.searchEvent.emit(this.value);
-            this.schemaModel.searchEvent$.next(this.value);
-        };
-        OfDynamicComponent.prototype.disableAll = function (f) {
-            if (f === void 0) { f = true; }
-            this.schemaModel.disableAll(f);
-        };
-        OfDynamicComponent.prototype.disableField = function (name, f) {
-            if (f === void 0) { f = true; }
-            this.schemaModel.disableField(name, f);
-        };
-        OfDynamicComponent.prototype.addOfFieldTempates = function (d) {
-            this.ofFieldTempates.push(d);
-        };
-        return OfDynamicComponent;
-    }());
-    OfDynamicComponent.ɵfac = function OfDynamicComponent_Factory(t) { return new (t || OfDynamicComponent)(i0__namespace.ɵɵdirectiveInject(i1__namespace$1.FormBuilder), i0__namespace.ɵɵdirectiveInject(OfCreateControlFormService), i0__namespace.ɵɵdirectiveInject(OfValidatorService), i0__namespace.ɵɵdirectiveInject(DestroyRxjsService)); };
-    OfDynamicComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfDynamicComponent, selectors: [["of"]], inputs: { schemaModel: "schemaModel" }, outputs: { submitValueEvent: "submitValueEvent", searchEvent: "searchEvent" }, features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])], ngContentSelectors: _c2$1, decls: 6, vars: 7, consts: [[1, "dynamic-form", 3, "formGroup"], ["nz-row", "", 3, "nzGutter", "id"], [4, "ngFor", "ngForOf", "ngForTrackBy"], ["nz-col", "", "class", "gutter-row of-btn-search ord-form-control", 3, "nzSpan", 4, "ngIf"], ["nz-col", "", 3, "nzSpan", "ngClass", 4, "ngIf"], ["nz-col", "", 3, "nzSpan", "ngClass"], [3, "nzRequired", "hidden"], [3, "innerHTML"], ["ofDynamicField", "", 3, "schemaModel", "field", "group", "ofFieldTempates", "searchEvent"], [1, "form-control-err", "text-danger"], ["nz-col", "", 1, "gutter-row", "of-btn-search", "ord-form-control", 3, "nzSpan"], ["nz-button", "", "nzType", "primary", 3, "nzLoading", "click"]], template: function OfDynamicComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵprojectionDef(_c0$7);
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelementStart(1, "div", 1);
-                i0__namespace.ɵɵprojection(2);
-                i0__namespace.ɵɵtemplate(3, OfDynamicComponent_ng_container_3_Template, 2, 1, "ng-container", 2);
-                i0__namespace.ɵɵtemplate(4, OfDynamicComponent_div_4_Template, 3, 2, "div", 3);
-                i0__namespace.ɵɵprojection(5, 1);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("formGroup", ctx.form);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("nzGutter", i0__namespace.ɵɵpureFunction0(6, _c1$2))("id", ctx.schemaModel.id);
-                i0__namespace.ɵɵadvance(2);
-                i0__namespace.ɵɵproperty("ngForOf", ctx.fields)("ngForTrackBy", ctx.trackByField);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("ngIf", ctx.schemaModel.isSearchBox);
-            }
-        }, styles: [".of-btn-search{max-width:109px}.of-btn-search button{margin-top:25px!important}.ant-form-item-label{padding:0!important;height:25px!important}.ant-form-item-label>label:after{content:\"\"!important}"], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfDynamicComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of',
-                        templateUrl: './of-dynamic.component.html',
-                        styleUrls: ['./of-dynamic.component.scss'],
-                        encapsulation: i0.ViewEncapsulation.None,
-                        providers: [DestroyRxjsService]
-                    }]
-            }], function () { return [{ type: i1__namespace$1.FormBuilder }, { type: OfCreateControlFormService }, { type: OfValidatorService }, { type: DestroyRxjsService }]; }, { schemaModel: [{
-                    type: i0.Input
-                }], submitValueEvent: [{
-                    type: i0.Output
-                }], searchEvent: [{
-                    type: i0.Output
-                }] });
-    })();
-
-    var _c0$6 = ["control"];
-    var OfFieldComponent = /** @class */ (function () {
-        function OfFieldComponent(ofDynamic) {
-            this.ofDynamic = ofDynamic;
-            // map với dataField
-            this.id = '';
-            this.ofDynamic.addOfFieldTempates(this);
-        }
-        return OfFieldComponent;
-    }());
-    OfFieldComponent.ɵfac = function OfFieldComponent_Factory(t) { return new (t || OfFieldComponent)(i0__namespace.ɵɵdirectiveInject(OfDynamicComponent)); };
-    OfFieldComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfFieldComponent, selectors: [["of-field"]], contentQueries: function OfFieldComponent_ContentQueries(rf, ctx, dirIndex) {
-            if (rf & 1) {
-                i0__namespace.ɵɵcontentQuery(dirIndex, _c0$6, true);
-            }
-            if (rf & 2) {
-                var _t = void 0;
-                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.controlTemplate = _t.first);
-            }
-        }, inputs: { id: "id" }, decls: 0, vars: 0, template: function OfFieldComponent_Template(rf, ctx) { }, encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfFieldComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-field',
-                        template: ""
-                    }]
-            }], function () { return [{ type: OfDynamicComponent }]; }, { id: [{
-                    type: i0.Input
-                }], controlTemplate: [{
-                    type: i0.ContentChild,
-                    args: ['control']
-                }] });
-    })();
-
-    function OfComponent_ng_template_4_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "form", 6);
-            i0__namespace.ɵɵelementStart(1, "nz-input-group", 7);
-            i0__namespace.ɵɵelementStart(2, "nz-select", 8);
-            i0__namespace.ɵɵelement(3, "nz-option", 9);
-            i0__namespace.ɵɵelement(4, "nz-option", 9);
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelement(5, "input", 10);
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var group_r3 = ctx.group;
-            i0__namespace.ɵɵproperty("formGroup", group_r3);
-            i0__namespace.ɵɵadvance(3);
-            i0__namespace.ɵɵproperty("nzLabel", "Option 1")("nzValue", "1");
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("nzLabel", "Option 2")("nzValue", "2");
-        }
-    }
     var OfComponent = /** @class */ (function () {
         function OfComponent(selectSp, searchSp) {
             var _this = this;
@@ -41359,63 +40261,354 @@
         };
         return OfComponent;
     }());
-    OfComponent.ɵfac = function OfComponent_Factory(t) { return new (t || OfComponent)(i0__namespace.ɵɵdirectiveInject(SelectoptionServiceProxy), i0__namespace.ɵɵdirectiveInject(SelectsearchserverServiceProxy)); };
-    OfComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfComponent, selectors: [["lib-of"]], features: [i0__namespace.ɵɵProvidersFeature([SelectoptionServiceProxy, SelectsearchserverServiceProxy])], decls: 20, vars: 4, consts: [[1, "form-group"], [3, "schemaModel"], ["vcForm", ""], ["id", "templateRef"], ["control", ""], [1, "btn", "btn-primary", 3, "click"], [3, "formGroup"], ["nzCompact", ""], ["formControlName", "templateOpt", 2, "width", "50%"], [3, "nzLabel", "nzValue"], ["formControlName", "templateInput", "nz-input", "", "placeholder", "templateInput", 2, "width", "50%"]], template: function OfComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                var _r4_1 = i0__namespace.ɵɵgetCurrentView();
-                i0__namespace.ɵɵelementStart(0, "div", 0);
-                i0__namespace.ɵɵelementStart(1, "of", 1, 2);
-                i0__namespace.ɵɵelementStart(3, "of-field", 3);
-                i0__namespace.ɵɵtemplate(4, OfComponent_ng_template_4_Template, 6, 5, "ng-template", null, 4, i0__namespace.ɵɵtemplateRefExtractor);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(6, "div");
-                i0__namespace.ɵɵelementStart(7, "button", 5);
-                i0__namespace.ɵɵlistener("click", function OfComponent_Template_button_click_7_listener() { return ctx.onClickDisable(); });
-                i0__namespace.ɵɵtext(8, "Disable");
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(9, "button", 5);
-                i0__namespace.ɵɵlistener("click", function OfComponent_Template_button_click_9_listener() { return ctx.onClickSetValue(); });
-                i0__namespace.ɵɵtext(10, "Set value");
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(11, "button", 5);
-                i0__namespace.ɵɵlistener("click", function OfComponent_Template_button_click_11_listener() { i0__namespace.ɵɵrestoreView(_r4_1); var _r0 = i0__namespace.ɵɵreference(2); return _r0.onSubmit(); });
-                i0__namespace.ɵɵtext(12, "Submit");
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(13, "button", 5);
-                i0__namespace.ɵɵlistener("click", function OfComponent_Template_button_click_13_listener() { return ctx.schemaModel.submitted = false; });
-                i0__namespace.ɵɵtext(14, "Clear Submit");
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(15, "button", 5);
-                i0__namespace.ɵɵlistener("click", function OfComponent_Template_button_click_15_listener() { return ctx.onClickAddControl(); });
-                i0__namespace.ɵɵtext(16, "AddControl");
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(17, "pre");
-                i0__namespace.ɵɵtext(18);
-                i0__namespace.ɵɵpipe(19, "json");
-                i0__namespace.ɵɵelementEnd();
+    OfComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-of',
+                    template: "\n      <div class=\"form-group\">\n          <of #vcForm [schemaModel]=\"schemaModel\">\n              <of-field id=\"templateRef\">\n                  <ng-template #control let-group=\"group\">\n                      <form [formGroup]=\"group\">\n                          <nz-input-group nzCompact>\n                              <nz-select formControlName=\"templateOpt\" style=\"width: 50%\">\n                                  <nz-option [nzLabel]=\"'Option 1'\" [nzValue]=\"'1'\"></nz-option>\n                                  <nz-option [nzLabel]=\"'Option 2'\" [nzValue]=\"'2'\"></nz-option>\n                              </nz-select>\n                              <input formControlName=\"templateInput\" nz-input placeholder=\"templateInput\"\n                                     style=\"width: 50%\"/>\n                          </nz-input-group>\n                      </form>\n                  </ng-template>\n              </of-field>\n          </of>\n      </div>\n      <div>\n          <button class=\"btn btn-primary\" (click)=\"onClickDisable()\">Disable</button>\n          <button class=\"btn btn-primary\" (click)=\"onClickSetValue()\">Set value</button>\n          <button class=\"btn btn-primary\" (click)=\"vcForm.onSubmit()\">Submit</button>\n          <button class=\"btn btn-primary\" (click)=\"schemaModel.submitted = false\">Clear Submit</button>\n          <button class=\"btn btn-primary\" (click)=\"onClickAddControl()\">AddControl</button>\n      </div>\n      <pre>{{vcForm.value|json}}</pre>\n\n  ",
+                    providers: [SelectoptionServiceProxy, SelectsearchserverServiceProxy]
+                },] }
+    ];
+    OfComponent.ctorParameters = function () { return [
+        { type: SelectoptionServiceProxy },
+        { type: SelectsearchserverServiceProxy }
+    ]; };
+
+    var DestroyRxjsService = /** @class */ (function (_super) {
+        __extends(DestroyRxjsService, _super);
+        function DestroyRxjsService() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        DestroyRxjsService.prototype.ngOnDestroy = function () {
+            this.next();
+            this.complete();
+        };
+        return DestroyRxjsService;
+    }(rxjs.Subject));
+    DestroyRxjsService.decorators = [
+        { type: i0.Injectable }
+    ];
+
+    var OfValidatorService = /** @class */ (function () {
+        function OfValidatorService() {
+        }
+        OfValidatorService.prototype.noWhitespaceValidator = function (control) {
+            if (AppUtilityService.isNullOrEmpty(control.value)) {
+                return { whiteSpace: true };
             }
-            if (rf & 2) {
-                var _r0 = i0__namespace.ɵɵreference(2);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("schemaModel", ctx.schemaModel);
-                i0__namespace.ɵɵadvance(17);
-                i0__namespace.ɵɵtextInterpolate(i0__namespace.ɵɵpipeBind1(19, 2, _r0.value));
+            var v = '' + control.value;
+            var isWhitespace = v.trim().length === 0;
+            var isValid = !isWhitespace;
+            return isValid ? null : { whiteSpace: true };
+        };
+        OfValidatorService.prototype.emailValidator = function (control) {
+            var value = (control === null || control === void 0 ? void 0 : control.value) || '';
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            var isValid = re.test(value);
+            return isValid ? null : { email: true };
+        };
+        OfValidatorService.prototype.passwordValidator = function (control) {
+            var value = (control === null || control === void 0 ? void 0 : control.value) || '';
+            var check = value.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/);
+            var isValid = !!check;
+            return isValid ? null : { password: true };
+        };
+        OfValidatorService.prototype.phoneValidator = function (control) {
+            var value = (control === null || control === void 0 ? void 0 : control.value) || '';
+            var check = value.match(/(09|01[2|6|8|9])+([0-9]{8})\b/);
+            var isValid = !!check;
+            return isValid ? null : { phone: true };
+        };
+        OfValidatorService.prototype.focusControlItem = function (id) {
+            var arr = $__namespace('#' + id).find('.ord-form-control');
+            var flag = true;
+            arr.each(function () {
+                var txt = $__namespace(this).find('.form-control-err').text();
+                if (txt) {
+                    txt = txt.replace(/ /g, '');
+                }
+                if (flag && AppUtilityService.isNotNull(txt)) {
+                    $__namespace(this).find('.ord-dynamic-input').focus();
+                    $__namespace(this).find('.ant-input-number-input').focus();
+                    $__namespace(this).find('.ant-input').focus();
+                    $__namespace(this).find('.ant-select-selection-search-input').focus();
+                    if ($__namespace(this).find('.ant-radio-input')[0]) {
+                        $__namespace(this).find('.ant-radio-input')[0].focus();
+                    }
+                    flag = false;
+                }
+            });
+        };
+        OfValidatorService.prototype.focusFirst = function (id) {
+            var arr = $__namespace('#' + id).find('.ord-form-control');
+            var flag = true;
+            arr.each(function () {
+                if (flag) {
+                    $__namespace(this).find('.ord-dynamic-input').focus();
+                    $__namespace(this).find('.ant-input-number-input').focus();
+                    $__namespace(this).find('.ant-input').focus();
+                    $__namespace(this).find('.ant-select-selection-search-input').focus();
+                    if ($__namespace(this).find('.ant-radio-input')[0]) {
+                        $__namespace(this).find('.ant-radio-input')[0].focus();
+                    }
+                    flag = false;
+                }
+            });
+        };
+        return OfValidatorService;
+    }());
+    OfValidatorService.ɵprov = i0__namespace.ɵɵdefineInjectable({ factory: function OfValidatorService_Factory() { return new OfValidatorService(); }, token: OfValidatorService, providedIn: "root" });
+    OfValidatorService.decorators = [
+        { type: i0.Injectable, args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    OfValidatorService.ctorParameters = function () { return []; };
+
+    var OfCreateControlFormService = /** @class */ (function () {
+        function OfCreateControlFormService(fb, validatorService) {
+            this.fb = fb;
+            this.validatorService = validatorService;
+        }
+        OfCreateControlFormService.prototype.createControl = function (fields) {
+            var _this = this;
+            var group = this.fb.group({});
+            ___namespace.forEach(fields, function (field) {
+                _this.createField(field, group);
+            });
+            return group;
+        };
+        OfCreateControlFormService.prototype.createExtendControl = function (group, controls) {
+            var _this = this;
+            ___namespace.forEach(controls, function (field) {
+                var f = group.get(field.dataField);
+                if (f) {
+                    return;
+                }
+                _this.createValidations(field);
+                var control = _this.fb.control(field.value, _this.bindValidations(field));
+                if (field.disabled) {
+                    control.disable({ onlySelf: true });
+                }
+                group.addControl(field.dataField, control);
+            });
+        };
+        OfCreateControlFormService.prototype.updateControl = function (fields, group) {
+            var _this = this;
+            Object.keys(group.controls).forEach(function (key) {
+                var fDataField = fields.find(function (x) { return x.dataField === key; });
+                if (!fDataField) {
+                    group.removeControl(key);
+                }
+            });
+            ___namespace.forEach(fields, function (field) {
+                var f = group.get(field.dataField);
+                if (f) {
+                    return;
+                }
+                _this.createField(field, group);
+            });
+        };
+        OfCreateControlFormService.prototype.createField = function (field, group) {
+            var ignoreType = ['contentHtml', 'componentRef', 'templateRef'];
+            if (ignoreType.indexOf(field.type) > 0) {
+                return;
             }
-        }, directives: [OfDynamicComponent, OfFieldComponent, i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace.NzInputGroupComponent, i3__namespace.NzSelectComponent, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i3__namespace.NzOptionComponent, i1__namespace$1.DefaultValueAccessor, i2__namespace.NzInputDirective], pipes: [i4__namespace.JsonPipe], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-of',
-                        template: "\n      <div class=\"form-group\">\n          <of #vcForm [schemaModel]=\"schemaModel\">\n              <of-field id=\"templateRef\">\n                  <ng-template #control let-group=\"group\">\n                      <form [formGroup]=\"group\">\n                          <nz-input-group nzCompact>\n                              <nz-select formControlName=\"templateOpt\" style=\"width: 50%\">\n                                  <nz-option [nzLabel]=\"'Option 1'\" [nzValue]=\"'1'\"></nz-option>\n                                  <nz-option [nzLabel]=\"'Option 2'\" [nzValue]=\"'2'\"></nz-option>\n                              </nz-select>\n                              <input formControlName=\"templateInput\" nz-input placeholder=\"templateInput\"\n                                     style=\"width: 50%\"/>\n                          </nz-input-group>\n                      </form>\n                  </ng-template>\n              </of-field>\n          </of>\n      </div>\n      <div>\n          <button class=\"btn btn-primary\" (click)=\"onClickDisable()\">Disable</button>\n          <button class=\"btn btn-primary\" (click)=\"onClickSetValue()\">Set value</button>\n          <button class=\"btn btn-primary\" (click)=\"vcForm.onSubmit()\">Submit</button>\n          <button class=\"btn btn-primary\" (click)=\"schemaModel.submitted = false\">Clear Submit</button>\n          <button class=\"btn btn-primary\" (click)=\"onClickAddControl()\">AddControl</button>\n      </div>\n      <pre>{{vcForm.value|json}}</pre>\n\n  ",
-                        styles: [],
-                        providers: [SelectoptionServiceProxy, SelectsearchserverServiceProxy]
-                    }]
-            }], function () { return [{ type: SelectoptionServiceProxy }, { type: SelectsearchserverServiceProxy }]; }, null);
-    })();
+            this.createValidations(field);
+            var control = this.fb.control(field.value, this.bindValidations(field));
+            if (field.disabled) {
+                control.disable({ onlySelf: true });
+            }
+            group.addControl(field.dataField, control);
+        };
+        OfCreateControlFormService.prototype.createValidations = function (field) {
+            var _this = this;
+            field.validations = field.validations || [];
+            field.validations.forEach(function (valid) {
+                if (valid.name === 'email') {
+                    valid.validator = _this.validatorService.emailValidator;
+                    valid.message = valid.message || 'Email sai định dạng!';
+                    return;
+                }
+                if (valid.name === 'phone') {
+                    valid.validator = _this.validatorService.phoneValidator;
+                    valid.message = valid.message || 'Số điện thoại không đúng định dạng!';
+                    return;
+                }
+                if (valid.name === 'password') {
+                    valid.validator = _this.validatorService.passwordValidator;
+                    valid.message = valid.message || 'Mật khẩu tối thiểu 8 ký tự, bao gồm chữ in hoa/ thường , số và ký tự đặc biệt!';
+                    return;
+                }
+            });
+            if (field.required) {
+                field.validations.push({
+                    name: 'whiteSpace',
+                    validator: this.validatorService.noWhitespaceValidator,
+                    message: field.errorEmpty
+                });
+            }
+        };
+        OfCreateControlFormService.prototype.bindValidations = function (field) {
+            var validations = field.validations || [];
+            if (validations.length > 0) {
+                var validList_1 = [];
+                validations.forEach(function (valid) {
+                    validList_1.push(valid.validator);
+                });
+                return i1.Validators.compose(validList_1);
+            }
+            return null;
+        };
+        return OfCreateControlFormService;
+    }());
+    OfCreateControlFormService.ɵprov = i0__namespace.ɵɵdefineInjectable({ factory: function OfCreateControlFormService_Factory() { return new OfCreateControlFormService(i0__namespace.ɵɵinject(i1__namespace.FormBuilder), i0__namespace.ɵɵinject(OfValidatorService)); }, token: OfCreateControlFormService, providedIn: "root" });
+    OfCreateControlFormService.decorators = [
+        { type: i0.Injectable, args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    OfCreateControlFormService.ctorParameters = function () { return [
+        { type: i1.FormBuilder },
+        { type: OfValidatorService }
+    ]; };
+
+    var OfDynamicComponent = /** @class */ (function () {
+        function OfDynamicComponent(fb, createCtrlService, validatorService, destroy$) {
+            this.fb = fb;
+            this.createCtrlService = createCtrlService;
+            this.validatorService = validatorService;
+            this.destroy$ = destroy$;
+            this.submitValueEvent = new i0.EventEmitter();
+            this.searchEvent = new i0.EventEmitter();
+            this.fields = [];
+            this.ofFieldTempates = [];
+        }
+        Object.defineProperty(OfDynamicComponent.prototype, "value", {
+            get: function () {
+                var _a;
+                return (_a = this.form) === null || _a === void 0 ? void 0 : _a.getRawValue();
+            },
+            enumerable: false,
+            configurable: true
+        });
+        OfDynamicComponent.prototype.ngOnInit = function () {
+            this.fields = this.schemaModel.fields || [];
+            this.form = this.createCtrlService.createControl(this.fields);
+            this.schemaModel.form = this.form;
+            this.init$();
+        };
+        OfDynamicComponent.prototype.reBuilderForm = function () {
+            this.fields = this.schemaModel.fields || [];
+            this.createCtrlService.updateControl(this.fields, this.form);
+            this.schemaModel.form = this.form;
+        };
+        OfDynamicComponent.prototype.init$ = function () {
+            var _this = this;
+            this.schemaModel.rebuilder$.pipe(operators.takeUntil(this.destroy$), operators.distinctUntilChanged(), operators.filter(function (x) { return x > 0; }))
+                .subscribe(function () {
+                _this.reBuilderForm();
+            });
+        };
+        OfDynamicComponent.prototype.trackByField = function (index, field) {
+            return field.dataField;
+        };
+        OfDynamicComponent.prototype.onSubmit = function (isCheckValid) {
+            var _this = this;
+            if (isCheckValid === void 0) { isCheckValid = true; }
+            this.schemaModel.submitted = true;
+            if (!isCheckValid) {
+                this.submitValueEvent.emit(this.value);
+                return this.value;
+            }
+            ___namespace.forEach(this.fields, function (field) {
+                var f = _this.form.controls[field.dataField];
+                if (f) {
+                    if (field.hidden) {
+                        f.setValidators(null);
+                    }
+                    else {
+                        f.setValidators(_this.createCtrlService.bindValidations(field));
+                    }
+                }
+            });
+            if (this.form.valid) {
+                this.submitValueEvent.emit(this.value);
+                return this.value;
+            }
+            else {
+                setTimeout(function () {
+                    _this.validatorService.focusControlItem(_this.schemaModel.id);
+                }, 500);
+                return null;
+            }
+        };
+        OfDynamicComponent.prototype.ngAfterViewInit = function () {
+            var _this = this;
+            setTimeout(function () {
+                _this.validatorService.focusFirst(_this.schemaModel.id);
+            }, 500);
+        };
+        OfDynamicComponent.prototype.onClickSearchBtn = function () {
+            this.schemaModel.searchBtnBusy = true;
+            this.searchEvent.emit(this.value);
+            this.schemaModel.searchEvent$.next(this.value);
+        };
+        OfDynamicComponent.prototype.disableAll = function (f) {
+            if (f === void 0) { f = true; }
+            this.schemaModel.disableAll(f);
+        };
+        OfDynamicComponent.prototype.disableField = function (name, f) {
+            if (f === void 0) { f = true; }
+            this.schemaModel.disableField(name, f);
+        };
+        OfDynamicComponent.prototype.addOfFieldTempates = function (d) {
+            this.ofFieldTempates.push(d);
+        };
+        return OfDynamicComponent;
+    }());
+    OfDynamicComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of',
+                    template: "<form class=\"dynamic-form\" [formGroup]=\"form\">\r\n  <div nz-row [nzGutter]=\"[18, 6]\" [id]=\"schemaModel.id\">\r\n    <ng-content select=\"[topContent]\"></ng-content>\r\n    <ng-container *ngFor=\"let field of fields;trackBy:trackByField\">\r\n      <div nz-col *ngIf=\"!field.hidden\" [nzSpan]=\"field.width\" [ngClass]=\"field.css\">\r\n        <nz-form-label [nzRequired]=\"field.required\" [hidden]=\"field.hiddenLabel\">\r\n          <span [innerHTML]=\"field.label\"></span>\r\n        </nz-form-label>\r\n        <div ofDynamicField [schemaModel]=\"schemaModel\" [field]=\"field\" [group]=\"form\"\r\n             [ofFieldTempates]=\"ofFieldTempates\" (searchEvent)=\"searchEvent.emit($event)\">\r\n        </div>\r\n        <span class=\"form-control-err text-danger\">\r\n              {{this.form.controls[field.dataField]?.errors | showValidationError : field?.validations : schemaModel.submitted}}\r\n        </span>\r\n        <div [innerHTML]=\"field.bottomHtml\"></div>\r\n      </div>\r\n    </ng-container>\r\n    <div *ngIf=\"schemaModel.isSearchBox\" nz-col class=\"gutter-row of-btn-search ord-form-control\" [nzSpan]=\"2\">\r\n      <button nz-button nzType=\"primary\"\r\n              [nzLoading]=\"schemaModel.searchBtnBusy\"\r\n              (click)=\"onClickSearchBtn()\">T\u00ECm ki\u1EBFm\r\n      </button>\r\n    </div>\r\n    <ng-content select=\"[bottomContent]\"></ng-content>\r\n  </div>\r\n</form>\r\n",
+                    encapsulation: i0.ViewEncapsulation.None,
+                    providers: [DestroyRxjsService],
+                    styles: [".of-btn-search{max-width:109px}.of-btn-search button{margin-top:25px!important}.ant-form-item-label{padding:0!important;height:25px!important}.ant-form-item-label>label:after{content:\"\"!important}"]
+                },] }
+    ];
+    OfDynamicComponent.ctorParameters = function () { return [
+        { type: i1.FormBuilder },
+        { type: OfCreateControlFormService },
+        { type: OfValidatorService },
+        { type: DestroyRxjsService }
+    ]; };
+    OfDynamicComponent.propDecorators = {
+        schemaModel: [{ type: i0.Input }],
+        submitValueEvent: [{ type: i0.Output }],
+        searchEvent: [{ type: i0.Output }]
+    };
+
+    var OfFieldComponent = /** @class */ (function () {
+        function OfFieldComponent(ofDynamic) {
+            this.ofDynamic = ofDynamic;
+            // map với dataField
+            this.id = '';
+            this.ofDynamic.addOfFieldTempates(this);
+        }
+        return OfFieldComponent;
+    }());
+    OfFieldComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-field',
+                    template: ""
+                },] }
+    ];
+    OfFieldComponent.ctorParameters = function () { return [
+        { type: OfDynamicComponent }
+    ]; };
+    OfFieldComponent.propDecorators = {
+        id: [{ type: i0.Input }],
+        controlTemplate: [{ type: i0.ContentChild, args: ['control',] }]
+    };
 
     var OfService = /** @class */ (function () {
         function OfService(restService) {
@@ -41430,22 +40623,21 @@
         };
         return OfService;
     }());
-    OfService.ɵfac = function OfService_Factory(t) { return new (t || OfService)(i0__namespace.ɵɵinject(i1__namespace$2.RestService)); };
-    OfService.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: OfService, factory: OfService.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfService, [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root',
-                    }]
-            }], function () { return [{ type: i1__namespace$2.RestService }]; }, null);
-    })();
+    OfService.ɵprov = i0__namespace.ɵɵdefineInjectable({ factory: function OfService_Factory() { return new OfService(i0__namespace.ɵɵinject(i1__namespace$1.RestService)); }, token: OfService, providedIn: "root" });
+    OfService.decorators = [
+        { type: i0.Injectable, args: [{
+                    providedIn: 'root',
+                },] }
+    ];
+    OfService.ctorParameters = function () { return [
+        { type: i1$1.RestService }
+    ]; };
 
     var routes = [
         {
             path: '',
             pathMatch: 'full',
-            component: i1$2.DynamicLayoutComponent,
+            component: i1$1.DynamicLayoutComponent,
             children: [
                 {
                     path: '',
@@ -41459,22 +40651,38 @@
         }
         return OfRoutingModule;
     }());
-    OfRoutingModule.ɵmod = i0__namespace.ɵɵdefineNgModule({ type: OfRoutingModule });
-    OfRoutingModule.ɵinj = i0__namespace.ɵɵdefineInjector({ factory: function OfRoutingModule_Factory(t) { return new (t || OfRoutingModule)(); }, imports: [[i1$3.RouterModule.forChild(routes)], i1$3.RouterModule] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(OfRoutingModule, { imports: [i1__namespace$3.RouterModule], exports: [i1$3.RouterModule] }); })();
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfRoutingModule, [{
-                type: i0.NgModule,
-                args: [{
-                        imports: [i1$3.RouterModule.forChild(routes)],
-                        exports: [i1$3.RouterModule],
-                    }]
-            }], null, null);
-    })();
+    OfRoutingModule.decorators = [
+        { type: i0.NgModule, args: [{
+                    imports: [router.RouterModule.forChild(routes)],
+                    exports: [router.RouterModule],
+                },] }
+    ];
 
-    i4.registerLocaleData(vi__default['default']);
+    common.registerLocaleData(vi__default['default']);
     var antDesignIcons = AllIcons__namespace;
-    var icons = Object.keys(antDesignIcons).map(function (key) { return antDesignIcons[key]; });
+    var Icon = /** @class */ (function () {
+        function Icon() {
+        }
+        Icon.icons = function () {
+            var e_1, _a;
+            var ret = [];
+            try {
+                for (var _b = __values(Object.keys(antDesignIcons)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                    var key = _c.value;
+                    ret.push(antDesignIcons[key]);
+                }
+            }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+            finally {
+                try {
+                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                }
+                finally { if (e_1) throw e_1.error; }
+            }
+            return ret;
+        };
+        return Icon;
+    }());
     var antModule = [
         affix.NzAffixModule,
         alert.NzAlertModule,
@@ -41483,27 +40691,27 @@
         avatar.NzAvatarModule,
         backTop.NzBackTopModule,
         badge.NzBadgeModule,
-        i6.NzButtonModule,
+        button.NzButtonModule,
         breadcrumb.NzBreadCrumbModule,
         calendar.NzCalendarModule,
         card.NzCardModule,
         carousel.NzCarouselModule,
         cascader.NzCascaderModule,
-        i2$1.NzCheckboxModule,
+        checkbox.NzCheckboxModule,
         collapse.NzCollapseModule,
         comment.NzCommentModule,
-        i1$4.NzDatePickerModule,
+        datePicker.NzDatePickerModule,
         descriptions.NzDescriptionsModule,
-        i5.NzDividerModule,
+        divider.NzDividerModule,
         drawer.NzDrawerModule,
         dropdown.NzDropDownModule,
         empty.NzEmptyModule,
-        i4$1.NzFormModule,
-        i2$2.NzGridModule,
+        form.NzFormModule,
+        grid.NzGridModule,
         i18n.NzI18nModule,
-        i4$2.NzIconModule,
-        i2.NzInputModule,
-        i5$1.NzInputNumberModule,
+        icon.NzIconModule,
+        input.NzInputModule,
+        inputNumber.NzInputNumberModule,
         layout.NzLayoutModule,
         list.NzListModule,
         mention.NzMentionModule,
@@ -41513,20 +40721,20 @@
         noAnimation.NzNoAnimationModule,
         notification.NzNotificationModule,
         pageHeader.NzPageHeaderModule,
-        i5$2.NzPaginationModule,
+        pagination.NzPaginationModule,
         popconfirm.NzPopconfirmModule,
         popover.NzPopoverModule,
         progress.NzProgressModule,
-        i2$3.NzRadioModule,
+        radio.NzRadioModule,
         rate.NzRateModule,
         result.NzResultModule,
-        i3.NzSelectModule,
+        select.NzSelectModule,
         skeleton.NzSkeletonModule,
         slider.NzSliderModule,
-        i2$4.NzSpinModule,
+        spin.NzSpinModule,
         statistic.NzStatisticModule,
         steps.NzStepsModule,
-        i2$5.NzSwitchModule,
+        _switch.NzSwitchModule,
         table.NzTableModule,
         tabs.NzTabsModule,
         tag.NzTagModule,
@@ -41539,168 +40747,27 @@
         treeSelect.NzTreeSelectModule,
         typography.NzTypographyModule,
         upload.NzUploadModule,
-        i7.NzWaveModule,
+        wave.NzWaveModule,
         resizable.NzResizableModule,
         space.NzSpaceModule
     ];
+    var ɵ0 = i18n.vi_VN, ɵ1 = Icon.icons(), ɵ2 = locale.vi;
     var AntDesignModule = /** @class */ (function () {
         function AntDesignModule() {
         }
         return AntDesignModule;
     }());
-    AntDesignModule.ɵmod = i0__namespace.ɵɵdefineNgModule({ type: AntDesignModule });
-    AntDesignModule.ɵinj = i0__namespace.ɵɵdefineInjector({ factory: function AntDesignModule_Factory(t) { return new (t || AntDesignModule)(); }, providers: [
-            { provide: i18n.NZ_I18N, useValue: i18n.vi_VN },
-            { provide: i4$2.NZ_ICONS, useValue: icons },
-            { provide: i18n.NZ_DATE_LOCALE, useValue: locale.vi }
-        ], imports: [affix.NzAffixModule,
-            alert.NzAlertModule,
-            anchor.NzAnchorModule,
-            autoComplete.NzAutocompleteModule,
-            avatar.NzAvatarModule,
-            backTop.NzBackTopModule,
-            badge.NzBadgeModule,
-            i6.NzButtonModule,
-            breadcrumb.NzBreadCrumbModule,
-            calendar.NzCalendarModule,
-            card.NzCardModule,
-            carousel.NzCarouselModule,
-            cascader.NzCascaderModule,
-            i2$1.NzCheckboxModule,
-            collapse.NzCollapseModule,
-            comment.NzCommentModule,
-            i1$4.NzDatePickerModule,
-            descriptions.NzDescriptionsModule,
-            i5.NzDividerModule,
-            drawer.NzDrawerModule,
-            dropdown.NzDropDownModule,
-            empty.NzEmptyModule,
-            i4$1.NzFormModule,
-            i2$2.NzGridModule,
-            i18n.NzI18nModule,
-            i4$2.NzIconModule,
-            i2.NzInputModule,
-            i5$1.NzInputNumberModule,
-            layout.NzLayoutModule,
-            list.NzListModule,
-            mention.NzMentionModule,
-            menu.NzMenuModule,
-            message.NzMessageModule,
-            modal.NzModalModule,
-            noAnimation.NzNoAnimationModule,
-            notification.NzNotificationModule,
-            pageHeader.NzPageHeaderModule,
-            i5$2.NzPaginationModule,
-            popconfirm.NzPopconfirmModule,
-            popover.NzPopoverModule,
-            progress.NzProgressModule,
-            i2$3.NzRadioModule,
-            rate.NzRateModule,
-            result.NzResultModule,
-            i3.NzSelectModule,
-            skeleton.NzSkeletonModule,
-            slider.NzSliderModule,
-            i2$4.NzSpinModule,
-            statistic.NzStatisticModule,
-            steps.NzStepsModule,
-            i2$5.NzSwitchModule,
-            table.NzTableModule,
-            tabs.NzTabsModule,
-            tag.NzTagModule,
-            timePicker.NzTimePickerModule,
-            timeline.NzTimelineModule,
-            tooltip.NzToolTipModule,
-            transButton.NzTransButtonModule,
-            transfer.NzTransferModule,
-            tree.NzTreeModule,
-            treeSelect.NzTreeSelectModule,
-            typography.NzTypographyModule,
-            upload.NzUploadModule,
-            i7.NzWaveModule,
-            resizable.NzResizableModule,
-            space.NzSpaceModule] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(AntDesignModule, { exports: [affix.NzAffixModule,
-                alert.NzAlertModule,
-                anchor.NzAnchorModule,
-                autoComplete.NzAutocompleteModule,
-                avatar.NzAvatarModule,
-                backTop.NzBackTopModule,
-                badge.NzBadgeModule,
-                i6.NzButtonModule,
-                breadcrumb.NzBreadCrumbModule,
-                calendar.NzCalendarModule,
-                card.NzCardModule,
-                carousel.NzCarouselModule,
-                cascader.NzCascaderModule,
-                i2$1.NzCheckboxModule,
-                collapse.NzCollapseModule,
-                comment.NzCommentModule,
-                i1$4.NzDatePickerModule,
-                descriptions.NzDescriptionsModule,
-                i5.NzDividerModule,
-                drawer.NzDrawerModule,
-                dropdown.NzDropDownModule,
-                empty.NzEmptyModule,
-                i4$1.NzFormModule,
-                i2$2.NzGridModule,
-                i18n.NzI18nModule,
-                i4$2.NzIconModule,
-                i2.NzInputModule,
-                i5$1.NzInputNumberModule,
-                layout.NzLayoutModule,
-                list.NzListModule,
-                mention.NzMentionModule,
-                menu.NzMenuModule,
-                message.NzMessageModule,
-                modal.NzModalModule,
-                noAnimation.NzNoAnimationModule,
-                notification.NzNotificationModule,
-                pageHeader.NzPageHeaderModule,
-                i5$2.NzPaginationModule,
-                popconfirm.NzPopconfirmModule,
-                popover.NzPopoverModule,
-                progress.NzProgressModule,
-                i2$3.NzRadioModule,
-                rate.NzRateModule,
-                result.NzResultModule,
-                i3.NzSelectModule,
-                skeleton.NzSkeletonModule,
-                slider.NzSliderModule,
-                i2$4.NzSpinModule,
-                statistic.NzStatisticModule,
-                steps.NzStepsModule,
-                i2$5.NzSwitchModule,
-                table.NzTableModule,
-                tabs.NzTabsModule,
-                tag.NzTagModule,
-                timePicker.NzTimePickerModule,
-                timeline.NzTimelineModule,
-                tooltip.NzToolTipModule,
-                transButton.NzTransButtonModule,
-                transfer.NzTransferModule,
-                tree.NzTreeModule,
-                treeSelect.NzTreeSelectModule,
-                typography.NzTypographyModule,
-                upload.NzUploadModule,
-                i7.NzWaveModule,
-                resizable.NzResizableModule,
-                space.NzSpaceModule] });
-    })();
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(AntDesignModule, [{
-                type: i0.NgModule,
-                args: [{
-                        declarations: [],
-                        exports: [antModule],
-                        providers: [
-                            { provide: i18n.NZ_I18N, useValue: i18n.vi_VN },
-                            { provide: i4$2.NZ_ICONS, useValue: icons },
-                            { provide: i18n.NZ_DATE_LOCALE, useValue: locale.vi }
-                        ]
-                    }]
-            }], null, null);
-    })();
+    AntDesignModule.decorators = [
+        { type: i0.NgModule, args: [{
+                    declarations: [],
+                    exports: [antModule],
+                    providers: [
+                        { provide: i18n.NZ_I18N, useValue: ɵ0 },
+                        { provide: icon.NZ_ICONS, useValue: ɵ1 },
+                        { provide: i18n.NZ_DATE_LOCALE, useValue: ɵ2 }
+                    ]
+                },] }
+    ];
 
     var OfCheckBoxComponent = /** @class */ (function () {
         function OfCheckBoxComponent() {
@@ -41709,33 +40776,14 @@
         };
         return OfCheckBoxComponent;
     }());
-    OfCheckBoxComponent.ɵfac = function OfCheckBoxComponent_Factory(t) { return new (t || OfCheckBoxComponent)(); };
-    OfCheckBoxComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfCheckBoxComponent, selectors: [["of-check-box"]], decls: 3, vars: 3, consts: [[3, "formGroup"], ["nz-checkbox", "", 3, "formControlName"]], template: function OfCheckBoxComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelementStart(1, "label", 1);
-                i0__namespace.ɵɵtext(2);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵtextInterpolate(ctx.field.checkBoxLabel);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace$1.NzCheckboxComponent, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfCheckBoxComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-check-box',
-                        template: "\n      <form [formGroup]=\"group\">\n          <label nz-checkbox [formControlName]=\"field.dataField\">{{ field.checkBoxLabel }}</label>\n      </form>\n  ",
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return []; }, null);
-    })();
+    OfCheckBoxComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-check-box',
+                    template: "\n      <form [formGroup]=\"group\">\n          <label nz-checkbox [formControlName]=\"field.dataField\">{{ field.checkBoxLabel }}</label>\n      </form>\n  ",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfCheckBoxComponent.ctorParameters = function () { return []; };
 
     var ofCheckBox_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
@@ -41948,27 +40996,24 @@
         };
         return DynamicFieldDirective;
     }());
-    DynamicFieldDirective.ɵfac = function DynamicFieldDirective_Factory(t) { return new (t || DynamicFieldDirective)(i0__namespace.ɵɵdirectiveInject(i0__namespace.ComponentFactoryResolver), i0__namespace.ɵɵdirectiveInject(i0__namespace.ViewContainerRef), i0__namespace.ɵɵdirectiveInject(DestroyRxjsService)); };
-    DynamicFieldDirective.ɵdir = i0__namespace.ɵɵdefineDirective({ type: DynamicFieldDirective, selectors: [["", "ofDynamicField", ""]], inputs: { schemaModel: "schemaModel", field: "field", group: "group", ofFieldTempates: "ofFieldTempates" }, outputs: { searchEvent: "searchEvent" }, features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])] });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(DynamicFieldDirective, [{
-                type: i0.Directive,
-                args: [{
-                        selector: '[ofDynamicField]',
-                        providers: [DestroyRxjsService]
-                    }]
-            }], function () { return [{ type: i0__namespace.ComponentFactoryResolver }, { type: i0__namespace.ViewContainerRef }, { type: DestroyRxjsService }]; }, { schemaModel: [{
-                    type: i0.Input
-                }], field: [{
-                    type: i0.Input
-                }], group: [{
-                    type: i0.Input
-                }], ofFieldTempates: [{
-                    type: i0.Input
-                }], searchEvent: [{
-                    type: i0.Output
-                }] });
-    })();
+    DynamicFieldDirective.decorators = [
+        { type: i0.Directive, args: [{
+                    selector: '[ofDynamicField]',
+                    providers: [DestroyRxjsService]
+                },] }
+    ];
+    DynamicFieldDirective.ctorParameters = function () { return [
+        { type: i0.ComponentFactoryResolver },
+        { type: i0.ViewContainerRef },
+        { type: DestroyRxjsService }
+    ]; };
+    DynamicFieldDirective.propDecorators = {
+        schemaModel: [{ type: i0.Input }],
+        field: [{ type: i0.Input }],
+        group: [{ type: i0.Input }],
+        ofFieldTempates: [{ type: i0.Input }],
+        searchEvent: [{ type: i0.Output }]
+    };
 
     var OfTextComponent = /** @class */ (function () {
         function OfTextComponent(destroy$) {
@@ -41997,37 +41042,19 @@
         };
         return OfTextComponent;
     }());
-    OfTextComponent.ɵfac = function OfTextComponent_Factory(t) { return new (t || OfTextComponent)(i0__namespace.ɵɵdirectiveInject(DestroyRxjsService)); };
-    OfTextComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfTextComponent, selectors: [["of-text"]], outputs: { searchEvent: "searchEvent" }, features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])], decls: 3, vars: 6, consts: [[3, "nzSpinning"], [3, "formGroup", "keyup.enter"], ["nz-input", "", 3, "formControlName", "disabled", "placeholder", "maxlength"]], template: function OfTextComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "nz-spin", 0);
-                i0__namespace.ɵɵelementStart(1, "form", 1);
-                i0__namespace.ɵɵlistener("keyup.enter", function OfTextComponent_Template_form_keyup_enter_1_listener() { return ctx.onKeyEnterControl(); });
-                i0__namespace.ɵɵelement(2, "input", 2);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("nzSpinning", ctx.nzSpinning);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵpropertyInterpolate("maxlength", ctx.field == null ? null : ctx.field.maxLength);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField)("disabled", true)("placeholder", ctx.field.placeholder);
-            }
-        }, directives: [i2__namespace$2.NzSpinComponent, i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace.NzInputDirective, i1__namespace$1.DefaultValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i1__namespace$1.MaxLengthValidator], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfTextComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-text',
-                        template: "\n      <nz-spin [nzSpinning]=\"nzSpinning\">\n          <form [formGroup]=\"group\" (keyup.enter)=\"onKeyEnterControl()\">\n              <input [formControlName]=\"field.dataField\" nz-input [disabled]=\"true\" [placeholder]=\"field.placeholder\"\n                     maxlength=\"{{ field?.maxLength }}\"/>\n          </form>\n      </nz-spin>\n\n  ",
-                        providers: [DestroyRxjsService]
-                    }]
-            }], function () { return [{ type: DestroyRxjsService }]; }, { searchEvent: [{
-                    type: i0.Output
-                }] });
-    })();
+    OfTextComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-text',
+                    template: "\n      <nz-spin [nzSpinning]=\"nzSpinning\">\n          <form [formGroup]=\"group\" (keyup.enter)=\"onKeyEnterControl()\">\n              <input [formControlName]=\"field.dataField\" nz-input [disabled]=\"true\" [placeholder]=\"field.placeholder\"\n                     maxlength=\"{{ field?.maxLength }}\"/>\n          </form>\n      </nz-spin>\n\n  ",
+                    providers: [DestroyRxjsService]
+                },] }
+    ];
+    OfTextComponent.ctorParameters = function () { return [
+        { type: DestroyRxjsService }
+    ]; };
+    OfTextComponent.propDecorators = {
+        searchEvent: [{ type: i0.Output }]
+    };
 
     var ofText_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
@@ -42049,41 +41076,184 @@
         };
         return OfCurrencyComponent;
     }());
-    OfCurrencyComponent.ɵfac = function OfCurrencyComponent_Factory(t) { return new (t || OfCurrencyComponent)(); };
-    OfCurrencyComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfCurrencyComponent, selectors: [["of-currency"]], decls: 2, vars: 5, consts: [[3, "formGroup"], ["currencyMask", "", "nz-input", "", 1, "ord-dynamic-input", 3, "formControlName", "disabled", "placeholder", "options"]], template: function OfCurrencyComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelement(1, "input", 1);
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField)("disabled", ctx.field.disabled)("placeholder", ctx.field.placeholder)("options", ctx.field);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace.NzInputDirective, i1__namespace$1.DefaultValueAccessor, i3__namespace$1.CurrencyMaskDirective, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName], styles: ["input[_ngcontent-%COMP%]::placeholder {\n          text-align: left;\n      }"], changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfCurrencyComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-currency',
-                        template: "\n      <form [formGroup]=\"group\">\n          <input\n                  currencyMask\n                  nz-input\n                  [formControlName]=\"field.dataField\"\n                  class=\"ord-dynamic-input\"\n                  [disabled]=\"field.disabled\"\n                  [placeholder]=\"field.placeholder\"\n                  [options]=\"field\"\n          />\n      </form>\n  ",
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                        styles: ["\n      input::placeholder {\n          text-align: left;\n      }\n  "]
-                    }]
-            }], function () { return []; }, null);
-    })();
+    OfCurrencyComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-currency',
+                    template: "\n      <form [formGroup]=\"group\">\n          <input\n                  currencyMask\n                  nz-input\n                  [formControlName]=\"field.dataField\"\n                  class=\"ord-dynamic-input\"\n                  [disabled]=\"field.disabled\"\n                  [placeholder]=\"field.placeholder\"\n                  [options]=\"field\"\n          />\n      </form>\n  ",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    styles: ["\n      input::placeholder {\n          text-align: left;\n      }\n  "]
+                },] }
+    ];
+    OfCurrencyComponent.ctorParameters = function () { return []; };
 
     var ofCurrency_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
         OfCurrencyComponent: OfCurrencyComponent
     });
 
-    var _c0$5 = ["refDate"];
-    var _c1$1 = ["refInput"];
-    var _c2 = function (a0) { return { mask: a0 }; };
+    var OfDatePickerComponent = /** @class */ (function () {
+        function OfDatePickerComponent(destroy$, cdr) {
+            var _this = this;
+            this.destroy$ = destroy$;
+            this.cdr = cdr;
+            this.disabledDate = function (current) {
+                var _a;
+                if (((_a = _this.field) === null || _a === void 0 ? void 0 : _a.dateNotGreaterThanCurrent) && !_this.maxDate) {
+                    _this.maxDate = new Date();
+                }
+                var check = false;
+                if (_this.minDate) {
+                    check = check || differenceInCalendarDays__default['default'](current, _this.minDate) < 0;
+                }
+                if (_this.maxDate) {
+                    check = check || differenceInCalendarDays__default['default'](current, _this.maxDate) > 0;
+                }
+                return check;
+            };
+        }
+        OfDatePickerComponent.prototype.ngOnInit = function () {
+            var _this = this;
+            this.minDate = this.field.minDate;
+            this.maxDate = this.field.maxDate;
+            if (this.field.minDateAsync) {
+                this.field.minDateAsync.pipe(operators.takeUntil(this.destroy$))
+                    .subscribe(function (min) {
+                    _this.setMinDate(min);
+                });
+            }
+            if (this.field.maxDateAsync) {
+                this.field.maxDateAsync.pipe(operators.takeUntil(this.destroy$)).subscribe(function (max) {
+                    _this.setMaxDate(max);
+                });
+            }
+            this.schemaModel.subRender(this.cdr, this.destroy$);
+        };
+        OfDatePickerComponent.prototype.setMinDate = function (min) {
+            var d = this.convertDate(min);
+            if (AppUtilityService.isNullOrEmpty(this.field.minDate)) {
+                this.minDate = d;
+            }
+            else if (AppUtilityService.isNotNull(d) && differenceInCalendarDays__default['default'](d, this.field.minDate) > 0) {
+                this.minDate = d;
+            }
+            else {
+                this.minDate = this.field.minDate;
+            }
+            this.cdr.detectChanges();
+        };
+        OfDatePickerComponent.prototype.setMaxDate = function (max) {
+            var d = this.convertDate(max);
+            if (AppUtilityService.isNullOrEmpty(this.field.maxDate)) {
+                this.maxDate = d;
+            }
+            else if (AppUtilityService.isNotNull(d) && differenceInCalendarDays__default['default'](d, this.field.maxDate) < 0) {
+                this.maxDate = d;
+            }
+            else {
+                this.maxDate = this.field.maxDate;
+            }
+            this.cdr.detectChanges();
+        };
+        OfDatePickerComponent.prototype.convertDate = function (date) {
+            if (moment__namespace.isMoment(date)) {
+                return date.toDate();
+            }
+            else {
+                return date;
+            }
+        };
+        Object.defineProperty(OfDatePickerComponent.prototype, "f", {
+            get: function () {
+                return this.group.get(this.field.dataField);
+            },
+            enumerable: false,
+            configurable: true
+        });
+        OfDatePickerComponent.prototype.handlerTuNgayChange = function () {
+            var _this = this;
+            if (AppUtilityService.isNotNull(this.field.tuNgayDataField) && this.group.get(this.field.tuNgayDataField)) {
+                this.group.get(this.field.tuNgayDataField).valueChanges
+                    .pipe(operators.takeUntil(this.destroy$)).subscribe(function (min) {
+                    _this.setMinDate(min);
+                });
+            }
+        };
+        OfDatePickerComponent.prototype.handlerDenNgayChange = function () {
+            var _this = this;
+            if (AppUtilityService.isNotNull(this.field.denNgayDataField) && this.group.get(this.field.denNgayDataField)) {
+                this.group.get(this.field.denNgayDataField).valueChanges
+                    .pipe(operators.takeUntil(this.destroy$)).subscribe(function (max) {
+                    _this.setMaxDate(max);
+                });
+            }
+        };
+        OfDatePickerComponent.prototype.ngAfterContentChecked = function () {
+            this.handlerDenNgayChange();
+            this.handlerTuNgayChange();
+        };
+        return OfDatePickerComponent;
+    }());
+    OfDatePickerComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-date-picker',
+                    template: "\n      <form [formGroup]=\"group\">\n          <of-date-picker-ctrl #vcDatePicker [formControlName]=\"field.dataField\"\n                               [disabled]=\"field.disabled\"\n                               [disabledDate]=\"disabledDate\"></of-date-picker-ctrl>\n      </form>\n  ",
+                    providers: [DestroyRxjsService],
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfDatePickerComponent.ctorParameters = function () { return [
+        { type: DestroyRxjsService },
+        { type: i0.ChangeDetectorRef }
+    ]; };
+    OfDatePickerComponent.propDecorators = {
+        vcDatePicker: [{ type: i0.ViewChild, args: ['vcDatePicker',] }]
+    };
+
+    var ofDatePicker_component = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        OfDatePickerComponent: OfDatePickerComponent
+    });
+
+    var OfNumberInputComponent = /** @class */ (function () {
+        function OfNumberInputComponent() {
+        }
+        OfNumberInputComponent.prototype.ngOnInit = function () {
+        };
+        return OfNumberInputComponent;
+    }());
+    OfNumberInputComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-number-input',
+                    template: "\n      <form [formGroup]=\"group\">\n          <input nz-input *ngIf=\"field.onlyKeyNumber;else tplNumberInput\"\n                 numbersOnlyInput [formControlName]=\"field.dataField\"\n                 [placeholder]=\"field.placeholder\"\n                 maxlength=\"{{ field.maxlength }}\"\n          />\n          <ng-template #tplNumberInput>\n              <nz-input-number [formControlName]=\"field.dataField\"\n                               [nzPlaceHolder]=\"field.placeholder\"\n                               style=\"width: 100%\"\n                               [nzMin]=\"field.min\"\n                               [nzMax]=\"field.max\"\n                               [nzStep]=\"field.step\">\n              </nz-input-number>\n          </ng-template>\n      </form>\n  ",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfNumberInputComponent.ctorParameters = function () { return []; };
+
+    var ofNumberInput_component = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        OfNumberInputComponent: OfNumberInputComponent
+    });
+
+    var OfTextAreaComponent = /** @class */ (function () {
+        function OfTextAreaComponent() {
+        }
+        return OfTextAreaComponent;
+    }());
+    OfTextAreaComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-text-area',
+                    template: "\n      <form [formGroup]=\"group\">\n          <textarea nz-input\n                    [formControlName]=\"field.dataField\"\n                    [placeholder]=\"field.placeholder\"\n                    [rows]=\"field.rows\"\n                    maxlength=\"{{field.maxLength}}\"></textarea>\n      </form>\n  "
+                },] }
+    ];
+
+    var ofTextArea_component = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        OfTextAreaComponent: OfTextAreaComponent
+    });
+
     var VALUE_ACCESSOR = {
-        provide: i1$1.NG_VALUE_ACCESSOR,
+        provide: i1.NG_VALUE_ACCESSOR,
         useExisting: i0.forwardRef(function () { return OfDataPickerControlComponent; }),
         multi: true
     };
@@ -42099,8 +41269,8 @@
             // tslint:disable-next-line:variable-name
             this.isShowIconCalendar = true;
             this.isDisabled = false;
-            this.control = new i1$1.FormControl({ value: null, disabled: true });
-            this.inputValue = new i1$1.FormControl({ value: '', disabled: false });
+            this.control = new i1.FormControl({ value: null, disabled: true });
+            this.inputValue = new i1.FormControl({ value: '', disabled: false });
         }
         Object.defineProperty(OfDataPickerControlComponent.prototype, "value", {
             get: function () {
@@ -42271,209 +41441,44 @@
         };
         return OfDataPickerControlComponent;
     }());
-    OfDataPickerControlComponent.ɵfac = function OfDataPickerControlComponent_Factory(t) { return new (t || OfDataPickerControlComponent)(); };
-    OfDataPickerControlComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfDataPickerControlComponent, selectors: [["of-date-picker-ctrl"]], viewQuery: function OfDataPickerControlComponent_Query(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵviewQuery(_c0$5, true);
-                i0__namespace.ɵɵviewQuery(_c1$1, true);
-            }
-            if (rf & 2) {
-                var _t = void 0;
-                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.refDate = _t.first);
-                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.refInput = _t.first);
-            }
-        }, inputs: { disabledDate: "disabledDate", placeHolder: "placeHolder", disabled: "disabled", control: "control" }, features: [i0__namespace.ɵɵProvidersFeature([VALUE_ACCESSOR])], decls: 7, vars: 12, consts: [[1, "main-ora-date", 3, "mouseenter", "mouseleave"], ["tabindex", "-1", "nzFormat", "dd/MM/yyyy", 1, "ora-date", 2, "width", "100%", 3, "nzPlaceHolder", "nzDisabled", "nzDisabledDate", "formControl"], ["refDate", ""], ["nz-input", "", 1, "ora-input-date", 3, "placeholder", "formControl", "textMask", "focusout"], ["refInput", ""], ["nz-icon", "", "nzTheme", "outline", 1, "ora-calendar", 3, "nzType", "click"]], template: function OfDataPickerControlComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "div", 0);
-                i0__namespace.ɵɵlistener("mouseenter", function OfDataPickerControlComponent_Template_div_mouseenter_0_listener() { return ctx.mouseEnterMain(); })("mouseleave", function OfDataPickerControlComponent_Template_div_mouseleave_0_listener() { return ctx.mouseLeaveMain(); });
-                i0__namespace.ɵɵelement(1, "nz-date-picker", 1, 2);
-                i0__namespace.ɵɵelementStart(3, "input", 3, 4);
-                i0__namespace.ɵɵlistener("focusout", function OfDataPickerControlComponent_Template_input_focusout_3_listener() { return ctx.onFocusOutInputMask(); });
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(5, "i", 5);
-                i0__namespace.ɵɵlistener("click", function OfDataPickerControlComponent_Template_i_click_5_listener() { return ctx.onClickIcon(); });
-                i0__namespace.ɵɵpipe(6, "async");
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("nzPlaceHolder", ctx.placeHolder)("nzDisabled", ctx.disabled)("nzDisabledDate", ctx.disabledDate)("formControl", ctx.control);
-                i0__namespace.ɵɵadvance(2);
-                i0__namespace.ɵɵproperty("placeholder", ctx.placeHolder)("formControl", ctx.inputValue)("textMask", i0__namespace.ɵɵpureFunction1(10, _c2, ctx.mask));
-                i0__namespace.ɵɵadvance(2);
-                i0__namespace.ɵɵproperty("nzType", i0__namespace.ɵɵpipeBind1(6, 8, ctx.nzIcon$));
-            }
-        }, directives: [i1__namespace$4.NzDatePickerComponent, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlDirective, i2__namespace.NzInputDirective, i1__namespace$1.DefaultValueAccessor, i4__namespace$1.MaskedInputDirective, i3__namespace$2.ɵNzTransitionPatchDirective, i4__namespace$2.NzIconDirective], pipes: [i4__namespace.AsyncPipe], styles: [".main-ora-date {\n      position: relative;\n  }\n\n  .ora-date {\n      border: 0;\n  }\n\n  .ora-input-date {\n      position: absolute;\n      top: 0;\n      left: 0\n  }\n\n  .ora-close {\n      position: absolute;\n      top: 7px;\n      right: 5px;\n  }\n\n  .ora-calendar {\n      position: absolute;\n      top: 7px;\n      right: 5px;\n  }"], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfDataPickerControlComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-date-picker-ctrl',
-                        template: "\n      <div class=\"main-ora-date\" (mouseenter)=\"mouseEnterMain()\" (mouseleave)=\"mouseLeaveMain()\">\n          <nz-date-picker class=\"ora-date\" #refDate style=\"width:100%\" [nzPlaceHolder]=\"placeHolder\"\n                          [nzDisabled]=\"disabled\"\n                          [nzDisabledDate]=\"disabledDate\"\n                          tabindex=\"-1\"\n                          [formControl]=\"control\"\n                          nzFormat=\"dd/MM/yyyy\"></nz-date-picker>\n          <input #refInput class=\"ora-input-date\" nz-input (focusout)=\"onFocusOutInputMask()\"\n                 [placeholder]=\"placeHolder\"\n                 [formControl]=\"inputValue\"\n                 [textMask]=\"{mask: mask}\"/>\n          <i class=\"ora-calendar\" (click)=\"onClickIcon()\" nz-icon\n             [nzType]=\"nzIcon$ | async\"\n             nzTheme=\"outline\"></i>\n      </div>\n  ",
-                        styles: [".main-ora-date {\n      position: relative;\n  }\n\n  .ora-date {\n      border: 0;\n  }\n\n  .ora-input-date {\n      position: absolute;\n      top: 0;\n      left: 0\n  }\n\n  .ora-close {\n      position: absolute;\n      top: 7px;\n      right: 5px;\n  }\n\n  .ora-calendar {\n      position: absolute;\n      top: 7px;\n      right: 5px;\n  }"],
-                        encapsulation: i0.ViewEncapsulation.None,
-                        providers: [VALUE_ACCESSOR]
-                    }]
-            }], function () { return []; }, { refDate: [{
-                    type: i0.ViewChild,
-                    args: ['refDate']
-                }], refInput: [{
-                    type: i0.ViewChild,
-                    args: ['refInput']
-                }], disabledDate: [{
-                    type: i0.Input
-                }], placeHolder: [{
-                    type: i0.Input
-                }], disabled: [{
-                    type: i0.Input
-                }], control: [{
-                    type: i0.Input
-                }] });
-    })();
+    OfDataPickerControlComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-date-picker-ctrl',
+                    template: "\n      <div class=\"main-ora-date\" (mouseenter)=\"mouseEnterMain()\" (mouseleave)=\"mouseLeaveMain()\">\n          <nz-date-picker class=\"ora-date\" #refDate style=\"width:100%\" [nzPlaceHolder]=\"placeHolder\"\n                          [nzDisabled]=\"disabled\"\n                          [nzDisabledDate]=\"disabledDate\"\n                          tabindex=\"-1\"\n                          [formControl]=\"control\"\n                          nzFormat=\"dd/MM/yyyy\"></nz-date-picker>\n          <input #refInput class=\"ora-input-date\" nz-input (focusout)=\"onFocusOutInputMask()\"\n                 [placeholder]=\"placeHolder\"\n                 [formControl]=\"inputValue\"\n                 [textMask]=\"{mask: mask}\"/>\n          <i class=\"ora-calendar\" (click)=\"onClickIcon()\" nz-icon\n             [nzType]=\"nzIcon$ | async\"\n             nzTheme=\"outline\"></i>\n      </div>\n  ",
+                    encapsulation: i0.ViewEncapsulation.None,
+                    providers: [VALUE_ACCESSOR],
+                    styles: [".main-ora-date {\n      position: relative;\n  }\n\n  .ora-date {\n      border: 0;\n  }\n\n  .ora-input-date {\n      position: absolute;\n      top: 0;\n      left: 0\n  }\n\n  .ora-close {\n      position: absolute;\n      top: 7px;\n      right: 5px;\n  }\n\n  .ora-calendar {\n      position: absolute;\n      top: 7px;\n      right: 5px;\n  }"]
+                },] }
+    ];
+    OfDataPickerControlComponent.ctorParameters = function () { return []; };
+    OfDataPickerControlComponent.propDecorators = {
+        refDate: [{ type: i0.ViewChild, args: ['refDate',] }],
+        refInput: [{ type: i0.ViewChild, args: ['refInput',] }],
+        disabledDate: [{ type: i0.Input }],
+        placeHolder: [{ type: i0.Input }],
+        disabled: [{ type: i0.Input }],
+        control: [{ type: i0.Input }]
+    };
 
-    var _c0$4 = ["vcDatePicker"];
-    var OfDatePickerComponent = /** @class */ (function () {
-        function OfDatePickerComponent(destroy$, cdr) {
-            var _this = this;
-            this.destroy$ = destroy$;
-            this.cdr = cdr;
-            this.disabledDate = function (current) {
-                var _a;
-                if (((_a = _this.field) === null || _a === void 0 ? void 0 : _a.dateNotGreaterThanCurrent) && !_this.maxDate) {
-                    _this.maxDate = new Date();
-                }
-                var check = false;
-                if (_this.minDate) {
-                    check = check || differenceInCalendarDays__default['default'](current, _this.minDate) < 0;
-                }
-                if (_this.maxDate) {
-                    check = check || differenceInCalendarDays__default['default'](current, _this.maxDate) > 0;
-                }
-                return check;
-            };
+    var OfContentHtmlComponent = /** @class */ (function () {
+        function OfContentHtmlComponent() {
         }
-        OfDatePickerComponent.prototype.ngOnInit = function () {
-            var _this = this;
-            this.minDate = this.field.minDate;
-            this.maxDate = this.field.maxDate;
-            if (this.field.minDateAsync) {
-                this.field.minDateAsync.pipe(operators.takeUntil(this.destroy$))
-                    .subscribe(function (min) {
-                    _this.setMinDate(min);
-                });
-            }
-            if (this.field.maxDateAsync) {
-                this.field.maxDateAsync.pipe(operators.takeUntil(this.destroy$)).subscribe(function (max) {
-                    _this.setMaxDate(max);
-                });
-            }
-            this.schemaModel.subRender(this.cdr, this.destroy$);
+        OfContentHtmlComponent.prototype.ngOnInit = function () {
         };
-        OfDatePickerComponent.prototype.setMinDate = function (min) {
-            var d = this.convertDate(min);
-            if (AppUtilityService.isNullOrEmpty(this.field.minDate)) {
-                this.minDate = d;
-            }
-            else if (AppUtilityService.isNotNull(d) && differenceInCalendarDays__default['default'](d, this.field.minDate) > 0) {
-                this.minDate = d;
-            }
-            else {
-                this.minDate = this.field.minDate;
-            }
-            this.cdr.detectChanges();
-        };
-        OfDatePickerComponent.prototype.setMaxDate = function (max) {
-            var d = this.convertDate(max);
-            if (AppUtilityService.isNullOrEmpty(this.field.maxDate)) {
-                this.maxDate = d;
-            }
-            else if (AppUtilityService.isNotNull(d) && differenceInCalendarDays__default['default'](d, this.field.maxDate) < 0) {
-                this.maxDate = d;
-            }
-            else {
-                this.maxDate = this.field.maxDate;
-            }
-            this.cdr.detectChanges();
-        };
-        OfDatePickerComponent.prototype.convertDate = function (date) {
-            if (moment__namespace.isMoment(date)) {
-                return date.toDate();
-            }
-            else {
-                return date;
-            }
-        };
-        Object.defineProperty(OfDatePickerComponent.prototype, "f", {
-            get: function () {
-                return this.group.get(this.field.dataField);
-            },
-            enumerable: false,
-            configurable: true
-        });
-        OfDatePickerComponent.prototype.handlerTuNgayChange = function () {
-            var _this = this;
-            if (AppUtilityService.isNotNull(this.field.tuNgayDataField) && this.group.get(this.field.tuNgayDataField)) {
-                this.group.get(this.field.tuNgayDataField).valueChanges
-                    .pipe(operators.takeUntil(this.destroy$)).subscribe(function (min) {
-                    _this.setMinDate(min);
-                });
-            }
-        };
-        OfDatePickerComponent.prototype.handlerDenNgayChange = function () {
-            var _this = this;
-            if (AppUtilityService.isNotNull(this.field.denNgayDataField) && this.group.get(this.field.denNgayDataField)) {
-                this.group.get(this.field.denNgayDataField).valueChanges
-                    .pipe(operators.takeUntil(this.destroy$)).subscribe(function (max) {
-                    _this.setMaxDate(max);
-                });
-            }
-        };
-        OfDatePickerComponent.prototype.ngAfterContentChecked = function () {
-            this.handlerDenNgayChange();
-            this.handlerTuNgayChange();
-        };
-        return OfDatePickerComponent;
+        return OfContentHtmlComponent;
     }());
-    OfDatePickerComponent.ɵfac = function OfDatePickerComponent_Factory(t) { return new (t || OfDatePickerComponent)(i0__namespace.ɵɵdirectiveInject(DestroyRxjsService), i0__namespace.ɵɵdirectiveInject(i0__namespace.ChangeDetectorRef)); };
-    OfDatePickerComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfDatePickerComponent, selectors: [["of-date-picker"]], viewQuery: function OfDatePickerComponent_Query(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵviewQuery(_c0$4, true);
-            }
-            if (rf & 2) {
-                var _t = void 0;
-                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.vcDatePicker = _t.first);
-            }
-        }, features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])], decls: 3, vars: 4, consts: [[3, "formGroup"], [3, "formControlName", "disabled", "disabledDate"], ["vcDatePicker", ""]], template: function OfDatePickerComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelement(1, "of-date-picker-ctrl", 1, 2);
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField)("disabled", ctx.field.disabled)("disabledDate", ctx.disabledDate);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, OfDataPickerControlComponent, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfDatePickerComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-date-picker',
-                        template: "\n      <form [formGroup]=\"group\">\n          <of-date-picker-ctrl #vcDatePicker [formControlName]=\"field.dataField\"\n                               [disabled]=\"field.disabled\"\n                               [disabledDate]=\"disabledDate\"></of-date-picker-ctrl>\n      </form>\n  ",
-                        providers: [DestroyRxjsService],
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return [{ type: DestroyRxjsService }, { type: i0__namespace.ChangeDetectorRef }]; }, { vcDatePicker: [{
-                    type: i0.ViewChild,
-                    args: ['vcDatePicker']
-                }] });
-    })();
+    OfContentHtmlComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-content-html',
+                    template: "\n      <div [innerHTML]=\"field.content\"></div>",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfContentHtmlComponent.ctorParameters = function () { return []; };
 
-    var ofDatePicker_component = /*#__PURE__*/Object.freeze({
+    var ofContentHtml_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
-        OfDatePickerComponent: OfDatePickerComponent
+        OfContentHtmlComponent: OfContentHtmlComponent
     });
 
     var NumbersOnlyDirective = /** @class */ (function () {
@@ -42490,159 +41495,18 @@
         };
         return NumbersOnlyDirective;
     }());
-    NumbersOnlyDirective.ɵfac = function NumbersOnlyDirective_Factory(t) { return new (t || NumbersOnlyDirective)(i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef)); };
-    NumbersOnlyDirective.ɵdir = i0__namespace.ɵɵdefineDirective({ type: NumbersOnlyDirective, selectors: [["input", "numbersOnlyInput", ""]], hostBindings: function NumbersOnlyDirective_HostBindings(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵlistener("input", function NumbersOnlyDirective_input_HostBindingHandler($event) { return ctx.onInputChange($event); });
-            }
-        } });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(NumbersOnlyDirective, [{
-                type: i0.Directive,
-                args: [{
-                        selector: 'input[numbersOnlyInput]'
-                    }]
-            }], function () { return [{ type: i0__namespace.ElementRef }]; }, { onInputChange: [{
-                    type: i0.HostListener,
-                    args: ['input', ['$event']]
-                }] });
-    })();
+    NumbersOnlyDirective.decorators = [
+        { type: i0.Directive, args: [{
+                    selector: 'input[numbersOnlyInput]'
+                },] }
+    ];
+    NumbersOnlyDirective.ctorParameters = function () { return [
+        { type: i0.ElementRef }
+    ]; };
+    NumbersOnlyDirective.propDecorators = {
+        onInputChange: [{ type: i0.HostListener, args: ['input', ['$event'],] }]
+    };
 
-    function OfNumberInputComponent_input_1_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "input", 3);
-        }
-        if (rf & 2) {
-            var ctx_r0 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵpropertyInterpolate("maxlength", ctx_r0.field.maxlength);
-            i0__namespace.ɵɵproperty("formControlName", ctx_r0.field.dataField)("placeholder", ctx_r0.field.placeholder);
-        }
-    }
-    function OfNumberInputComponent_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "nz-input-number", 4);
-        }
-        if (rf & 2) {
-            var ctx_r2 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("formControlName", ctx_r2.field.dataField)("nzPlaceHolder", ctx_r2.field.placeholder)("nzMin", ctx_r2.field.min)("nzMax", ctx_r2.field.max)("nzStep", ctx_r2.field.step);
-        }
-    }
-    var OfNumberInputComponent = /** @class */ (function () {
-        function OfNumberInputComponent() {
-        }
-        OfNumberInputComponent.prototype.ngOnInit = function () {
-        };
-        return OfNumberInputComponent;
-    }());
-    OfNumberInputComponent.ɵfac = function OfNumberInputComponent_Factory(t) { return new (t || OfNumberInputComponent)(); };
-    OfNumberInputComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfNumberInputComponent, selectors: [["of-number-input"]], decls: 4, vars: 3, consts: [[3, "formGroup"], ["nz-input", "", "numbersOnlyInput", "", 3, "formControlName", "placeholder", "maxlength", 4, "ngIf", "ngIfElse"], ["tplNumberInput", ""], ["nz-input", "", "numbersOnlyInput", "", 3, "formControlName", "placeholder", "maxlength"], [2, "width", "100%", 3, "formControlName", "nzPlaceHolder", "nzMin", "nzMax", "nzStep"]], template: function OfNumberInputComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵtemplate(1, OfNumberInputComponent_input_1_Template, 1, 3, "input", 1);
-                i0__namespace.ɵɵtemplate(2, OfNumberInputComponent_ng_template_2_Template, 1, 5, "ng-template", null, 2, i0__namespace.ɵɵtemplateRefExtractor);
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                var _r1 = i0__namespace.ɵɵreference(3);
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("ngIf", ctx.field.onlyKeyNumber)("ngIfElse", _r1);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i4__namespace.NgIf, i2__namespace.NzInputDirective, NumbersOnlyDirective, i1__namespace$1.DefaultValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i1__namespace$1.MaxLengthValidator, i5__namespace.NzInputNumberComponent], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfNumberInputComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-number-input',
-                        template: "\n      <form [formGroup]=\"group\">\n          <input nz-input *ngIf=\"field.onlyKeyNumber;else tplNumberInput\"\n                 numbersOnlyInput [formControlName]=\"field.dataField\"\n                 [placeholder]=\"field.placeholder\"\n                 maxlength=\"{{ field.maxlength }}\"\n          />\n          <ng-template #tplNumberInput>\n              <nz-input-number [formControlName]=\"field.dataField\"\n                               [nzPlaceHolder]=\"field.placeholder\"\n                               style=\"width: 100%\"\n                               [nzMin]=\"field.min\"\n                               [nzMax]=\"field.max\"\n                               [nzStep]=\"field.step\">\n              </nz-input-number>\n          </ng-template>\n      </form>\n  ",
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return []; }, null);
-    })();
-
-    var ofNumberInput_component = /*#__PURE__*/Object.freeze({
-        __proto__: null,
-        OfNumberInputComponent: OfNumberInputComponent
-    });
-
-    var OfTextAreaComponent = /** @class */ (function () {
-        function OfTextAreaComponent() {
-        }
-        return OfTextAreaComponent;
-    }());
-    OfTextAreaComponent.ɵfac = function OfTextAreaComponent_Factory(t) { return new (t || OfTextAreaComponent)(); };
-    OfTextAreaComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfTextAreaComponent, selectors: [["of-text-area"]], decls: 2, vars: 5, consts: [[3, "formGroup"], ["nz-input", "", 3, "formControlName", "placeholder", "rows", "maxlength"]], template: function OfTextAreaComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelement(1, "textarea", 1);
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵpropertyInterpolate("maxlength", ctx.field.maxLength);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField)("placeholder", ctx.field.placeholder)("rows", ctx.field.rows);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace.NzInputDirective, i1__namespace$1.DefaultValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i1__namespace$1.MaxLengthValidator], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfTextAreaComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-text-area',
-                        template: "\n      <form [formGroup]=\"group\">\n          <textarea nz-input\n                    [formControlName]=\"field.dataField\"\n                    [placeholder]=\"field.placeholder\"\n                    [rows]=\"field.rows\"\n                    maxlength=\"{{field.maxLength}}\"></textarea>\n      </form>\n  "
-                    }]
-            }], null, null);
-    })();
-
-    var ofTextArea_component = /*#__PURE__*/Object.freeze({
-        __proto__: null,
-        OfTextAreaComponent: OfTextAreaComponent
-    });
-
-    var OfContentHtmlComponent = /** @class */ (function () {
-        function OfContentHtmlComponent() {
-        }
-        OfContentHtmlComponent.prototype.ngOnInit = function () {
-        };
-        return OfContentHtmlComponent;
-    }());
-    OfContentHtmlComponent.ɵfac = function OfContentHtmlComponent_Factory(t) { return new (t || OfContentHtmlComponent)(); };
-    OfContentHtmlComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfContentHtmlComponent, selectors: [["of-content-html"]], decls: 1, vars: 1, consts: [[3, "innerHTML"]], template: function OfContentHtmlComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelement(0, "div", 0);
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("innerHTML", ctx.field.content, i0__namespace.ɵɵsanitizeHtml);
-            }
-        }, encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfContentHtmlComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-content-html',
-                        template: "\n      <div [innerHTML]=\"field.content\"></div>",
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return []; }, null);
-    })();
-
-    var ofContentHtml_component = /*#__PURE__*/Object.freeze({
-        __proto__: null,
-        OfContentHtmlComponent: OfContentHtmlComponent
-    });
-
-    function OfPasswordComponent_ng_template_3_Template(rf, ctx) {
-        if (rf & 1) {
-            var _r3_1 = i0__namespace.ɵɵgetCurrentView();
-            i0__namespace.ɵɵelementStart(0, "i", 4);
-            i0__namespace.ɵɵlistener("click", function OfPasswordComponent_ng_template_3_Template_i_click_0_listener() { i0__namespace.ɵɵrestoreView(_r3_1); var ctx_r2 = i0__namespace.ɵɵnextContext(); return ctx_r2.passwordVisible = !ctx_r2.passwordVisible; });
-            i0__namespace.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var ctx_r1 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("nzType", ctx_r1.passwordVisible ? "eye-invisible" : "eye");
-        }
-    }
     var OfPasswordComponent = /** @class */ (function () {
         function OfPasswordComponent() {
             this.passwordVisible = false;
@@ -42652,55 +41516,20 @@
         };
         return OfPasswordComponent;
     }());
-    OfPasswordComponent.ɵfac = function OfPasswordComponent_Factory(t) { return new (t || OfPasswordComponent)(); };
-    OfPasswordComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfPasswordComponent, selectors: [["of-password"]], decls: 5, vars: 5, consts: [[3, "formGroup"], ["nzPrefixIcon", "lock", 3, "nzSuffix"], ["nz-input", "", 3, "type", "placeholder", "formControlName"], ["suffixTemplate", ""], ["nz-icon", "", 3, "nzType", "click"]], template: function OfPasswordComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelementStart(1, "nz-input-group", 1);
-                i0__namespace.ɵɵelement(2, "input", 2);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵtemplate(3, OfPasswordComponent_ng_template_3_Template, 1, 1, "ng-template", null, 3, i0__namespace.ɵɵtemplateRefExtractor);
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                var _r0 = i0__namespace.ɵɵreference(4);
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("nzSuffix", _r0);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵpropertyInterpolate("placeholder", ctx.field.placeholder);
-                i0__namespace.ɵɵproperty("type", ctx.passwordVisible ? "text" : "password")("formControlName", ctx.field.dataField);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace.NzInputGroupComponent, i2__namespace.NzInputGroupWhitSuffixOrPrefixDirective, i2__namespace.NzInputDirective, i1__namespace$1.DefaultValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i3__namespace$2.ɵNzTransitionPatchDirective, i4__namespace$2.NzIconDirective], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfPasswordComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-password',
-                        template: "\n      <form [formGroup]=\"group\">\n          <nz-input-group nzPrefixIcon=\"lock\" [nzSuffix]=\"suffixTemplate\">\n              <input [type]=\"passwordVisible ? 'text' : 'password'\" nz-input placeholder=\"{{field.placeholder}}\"\n                     [formControlName]=\"field.dataField\"/>\n          </nz-input-group>\n          <ng-template #suffixTemplate>\n              <i nz-icon [nzType]=\"passwordVisible ? 'eye-invisible' : 'eye'\"\n                 (click)=\"passwordVisible = !passwordVisible\"></i>\n          </ng-template>\n      </form>\n  ",
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return []; }, null);
-    })();
+    OfPasswordComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-password',
+                    template: "\n      <form [formGroup]=\"group\">\n          <nz-input-group nzPrefixIcon=\"lock\" [nzSuffix]=\"suffixTemplate\">\n              <input [type]=\"passwordVisible ? 'text' : 'password'\" nz-input placeholder=\"{{field.placeholder}}\"\n                     [formControlName]=\"field.dataField\"/>\n          </nz-input-group>\n          <ng-template #suffixTemplate>\n              <i nz-icon [nzType]=\"passwordVisible ? 'eye-invisible' : 'eye'\"\n                 (click)=\"passwordVisible = !passwordVisible\"></i>\n          </ng-template>\n      </form>\n  ",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfPasswordComponent.ctorParameters = function () { return []; };
 
     var ofPassword_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
         OfPasswordComponent: OfPasswordComponent
     });
 
-    function OfRadioComponent_label_2_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "label", 3);
-            i0__namespace.ɵɵtext(1);
-            i0__namespace.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var op_r1 = ctx.$implicit;
-            i0__namespace.ɵɵproperty("nzValue", op_r1.value);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵtextInterpolate(op_r1.label);
-        }
-    }
     var OfRadioComponent = /** @class */ (function () {
         function OfRadioComponent() {
         }
@@ -42708,49 +41537,20 @@
         };
         return OfRadioComponent;
     }());
-    OfRadioComponent.ɵfac = function OfRadioComponent_Factory(t) { return new (t || OfRadioComponent)(); };
-    OfRadioComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfRadioComponent, selectors: [["of-radio"]], decls: 3, vars: 4, consts: [[3, "formGroup"], [2, "width", "100%", 3, "formControlName", "nzDisabled"], ["nz-radio", "", 3, "nzValue", 4, "ngFor", "ngForOf"], ["nz-radio", "", 3, "nzValue"]], template: function OfRadioComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelementStart(1, "nz-radio-group", 1);
-                i0__namespace.ɵɵtemplate(2, OfRadioComponent_label_2_Template, 2, 2, "label", 2);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField)("nzDisabled", ctx.field.disabled);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("ngForOf", ctx.field.items);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace$3.NzRadioGroupComponent, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i4__namespace.NgForOf, i2__namespace$3.NzRadioComponent], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfRadioComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-radio',
-                        template: "\n      <form [formGroup]=\"group\">\n          <nz-radio-group [formControlName]=\"field.dataField\"\n                          [nzDisabled]=\"field.disabled\"\n                          style=\"width: 100%\">\n              <label *ngFor=\"let op of field.items\" nz-radio [nzValue]=\"op.value\">{{ op.label }}</label>\n          </nz-radio-group>\n      </form>\n  ",
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return []; }, null);
-    })();
+    OfRadioComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-radio',
+                    template: "\n      <form [formGroup]=\"group\">\n          <nz-radio-group [formControlName]=\"field.dataField\"\n                          [nzDisabled]=\"field.disabled\"\n                          style=\"width: 100%\">\n              <label *ngFor=\"let op of field.items\" nz-radio [nzValue]=\"op.value\">{{ op.label }}</label>\n          </nz-radio-group>\n      </form>\n  ",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfRadioComponent.ctorParameters = function () { return []; };
 
     var ofRadio_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
         OfRadioComponent: OfRadioComponent
     });
 
-    function OfSwitchComponent_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "i", 4);
-        }
-    }
-    function OfSwitchComponent_ng_template_4_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "i", 5);
-        }
-    }
     var OfSwitchComponent = /** @class */ (function () {
         function OfSwitchComponent() {
         }
@@ -42758,148 +41558,20 @@
         };
         return OfSwitchComponent;
     }());
-    OfSwitchComponent.ɵfac = function OfSwitchComponent_Factory(t) { return new (t || OfSwitchComponent)(); };
-    OfSwitchComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfSwitchComponent, selectors: [["of-switch"]], decls: 6, vars: 5, consts: [[3, "formGroup"], [3, "formControlName", "nzCheckedChildren", "nzUnCheckedChildren", "nzDisabled"], ["checkedTemplate", ""], ["unCheckedTemplate", ""], ["nz-icon", "", "nzType", "check"], ["nz-icon", "", "nzType", "close"]], template: function OfSwitchComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelementStart(1, "nz-switch", 1);
-                i0__namespace.ɵɵtemplate(2, OfSwitchComponent_ng_template_2_Template, 1, 0, "ng-template", null, 2, i0__namespace.ɵɵtemplateRefExtractor);
-                i0__namespace.ɵɵtemplate(4, OfSwitchComponent_ng_template_4_Template, 1, 0, "ng-template", null, 3, i0__namespace.ɵɵtemplateRefExtractor);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                var _r0 = i0__namespace.ɵɵreference(3);
-                var _r2 = i0__namespace.ɵɵreference(5);
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField)("nzCheckedChildren", ctx.field.yesText ? ctx.field.yesText : _r0)("nzUnCheckedChildren", ctx.field.noText ? ctx.field.noText : _r2)("nzDisabled", ctx.field.disabled);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace$4.NzSwitchComponent, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i3__namespace$2.ɵNzTransitionPatchDirective, i4__namespace$2.NzIconDirective], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfSwitchComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-switch',
-                        template: "\n      <form [formGroup]=\"group\">\n          <nz-switch [formControlName]=\"field.dataField\"\n                     [nzCheckedChildren]=\"field.yesText ? field.yesText : checkedTemplate\"\n                     [nzUnCheckedChildren]=\"field.noText ? field.noText : unCheckedTemplate\"\n                     [nzDisabled]=\"field.disabled\"\n          >\n              <ng-template #checkedTemplate><i nz-icon nzType=\"check\"></i></ng-template>\n              <ng-template #unCheckedTemplate><i nz-icon nzType=\"close\"></i></ng-template>\n          </nz-switch>\n      </form>\n  ",
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return []; }, null);
-    })();
+    OfSwitchComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-switch',
+                    template: "\n      <form [formGroup]=\"group\">\n          <nz-switch [formControlName]=\"field.dataField\"\n                     [nzCheckedChildren]=\"field.yesText ? field.yesText : checkedTemplate\"\n                     [nzUnCheckedChildren]=\"field.noText ? field.noText : unCheckedTemplate\"\n                     [nzDisabled]=\"field.disabled\"\n          >\n              <ng-template #checkedTemplate><i nz-icon nzType=\"check\"></i></ng-template>\n              <ng-template #unCheckedTemplate><i nz-icon nzType=\"close\"></i></ng-template>\n          </nz-switch>\n      </form>\n  ",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfSwitchComponent.ctorParameters = function () { return []; };
 
     var ofSwitch_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
         OfSwitchComponent: OfSwitchComponent
     });
 
-    var OfSelectRenderOptionPipe = /** @class */ (function () {
-        function OfSelectRenderOptionPipe() {
-        }
-        OfSelectRenderOptionPipe.prototype.transform = function (displayText, field, option) {
-            return typeof (field.renderOptionFunc) === 'function' ? field === null || field === void 0 ? void 0 : field.renderOptionFunc(option) : displayText;
-        };
-        return OfSelectRenderOptionPipe;
-    }());
-    OfSelectRenderOptionPipe.ɵfac = function OfSelectRenderOptionPipe_Factory(t) { return new (t || OfSelectRenderOptionPipe)(); };
-    OfSelectRenderOptionPipe.ɵpipe = i0__namespace.ɵɵdefinePipe({ name: "ofSelectRenderOption", type: OfSelectRenderOptionPipe, pure: true });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfSelectRenderOptionPipe, [{
-                type: i0.Pipe,
-                args: [{
-                        name: 'ofSelectRenderOption'
-                    }]
-            }], null, null);
-    })();
-
-    var OfOptionSelectedPipe = /** @class */ (function () {
-        function OfOptionSelectedPipe() {
-        }
-        OfOptionSelectedPipe.prototype.transform = function (value, label, field) {
-            if (AppUtilityService.isNotNull(value)) {
-                if (typeof field.renderSelectedFunc === 'function') {
-                    if (field === null || field === void 0 ? void 0 : field.itemSelected) {
-                        return field.renderSelectedFunc(field === null || field === void 0 ? void 0 : field.itemSelected);
-                    }
-                    return '';
-                }
-                else {
-                    return label;
-                }
-            }
-            return null;
-        };
-        return OfOptionSelectedPipe;
-    }());
-    OfOptionSelectedPipe.ɵfac = function OfOptionSelectedPipe_Factory(t) { return new (t || OfOptionSelectedPipe)(); };
-    OfOptionSelectedPipe.ɵpipe = i0__namespace.ɵɵdefinePipe({ name: "ofOptionSelected", type: OfOptionSelectedPipe, pure: false });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfOptionSelectedPipe, [{
-                type: i0.Pipe,
-                args: [{
-                        name: 'ofOptionSelected',
-                        pure: false
-                    }]
-            }], null, null);
-    })();
-
-    function OfSelectSearchServerComponent_nz_option_2_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "nz-option", 5);
-            i0__namespace.ɵɵelement(1, "span", 6);
-            i0__namespace.ɵɵpipe(2, "ofSelectRenderOption");
-            i0__namespace.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var option_r5 = ctx.$implicit;
-            var ctx_r0 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("nzCustomContent", true)("nzLabel", option_r5.displayText)("nzValue", option_r5.value);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("innerHTML", i0__namespace.ɵɵpipeBind3(2, 4, option_r5.displayText, ctx_r0.field, option_r5), i0__namespace.ɵɵsanitizeHtml);
-        }
-    }
-    function OfSelectSearchServerComponent_ng_template_4_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "span", 6);
-            i0__namespace.ɵɵpipe(1, "ofOptionSelected");
-        }
-        if (rf & 2) {
-            var selected_r6 = ctx.$implicit;
-            var ctx_r2 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("innerHTML", i0__namespace.ɵɵpipeBind3(1, 1, selected_r6.nzValue, selected_r6.nzLabel, ctx_r2.field), i0__namespace.ɵɵsanitizeHtml);
-        }
-    }
-    function OfSelectSearchServerComponent_ng_template_6_div_0_Template(rf, ctx) {
-        if (rf & 1) {
-            var _r10_1 = i0__namespace.ɵɵgetCurrentView();
-            i0__namespace.ɵɵelementStart(0, "div", 9);
-            i0__namespace.ɵɵelementStart(1, "nz-pagination", 10);
-            i0__namespace.ɵɵlistener("nzPageIndexChange", function OfSelectSearchServerComponent_ng_template_6_div_0_Template_nz_pagination_nzPageIndexChange_1_listener($event) { i0__namespace.ɵɵrestoreView(_r10_1); var ctx_r9 = i0__namespace.ɵɵnextContext(2); return ctx_r9.nzPageIndex = $event; })("nzPageIndexChange", function OfSelectSearchServerComponent_ng_template_6_div_0_Template_nz_pagination_nzPageIndexChange_1_listener() { i0__namespace.ɵɵrestoreView(_r10_1); var ctx_r11 = i0__namespace.ɵɵnextContext(2); return ctx_r11.nzPageIndexChange(); });
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var ctx_r7 = i0__namespace.ɵɵnextContext(2);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("nzPageSize", ctx_r7.maxResultCount)("nzPageIndex", ctx_r7.nzPageIndex)("nzTotal", ctx_r7.totalItems);
-        }
-    }
-    function OfSelectSearchServerComponent_ng_template_6_nz_spin_1_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "nz-spin");
-        }
-    }
-    function OfSelectSearchServerComponent_ng_template_6_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵtemplate(0, OfSelectSearchServerComponent_ng_template_6_div_0_Template, 2, 3, "div", 7);
-            i0__namespace.ɵɵtemplate(1, OfSelectSearchServerComponent_ng_template_6_nz_spin_1_Template, 1, 0, "nz-spin", 8);
-        }
-        if (rf & 2) {
-            var ctx_r4 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("ngIf", ctx_r4.field.showPagination);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("ngIf", ctx_r4.isLoading);
-        }
-    }
     var OfSelectSearchServerComponent = /** @class */ (function () {
         function OfSelectSearchServerComponent(destroy$, cdr) {
             var _this = this;
@@ -43084,57 +41756,26 @@
         };
         return OfSelectSearchServerComponent;
     }());
-    OfSelectSearchServerComponent.ɵfac = function OfSelectSearchServerComponent_Factory(t) { return new (t || OfSelectSearchServerComponent)(i0__namespace.ɵɵdirectiveInject(DestroyRxjsService), i0__namespace.ɵɵdirectiveInject(i0__namespace.ChangeDetectorRef)); };
-    OfSelectSearchServerComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfSelectSearchServerComponent, selectors: [["of-select-search-server"]], features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])], decls: 8, vars: 14, consts: [[3, "formGroup"], ["nzShowSearch", "", "nzServerSearch", "", 2, "width", "100%", 3, "formControlName", "nzCustomTemplate", "nzOptionHeightPx", "nzPlaceHolder", "nzMode", "nzAllowClear", "nzMaxMultipleCount", "nzMaxTagCount", "nzDropdownRender", "nzOpenChange", "nzScrollToBottom", "nzOnSearch"], [3, "nzCustomContent", "nzLabel", "nzValue", 4, "ngFor", "ngForOf", "ngForTrackBy"], ["tplSelectedView", ""], ["renderTemplate", ""], [3, "nzCustomContent", "nzLabel", "nzValue"], [3, "innerHTML"], ["class", "select-pagination", 4, "ngIf"], [4, "ngIf"], [1, "select-pagination"], ["nzSize", "small", 3, "nzPageSize", "nzPageIndex", "nzTotal", "nzPageIndexChange"]], template: function OfSelectSearchServerComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelementStart(1, "nz-select", 1);
-                i0__namespace.ɵɵlistener("nzOpenChange", function OfSelectSearchServerComponent_Template_nz_select_nzOpenChange_1_listener($event) { return ctx.nzOpenChange($event); })("nzScrollToBottom", function OfSelectSearchServerComponent_Template_nz_select_nzScrollToBottom_1_listener() { return ctx.loadMore(); })("nzOnSearch", function OfSelectSearchServerComponent_Template_nz_select_nzOnSearch_1_listener($event) { return ctx.search($event); });
-                i0__namespace.ɵɵtemplate(2, OfSelectSearchServerComponent_nz_option_2_Template, 3, 8, "nz-option", 2);
-                i0__namespace.ɵɵpipe(3, "async");
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵtemplate(4, OfSelectSearchServerComponent_ng_template_4_Template, 2, 5, "ng-template", null, 3, i0__namespace.ɵɵtemplateRefExtractor);
-                i0__namespace.ɵɵtemplate(6, OfSelectSearchServerComponent_ng_template_6_Template, 2, 2, "ng-template", null, 4, i0__namespace.ɵɵtemplateRefExtractor);
-            }
-            if (rf & 2) {
-                var _r1 = i0__namespace.ɵɵreference(5);
-                var _r3 = i0__namespace.ɵɵreference(7);
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField)("nzCustomTemplate", _r1)("nzOptionHeightPx", 26)("nzPlaceHolder", ctx.field.placeholder)("nzMode", ctx.field.nzMode)("nzAllowClear", ctx.field.nzAllowClear)("nzMaxMultipleCount", ctx.field == null ? null : ctx.field.nzMaxMultipleCount)("nzMaxTagCount", ctx.field == null ? null : ctx.field.nzMaxTagCount)("nzDropdownRender", _r3);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("ngForOf", i0__namespace.ɵɵpipeBind1(3, 12, ctx.optionDebound$))("ngForTrackBy", ctx.trackBySelect);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i3__namespace.NzSelectComponent, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i4__namespace.NgForOf, i3__namespace.NzOptionComponent, i4__namespace.NgIf, i5__namespace$1.NzPaginationComponent, i2__namespace$2.NzSpinComponent], pipes: [i4__namespace.AsyncPipe, OfSelectRenderOptionPipe, OfOptionSelectedPipe], styles: [":host ::ng-deep .cdk-virtual-scroll-viewport{min-height:120px!important}.select-pagination{margin-top:8px;margin-bottom:3px}"], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfSelectSearchServerComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-select-search-server',
-                        templateUrl: './of-select-search-server.component.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                        providers: [DestroyRxjsService],
-                        encapsulation: i0.ViewEncapsulation.None,
-                        styleUrls: ['./of-select-search-server.component.scss']
-                    }]
-            }], function () { return [{ type: DestroyRxjsService }, { type: i0__namespace.ChangeDetectorRef }]; }, null);
-    })();
+    OfSelectSearchServerComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-select-search-server',
+                    template: "<form [formGroup]=\"group\">\r\n  <nz-select [formControlName]=\"field.dataField\" style=\" width: 100%;\"\r\n             (nzOpenChange)=\"nzOpenChange($event)\"\r\n             (nzScrollToBottom)=\"loadMore()\"\r\n             [nzCustomTemplate]=\"tplSelectedView\"\r\n             [nzOptionHeightPx]=\"26\"\r\n             [nzPlaceHolder]=\"field.placeholder\"\r\n             [nzMode]=\"field.nzMode\" [nzAllowClear]=\"field.nzAllowClear\"\r\n             nzShowSearch nzServerSearch (nzOnSearch)=\"search($event)\"\r\n             [nzMaxMultipleCount]=\"field?.nzMaxMultipleCount\" [nzMaxTagCount]=\"field?.nzMaxTagCount\"\r\n             [nzDropdownRender]=\"renderTemplate\">\r\n    <nz-option [nzCustomContent]=\"true\" *ngFor=\"let option of optionDebound$ | async;trackBy:trackBySelect\"\r\n               [nzLabel]=\"option.displayText\"\r\n               [nzValue]=\"option.value\"\r\n    >\r\n      <span [innerHTML]=\"option.displayText | ofSelectRenderOption: field: option\">\r\n      </span>\r\n    </nz-option>\r\n  </nz-select>\r\n</form>\r\n<ng-template #tplSelectedView let-selected>\r\n  <span [innerHTML]=\"selected.nzValue | ofOptionSelected:selected.nzLabel:field\"></span>\r\n</ng-template>\r\n<ng-template #renderTemplate>\r\n\r\n  <div class=\"select-pagination\" *ngIf=\"field.showPagination\">\r\n    <nz-pagination nzSize=\"small\" [nzPageSize]=\"maxResultCount\" [(nzPageIndex)]=\"nzPageIndex\"\r\n                   (nzPageIndexChange)=\"nzPageIndexChange()\"\r\n                   [nzTotal]=\"totalItems\"></nz-pagination>\r\n  </div>\r\n  <nz-spin *ngIf=\"isLoading\"></nz-spin>\r\n</ng-template>\r\n",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    providers: [DestroyRxjsService],
+                    encapsulation: i0.ViewEncapsulation.None,
+                    styles: [":host ::ng-deep .cdk-virtual-scroll-viewport{min-height:120px!important}.select-pagination{margin-top:8px;margin-bottom:3px}"]
+                },] }
+    ];
+    OfSelectSearchServerComponent.ctorParameters = function () { return [
+        { type: DestroyRxjsService },
+        { type: i0.ChangeDetectorRef }
+    ]; };
 
     var ofSelectSearchServer_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
         OfSelectSearchServerComponent: OfSelectSearchServerComponent
     });
 
-    function OfTemplateRefComponent_span_1_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "span", 2);
-            i0__namespace.ɵɵtext(1, "Ch\u01B0a c\u00F3 tempate");
-            i0__namespace.ɵɵelementEnd();
-        }
-    }
-    var _c0$3 = function (a0) { return { value: a0 }; };
-    var _c1 = function (a0, a1, a2) { return { $implicit: a0, group: a1, field: a2 }; };
     var OfTemplateRefComponent = /** @class */ (function () {
         function OfTemplateRefComponent(formService) {
             this.formService = formService;
@@ -43149,27 +41790,15 @@
         };
         return OfTemplateRefComponent;
     }());
-    OfTemplateRefComponent.ɵfac = function OfTemplateRefComponent_Factory(t) { return new (t || OfTemplateRefComponent)(i0__namespace.ɵɵdirectiveInject(OfCreateControlFormService)); };
-    OfTemplateRefComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfTemplateRefComponent, selectors: [["of-template-ref"]], decls: 2, vars: 9, consts: [[3, "ngTemplateOutlet", "ngTemplateOutletContext"], ["class", "text-danger", 4, "ngIf"], [1, "text-danger"]], template: function OfTemplateRefComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementContainer(0, 0);
-                i0__namespace.ɵɵtemplate(1, OfTemplateRefComponent_span_1_Template, 2, 0, "span", 1);
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("ngTemplateOutlet", ctx.templateRef)("ngTemplateOutletContext", i0__namespace.ɵɵpureFunction3(5, _c1, i0__namespace.ɵɵpureFunction1(3, _c0$3, ctx.id), ctx.group, ctx.field));
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("ngIf", !ctx.templateRef);
-            }
-        }, directives: [i4__namespace.NgTemplateOutlet, i4__namespace.NgIf], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfTemplateRefComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-template-ref',
-                        template: "\n      <ng-container [ngTemplateOutlet]=\"templateRef\"\n                    [ngTemplateOutletContext]=\"{ $implicit: { value: id }, group: group,field: field }\"></ng-container>\n      <span *ngIf=\"!templateRef\" class=\"text-danger\">Ch\u01B0a c\u00F3 tempate</span>\n  "
-                    }]
-            }], function () { return [{ type: OfCreateControlFormService }]; }, null);
-    })();
+    OfTemplateRefComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-template-ref',
+                    template: "\n      <ng-container [ngTemplateOutlet]=\"templateRef\"\n                    [ngTemplateOutletContext]=\"{ $implicit: { value: id }, group: group,field: field }\"></ng-container>\n      <span *ngIf=\"!templateRef\" class=\"text-danger\">Ch\u01B0a c\u00F3 tempate</span>\n  "
+                },] }
+    ];
+    OfTemplateRefComponent.ctorParameters = function () { return [
+        { type: OfCreateControlFormService }
+    ]; };
 
     var ofTemplateRef_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
@@ -43196,72 +41825,52 @@
         };
         return ShowValidationErrorPipe;
     }());
-    ShowValidationErrorPipe.ɵfac = function ShowValidationErrorPipe_Factory(t) { return new (t || ShowValidationErrorPipe)(); };
-    ShowValidationErrorPipe.ɵpipe = i0__namespace.ɵɵdefinePipe({ name: "showValidationError", type: ShowValidationErrorPipe, pure: true });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(ShowValidationErrorPipe, [{
-                type: i0.Pipe,
-                args: [{
-                        name: 'showValidationError'
-                    }]
-            }], null, null);
-    })();
+    ShowValidationErrorPipe.decorators = [
+        { type: i0.Pipe, args: [{
+                    name: 'showValidationError'
+                },] }
+    ];
 
-    function OfSelectComponent_nz_option_2_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "nz-option", 5);
-            i0__namespace.ɵɵelement(1, "span", 6);
-            i0__namespace.ɵɵpipe(2, "ofSelectRenderOption");
-            i0__namespace.ɵɵelementEnd();
+    var OfOptionSelectedPipe = /** @class */ (function () {
+        function OfOptionSelectedPipe() {
         }
-        if (rf & 2) {
-            var option_r5 = ctx.$implicit;
-            var ctx_r0 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("nzCustomContent", true)("nzLabel", option_r5.displayText)("nzValue", option_r5.value);
-            i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵproperty("innerHTML", i0__namespace.ɵɵpipeBind3(2, 4, option_r5.displayText, ctx_r0.field, option_r5), i0__namespace.ɵɵsanitizeHtml);
+        OfOptionSelectedPipe.prototype.transform = function (value, label, field) {
+            if (AppUtilityService.isNotNull(value)) {
+                if (typeof field.renderSelectedFunc === 'function') {
+                    if (field === null || field === void 0 ? void 0 : field.itemSelected) {
+                        return field.renderSelectedFunc(field === null || field === void 0 ? void 0 : field.itemSelected);
+                    }
+                    return '';
+                }
+                else {
+                    return label;
+                }
+            }
+            return null;
+        };
+        return OfOptionSelectedPipe;
+    }());
+    OfOptionSelectedPipe.decorators = [
+        { type: i0.Pipe, args: [{
+                    name: 'ofOptionSelected',
+                    pure: false
+                },] }
+    ];
+
+    var OfSelectRenderOptionPipe = /** @class */ (function () {
+        function OfSelectRenderOptionPipe() {
         }
-    }
-    function OfSelectComponent_ng_template_3_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "span", 6);
-            i0__namespace.ɵɵpipe(1, "ofOptionSelected");
-        }
-        if (rf & 2) {
-            var selected_r6 = ctx.$implicit;
-            var ctx_r2 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("innerHTML", i0__namespace.ɵɵpipeBind3(1, 1, selected_r6.nzValue, selected_r6.nzLabel, ctx_r2.field), i0__namespace.ɵɵsanitizeHtml);
-        }
-    }
-    function OfSelectComponent_ng_template_5_div_0_Template(rf, ctx) {
-        if (rf & 1) {
-            var _r9_1 = i0__namespace.ɵɵgetCurrentView();
-            i0__namespace.ɵɵelementStart(0, "div");
-            i0__namespace.ɵɵelement(1, "nz-divider");
-            i0__namespace.ɵɵelementStart(2, "div", 8);
-            i0__namespace.ɵɵelementStart(3, "button", 9);
-            i0__namespace.ɵɵlistener("click", function OfSelectComponent_ng_template_5_div_0_Template_button_click_3_listener() { i0__namespace.ɵɵrestoreView(_r9_1); var ctx_r8 = i0__namespace.ɵɵnextContext(2); return ctx_r8.selectAll(); });
-            i0__namespace.ɵɵelement(4, "i", 10);
-            i0__namespace.ɵɵtext(5, " Ch\u1ECDn t\u1EA5t c\u1EA3 ");
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelementStart(6, "button", 11);
-            i0__namespace.ɵɵlistener("click", function OfSelectComponent_ng_template_5_div_0_Template_button_click_6_listener() { i0__namespace.ɵɵrestoreView(_r9_1); var ctx_r10 = i0__namespace.ɵɵnextContext(2); return ctx_r10.unSelectAll(); });
-            i0__namespace.ɵɵelement(7, "i", 12);
-            i0__namespace.ɵɵtext(8, " B\u1ECF ch\u1ECDn ");
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelementEnd();
-            i0__namespace.ɵɵelementEnd();
-        }
-    }
-    function OfSelectComponent_ng_template_5_Template(rf, ctx) {
-        if (rf & 1) {
-            i0__namespace.ɵɵtemplate(0, OfSelectComponent_ng_template_5_div_0_Template, 9, 0, "div", 7);
-        }
-        if (rf & 2) {
-            var ctx_r4 = i0__namespace.ɵɵnextContext();
-            i0__namespace.ɵɵproperty("ngIf", ctx_r4.field.nzMode === "multiple" && (ctx_r4.field.options == null ? null : ctx_r4.field.options.length) > 3);
-        }
-    }
+        OfSelectRenderOptionPipe.prototype.transform = function (displayText, field, option) {
+            return typeof (field.renderOptionFunc) === 'function' ? field === null || field === void 0 ? void 0 : field.renderOptionFunc(option) : displayText;
+        };
+        return OfSelectRenderOptionPipe;
+    }());
+    OfSelectRenderOptionPipe.decorators = [
+        { type: i0.Pipe, args: [{
+                    name: 'ofSelectRenderOption'
+                },] }
+    ];
+
     var OfSelectComponent = /** @class */ (function () {
         function OfSelectComponent(cdr, destroy$) {
             this.cdr = cdr;
@@ -43339,52 +41948,29 @@
         };
         return OfSelectComponent;
     }());
-    OfSelectComponent.ɵfac = function OfSelectComponent_Factory(t) { return new (t || OfSelectComponent)(i0__namespace.ɵɵdirectiveInject(i0__namespace.ChangeDetectorRef), i0__namespace.ɵɵdirectiveInject(DestroyRxjsService)); };
-    OfSelectComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfSelectComponent, selectors: [["of-select"]], inputs: { schemaModel: "schemaModel", field: "field", group: "group" }, features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])], decls: 7, vars: 11, consts: [[3, "formGroup"], ["nzShowSearch", "", "nzServerSearch", "", 2, "width", "100%", 3, "formControlName", "nzCustomTemplate", "nzPlaceHolder", "nzMode", "nzAllowClear", "nzMaxMultipleCount", "nzMaxTagCount", "nzDropdownRender", "nzOnSearch"], [3, "nzCustomContent", "nzLabel", "nzValue", 4, "ngFor", "ngForOf", "ngForTrackBy"], ["tplSelectedView", ""], ["nzDropdownRenderTpl", ""], [3, "nzCustomContent", "nzLabel", "nzValue"], [3, "innerHTML"], [4, "ngIf"], [1, "margin-top-10", "margin-left-10", "margin-bottom-5"], ["nz-button", "", "nzType", "primary", "nzSize", "small", 3, "click"], ["nz-icon", "", "nzType", "plus"], ["nz-button", "", "nzType", "default", "nzSize", "small", 3, "click"], ["nz-icon", "", "nzType", "minus"]], template: function OfSelectComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelementStart(1, "nz-select", 1);
-                i0__namespace.ɵɵlistener("nzOnSearch", function OfSelectComponent_Template_nz_select_nzOnSearch_1_listener($event) { return ctx.search($event); });
-                i0__namespace.ɵɵtemplate(2, OfSelectComponent_nz_option_2_Template, 3, 8, "nz-option", 2);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵtemplate(3, OfSelectComponent_ng_template_3_Template, 2, 5, "ng-template", null, 3, i0__namespace.ɵɵtemplateRefExtractor);
-                i0__namespace.ɵɵtemplate(5, OfSelectComponent_ng_template_5_Template, 1, 1, "ng-template", null, 4, i0__namespace.ɵɵtemplateRefExtractor);
-            }
-            if (rf & 2) {
-                var _r1 = i0__namespace.ɵɵreference(4);
-                var _r3 = i0__namespace.ɵɵreference(6);
-                i0__namespace.ɵɵproperty("formGroup", ctx.group);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("formControlName", ctx.field.dataField)("nzCustomTemplate", _r1)("nzPlaceHolder", ctx.field.placeholder)("nzMode", ctx.field.nzMode)("nzAllowClear", ctx.field.nzAllowClear)("nzMaxMultipleCount", ctx.field == null ? null : ctx.field.nzMaxMultipleCount)("nzMaxTagCount", ctx.field == null ? null : ctx.field.nzMaxTagCount)("nzDropdownRender", _r3);
-                i0__namespace.ɵɵadvance(1);
-                i0__namespace.ɵɵproperty("ngForOf", ctx.options)("ngForTrackBy", ctx.trackBySelect);
-            }
-        }, directives: [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i3__namespace.NzSelectComponent, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i4__namespace.NgForOf, i3__namespace.NzOptionComponent, i4__namespace.NgIf, i5__namespace$2.NzDividerComponent, i6__namespace.NzButtonComponent, i7__namespace.NzWaveDirective, i3__namespace$2.ɵNzTransitionPatchDirective, i4__namespace$2.NzIconDirective], pipes: [OfSelectRenderOptionPipe, OfOptionSelectedPipe], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfSelectComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-select',
-                        templateUrl: './of-select.component.html',
-                        providers: [DestroyRxjsService],
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return [{ type: i0__namespace.ChangeDetectorRef }, { type: DestroyRxjsService }]; }, { schemaModel: [{
-                    type: i0.Input
-                }], field: [{
-                    type: i0.Input
-                }], group: [{
-                    type: i0.Input
-                }] });
-    })();
+    OfSelectComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-select',
+                    template: "<form [formGroup]=\"group\">\n  <nz-select [formControlName]=\"field.dataField\" style=\"width: 100%\"\n             [nzCustomTemplate]=\"tplSelectedView\"\n             [nzPlaceHolder]=\"field.placeholder\"\n             [nzMode]=\"field.nzMode\" [nzAllowClear]=\"field.nzAllowClear\"\n             nzShowSearch nzServerSearch (nzOnSearch)=\"search($event)\"\n             [nzMaxMultipleCount]=\"field?.nzMaxMultipleCount\" [nzMaxTagCount]=\"field?.nzMaxTagCount\"\n             [nzDropdownRender]=\"nzDropdownRenderTpl\">\n    <nz-option [nzCustomContent]=\"true\" *ngFor=\"let option of options;trackBy:trackBySelect\"\n               [nzLabel]=\"option.displayText\"\n               [nzValue]=\"option.value\"\n    >\n      <span [innerHTML]=\"option.displayText | ofSelectRenderOption: field: option\">\n      </span>\n    </nz-option>\n  </nz-select>\n</form>\n<ng-template #tplSelectedView let-selected>\n  <span [innerHTML]=\"selected.nzValue | ofOptionSelected:selected.nzLabel:field\"></span>\n</ng-template>\n\n<ng-template #nzDropdownRenderTpl>\n  <div *ngIf=\"field.nzMode === 'multiple' && field.options?.length > 3\">\n    <nz-divider></nz-divider>\n    <div class=\"margin-top-10 margin-left-10 margin-bottom-5\">\n      <button nz-button nzType=\"primary\" (click)=\"selectAll()\" nzSize=\"small\"><i nz-icon nzType=\"plus\"></i> Ch\u1ECDn t\u1EA5t c\u1EA3\n      </button>\n      <button nz-button nzType=\"default\" (click)=\"unSelectAll()\" nzSize=\"small\"><i nz-icon nzType=\"minus\"></i> B\u1ECF ch\u1ECDn\n      </button>\n    </div>\n  </div>\n</ng-template>\n",
+                    providers: [DestroyRxjsService],
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfSelectComponent.ctorParameters = function () { return [
+        { type: i0.ChangeDetectorRef },
+        { type: DestroyRxjsService }
+    ]; };
+    OfSelectComponent.propDecorators = {
+        schemaModel: [{ type: i0.Input }],
+        field: [{ type: i0.Input }],
+        group: [{ type: i0.Input }]
+    };
 
     var ofSelect_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
         OfSelectComponent: OfSelectComponent
     });
 
-    var _c0$2 = ["vcSelect"];
     var OfSelectAsyncComponent = /** @class */ (function () {
         function OfSelectAsyncComponent(destroy$) {
             this.destroy$ = destroy$;
@@ -43402,44 +41988,26 @@
         };
         return OfSelectAsyncComponent;
     }());
-    OfSelectAsyncComponent.ɵfac = function OfSelectAsyncComponent_Factory(t) { return new (t || OfSelectAsyncComponent)(i0__namespace.ɵɵdirectiveInject(DestroyRxjsService)); };
-    OfSelectAsyncComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfSelectAsyncComponent, selectors: [["select-async"]], viewQuery: function OfSelectAsyncComponent_Query(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵviewQuery(_c0$2, true);
-            }
-            if (rf & 2) {
-                var _t = void 0;
-                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.vcSelect = _t.first);
-            }
-        }, features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])], decls: 2, vars: 3, consts: [[3, "schemaModel", "group", "field"], ["vcSelect", ""]], template: function OfSelectAsyncComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelement(0, "of-select", 0, 1);
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("schemaModel", ctx.schemaModel)("group", ctx.group)("field", ctx.field);
-            }
-        }, directives: [OfSelectComponent], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfSelectAsyncComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'select-async',
-                        template: "\n      <of-select #vcSelect [schemaModel]=\"schemaModel\" [group]=\"group\" [field]=\"field\"></of-select>",
-                        providers: [DestroyRxjsService],
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return [{ type: DestroyRxjsService }]; }, { vcSelect: [{
-                    type: i0.ViewChild,
-                    args: ['vcSelect']
-                }] });
-    })();
+    OfSelectAsyncComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'select-async',
+                    template: "\n      <of-select #vcSelect [schemaModel]=\"schemaModel\" [group]=\"group\" [field]=\"field\"></of-select>",
+                    providers: [DestroyRxjsService],
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfSelectAsyncComponent.ctorParameters = function () { return [
+        { type: DestroyRxjsService }
+    ]; };
+    OfSelectAsyncComponent.propDecorators = {
+        vcSelect: [{ type: i0.ViewChild, args: ['vcSelect',] }]
+    };
 
     var ofSelectAsync_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
         OfSelectAsyncComponent: OfSelectAsyncComponent
     });
 
-    var _c0$1 = ["vcSelect"];
     var OfSelectApiComponent = /** @class */ (function () {
         function OfSelectApiComponent(destroy$) {
             this.destroy$ = destroy$;
@@ -43484,44 +42052,26 @@
         };
         return OfSelectApiComponent;
     }());
-    OfSelectApiComponent.ɵfac = function OfSelectApiComponent_Factory(t) { return new (t || OfSelectApiComponent)(i0__namespace.ɵɵdirectiveInject(DestroyRxjsService)); };
-    OfSelectApiComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfSelectApiComponent, selectors: [["lib-of-select-api"]], viewQuery: function OfSelectApiComponent_Query(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵviewQuery(_c0$1, true);
-            }
-            if (rf & 2) {
-                var _t = void 0;
-                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.vcSelect = _t.first);
-            }
-        }, features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])], decls: 2, vars: 3, consts: [[3, "schemaModel", "group", "field"], ["vcSelect", ""]], template: function OfSelectApiComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelement(0, "of-select", 0, 1);
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("schemaModel", ctx.schemaModel)("group", ctx.group)("field", ctx.field);
-            }
-        }, directives: [OfSelectComponent], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfSelectApiComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-of-select-api',
-                        template: "\n      <of-select #vcSelect [schemaModel]=\"schemaModel\" [group]=\"group\" [field]=\"field\"></of-select>",
-                        providers: [DestroyRxjsService],
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return [{ type: DestroyRxjsService }]; }, { vcSelect: [{
-                    type: i0.ViewChild,
-                    args: ['vcSelect']
-                }] });
-    })();
+    OfSelectApiComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-of-select-api',
+                    template: "\n      <of-select #vcSelect [schemaModel]=\"schemaModel\" [group]=\"group\" [field]=\"field\"></of-select>",
+                    providers: [DestroyRxjsService],
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfSelectApiComponent.ctorParameters = function () { return [
+        { type: DestroyRxjsService }
+    ]; };
+    OfSelectApiComponent.propDecorators = {
+        vcSelect: [{ type: i0.ViewChild, args: ['vcSelect',] }]
+    };
 
     var ofSelectApi_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
         OfSelectApiComponent: OfSelectApiComponent
     });
 
-    var _c0 = ["vcSelect"];
     var OfSelectCascadeComponent = /** @class */ (function () {
         function OfSelectCascadeComponent(destroy$) {
             this.destroy$ = destroy$;
@@ -43621,37 +42171,20 @@
         };
         return OfSelectCascadeComponent;
     }());
-    OfSelectCascadeComponent.ɵfac = function OfSelectCascadeComponent_Factory(t) { return new (t || OfSelectCascadeComponent)(i0__namespace.ɵɵdirectiveInject(DestroyRxjsService)); };
-    OfSelectCascadeComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: OfSelectCascadeComponent, selectors: [["of-select-cascade"]], viewQuery: function OfSelectCascadeComponent_Query(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵviewQuery(_c0, true);
-            }
-            if (rf & 2) {
-                var _t = void 0;
-                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.vcSelect = _t.first);
-            }
-        }, features: [i0__namespace.ɵɵProvidersFeature([DestroyRxjsService])], decls: 2, vars: 3, consts: [[3, "schemaModel", "group", "field"], ["vcSelect", ""]], template: function OfSelectCascadeComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelement(0, "of-select", 0, 1);
-            }
-            if (rf & 2) {
-                i0__namespace.ɵɵproperty("schemaModel", ctx.schemaModel)("group", ctx.group)("field", ctx.field);
-            }
-        }, directives: [OfSelectComponent], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfSelectCascadeComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'of-select-cascade',
-                        template: "\n      <of-select #vcSelect [schemaModel]=\"schemaModel\" [group]=\"group\" [field]=\"field\"></of-select>",
-                        providers: [DestroyRxjsService],
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush
-                    }]
-            }], function () { return [{ type: DestroyRxjsService }]; }, { vcSelect: [{
-                    type: i0.ViewChild,
-                    args: ['vcSelect']
-                }] });
-    })();
+    OfSelectCascadeComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'of-select-cascade',
+                    template: "\n      <of-select #vcSelect [schemaModel]=\"schemaModel\" [group]=\"group\" [field]=\"field\"></of-select>",
+                    providers: [DestroyRxjsService],
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    OfSelectCascadeComponent.ctorParameters = function () { return [
+        { type: DestroyRxjsService }
+    ]; };
+    OfSelectCascadeComponent.propDecorators = {
+        vcSelect: [{ type: i0.ViewChild, args: ['vcSelect',] }]
+    };
 
     var ofSelectCascade_component = /*#__PURE__*/Object.freeze({
         __proto__: null,
@@ -43694,70 +42227,26 @@
             };
         };
         OfModule.forLazy = function () {
-            return new i1$2.LazyModuleFactory(OfModule.forChild());
+            return new i1$1.LazyModuleFactory(OfModule.forChild());
         };
         return OfModule;
     }());
-    OfModule.ɵmod = i0__namespace.ɵɵdefineNgModule({ type: OfModule });
-    OfModule.ɵinj = i0__namespace.ɵɵdefineInjector({ factory: function OfModule_Factory(t) { return new (t || OfModule)(); }, imports: [[i1$2.CoreModule,
-                ng_theme_shared.ThemeSharedModule,
-                OfRoutingModule,
-                AntDesignModule,
-                i3$1.CurrencyMaskModule,
-                i4$3.TextMaskModule]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(OfModule, { declarations: [OfComponent, OfDynamicComponent,
-                DynamicFieldDirective,
-                OfTextComponent,
-                ShowValidationErrorPipe,
-                OfCheckBoxComponent,
-                OfCurrencyComponent,
-                OfDatePickerComponent,
-                OfDataPickerControlComponent,
-                OfTextAreaComponent,
-                OfContentHtmlComponent,
-                OfNumberInputComponent,
-                NumbersOnlyDirective,
-                OfPasswordComponent,
-                OfRadioComponent,
-                OfSwitchComponent,
-                OfOptionSelectedPipe,
-                OfSelectRenderOptionPipe,
-                OfSelectSearchServerComponent,
-                OfTemplateRefComponent,
-                OfFieldComponent,
-                OfSelectComponent,
-                OfSelectAsyncComponent,
-                OfSelectApiComponent,
-                OfSelectCascadeComponent], imports: [i1$2.CoreModule,
-                ng_theme_shared.ThemeSharedModule,
-                OfRoutingModule,
-                AntDesignModule,
-                i3$1.CurrencyMaskModule,
-                i4$3.TextMaskModule], exports: [OfComponent,
-                OfDynamicComponent,
-                OfFieldComponent] });
-    })();
-    /*@__PURE__*/ (function () {
-        i0__namespace.ɵsetClassMetadata(OfModule, [{
-                type: i0.NgModule,
-                args: [{
-                        declarations: [OfComponent, Of],
-                        imports: [i1$2.CoreModule,
-                            ng_theme_shared.ThemeSharedModule,
-                            OfRoutingModule,
-                            AntDesignModule,
-                            i3$1.CurrencyMaskModule,
-                            i4$3.TextMaskModule],
-                        exports: [
-                            OfComponent,
-                            OfDynamicComponent,
-                            OfFieldComponent
-                        ]
-                    }]
-            }], null, null);
-    })();
-    i0__namespace.ɵɵsetComponentScope(OfDynamicComponent, [i1__namespace$1.ɵangular_packages_forms_forms_y, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i2__namespace$5.NzRowDirective, i4__namespace.NgForOf, i4__namespace.NgIf, i2__namespace$5.NzColDirective, i4__namespace.NgClass, i4__namespace$3.NzFormLabelComponent, DynamicFieldDirective, i6__namespace.NzButtonComponent, i7__namespace.NzWaveDirective, i3__namespace$2.ɵNzTransitionPatchDirective], [ShowValidationErrorPipe]);
+    OfModule.decorators = [
+        { type: i0.NgModule, args: [{
+                    declarations: [OfComponent, Of],
+                    imports: [i1$1.CoreModule,
+                        ng_theme_shared.ThemeSharedModule,
+                        OfRoutingModule,
+                        AntDesignModule,
+                        ng2CurrencyMask.CurrencyMaskModule,
+                        angular2TextMask.TextMaskModule],
+                    exports: [
+                        OfComponent,
+                        OfDynamicComponent,
+                        OfFieldComponent
+                    ]
+                },] }
+    ];
 
     /*
      * Public API Surface of of
@@ -43792,6 +42281,38 @@
     exports.OfTemplateRefModel = OfTemplateRefModel;
     exports.OfTextAreaModel = OfTextAreaModel;
     exports.OfTextModel = OfTextModel;
+    exports.ɵa = SelectoptionServiceProxy;
+    exports.ɵb = SelectsearchserverServiceProxy;
+    exports.ɵba = OfSelectCascadeComponent;
+    exports.ɵbb = OfRoutingModule;
+    exports.ɵbc = Icon;
+    exports.ɵbd = AntDesignModule;
+    exports.ɵbe = OfControlModel;
+    exports.ɵbg = OfSelectBaseModel;
+    exports.ɵc = DestroyRxjsService;
+    exports.ɵd = OfCreateControlFormService;
+    exports.ɵe = OfValidatorService;
+    exports.ɵf = DynamicFieldDirective;
+    exports.ɵg = OfTextComponent;
+    exports.ɵh = ShowValidationErrorPipe;
+    exports.ɵi = OfCheckBoxComponent;
+    exports.ɵj = OfCurrencyComponent;
+    exports.ɵk = OfDatePickerComponent;
+    exports.ɵl = OfDataPickerControlComponent;
+    exports.ɵm = OfTextAreaComponent;
+    exports.ɵn = OfContentHtmlComponent;
+    exports.ɵo = OfNumberInputComponent;
+    exports.ɵp = NumbersOnlyDirective;
+    exports.ɵq = OfPasswordComponent;
+    exports.ɵr = OfRadioComponent;
+    exports.ɵs = OfSwitchComponent;
+    exports.ɵt = OfOptionSelectedPipe;
+    exports.ɵu = OfSelectRenderOptionPipe;
+    exports.ɵv = OfSelectSearchServerComponent;
+    exports.ɵw = OfTemplateRefComponent;
+    exports.ɵx = OfSelectComponent;
+    exports.ɵy = OfSelectAsyncComponent;
+    exports.ɵz = OfSelectApiComponent;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -11,4 +11,3 @@ export declare class OfSelectApiModel extends OfSelectBaseModel {
     dataExtend: {};
     constructor(config: OfSelectApiModelConfig);
 }
-//# sourceMappingURL=of-select-api-model.d.ts.map

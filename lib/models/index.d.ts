@@ -4,4 +4,3 @@ export * from './of-schema.model';
 export * from './of-type';
 export * from '../components/index';
 export * from './ord-combo-box-dto';
-//# sourceMappingURL=index.d.ts.map

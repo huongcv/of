@@ -5,4 +5,3 @@ export interface OfTemplateRefModelConfig extends OfControlModelConfig {
 export declare class OfTemplateRefModel extends OfControlModel {
     constructor(config: OfTemplateRefModelConfig);
 }
-//# sourceMappingURL=of-template-ref.model.d.ts.map

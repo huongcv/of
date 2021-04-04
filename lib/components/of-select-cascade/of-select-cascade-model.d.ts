@@ -12,4 +12,3 @@ export declare class OfSelectCascadeModel extends OfSelectBaseModel {
     cascadeField: string;
     constructor(config: OfSelectCascadeModelConfig);
 }
-//# sourceMappingURL=of-select-cascade-model.d.ts.map

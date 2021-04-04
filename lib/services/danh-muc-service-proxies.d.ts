@@ -1,7 +1,6 @@
 import { Observable } from 'rxjs';
 import { HttpClient, HttpResponseBase } from '@angular/common/http';
 import * as moment from 'moment';
-import * as i0 from "@angular/core";
 export declare const API_BASE_URL = "http://ytcs-api-v2.orenda.vn";
 export declare class AbpServiceProxy {
     private http;
@@ -19,8 +18,6 @@ export declare class AbpServiceProxy {
      */
     applicationConfiguration(): Observable<ApplicationConfigurationDto>;
     protected processApplicationConfiguration(response: HttpResponseBase): Observable<ApplicationConfigurationDto>;
-    static ɵfac: i0.ɵɵFactoryDef<AbpServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<AbpServiceProxy>;
 }
 export declare class TenantsServiceProxy {
     private http;
@@ -37,8 +34,6 @@ export declare class TenantsServiceProxy {
      */
     byId(id: string): Observable<FindTenantResultDto>;
     protected processById(response: HttpResponseBase): Observable<FindTenantResultDto>;
-    static ɵfac: i0.ɵɵFactoryDef<TenantsServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<TenantsServiceProxy>;
 }
 export declare class BenhvienServiceProxy {
     private http;
@@ -107,8 +102,6 @@ export declare class BenhvienServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<BenhvienServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<BenhvienServiceProxy>;
 }
 export declare class CauhinhdichvusokhamServiceProxy {
     private http;
@@ -149,8 +142,6 @@ export declare class CauhinhdichvusokhamServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhdichvusokhamServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhdichvusokhamServiceProxy>;
 }
 export declare class CauhinhdoituongkhoduocServiceProxy {
     private http;
@@ -169,8 +160,6 @@ export declare class CauhinhdoituongkhoduocServiceProxy {
      */
     luucauhinh(body: KhoDoiTuongDto | undefined): Observable<void>;
     protected processLuucauhinh(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhdoituongkhoduocServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhdoituongkhoduocServiceProxy>;
 }
 export declare class CauhinhgiadichvuServiceProxy {
     private http;
@@ -268,8 +257,6 @@ export declare class CauhinhgiadichvuServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhgiadichvuServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhgiadichvuServiceProxy>;
 }
 export declare class CauhinhmautinnhanServiceProxy {
     private http;
@@ -315,8 +302,6 @@ export declare class CauhinhmautinnhanServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhmautinnhanServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhmautinnhanServiceProxy>;
 }
 export declare class CauhinhphongbandichvuServiceProxy {
     private http;
@@ -357,8 +342,6 @@ export declare class CauhinhphongbandichvuServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhphongbandichvuServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhphongbandichvuServiceProxy>;
 }
 export declare class CauhinhquanlyhosobccsServiceProxy {
     private http;
@@ -404,8 +387,6 @@ export declare class CauhinhquanlyhosobccsServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhquanlyhosobccsServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhquanlyhosobccsServiceProxy>;
 }
 export declare class CauhinhtaikhoanbulksmsServiceProxy {
     private http;
@@ -451,8 +432,6 @@ export declare class CauhinhtaikhoanbulksmsServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhtaikhoanbulksmsServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhtaikhoanbulksmsServiceProxy>;
 }
 export declare class CauhinhtaikhoandichvuthecaoServiceProxy {
     private http;
@@ -498,8 +477,6 @@ export declare class CauhinhtaikhoandichvuthecaoServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhtaikhoandichvuthecaoServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhtaikhoandichvuthecaoServiceProxy>;
 }
 export declare class CauhinhtaikhoanlienthongServiceProxy {
     private http;
@@ -556,8 +533,6 @@ export declare class CauhinhtaikhoanlienthongServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhtaikhoanlienthongServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhtaikhoanlienthongServiceProxy>;
 }
 export declare class CauhinhtaikhoanviettelpayServiceProxy {
     private http;
@@ -603,8 +578,6 @@ export declare class CauhinhtaikhoanviettelpayServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhtaikhoanviettelpayServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhtaikhoanviettelpayServiceProxy>;
 }
 export declare class CauhinhtinnhandichvuServiceProxy {
     private http;
@@ -650,8 +623,6 @@ export declare class CauhinhtinnhandichvuServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<CauhinhtinnhandichvuServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CauhinhtinnhandichvuServiceProxy>;
 }
 export declare class ChuongtrinhServiceProxy {
     private http;
@@ -686,8 +657,6 @@ export declare class ChuongtrinhServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<ChuongtrinhServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<ChuongtrinhServiceProxy>;
 }
 export declare class CombodataServiceProxy {
     private http;
@@ -712,8 +681,6 @@ export declare class CombodataServiceProxy {
      */
     appenum(type: string | null | undefined): Observable<ComboBoxDto[]>;
     protected processAppenum(response: HttpResponseBase): Observable<ComboBoxDto[]>;
-    static ɵfac: i0.ɵɵFactoryDef<CombodataServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<CombodataServiceProxy>;
 }
 export declare class DichvukhamchuabenhServiceProxy {
     private http;
@@ -764,8 +731,6 @@ export declare class DichvukhamchuabenhServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<DichvukhamchuabenhServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<DichvukhamchuabenhServiceProxy>;
 }
 export declare class DoituongServiceProxy {
     private http;
@@ -805,8 +770,6 @@ export declare class DoituongServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<DoituongServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<DoituongServiceProxy>;
 }
 export declare class DoituongkhoduocnoitruServiceProxy {
     private http;
@@ -853,8 +816,6 @@ export declare class DoituongkhoduocnoitruServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<DoituongkhoduocnoitruServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<DoituongkhoduocnoitruServiceProxy>;
 }
 export declare class DoituongloaigiaServiceProxy {
     private http;
@@ -901,8 +862,6 @@ export declare class DoituongloaigiaServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<DoituongloaigiaServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<DoituongloaigiaServiceProxy>;
 }
 export declare class DonvihanhchinhServiceProxy {
     private http;
@@ -937,8 +896,6 @@ export declare class DonvihanhchinhServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<DonvihanhchinhServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<DonvihanhchinhServiceProxy>;
 }
 export declare class DonvitinhduocphamServiceProxy {
     private http;
@@ -973,8 +930,6 @@ export declare class DonvitinhduocphamServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<DonvitinhduocphamServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<DonvitinhduocphamServiceProxy>;
 }
 export declare class DuocbenhvienServiceProxy {
     private http;
@@ -1050,8 +1005,6 @@ export declare class DuocbenhvienServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<DuocbenhvienServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<DuocbenhvienServiceProxy>;
 }
 export declare class DuocthongtinthauServiceProxy {
     private http;
@@ -1086,8 +1039,6 @@ export declare class DuocthongtinthauServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<DuocthongtinthauServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<DuocthongtinthauServiceProxy>;
 }
 export declare class FileServiceProxy {
     private http;
@@ -1117,8 +1068,6 @@ export declare class FileServiceProxy {
      */
     uploaexcel(): Observable<FileDto>;
     protected processUploaexcel(response: HttpResponseBase): Observable<FileDto>;
-    static ɵfac: i0.ɵɵFactoryDef<FileServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<FileServiceProxy>;
 }
 export declare class GetentitycommonServiceProxy {
     private http;
@@ -1131,8 +1080,6 @@ export declare class GetentitycommonServiceProxy {
      */
     getbyid(body: GetEntityByIdInputDto | undefined): Observable<GetEntityByIdOutDto>;
     protected processGetbyid(response: HttpResponseBase): Observable<GetEntityByIdOutDto>;
-    static ɵfac: i0.ɵɵFactoryDef<GetentitycommonServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<GetentitycommonServiceProxy>;
 }
 export declare class GiuongbenhServiceProxy {
     private http;
@@ -1167,8 +1114,6 @@ export declare class GiuongbenhServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<GiuongbenhServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<GiuongbenhServiceProxy>;
 }
 export declare class HethongdanhmucServiceProxy {
     private http;
@@ -1209,8 +1154,6 @@ export declare class HethongdanhmucServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<HethongdanhmucServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<HethongdanhmucServiceProxy>;
 }
 export declare class HethongdanhmucdinhnghiaServiceProxy {
     private http;
@@ -1255,8 +1198,6 @@ export declare class HethongdanhmucdinhnghiaServiceProxy {
      */
     getbyid(id: number): Observable<LstDictionaryTypeDto>;
     protected processGetbyid(response: HttpResponseBase): Observable<LstDictionaryTypeDto>;
-    static ɵfac: i0.ɵɵFactoryDef<HethongdanhmucdinhnghiaServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<HethongdanhmucdinhnghiaServiceProxy>;
 }
 export declare class HoatchatServiceProxy {
     private http;
@@ -1291,8 +1232,6 @@ export declare class HoatchatServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<HoatchatServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<HoatchatServiceProxy>;
 }
 export declare class ImportduocphamServiceProxy {
     private http;
@@ -1317,8 +1256,6 @@ export declare class ImportduocphamServiceProxy {
      */
     updatethuochople(body: UpdateThuocHopLeRequest | undefined): Observable<CommonResultDtoOfInt32>;
     protected processUpdatethuochople(response: HttpResponseBase): Observable<CommonResultDtoOfInt32>;
-    static ɵfac: i0.ɵɵFactoryDef<ImportduocphamServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<ImportduocphamServiceProxy>;
 }
 export declare class KhangnguyenServiceProxy {
     private http;
@@ -1368,8 +1305,6 @@ export declare class KhangnguyenServiceProxy {
      */
     getlist(body: PagedFullRequestDto | undefined): Observable<PagedResultDtoOfKhangNguyenDto>;
     protected processGetlist(response: HttpResponseBase): Observable<PagedResultDtoOfKhangNguyenDto>;
-    static ɵfac: i0.ɵɵFactoryDef<KhangnguyenServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<KhangnguyenServiceProxy>;
 }
 export declare class KhoduocServiceProxy {
     private http;
@@ -1404,8 +1339,6 @@ export declare class KhoduocServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<KhoduocServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<KhoduocServiceProxy>;
 }
 export declare class LoaiduocServiceProxy {
     private http;
@@ -1440,8 +1373,6 @@ export declare class LoaiduocServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<LoaiduocServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<LoaiduocServiceProxy>;
 }
 export declare class LoaigiaServiceProxy {
     private http;
@@ -1476,8 +1407,6 @@ export declare class LoaigiaServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<LoaigiaServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<LoaigiaServiceProxy>;
 }
 export declare class LoaivattuServiceProxy {
     private http;
@@ -1512,8 +1441,6 @@ export declare class LoaivattuServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<LoaivattuServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<LoaivattuServiceProxy>;
 }
 export declare class NhacungcapServiceProxy {
     private http;
@@ -1548,8 +1475,6 @@ export declare class NhacungcapServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<NhacungcapServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<NhacungcapServiceProxy>;
 }
 export declare class NhanlucServiceProxy {
     private http;
@@ -1595,8 +1520,6 @@ export declare class NhanlucServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<NhanlucServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<NhanlucServiceProxy>;
 }
 export declare class NhomduocServiceProxy {
     private http;
@@ -1631,8 +1554,6 @@ export declare class NhomduocServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<NhomduocServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<NhomduocServiceProxy>;
 }
 export declare class NhomdvktbhytServiceProxy {
     private http;
@@ -1667,8 +1588,6 @@ export declare class NhomdvktbhytServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<NhomdvktbhytServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<NhomdvktbhytServiceProxy>;
 }
 export declare class PermissionmanagementServiceProxy {
     private http;
@@ -1681,8 +1600,6 @@ export declare class PermissionmanagementServiceProxy {
      */
     getbyrole(body: GetPermissionInputDto | undefined): Observable<GetPermissionListResultDto>;
     protected processGetbyrole(response: HttpResponseBase): Observable<GetPermissionListResultDto>;
-    static ɵfac: i0.ɵɵFactoryDef<PermissionmanagementServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<PermissionmanagementServiceProxy>;
 }
 export declare class PhacdodieutriServiceProxy {
     private http;
@@ -1717,8 +1634,6 @@ export declare class PhacdodieutriServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<PhacdodieutriServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<PhacdodieutriServiceProxy>;
 }
 export declare class PhannhomduocServiceProxy {
     private http;
@@ -1753,8 +1668,6 @@ export declare class PhannhomduocServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<PhannhomduocServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<PhannhomduocServiceProxy>;
 }
 export declare class PhongbanServiceProxy {
     private http;
@@ -1794,8 +1707,6 @@ export declare class PhongbanServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<PhongbanServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<PhongbanServiceProxy>;
 }
 export declare class SearchservercombodataServiceProxy {
     private http;
@@ -1814,8 +1725,6 @@ export declare class SearchservercombodataServiceProxy {
      */
     benhicdtable(body: FetchBenhIcdSearchRequest | undefined): Observable<PagedResultDtoOfBenhIcdSearchDto>;
     protected processBenhicdtable(response: HttpResponseBase): Observable<PagedResultDtoOfBenhIcdSearchDto>;
-    static ɵfac: i0.ɵɵFactoryDef<SearchservercombodataServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<SearchservercombodataServiceProxy>;
 }
 export declare class SelectoptionServiceProxy {
     private http;
@@ -1828,8 +1737,6 @@ export declare class SelectoptionServiceProxy {
      */
     getoptions(body: SelectOptionInputDto | undefined): Observable<ComboBoxDto[]>;
     protected processGetoptions(response: HttpResponseBase): Observable<ComboBoxDto[]>;
-    static ɵfac: i0.ɵɵFactoryDef<SelectoptionServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<SelectoptionServiceProxy>;
 }
 export declare class SelectsearchserverServiceProxy {
     private http;
@@ -1842,8 +1749,6 @@ export declare class SelectsearchserverServiceProxy {
      */
     getoptions(body: SelectSearchServerDto | undefined): Observable<PagedResultDtoOfComboBoxDto>;
     protected processGetoptions(response: HttpResponseBase): Observable<PagedResultDtoOfComboBoxDto>;
-    static ɵfac: i0.ɵɵFactoryDef<SelectsearchserverServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<SelectsearchserverServiceProxy>;
 }
 export declare class SokhamServiceProxy {
     private http;
@@ -1878,8 +1783,6 @@ export declare class SokhamServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<SokhamServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<SokhamServiceProxy>;
 }
 export declare class StaticroleServiceProxy {
     private http;
@@ -1928,8 +1831,6 @@ export declare class StaticroleServiceProxy {
      */
     setpermissionloaibenhvien(body: SetPermissionLoaiBenhVienRequest | undefined): Observable<number>;
     protected processSetpermissionloaibenhvien(response: HttpResponseBase): Observable<number>;
-    static ɵfac: i0.ɵɵFactoryDef<StaticroleServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<StaticroleServiceProxy>;
 }
 export declare class SysroleServiceProxy {
     private http;
@@ -1971,8 +1872,6 @@ export declare class SysroleServiceProxy {
      */
     xoarolecoso(sysRoleId: number): Observable<CommonResultDtoOfInt64>;
     protected processXoarolecoso(response: HttpResponseBase): Observable<CommonResultDtoOfInt64>;
-    static ɵfac: i0.ɵɵFactoryDef<SysroleServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<SysroleServiceProxy>;
 }
 export declare class TaikhoanadminServiceProxy {
     private http;
@@ -2023,8 +1922,6 @@ export declare class TaikhoanadminServiceProxy {
      */
     unlock(userId: string): Observable<string>;
     protected processUnlock(response: HttpResponseBase): Observable<string>;
-    static ɵfac: i0.ɵɵFactoryDef<TaikhoanadminServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<TaikhoanadminServiceProxy>;
 }
 export declare class TaikhoancosoServiceProxy {
     private http;
@@ -2110,8 +2007,6 @@ export declare class TaikhoancosoServiceProxy {
      */
     unlock(userId: string): Observable<string>;
     protected processUnlock(response: HttpResponseBase): Observable<string>;
-    static ɵfac: i0.ɵɵFactoryDef<TaikhoancosoServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<TaikhoancosoServiceProxy>;
 }
 export declare class ThamsobenhvienServiceProxy {
     private http;
@@ -2169,8 +2064,6 @@ export declare class ThamsobenhvienServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<ThamsobenhvienServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<ThamsobenhvienServiceProxy>;
 }
 export declare class ThamsohethongServiceProxy {
     private http;
@@ -2205,8 +2098,6 @@ export declare class ThamsohethongServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<ThamsohethongServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<ThamsohethongServiceProxy>;
 }
 export declare class ThietbiServiceProxy {
     private http;
@@ -2241,8 +2132,6 @@ export declare class ThietbiServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<ThietbiServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<ThietbiServiceProxy>;
 }
 export declare class TienteServiceProxy {
     private http;
@@ -2277,8 +2166,6 @@ export declare class TienteServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<TienteServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<TienteServiceProxy>;
 }
 export declare class TientetygiaServiceProxy {
     private http;
@@ -2313,8 +2200,6 @@ export declare class TientetygiaServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<TientetygiaServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<TientetygiaServiceProxy>;
 }
 export declare class ToathuocmauServiceProxy {
     private http;
@@ -2349,8 +2234,6 @@ export declare class ToathuocmauServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<ToathuocmauServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<ToathuocmauServiceProxy>;
 }
 export declare class ToathuocmauchitietServiceProxy {
     private http;
@@ -2401,8 +2284,6 @@ export declare class ToathuocmauchitietServiceProxy {
      */
     removebyid(id: number): Observable<void>;
     protected processRemovebyid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<ToathuocmauchitietServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<ToathuocmauchitietServiceProxy>;
 }
 export declare class UserextensionServiceProxy {
     private http;
@@ -2424,8 +2305,6 @@ export declare class UserextensionServiceProxy {
      */
     switchbenhvienid(benhVienId: number | null): Observable<void>;
     protected processSwitchbenhvienid(response: HttpResponseBase): Observable<void>;
-    static ɵfac: i0.ɵɵFactoryDef<UserextensionServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<UserextensionServiceProxy>;
 }
 export declare class VacxinServiceProxy {
     private http;
@@ -2487,8 +2366,6 @@ export declare class VacxinServiceProxy {
      */
     vacxinlapkehoach(tcmr: boolean | undefined): Observable<ComboBoxDto[]>;
     protected processVacxinlapkehoach(response: HttpResponseBase): Observable<ComboBoxDto[]>;
-    static ɵfac: i0.ɵɵFactoryDef<VacxinServiceProxy, [null, { optional: true; }]>;
-    static ɵprov: i0.ɵɵInjectableDef<VacxinServiceProxy>;
 }
 export declare class ControllerInterfaceApiDescriptionModel implements IControllerInterfaceApiDescriptionModel {
     type: string | undefined;
@@ -7696,4 +7573,3 @@ export declare class ApiException extends Error {
     protected isApiException: boolean;
     static isApiException(obj: any): obj is ApiException;
 }
-//# sourceMappingURL=danh-muc-service-proxies.d.ts.map

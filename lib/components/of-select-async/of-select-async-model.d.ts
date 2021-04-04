@@ -10,4 +10,3 @@ export declare class OfSelectAsyncModel extends OfSelectBaseModel {
     keyCache: string;
     constructor(config: OfSelectAsyncModelConfig);
 }
-//# sourceMappingURL=of-select-async-model.d.ts.map

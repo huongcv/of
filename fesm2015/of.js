@@ -1,24 +1,16 @@
 import * as i0 from '@angular/core';
-import { Injectable, Inject, Optional, EventEmitter, Component, ViewEncapsulation, Input, Output, ContentChild, NgModule, ChangeDetectionStrategy, Directive, forwardRef, ViewChild, HostListener, Pipe } from '@angular/core';
+import { Injectable, Inject, Optional, Component, EventEmitter, ViewEncapsulation, Input, Output, ContentChild, NgModule, ChangeDetectionStrategy, Directive, ComponentFactoryResolver, ViewContainerRef, ChangeDetectorRef, ViewChild, forwardRef, ElementRef, HostListener, Pipe } from '@angular/core';
 import * as _ from 'lodash';
 import { Subject, throwError, Observable, of, BehaviorSubject, fromEvent } from 'rxjs';
 import { debounceTime, filter, takeUntil, mergeMap, catchError, distinctUntilChanged, map, tap, finalize } from 'rxjs/operators';
-import * as i1 from '@angular/common/http';
 import { HttpHeaders, HttpResponseBase, HttpResponse, HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
-import * as i1$1 from '@angular/forms';
-import { Validators, NG_VALUE_ACCESSOR, FormControl } from '@angular/forms';
+import * as i1 from '@angular/forms';
+import { Validators, FormBuilder, NG_VALUE_ACCESSOR, FormControl } from '@angular/forms';
 import * as $ from 'jquery';
-import * as i2 from 'ng-zorro-antd/input';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import * as i3 from 'ng-zorro-antd/select';
-import { NzSelectModule } from 'ng-zorro-antd/select';
-import * as i4 from '@angular/common';
-import { registerLocaleData } from '@angular/common';
-import * as i1$2 from '@abp/ng.core';
-import { DynamicLayoutComponent, LazyModuleFactory, CoreModule } from '@abp/ng.core';
+import * as i1$1 from '@abp/ng.core';
+import { RestService, DynamicLayoutComponent, LazyModuleFactory, CoreModule } from '@abp/ng.core';
 import { ThemeSharedModule } from '@abp/ng.theme.shared';
-import * as i1$3 from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
@@ -28,36 +20,28 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzBackTopModule } from 'ng-zorro-antd/back-top';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
-import * as i6 from 'ng-zorro-antd/button';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzCascaderModule } from 'ng-zorro-antd/cascader';
-import * as i2$1 from 'ng-zorro-antd/checkbox';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { NzCommentModule } from 'ng-zorro-antd/comment';
 import { NzNoAnimationModule } from 'ng-zorro-antd/core/no-animation';
 import { NzTransButtonModule } from 'ng-zorro-antd/core/trans-button';
-import * as i7 from 'ng-zorro-antd/core/wave';
 import { NzWaveModule } from 'ng-zorro-antd/core/wave';
-import * as i1$4 from 'ng-zorro-antd/date-picker';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
-import * as i5$2 from 'ng-zorro-antd/divider';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
-import * as i4$3 from 'ng-zorro-antd/form';
 import { NzFormModule } from 'ng-zorro-antd/form';
-import * as i2$5 from 'ng-zorro-antd/grid';
 import { NzGridModule } from 'ng-zorro-antd/grid';
-import { NzI18nModule, NZ_I18N, vi_VN, NZ_DATE_LOCALE } from 'ng-zorro-antd/i18n';
-import * as i4$2 from 'ng-zorro-antd/icon';
+import { NzI18nModule, vi_VN, NZ_I18N, NZ_DATE_LOCALE } from 'ng-zorro-antd/i18n';
 import { NzIconModule, NZ_ICONS } from 'ng-zorro-antd/icon';
-import * as i5 from 'ng-zorro-antd/input-number';
+import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzListModule } from 'ng-zorro-antd/list';
@@ -67,22 +51,19 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
-import * as i5$1 from 'ng-zorro-antd/pagination';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzPopoverModule } from 'ng-zorro-antd/popover';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
-import * as i2$3 from 'ng-zorro-antd/radio';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 import { NzResultModule } from 'ng-zorro-antd/result';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
-import * as i2$2 from 'ng-zorro-antd/spin';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzStatisticModule } from 'ng-zorro-antd/statistic';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
-import * as i2$4 from 'ng-zorro-antd/switch';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
@@ -97,16 +78,14 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzResizableModule } from 'ng-zorro-antd/resizable';
 import { vi as vi$1 } from 'date-fns/locale';
+import { registerLocaleData } from '@angular/common';
 import vi from '@angular/common/locales/vi';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { __awaiter } from 'tslib';
-import * as i3$1 from 'ng2-currency-mask';
-import { CurrencyMaskModule } from 'ng2-currency-mask';
 import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
-import * as i4$1 from 'angular2-text-mask';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { TextMaskModule } from 'angular2-text-mask';
-import * as i3$2 from 'ng-zorro-antd/core/transition-patch';
 
 class OfControlModel {
     constructor(config) {
@@ -408,19 +387,19 @@ class AppUtilityService {
         // return !(typeof input !== 'undefined' && input && input !== '' && input !== null);
     }
     static isNotNull(input) {
-        return !this.isNullOrEmpty(input);
+        return !AppUtilityService.isNullOrEmpty(input);
     }
     static getFullTextSearch(str) {
-        if (this.isNullOrEmpty(str)) {
+        if (AppUtilityService.isNullOrEmpty(str)) {
             return str;
         }
         str += '';
-        str = this.removeDau(str);
+        str = AppUtilityService.removeDau(str);
         str = str.replace(/\s\s+/g, ' ');
         return str;
     }
     static removeDau(str) {
-        if (this.isNullOrEmpty(str)) {
+        if (AppUtilityService.isNullOrEmpty(str)) {
             return str;
         }
         str = str.toLowerCase();
@@ -437,32 +416,31 @@ class AppUtilityService {
         return str;
     }
     static isNotAnyItem(input) {
-        return this.isNullOrEmpty(input) || input.length === 0;
+        return AppUtilityService.isNullOrEmpty(input) || input.length === 0;
     }
     static isWhitespace(value) {
         return (value || '').trim().length === 0;
     }
     static searchVietTat(str) {
-        if (this.isNullOrEmpty(str)) {
+        if (AppUtilityService.isNullOrEmpty(str)) {
             return str;
         }
         let ret = '';
         const spl = str.split(' ');
-        if (this.isNotAnyItem(spl) === false) {
+        if (AppUtilityService.isNotAnyItem(spl) === false) {
             spl.forEach((s) => {
                 if (s.length > 0) {
                     ret = ret + s[0];
                 }
             });
         }
-        return this.getFullTextSearch(_.cloneDeep(ret));
+        return AppUtilityService.getFullTextSearch(_.cloneDeep(ret));
     }
 }
-AppUtilityService.ɵfac = function AppUtilityService_Factory(t) { return new (t || AppUtilityService)(); };
-AppUtilityService.ɵprov = i0.ɵɵdefineInjectable({ token: AppUtilityService, factory: AppUtilityService.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AppUtilityService, [{
-        type: Injectable
-    }], function () { return []; }, null); })();
+AppUtilityService.decorators = [
+    { type: Injectable }
+];
+AppUtilityService.ctorParameters = () => [];
 
 class OfSelectBaseModel extends OfControlModel {
     constructor(config) {
@@ -794,19 +772,13 @@ class AbpServiceProxy {
         return of(null);
     }
 }
-AbpServiceProxy.ɵfac = function AbpServiceProxy_Factory(t) { return new (t || AbpServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-AbpServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: AbpServiceProxy, factory: AbpServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AbpServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+AbpServiceProxy.decorators = [
+    { type: Injectable }
+];
+AbpServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class TenantsServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -1024,19 +996,13 @@ class TenantsServiceProxy {
         return of(null);
     }
 }
-TenantsServiceProxy.ɵfac = function TenantsServiceProxy_Factory(t) { return new (t || TenantsServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-TenantsServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: TenantsServiceProxy, factory: TenantsServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TenantsServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+TenantsServiceProxy.decorators = [
+    { type: Injectable }
+];
+TenantsServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class BenhvienServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -1679,19 +1645,13 @@ class BenhvienServiceProxy {
         return of(null);
     }
 }
-BenhvienServiceProxy.ɵfac = function BenhvienServiceProxy_Factory(t) { return new (t || BenhvienServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-BenhvienServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: BenhvienServiceProxy, factory: BenhvienServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BenhvienServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+BenhvienServiceProxy.decorators = [
+    { type: Injectable }
+];
+BenhvienServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhdichvusokhamServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -2039,19 +1999,13 @@ class CauhinhdichvusokhamServiceProxy {
         return of(null);
     }
 }
-CauhinhdichvusokhamServiceProxy.ɵfac = function CauhinhdichvusokhamServiceProxy_Factory(t) { return new (t || CauhinhdichvusokhamServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhdichvusokhamServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhdichvusokhamServiceProxy, factory: CauhinhdichvusokhamServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhdichvusokhamServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhdichvusokhamServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhdichvusokhamServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhdoituongkhoduocServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -2172,19 +2126,13 @@ class CauhinhdoituongkhoduocServiceProxy {
         return of(null);
     }
 }
-CauhinhdoituongkhoduocServiceProxy.ɵfac = function CauhinhdoituongkhoduocServiceProxy_Factory(t) { return new (t || CauhinhdoituongkhoduocServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhdoituongkhoduocServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhdoituongkhoduocServiceProxy, factory: CauhinhdoituongkhoduocServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhdoituongkhoduocServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhdoituongkhoduocServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhdoituongkhoduocServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhgiadichvuServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -3103,19 +3051,13 @@ class CauhinhgiadichvuServiceProxy {
         return of(null);
     }
 }
-CauhinhgiadichvuServiceProxy.ɵfac = function CauhinhgiadichvuServiceProxy_Factory(t) { return new (t || CauhinhgiadichvuServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhgiadichvuServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhgiadichvuServiceProxy, factory: CauhinhgiadichvuServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhgiadichvuServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhgiadichvuServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhgiadichvuServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhmautinnhanServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -3525,19 +3467,13 @@ class CauhinhmautinnhanServiceProxy {
         return of(null);
     }
 }
-CauhinhmautinnhanServiceProxy.ɵfac = function CauhinhmautinnhanServiceProxy_Factory(t) { return new (t || CauhinhmautinnhanServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhmautinnhanServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhmautinnhanServiceProxy, factory: CauhinhmautinnhanServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhmautinnhanServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhmautinnhanServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhmautinnhanServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhphongbandichvuServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -3885,19 +3821,13 @@ class CauhinhphongbandichvuServiceProxy {
         return of(null);
     }
 }
-CauhinhphongbandichvuServiceProxy.ɵfac = function CauhinhphongbandichvuServiceProxy_Factory(t) { return new (t || CauhinhphongbandichvuServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhphongbandichvuServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhphongbandichvuServiceProxy, factory: CauhinhphongbandichvuServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhphongbandichvuServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhphongbandichvuServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhphongbandichvuServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhquanlyhosobccsServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -4307,19 +4237,13 @@ class CauhinhquanlyhosobccsServiceProxy {
         return of(null);
     }
 }
-CauhinhquanlyhosobccsServiceProxy.ɵfac = function CauhinhquanlyhosobccsServiceProxy_Factory(t) { return new (t || CauhinhquanlyhosobccsServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhquanlyhosobccsServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhquanlyhosobccsServiceProxy, factory: CauhinhquanlyhosobccsServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhquanlyhosobccsServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhquanlyhosobccsServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhquanlyhosobccsServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhtaikhoanbulksmsServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -4729,19 +4653,13 @@ class CauhinhtaikhoanbulksmsServiceProxy {
         return of(null);
     }
 }
-CauhinhtaikhoanbulksmsServiceProxy.ɵfac = function CauhinhtaikhoanbulksmsServiceProxy_Factory(t) { return new (t || CauhinhtaikhoanbulksmsServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhtaikhoanbulksmsServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhtaikhoanbulksmsServiceProxy, factory: CauhinhtaikhoanbulksmsServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhtaikhoanbulksmsServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhtaikhoanbulksmsServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhtaikhoanbulksmsServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhtaikhoandichvuthecaoServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -5151,19 +5069,13 @@ class CauhinhtaikhoandichvuthecaoServiceProxy {
         return of(null);
     }
 }
-CauhinhtaikhoandichvuthecaoServiceProxy.ɵfac = function CauhinhtaikhoandichvuthecaoServiceProxy_Factory(t) { return new (t || CauhinhtaikhoandichvuthecaoServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhtaikhoandichvuthecaoServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhtaikhoandichvuthecaoServiceProxy, factory: CauhinhtaikhoandichvuthecaoServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhtaikhoandichvuthecaoServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhtaikhoandichvuthecaoServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhtaikhoandichvuthecaoServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhtaikhoanlienthongServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -5688,19 +5600,13 @@ class CauhinhtaikhoanlienthongServiceProxy {
         return of(null);
     }
 }
-CauhinhtaikhoanlienthongServiceProxy.ɵfac = function CauhinhtaikhoanlienthongServiceProxy_Factory(t) { return new (t || CauhinhtaikhoanlienthongServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhtaikhoanlienthongServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhtaikhoanlienthongServiceProxy, factory: CauhinhtaikhoanlienthongServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhtaikhoanlienthongServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhtaikhoanlienthongServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhtaikhoanlienthongServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhtaikhoanviettelpayServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -6110,19 +6016,13 @@ class CauhinhtaikhoanviettelpayServiceProxy {
         return of(null);
     }
 }
-CauhinhtaikhoanviettelpayServiceProxy.ɵfac = function CauhinhtaikhoanviettelpayServiceProxy_Factory(t) { return new (t || CauhinhtaikhoanviettelpayServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhtaikhoanviettelpayServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhtaikhoanviettelpayServiceProxy, factory: CauhinhtaikhoanviettelpayServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhtaikhoanviettelpayServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhtaikhoanviettelpayServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhtaikhoanviettelpayServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CauhinhtinnhandichvuServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -6532,19 +6432,13 @@ class CauhinhtinnhandichvuServiceProxy {
         return of(null);
     }
 }
-CauhinhtinnhandichvuServiceProxy.ɵfac = function CauhinhtinnhandichvuServiceProxy_Factory(t) { return new (t || CauhinhtinnhandichvuServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CauhinhtinnhandichvuServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CauhinhtinnhandichvuServiceProxy, factory: CauhinhtinnhandichvuServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CauhinhtinnhandichvuServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CauhinhtinnhandichvuServiceProxy.decorators = [
+    { type: Injectable }
+];
+CauhinhtinnhandichvuServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class ChuongtrinhServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -6838,19 +6732,13 @@ class ChuongtrinhServiceProxy {
         return of(null);
     }
 }
-ChuongtrinhServiceProxy.ɵfac = function ChuongtrinhServiceProxy_Factory(t) { return new (t || ChuongtrinhServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-ChuongtrinhServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: ChuongtrinhServiceProxy, factory: ChuongtrinhServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ChuongtrinhServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+ChuongtrinhServiceProxy.decorators = [
+    { type: Injectable }
+];
+ChuongtrinhServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class CombodataServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -7035,19 +6923,13 @@ class CombodataServiceProxy {
         return of(null);
     }
 }
-CombodataServiceProxy.ɵfac = function CombodataServiceProxy_Factory(t) { return new (t || CombodataServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-CombodataServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: CombodataServiceProxy, factory: CombodataServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CombodataServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+CombodataServiceProxy.decorators = [
+    { type: Injectable }
+];
+CombodataServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class DichvukhamchuabenhServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -7505,19 +7387,13 @@ class DichvukhamchuabenhServiceProxy {
         return of(null);
     }
 }
-DichvukhamchuabenhServiceProxy.ɵfac = function DichvukhamchuabenhServiceProxy_Factory(t) { return new (t || DichvukhamchuabenhServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-DichvukhamchuabenhServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: DichvukhamchuabenhServiceProxy, factory: DichvukhamchuabenhServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DichvukhamchuabenhServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+DichvukhamchuabenhServiceProxy.decorators = [
+    { type: Injectable }
+];
+DichvukhamchuabenhServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class DoituongServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -7869,19 +7745,13 @@ class DoituongServiceProxy {
         return of(null);
     }
 }
-DoituongServiceProxy.ɵfac = function DoituongServiceProxy_Factory(t) { return new (t || DoituongServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-DoituongServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: DoituongServiceProxy, factory: DoituongServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DoituongServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+DoituongServiceProxy.decorators = [
+    { type: Injectable }
+];
+DoituongServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class DoituongkhoduocnoitruServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -8295,19 +8165,13 @@ class DoituongkhoduocnoitruServiceProxy {
         return of(null);
     }
 }
-DoituongkhoduocnoitruServiceProxy.ɵfac = function DoituongkhoduocnoitruServiceProxy_Factory(t) { return new (t || DoituongkhoduocnoitruServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-DoituongkhoduocnoitruServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: DoituongkhoduocnoitruServiceProxy, factory: DoituongkhoduocnoitruServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DoituongkhoduocnoitruServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+DoituongkhoduocnoitruServiceProxy.decorators = [
+    { type: Injectable }
+];
+DoituongkhoduocnoitruServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class DoituongloaigiaServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -8721,19 +8585,13 @@ class DoituongloaigiaServiceProxy {
         return of(null);
     }
 }
-DoituongloaigiaServiceProxy.ɵfac = function DoituongloaigiaServiceProxy_Factory(t) { return new (t || DoituongloaigiaServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-DoituongloaigiaServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: DoituongloaigiaServiceProxy, factory: DoituongloaigiaServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DoituongloaigiaServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+DoituongloaigiaServiceProxy.decorators = [
+    { type: Injectable }
+];
+DoituongloaigiaServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class DonvihanhchinhServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -9027,19 +8885,13 @@ class DonvihanhchinhServiceProxy {
         return of(null);
     }
 }
-DonvihanhchinhServiceProxy.ɵfac = function DonvihanhchinhServiceProxy_Factory(t) { return new (t || DonvihanhchinhServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-DonvihanhchinhServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: DonvihanhchinhServiceProxy, factory: DonvihanhchinhServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DonvihanhchinhServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+DonvihanhchinhServiceProxy.decorators = [
+    { type: Injectable }
+];
+DonvihanhchinhServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class DonvitinhduocphamServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -9333,19 +9185,13 @@ class DonvitinhduocphamServiceProxy {
         return of(null);
     }
 }
-DonvitinhduocphamServiceProxy.ɵfac = function DonvitinhduocphamServiceProxy_Factory(t) { return new (t || DonvitinhduocphamServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-DonvitinhduocphamServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: DonvitinhduocphamServiceProxy, factory: DonvitinhduocphamServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DonvitinhduocphamServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+DonvitinhduocphamServiceProxy.decorators = [
+    { type: Injectable }
+];
+DonvitinhduocphamServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class DuocbenhvienServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -10042,19 +9888,13 @@ class DuocbenhvienServiceProxy {
         return of(null);
     }
 }
-DuocbenhvienServiceProxy.ɵfac = function DuocbenhvienServiceProxy_Factory(t) { return new (t || DuocbenhvienServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-DuocbenhvienServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: DuocbenhvienServiceProxy, factory: DuocbenhvienServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DuocbenhvienServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+DuocbenhvienServiceProxy.decorators = [
+    { type: Injectable }
+];
+DuocbenhvienServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class DuocthongtinthauServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -10348,19 +10188,13 @@ class DuocthongtinthauServiceProxy {
         return of(null);
     }
 }
-DuocthongtinthauServiceProxy.ɵfac = function DuocthongtinthauServiceProxy_Factory(t) { return new (t || DuocthongtinthauServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-DuocthongtinthauServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: DuocthongtinthauServiceProxy, factory: DuocthongtinthauServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DuocthongtinthauServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+DuocthongtinthauServiceProxy.decorators = [
+    { type: Injectable }
+];
+DuocthongtinthauServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class FileServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -10592,19 +10426,13 @@ class FileServiceProxy {
         return of(null);
     }
 }
-FileServiceProxy.ɵfac = function FileServiceProxy_Factory(t) { return new (t || FileServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-FileServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: FileServiceProxy, factory: FileServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(FileServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+FileServiceProxy.decorators = [
+    { type: Injectable }
+];
+FileServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class GetentitycommonServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -10670,19 +10498,13 @@ class GetentitycommonServiceProxy {
         return of(null);
     }
 }
-GetentitycommonServiceProxy.ɵfac = function GetentitycommonServiceProxy_Factory(t) { return new (t || GetentitycommonServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-GetentitycommonServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: GetentitycommonServiceProxy, factory: GetentitycommonServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(GetentitycommonServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+GetentitycommonServiceProxy.decorators = [
+    { type: Injectable }
+];
+GetentitycommonServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class GiuongbenhServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -10976,19 +10798,13 @@ class GiuongbenhServiceProxy {
         return of(null);
     }
 }
-GiuongbenhServiceProxy.ɵfac = function GiuongbenhServiceProxy_Factory(t) { return new (t || GiuongbenhServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-GiuongbenhServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: GiuongbenhServiceProxy, factory: GiuongbenhServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(GiuongbenhServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+GiuongbenhServiceProxy.decorators = [
+    { type: Injectable }
+];
+GiuongbenhServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class HethongdanhmucServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -11344,19 +11160,13 @@ class HethongdanhmucServiceProxy {
         return of(null);
     }
 }
-HethongdanhmucServiceProxy.ɵfac = function HethongdanhmucServiceProxy_Factory(t) { return new (t || HethongdanhmucServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-HethongdanhmucServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: HethongdanhmucServiceProxy, factory: HethongdanhmucServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(HethongdanhmucServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+HethongdanhmucServiceProxy.decorators = [
+    { type: Injectable }
+];
+HethongdanhmucServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class HethongdanhmucdinhnghiaServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -11751,19 +11561,13 @@ class HethongdanhmucdinhnghiaServiceProxy {
         return of(null);
     }
 }
-HethongdanhmucdinhnghiaServiceProxy.ɵfac = function HethongdanhmucdinhnghiaServiceProxy_Factory(t) { return new (t || HethongdanhmucdinhnghiaServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-HethongdanhmucdinhnghiaServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: HethongdanhmucdinhnghiaServiceProxy, factory: HethongdanhmucdinhnghiaServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(HethongdanhmucdinhnghiaServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+HethongdanhmucdinhnghiaServiceProxy.decorators = [
+    { type: Injectable }
+];
+HethongdanhmucdinhnghiaServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class HoatchatServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -12057,19 +11861,13 @@ class HoatchatServiceProxy {
         return of(null);
     }
 }
-HoatchatServiceProxy.ɵfac = function HoatchatServiceProxy_Factory(t) { return new (t || HoatchatServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-HoatchatServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: HoatchatServiceProxy, factory: HoatchatServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(HoatchatServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+HoatchatServiceProxy.decorators = [
+    { type: Injectable }
+];
+HoatchatServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class ImportduocphamServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -12251,19 +12049,13 @@ class ImportduocphamServiceProxy {
         return of(null);
     }
 }
-ImportduocphamServiceProxy.ɵfac = function ImportduocphamServiceProxy_Factory(t) { return new (t || ImportduocphamServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-ImportduocphamServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: ImportduocphamServiceProxy, factory: ImportduocphamServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ImportduocphamServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+ImportduocphamServiceProxy.decorators = [
+    { type: Injectable }
+];
+ImportduocphamServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class KhangnguyenServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -12730,19 +12522,13 @@ class KhangnguyenServiceProxy {
         return of(null);
     }
 }
-KhangnguyenServiceProxy.ɵfac = function KhangnguyenServiceProxy_Factory(t) { return new (t || KhangnguyenServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-KhangnguyenServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: KhangnguyenServiceProxy, factory: KhangnguyenServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(KhangnguyenServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+KhangnguyenServiceProxy.decorators = [
+    { type: Injectable }
+];
+KhangnguyenServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class KhoduocServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -13036,19 +12822,13 @@ class KhoduocServiceProxy {
         return of(null);
     }
 }
-KhoduocServiceProxy.ɵfac = function KhoduocServiceProxy_Factory(t) { return new (t || KhoduocServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-KhoduocServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: KhoduocServiceProxy, factory: KhoduocServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(KhoduocServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+KhoduocServiceProxy.decorators = [
+    { type: Injectable }
+];
+KhoduocServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class LoaiduocServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -13342,19 +13122,13 @@ class LoaiduocServiceProxy {
         return of(null);
     }
 }
-LoaiduocServiceProxy.ɵfac = function LoaiduocServiceProxy_Factory(t) { return new (t || LoaiduocServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-LoaiduocServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: LoaiduocServiceProxy, factory: LoaiduocServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LoaiduocServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+LoaiduocServiceProxy.decorators = [
+    { type: Injectable }
+];
+LoaiduocServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class LoaigiaServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -13648,19 +13422,13 @@ class LoaigiaServiceProxy {
         return of(null);
     }
 }
-LoaigiaServiceProxy.ɵfac = function LoaigiaServiceProxy_Factory(t) { return new (t || LoaigiaServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-LoaigiaServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: LoaigiaServiceProxy, factory: LoaigiaServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LoaigiaServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+LoaigiaServiceProxy.decorators = [
+    { type: Injectable }
+];
+LoaigiaServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class LoaivattuServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -13954,19 +13722,13 @@ class LoaivattuServiceProxy {
         return of(null);
     }
 }
-LoaivattuServiceProxy.ɵfac = function LoaivattuServiceProxy_Factory(t) { return new (t || LoaivattuServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-LoaivattuServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: LoaivattuServiceProxy, factory: LoaivattuServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LoaivattuServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+LoaivattuServiceProxy.decorators = [
+    { type: Injectable }
+];
+LoaivattuServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class NhacungcapServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -14260,19 +14022,13 @@ class NhacungcapServiceProxy {
         return of(null);
     }
 }
-NhacungcapServiceProxy.ɵfac = function NhacungcapServiceProxy_Factory(t) { return new (t || NhacungcapServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-NhacungcapServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: NhacungcapServiceProxy, factory: NhacungcapServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NhacungcapServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+NhacungcapServiceProxy.decorators = [
+    { type: Injectable }
+];
+NhacungcapServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class NhanlucServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -14686,19 +14442,13 @@ class NhanlucServiceProxy {
         return of(null);
     }
 }
-NhanlucServiceProxy.ɵfac = function NhanlucServiceProxy_Factory(t) { return new (t || NhanlucServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-NhanlucServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: NhanlucServiceProxy, factory: NhanlucServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NhanlucServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+NhanlucServiceProxy.decorators = [
+    { type: Injectable }
+];
+NhanlucServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class NhomduocServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -14992,19 +14742,13 @@ class NhomduocServiceProxy {
         return of(null);
     }
 }
-NhomduocServiceProxy.ɵfac = function NhomduocServiceProxy_Factory(t) { return new (t || NhomduocServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-NhomduocServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: NhomduocServiceProxy, factory: NhomduocServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NhomduocServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+NhomduocServiceProxy.decorators = [
+    { type: Injectable }
+];
+NhomduocServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class NhomdvktbhytServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -15298,19 +15042,13 @@ class NhomdvktbhytServiceProxy {
         return of(null);
     }
 }
-NhomdvktbhytServiceProxy.ɵfac = function NhomdvktbhytServiceProxy_Factory(t) { return new (t || NhomdvktbhytServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-NhomdvktbhytServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: NhomdvktbhytServiceProxy, factory: NhomdvktbhytServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NhomdvktbhytServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+NhomdvktbhytServiceProxy.decorators = [
+    { type: Injectable }
+];
+NhomdvktbhytServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class PermissionmanagementServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -15376,19 +15114,13 @@ class PermissionmanagementServiceProxy {
         return of(null);
     }
 }
-PermissionmanagementServiceProxy.ɵfac = function PermissionmanagementServiceProxy_Factory(t) { return new (t || PermissionmanagementServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-PermissionmanagementServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: PermissionmanagementServiceProxy, factory: PermissionmanagementServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PermissionmanagementServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+PermissionmanagementServiceProxy.decorators = [
+    { type: Injectable }
+];
+PermissionmanagementServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class PhacdodieutriServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -15682,19 +15414,13 @@ class PhacdodieutriServiceProxy {
         return of(null);
     }
 }
-PhacdodieutriServiceProxy.ɵfac = function PhacdodieutriServiceProxy_Factory(t) { return new (t || PhacdodieutriServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-PhacdodieutriServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: PhacdodieutriServiceProxy, factory: PhacdodieutriServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PhacdodieutriServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+PhacdodieutriServiceProxy.decorators = [
+    { type: Injectable }
+];
+PhacdodieutriServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class PhannhomduocServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -15988,19 +15714,13 @@ class PhannhomduocServiceProxy {
         return of(null);
     }
 }
-PhannhomduocServiceProxy.ɵfac = function PhannhomduocServiceProxy_Factory(t) { return new (t || PhannhomduocServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-PhannhomduocServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: PhannhomduocServiceProxy, factory: PhannhomduocServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PhannhomduocServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+PhannhomduocServiceProxy.decorators = [
+    { type: Injectable }
+];
+PhannhomduocServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class PhongbanServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -16352,19 +16072,13 @@ class PhongbanServiceProxy {
         return of(null);
     }
 }
-PhongbanServiceProxy.ɵfac = function PhongbanServiceProxy_Factory(t) { return new (t || PhongbanServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-PhongbanServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: PhongbanServiceProxy, factory: PhongbanServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PhongbanServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+PhongbanServiceProxy.decorators = [
+    { type: Injectable }
+];
+PhongbanServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class SearchservercombodataServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -16488,19 +16202,13 @@ class SearchservercombodataServiceProxy {
         return of(null);
     }
 }
-SearchservercombodataServiceProxy.ɵfac = function SearchservercombodataServiceProxy_Factory(t) { return new (t || SearchservercombodataServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-SearchservercombodataServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: SearchservercombodataServiceProxy, factory: SearchservercombodataServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SearchservercombodataServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+SearchservercombodataServiceProxy.decorators = [
+    { type: Injectable }
+];
+SearchservercombodataServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class SelectoptionServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -16571,19 +16279,13 @@ class SelectoptionServiceProxy {
         return of(null);
     }
 }
-SelectoptionServiceProxy.ɵfac = function SelectoptionServiceProxy_Factory(t) { return new (t || SelectoptionServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-SelectoptionServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: SelectoptionServiceProxy, factory: SelectoptionServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectoptionServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+SelectoptionServiceProxy.decorators = [
+    { type: Injectable }
+];
+SelectoptionServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class SelectsearchserverServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -16650,19 +16352,13 @@ class SelectsearchserverServiceProxy {
         return of(null);
     }
 }
-SelectsearchserverServiceProxy.ɵfac = function SelectsearchserverServiceProxy_Factory(t) { return new (t || SelectsearchserverServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-SelectsearchserverServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: SelectsearchserverServiceProxy, factory: SelectsearchserverServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectsearchserverServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+SelectsearchserverServiceProxy.decorators = [
+    { type: Injectable }
+];
+SelectsearchserverServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class SokhamServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -16956,19 +16652,13 @@ class SokhamServiceProxy {
         return of(null);
     }
 }
-SokhamServiceProxy.ɵfac = function SokhamServiceProxy_Factory(t) { return new (t || SokhamServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-SokhamServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: SokhamServiceProxy, factory: SokhamServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SokhamServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+SokhamServiceProxy.decorators = [
+    { type: Injectable }
+];
+SokhamServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class StaticroleServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -17393,19 +17083,13 @@ class StaticroleServiceProxy {
         return of(null);
     }
 }
-StaticroleServiceProxy.ɵfac = function StaticroleServiceProxy_Factory(t) { return new (t || StaticroleServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-StaticroleServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: StaticroleServiceProxy, factory: StaticroleServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StaticroleServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+StaticroleServiceProxy.decorators = [
+    { type: Injectable }
+];
+StaticroleServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class SysroleServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -17762,19 +17446,13 @@ class SysroleServiceProxy {
         return of(null);
     }
 }
-SysroleServiceProxy.ɵfac = function SysroleServiceProxy_Factory(t) { return new (t || SysroleServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-SysroleServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: SysroleServiceProxy, factory: SysroleServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SysroleServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+SysroleServiceProxy.decorators = [
+    { type: Injectable }
+];
+SysroleServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class TaikhoanadminServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -18243,19 +17921,13 @@ class TaikhoanadminServiceProxy {
         return of(null);
     }
 }
-TaikhoanadminServiceProxy.ɵfac = function TaikhoanadminServiceProxy_Factory(t) { return new (t || TaikhoanadminServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-TaikhoanadminServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: TaikhoanadminServiceProxy, factory: TaikhoanadminServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TaikhoanadminServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+TaikhoanadminServiceProxy.decorators = [
+    { type: Injectable }
+];
+TaikhoanadminServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class TaikhoancosoServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -19079,19 +18751,13 @@ class TaikhoancosoServiceProxy {
         return of(null);
     }
 }
-TaikhoancosoServiceProxy.ɵfac = function TaikhoancosoServiceProxy_Factory(t) { return new (t || TaikhoancosoServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-TaikhoancosoServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: TaikhoancosoServiceProxy, factory: TaikhoancosoServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TaikhoancosoServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+TaikhoancosoServiceProxy.decorators = [
+    { type: Injectable }
+];
+TaikhoancosoServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class ThamsobenhvienServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -19606,19 +19272,13 @@ class ThamsobenhvienServiceProxy {
         return of(null);
     }
 }
-ThamsobenhvienServiceProxy.ɵfac = function ThamsobenhvienServiceProxy_Factory(t) { return new (t || ThamsobenhvienServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-ThamsobenhvienServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: ThamsobenhvienServiceProxy, factory: ThamsobenhvienServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ThamsobenhvienServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+ThamsobenhvienServiceProxy.decorators = [
+    { type: Injectable }
+];
+ThamsobenhvienServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class ThamsohethongServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -19912,19 +19572,13 @@ class ThamsohethongServiceProxy {
         return of(null);
     }
 }
-ThamsohethongServiceProxy.ɵfac = function ThamsohethongServiceProxy_Factory(t) { return new (t || ThamsohethongServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-ThamsohethongServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: ThamsohethongServiceProxy, factory: ThamsohethongServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ThamsohethongServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+ThamsohethongServiceProxy.decorators = [
+    { type: Injectable }
+];
+ThamsohethongServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class ThietbiServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -20218,19 +19872,13 @@ class ThietbiServiceProxy {
         return of(null);
     }
 }
-ThietbiServiceProxy.ɵfac = function ThietbiServiceProxy_Factory(t) { return new (t || ThietbiServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-ThietbiServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: ThietbiServiceProxy, factory: ThietbiServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ThietbiServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+ThietbiServiceProxy.decorators = [
+    { type: Injectable }
+];
+ThietbiServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class TienteServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -20524,19 +20172,13 @@ class TienteServiceProxy {
         return of(null);
     }
 }
-TienteServiceProxy.ɵfac = function TienteServiceProxy_Factory(t) { return new (t || TienteServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-TienteServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: TienteServiceProxy, factory: TienteServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TienteServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+TienteServiceProxy.decorators = [
+    { type: Injectable }
+];
+TienteServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class TientetygiaServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -20830,19 +20472,13 @@ class TientetygiaServiceProxy {
         return of(null);
     }
 }
-TientetygiaServiceProxy.ɵfac = function TientetygiaServiceProxy_Factory(t) { return new (t || TientetygiaServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-TientetygiaServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: TientetygiaServiceProxy, factory: TientetygiaServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TientetygiaServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+TientetygiaServiceProxy.decorators = [
+    { type: Injectable }
+];
+TientetygiaServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class ToathuocmauServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -21136,19 +20772,13 @@ class ToathuocmauServiceProxy {
         return of(null);
     }
 }
-ToathuocmauServiceProxy.ɵfac = function ToathuocmauServiceProxy_Factory(t) { return new (t || ToathuocmauServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-ToathuocmauServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: ToathuocmauServiceProxy, factory: ToathuocmauServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToathuocmauServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+ToathuocmauServiceProxy.decorators = [
+    { type: Injectable }
+];
+ToathuocmauServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class ToathuocmauchitietServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -21609,19 +21239,13 @@ class ToathuocmauchitietServiceProxy {
         return of(null);
     }
 }
-ToathuocmauchitietServiceProxy.ɵfac = function ToathuocmauchitietServiceProxy_Factory(t) { return new (t || ToathuocmauchitietServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-ToathuocmauchitietServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: ToathuocmauchitietServiceProxy, factory: ToathuocmauchitietServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToathuocmauchitietServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+ToathuocmauchitietServiceProxy.decorators = [
+    { type: Injectable }
+];
+ToathuocmauchitietServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class UserextensionServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -21784,19 +21408,13 @@ class UserextensionServiceProxy {
         return of(null);
     }
 }
-UserextensionServiceProxy.ɵfac = function UserextensionServiceProxy_Factory(t) { return new (t || UserextensionServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-UserextensionServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: UserextensionServiceProxy, factory: UserextensionServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(UserextensionServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+UserextensionServiceProxy.decorators = [
+    { type: Injectable }
+];
+UserextensionServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class VacxinServiceProxy {
     constructor(http, baseUrl) {
         this.jsonParseReviver = undefined;
@@ -22380,19 +21998,13 @@ class VacxinServiceProxy {
         return of(null);
     }
 }
-VacxinServiceProxy.ɵfac = function VacxinServiceProxy_Factory(t) { return new (t || VacxinServiceProxy)(i0.ɵɵinject(HttpClient), i0.ɵɵinject(API_BASE_URL, 8)); };
-VacxinServiceProxy.ɵprov = i0.ɵɵdefineInjectable({ token: VacxinServiceProxy, factory: VacxinServiceProxy.ɵfac });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(VacxinServiceProxy, [{
-        type: Injectable
-    }], function () { return [{ type: i1.HttpClient, decorators: [{
-                type: Inject,
-                args: [HttpClient]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [API_BASE_URL]
-            }] }]; }, null); })();
+VacxinServiceProxy.decorators = [
+    { type: Injectable }
+];
+VacxinServiceProxy.ctorParameters = () => [
+    { type: HttpClient, decorators: [{ type: Inject, args: [HttpClient,] }] },
+    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [API_BASE_URL,] }] }
+];
 class ControllerInterfaceApiDescriptionModel {
     constructor(data) {
         if (data) {
@@ -32571,419 +32183,6 @@ function blobToText(blob) {
     });
 }
 
-class DestroyRxjsService extends Subject {
-    ngOnDestroy() {
-        this.next();
-        this.complete();
-    }
-}
-DestroyRxjsService.ɵfac = function DestroyRxjsService_Factory(t) { return ɵDestroyRxjsService_BaseFactory(t || DestroyRxjsService); };
-DestroyRxjsService.ɵprov = i0.ɵɵdefineInjectable({ token: DestroyRxjsService, factory: DestroyRxjsService.ɵfac });
-const ɵDestroyRxjsService_BaseFactory = /*@__PURE__*/ i0.ɵɵgetInheritedFactory(DestroyRxjsService);
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DestroyRxjsService, [{
-        type: Injectable
-    }], null, null); })();
-
-class OfValidatorService {
-    constructor() {
-    }
-    noWhitespaceValidator(control) {
-        if (AppUtilityService.isNullOrEmpty(control.value)) {
-            return { whiteSpace: true };
-        }
-        const v = '' + control.value;
-        const isWhitespace = v.trim().length === 0;
-        const isValid = !isWhitespace;
-        return isValid ? null : { whiteSpace: true };
-    }
-    emailValidator(control) {
-        const value = (control === null || control === void 0 ? void 0 : control.value) || '';
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const isValid = re.test(value);
-        return isValid ? null : { email: true };
-    }
-    passwordValidator(control) {
-        const value = (control === null || control === void 0 ? void 0 : control.value) || '';
-        const check = value.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/);
-        const isValid = !!check;
-        return isValid ? null : { password: true };
-    }
-    phoneValidator(control) {
-        const value = (control === null || control === void 0 ? void 0 : control.value) || '';
-        const check = value.match(/(09|01[2|6|8|9])+([0-9]{8})\b/);
-        const isValid = !!check;
-        return isValid ? null : { phone: true };
-    }
-    focusControlItem(id) {
-        const arr = $('#' + id).find('.ord-form-control');
-        let flag = true;
-        arr.each(function () {
-            let txt = $(this).find('.form-control-err').text();
-            if (txt) {
-                txt = txt.replace(/ /g, '');
-            }
-            if (flag && AppUtilityService.isNotNull(txt)) {
-                $(this).find('.ord-dynamic-input').focus();
-                $(this).find('.ant-input-number-input').focus();
-                $(this).find('.ant-input').focus();
-                $(this).find('.ant-select-selection-search-input').focus();
-                if ($(this).find('.ant-radio-input')[0]) {
-                    $(this).find('.ant-radio-input')[0].focus();
-                }
-                flag = false;
-            }
-        });
-    }
-    focusFirst(id) {
-        const arr = $('#' + id).find('.ord-form-control');
-        let flag = true;
-        arr.each(function () {
-            if (flag) {
-                $(this).find('.ord-dynamic-input').focus();
-                $(this).find('.ant-input-number-input').focus();
-                $(this).find('.ant-input').focus();
-                $(this).find('.ant-select-selection-search-input').focus();
-                if ($(this).find('.ant-radio-input')[0]) {
-                    $(this).find('.ant-radio-input')[0].focus();
-                }
-                flag = false;
-            }
-        });
-    }
-}
-OfValidatorService.ɵfac = function OfValidatorService_Factory(t) { return new (t || OfValidatorService)(); };
-OfValidatorService.ɵprov = i0.ɵɵdefineInjectable({ token: OfValidatorService, factory: OfValidatorService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfValidatorService, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return []; }, null); })();
-
-class OfCreateControlFormService {
-    constructor(fb, validatorService) {
-        this.fb = fb;
-        this.validatorService = validatorService;
-    }
-    createControl(fields) {
-        const group = this.fb.group({});
-        _.forEach(fields, (field) => {
-            this.createField(field, group);
-        });
-        return group;
-    }
-    createExtendControl(group, controls) {
-        _.forEach(controls, (field) => {
-            const f = group.get(field.dataField);
-            if (f) {
-                return;
-            }
-            this.createValidations(field);
-            const control = this.fb.control(field.value, this.bindValidations(field));
-            if (field.disabled) {
-                control.disable({ onlySelf: true });
-            }
-            group.addControl(field.dataField, control);
-        });
-    }
-    updateControl(fields, group) {
-        Object.keys(group.controls).forEach(key => {
-            const fDataField = fields.find(x => x.dataField === key);
-            if (!fDataField) {
-                group.removeControl(key);
-            }
-        });
-        _.forEach(fields, (field) => {
-            const f = group.get(field.dataField);
-            if (f) {
-                return;
-            }
-            this.createField(field, group);
-        });
-    }
-    createField(field, group) {
-        const ignoreType = ['contentHtml', 'componentRef', 'templateRef'];
-        if (ignoreType.indexOf(field.type) > 0) {
-            return;
-        }
-        this.createValidations(field);
-        const control = this.fb.control(field.value, this.bindValidations(field));
-        if (field.disabled) {
-            control.disable({ onlySelf: true });
-        }
-        group.addControl(field.dataField, control);
-    }
-    createValidations(field) {
-        field.validations = field.validations || [];
-        field.validations.forEach(valid => {
-            if (valid.name === 'email') {
-                valid.validator = this.validatorService.emailValidator;
-                valid.message = valid.message || 'Email sai định dạng!';
-                return;
-            }
-            if (valid.name === 'phone') {
-                valid.validator = this.validatorService.phoneValidator;
-                valid.message = valid.message || 'Số điện thoại không đúng định dạng!';
-                return;
-            }
-            if (valid.name === 'password') {
-                valid.validator = this.validatorService.passwordValidator;
-                valid.message = valid.message || 'Mật khẩu tối thiểu 8 ký tự, bao gồm chữ in hoa/ thường , số và ký tự đặc biệt!';
-                return;
-            }
-        });
-        if (field.required) {
-            field.validations.push({
-                name: 'whiteSpace',
-                validator: this.validatorService.noWhitespaceValidator,
-                message: field.errorEmpty
-            });
-        }
-    }
-    bindValidations(field) {
-        const validations = field.validations || [];
-        if (validations.length > 0) {
-            const validList = [];
-            validations.forEach(valid => {
-                validList.push(valid.validator);
-            });
-            return Validators.compose(validList);
-        }
-        return null;
-    }
-}
-OfCreateControlFormService.ɵfac = function OfCreateControlFormService_Factory(t) { return new (t || OfCreateControlFormService)(i0.ɵɵinject(i1$1.FormBuilder), i0.ɵɵinject(OfValidatorService)); };
-OfCreateControlFormService.ɵprov = i0.ɵɵdefineInjectable({ token: OfCreateControlFormService, factory: OfCreateControlFormService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfCreateControlFormService, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return [{ type: i1$1.FormBuilder }, { type: OfValidatorService }]; }, null); })();
-
-function OfDynamicComponent_ng_container_3_div_1_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 5);
-    i0.ɵɵelementStart(1, "nz-form-label", 6);
-    i0.ɵɵelement(2, "span", 7);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(3, "div", 8);
-    i0.ɵɵlistener("searchEvent", function OfDynamicComponent_ng_container_3_div_1_Template_div_searchEvent_3_listener($event) { i0.ɵɵrestoreView(_r5); const ctx_r4 = i0.ɵɵnextContext(2); return ctx_r4.searchEvent.emit($event); });
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "span", 9);
-    i0.ɵɵtext(5);
-    i0.ɵɵpipe(6, "showValidationError");
-    i0.ɵɵelementEnd();
-    i0.ɵɵelement(7, "div", 7);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const field_r2 = i0.ɵɵnextContext().$implicit;
-    const ctx_r3 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("nzSpan", field_r2.width)("ngClass", field_r2.css);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("nzRequired", field_r2.required)("hidden", field_r2.hiddenLabel);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("innerHTML", field_r2.label, i0.ɵɵsanitizeHtml);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("schemaModel", ctx_r3.schemaModel)("field", field_r2)("group", ctx_r3.form)("ofFieldTempates", ctx_r3.ofFieldTempates);
-    i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind3(6, 11, ctx_r3.form.controls[field_r2.dataField] == null ? null : ctx_r3.form.controls[field_r2.dataField].errors, field_r2 == null ? null : field_r2.validations, ctx_r3.schemaModel.submitted), " ");
-    i0.ɵɵadvance(2);
-    i0.ɵɵproperty("innerHTML", field_r2.bottomHtml, i0.ɵɵsanitizeHtml);
-} }
-function OfDynamicComponent_ng_container_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementContainerStart(0);
-    i0.ɵɵtemplate(1, OfDynamicComponent_ng_container_3_div_1_Template, 8, 15, "div", 4);
-    i0.ɵɵelementContainerEnd();
-} if (rf & 2) {
-    const field_r2 = ctx.$implicit;
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", !field_r2.hidden);
-} }
-function OfDynamicComponent_div_4_Template(rf, ctx) { if (rf & 1) {
-    const _r8 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 10);
-    i0.ɵɵelementStart(1, "button", 11);
-    i0.ɵɵlistener("click", function OfDynamicComponent_div_4_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.onClickSearchBtn(); });
-    i0.ɵɵtext(2, "T\u00ECm ki\u1EBFm ");
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("nzSpan", 2);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("nzLoading", ctx_r1.schemaModel.searchBtnBusy);
-} }
-const _c0$7 = [[["", "topContent", ""]], [["", "bottomContent", ""]]];
-const _c1$2 = function () { return [18, 6]; };
-const _c2$1 = ["[topContent]", "[bottomContent]"];
-class OfDynamicComponent {
-    constructor(fb, createCtrlService, validatorService, destroy$) {
-        this.fb = fb;
-        this.createCtrlService = createCtrlService;
-        this.validatorService = validatorService;
-        this.destroy$ = destroy$;
-        this.submitValueEvent = new EventEmitter();
-        this.searchEvent = new EventEmitter();
-        this.fields = [];
-        this.ofFieldTempates = [];
-    }
-    get value() {
-        var _a;
-        return (_a = this.form) === null || _a === void 0 ? void 0 : _a.getRawValue();
-    }
-    ngOnInit() {
-        this.fields = this.schemaModel.fields || [];
-        this.form = this.createCtrlService.createControl(this.fields);
-        this.schemaModel.form = this.form;
-        this.init$();
-    }
-    reBuilderForm() {
-        this.fields = this.schemaModel.fields || [];
-        this.createCtrlService.updateControl(this.fields, this.form);
-        this.schemaModel.form = this.form;
-    }
-    init$() {
-        this.schemaModel.rebuilder$.pipe(takeUntil(this.destroy$), distinctUntilChanged(), filter(x => x > 0))
-            .subscribe(() => {
-            this.reBuilderForm();
-        });
-    }
-    trackByField(index, field) {
-        return field.dataField;
-    }
-    onSubmit(isCheckValid = true) {
-        this.schemaModel.submitted = true;
-        if (!isCheckValid) {
-            this.submitValueEvent.emit(this.value);
-            return this.value;
-        }
-        _.forEach(this.fields, (field) => {
-            const f = this.form.controls[field.dataField];
-            if (f) {
-                if (field.hidden) {
-                    f.setValidators(null);
-                }
-                else {
-                    f.setValidators(this.createCtrlService.bindValidations(field));
-                }
-            }
-        });
-        if (this.form.valid) {
-            this.submitValueEvent.emit(this.value);
-            return this.value;
-        }
-        else {
-            setTimeout(() => {
-                this.validatorService.focusControlItem(this.schemaModel.id);
-            }, 500);
-            return null;
-        }
-    }
-    ngAfterViewInit() {
-        setTimeout(() => {
-            this.validatorService.focusFirst(this.schemaModel.id);
-        }, 500);
-    }
-    onClickSearchBtn() {
-        this.schemaModel.searchBtnBusy = true;
-        this.searchEvent.emit(this.value);
-        this.schemaModel.searchEvent$.next(this.value);
-    }
-    disableAll(f = true) {
-        this.schemaModel.disableAll(f);
-    }
-    disableField(name, f = true) {
-        this.schemaModel.disableField(name, f);
-    }
-    addOfFieldTempates(d) {
-        this.ofFieldTempates.push(d);
-    }
-}
-OfDynamicComponent.ɵfac = function OfDynamicComponent_Factory(t) { return new (t || OfDynamicComponent)(i0.ɵɵdirectiveInject(i1$1.FormBuilder), i0.ɵɵdirectiveInject(OfCreateControlFormService), i0.ɵɵdirectiveInject(OfValidatorService), i0.ɵɵdirectiveInject(DestroyRxjsService)); };
-OfDynamicComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfDynamicComponent, selectors: [["of"]], inputs: { schemaModel: "schemaModel" }, outputs: { submitValueEvent: "submitValueEvent", searchEvent: "searchEvent" }, features: [i0.ɵɵProvidersFeature([DestroyRxjsService])], ngContentSelectors: _c2$1, decls: 6, vars: 7, consts: [[1, "dynamic-form", 3, "formGroup"], ["nz-row", "", 3, "nzGutter", "id"], [4, "ngFor", "ngForOf", "ngForTrackBy"], ["nz-col", "", "class", "gutter-row of-btn-search ord-form-control", 3, "nzSpan", 4, "ngIf"], ["nz-col", "", 3, "nzSpan", "ngClass", 4, "ngIf"], ["nz-col", "", 3, "nzSpan", "ngClass"], [3, "nzRequired", "hidden"], [3, "innerHTML"], ["ofDynamicField", "", 3, "schemaModel", "field", "group", "ofFieldTempates", "searchEvent"], [1, "form-control-err", "text-danger"], ["nz-col", "", 1, "gutter-row", "of-btn-search", "ord-form-control", 3, "nzSpan"], ["nz-button", "", "nzType", "primary", 3, "nzLoading", "click"]], template: function OfDynamicComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵprojectionDef(_c0$7);
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelementStart(1, "div", 1);
-        i0.ɵɵprojection(2);
-        i0.ɵɵtemplate(3, OfDynamicComponent_ng_container_3_Template, 2, 1, "ng-container", 2);
-        i0.ɵɵtemplate(4, OfDynamicComponent_div_4_Template, 3, 2, "div", 3);
-        i0.ɵɵprojection(5, 1);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("formGroup", ctx.form);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("nzGutter", i0.ɵɵpureFunction0(6, _c1$2))("id", ctx.schemaModel.id);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngForOf", ctx.fields)("ngForTrackBy", ctx.trackByField);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx.schemaModel.isSearchBox);
-    } }, styles: [".of-btn-search{max-width:109px}.of-btn-search button{margin-top:25px!important}.ant-form-item-label{padding:0!important;height:25px!important}.ant-form-item-label>label:after{content:\"\"!important}"], encapsulation: 2 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfDynamicComponent, [{
-        type: Component,
-        args: [{
-                selector: 'of',
-                templateUrl: './of-dynamic.component.html',
-                styleUrls: ['./of-dynamic.component.scss'],
-                encapsulation: ViewEncapsulation.None,
-                providers: [DestroyRxjsService]
-            }]
-    }], function () { return [{ type: i1$1.FormBuilder }, { type: OfCreateControlFormService }, { type: OfValidatorService }, { type: DestroyRxjsService }]; }, { schemaModel: [{
-            type: Input
-        }], submitValueEvent: [{
-            type: Output
-        }], searchEvent: [{
-            type: Output
-        }] }); })();
-
-const _c0$6 = ["control"];
-class OfFieldComponent {
-    constructor(ofDynamic) {
-        this.ofDynamic = ofDynamic;
-        // map với dataField
-        this.id = '';
-        this.ofDynamic.addOfFieldTempates(this);
-    }
-}
-OfFieldComponent.ɵfac = function OfFieldComponent_Factory(t) { return new (t || OfFieldComponent)(i0.ɵɵdirectiveInject(OfDynamicComponent)); };
-OfFieldComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfFieldComponent, selectors: [["of-field"]], contentQueries: function OfFieldComponent_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-        i0.ɵɵcontentQuery(dirIndex, _c0$6, true);
-    } if (rf & 2) {
-        let _t;
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.controlTemplate = _t.first);
-    } }, inputs: { id: "id" }, decls: 0, vars: 0, template: function OfFieldComponent_Template(rf, ctx) { }, encapsulation: 2 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfFieldComponent, [{
-        type: Component,
-        args: [{
-                selector: 'of-field',
-                template: ``
-            }]
-    }], function () { return [{ type: OfDynamicComponent }]; }, { id: [{
-            type: Input
-        }], controlTemplate: [{
-            type: ContentChild,
-            args: ['control']
-        }] }); })();
-
-function OfComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "form", 6);
-    i0.ɵɵelementStart(1, "nz-input-group", 7);
-    i0.ɵɵelementStart(2, "nz-select", 8);
-    i0.ɵɵelement(3, "nz-option", 9);
-    i0.ɵɵelement(4, "nz-option", 9);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelement(5, "input", 10);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const group_r3 = ctx.group;
-    i0.ɵɵproperty("formGroup", group_r3);
-    i0.ɵɵadvance(3);
-    i0.ɵɵproperty("nzLabel", "Option 1")("nzValue", "1");
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("nzLabel", "Option 2")("nzValue", "2");
-} }
 class OfComponent {
     constructor(selectSp, searchSp) {
         this.selectSp = selectSp;
@@ -33212,52 +32411,8 @@ class OfComponent {
         ], 0);
     }
 }
-OfComponent.ɵfac = function OfComponent_Factory(t) { return new (t || OfComponent)(i0.ɵɵdirectiveInject(SelectoptionServiceProxy), i0.ɵɵdirectiveInject(SelectsearchserverServiceProxy)); };
-OfComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfComponent, selectors: [["lib-of"]], features: [i0.ɵɵProvidersFeature([SelectoptionServiceProxy, SelectsearchserverServiceProxy])], decls: 20, vars: 4, consts: [[1, "form-group"], [3, "schemaModel"], ["vcForm", ""], ["id", "templateRef"], ["control", ""], [1, "btn", "btn-primary", 3, "click"], [3, "formGroup"], ["nzCompact", ""], ["formControlName", "templateOpt", 2, "width", "50%"], [3, "nzLabel", "nzValue"], ["formControlName", "templateInput", "nz-input", "", "placeholder", "templateInput", 2, "width", "50%"]], template: function OfComponent_Template(rf, ctx) { if (rf & 1) {
-        const _r4 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "div", 0);
-        i0.ɵɵelementStart(1, "of", 1, 2);
-        i0.ɵɵelementStart(3, "of-field", 3);
-        i0.ɵɵtemplate(4, OfComponent_ng_template_4_Template, 6, 5, "ng-template", null, 4, i0.ɵɵtemplateRefExtractor);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(6, "div");
-        i0.ɵɵelementStart(7, "button", 5);
-        i0.ɵɵlistener("click", function OfComponent_Template_button_click_7_listener() { return ctx.onClickDisable(); });
-        i0.ɵɵtext(8, "Disable");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(9, "button", 5);
-        i0.ɵɵlistener("click", function OfComponent_Template_button_click_9_listener() { return ctx.onClickSetValue(); });
-        i0.ɵɵtext(10, "Set value");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(11, "button", 5);
-        i0.ɵɵlistener("click", function OfComponent_Template_button_click_11_listener() { i0.ɵɵrestoreView(_r4); const _r0 = i0.ɵɵreference(2); return _r0.onSubmit(); });
-        i0.ɵɵtext(12, "Submit");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(13, "button", 5);
-        i0.ɵɵlistener("click", function OfComponent_Template_button_click_13_listener() { return ctx.schemaModel.submitted = false; });
-        i0.ɵɵtext(14, "Clear Submit");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(15, "button", 5);
-        i0.ɵɵlistener("click", function OfComponent_Template_button_click_15_listener() { return ctx.onClickAddControl(); });
-        i0.ɵɵtext(16, "AddControl");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(17, "pre");
-        i0.ɵɵtext(18);
-        i0.ɵɵpipe(19, "json");
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(2);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("schemaModel", ctx.schemaModel);
-        i0.ɵɵadvance(17);
-        i0.ɵɵtextInterpolate(i0.ɵɵpipeBind1(19, 2, _r0.value));
-    } }, directives: [OfDynamicComponent, OfFieldComponent, i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2.NzInputGroupComponent, i3.NzSelectComponent, i1$1.NgControlStatus, i1$1.FormControlName, i3.NzOptionComponent, i1$1.DefaultValueAccessor, i2.NzInputDirective], pipes: [i4.JsonPipe], encapsulation: 2 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfComponent, [{
-        type: Component,
-        args: [{
+OfComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'lib-of',
                 template: `
       <div class="form-group">
@@ -33288,10 +32443,327 @@ OfComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfComponent, selectors: [["li
       <pre>{{vcForm.value|json}}</pre>
 
   `,
-                styles: [],
                 providers: [SelectoptionServiceProxy, SelectsearchserverServiceProxy]
-            }]
-    }], function () { return [{ type: SelectoptionServiceProxy }, { type: SelectsearchserverServiceProxy }]; }, null); })();
+            },] }
+];
+OfComponent.ctorParameters = () => [
+    { type: SelectoptionServiceProxy },
+    { type: SelectsearchserverServiceProxy }
+];
+
+class DestroyRxjsService extends Subject {
+    ngOnDestroy() {
+        this.next();
+        this.complete();
+    }
+}
+DestroyRxjsService.decorators = [
+    { type: Injectable }
+];
+
+class OfValidatorService {
+    constructor() {
+    }
+    noWhitespaceValidator(control) {
+        if (AppUtilityService.isNullOrEmpty(control.value)) {
+            return { whiteSpace: true };
+        }
+        const v = '' + control.value;
+        const isWhitespace = v.trim().length === 0;
+        const isValid = !isWhitespace;
+        return isValid ? null : { whiteSpace: true };
+    }
+    emailValidator(control) {
+        const value = (control === null || control === void 0 ? void 0 : control.value) || '';
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const isValid = re.test(value);
+        return isValid ? null : { email: true };
+    }
+    passwordValidator(control) {
+        const value = (control === null || control === void 0 ? void 0 : control.value) || '';
+        const check = value.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/);
+        const isValid = !!check;
+        return isValid ? null : { password: true };
+    }
+    phoneValidator(control) {
+        const value = (control === null || control === void 0 ? void 0 : control.value) || '';
+        const check = value.match(/(09|01[2|6|8|9])+([0-9]{8})\b/);
+        const isValid = !!check;
+        return isValid ? null : { phone: true };
+    }
+    focusControlItem(id) {
+        const arr = $('#' + id).find('.ord-form-control');
+        let flag = true;
+        arr.each(function () {
+            let txt = $(this).find('.form-control-err').text();
+            if (txt) {
+                txt = txt.replace(/ /g, '');
+            }
+            if (flag && AppUtilityService.isNotNull(txt)) {
+                $(this).find('.ord-dynamic-input').focus();
+                $(this).find('.ant-input-number-input').focus();
+                $(this).find('.ant-input').focus();
+                $(this).find('.ant-select-selection-search-input').focus();
+                if ($(this).find('.ant-radio-input')[0]) {
+                    $(this).find('.ant-radio-input')[0].focus();
+                }
+                flag = false;
+            }
+        });
+    }
+    focusFirst(id) {
+        const arr = $('#' + id).find('.ord-form-control');
+        let flag = true;
+        arr.each(function () {
+            if (flag) {
+                $(this).find('.ord-dynamic-input').focus();
+                $(this).find('.ant-input-number-input').focus();
+                $(this).find('.ant-input').focus();
+                $(this).find('.ant-select-selection-search-input').focus();
+                if ($(this).find('.ant-radio-input')[0]) {
+                    $(this).find('.ant-radio-input')[0].focus();
+                }
+                flag = false;
+            }
+        });
+    }
+}
+OfValidatorService.ɵprov = i0.ɵɵdefineInjectable({ factory: function OfValidatorService_Factory() { return new OfValidatorService(); }, token: OfValidatorService, providedIn: "root" });
+OfValidatorService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+OfValidatorService.ctorParameters = () => [];
+
+class OfCreateControlFormService {
+    constructor(fb, validatorService) {
+        this.fb = fb;
+        this.validatorService = validatorService;
+    }
+    createControl(fields) {
+        const group = this.fb.group({});
+        _.forEach(fields, (field) => {
+            this.createField(field, group);
+        });
+        return group;
+    }
+    createExtendControl(group, controls) {
+        _.forEach(controls, (field) => {
+            const f = group.get(field.dataField);
+            if (f) {
+                return;
+            }
+            this.createValidations(field);
+            const control = this.fb.control(field.value, this.bindValidations(field));
+            if (field.disabled) {
+                control.disable({ onlySelf: true });
+            }
+            group.addControl(field.dataField, control);
+        });
+    }
+    updateControl(fields, group) {
+        Object.keys(group.controls).forEach(key => {
+            const fDataField = fields.find(x => x.dataField === key);
+            if (!fDataField) {
+                group.removeControl(key);
+            }
+        });
+        _.forEach(fields, (field) => {
+            const f = group.get(field.dataField);
+            if (f) {
+                return;
+            }
+            this.createField(field, group);
+        });
+    }
+    createField(field, group) {
+        const ignoreType = ['contentHtml', 'componentRef', 'templateRef'];
+        if (ignoreType.indexOf(field.type) > 0) {
+            return;
+        }
+        this.createValidations(field);
+        const control = this.fb.control(field.value, this.bindValidations(field));
+        if (field.disabled) {
+            control.disable({ onlySelf: true });
+        }
+        group.addControl(field.dataField, control);
+    }
+    createValidations(field) {
+        field.validations = field.validations || [];
+        field.validations.forEach(valid => {
+            if (valid.name === 'email') {
+                valid.validator = this.validatorService.emailValidator;
+                valid.message = valid.message || 'Email sai định dạng!';
+                return;
+            }
+            if (valid.name === 'phone') {
+                valid.validator = this.validatorService.phoneValidator;
+                valid.message = valid.message || 'Số điện thoại không đúng định dạng!';
+                return;
+            }
+            if (valid.name === 'password') {
+                valid.validator = this.validatorService.passwordValidator;
+                valid.message = valid.message || 'Mật khẩu tối thiểu 8 ký tự, bao gồm chữ in hoa/ thường , số và ký tự đặc biệt!';
+                return;
+            }
+        });
+        if (field.required) {
+            field.validations.push({
+                name: 'whiteSpace',
+                validator: this.validatorService.noWhitespaceValidator,
+                message: field.errorEmpty
+            });
+        }
+    }
+    bindValidations(field) {
+        const validations = field.validations || [];
+        if (validations.length > 0) {
+            const validList = [];
+            validations.forEach(valid => {
+                validList.push(valid.validator);
+            });
+            return Validators.compose(validList);
+        }
+        return null;
+    }
+}
+OfCreateControlFormService.ɵprov = i0.ɵɵdefineInjectable({ factory: function OfCreateControlFormService_Factory() { return new OfCreateControlFormService(i0.ɵɵinject(i1.FormBuilder), i0.ɵɵinject(OfValidatorService)); }, token: OfCreateControlFormService, providedIn: "root" });
+OfCreateControlFormService.decorators = [
+    { type: Injectable, args: [{
+                providedIn: 'root'
+            },] }
+];
+OfCreateControlFormService.ctorParameters = () => [
+    { type: FormBuilder },
+    { type: OfValidatorService }
+];
+
+class OfDynamicComponent {
+    constructor(fb, createCtrlService, validatorService, destroy$) {
+        this.fb = fb;
+        this.createCtrlService = createCtrlService;
+        this.validatorService = validatorService;
+        this.destroy$ = destroy$;
+        this.submitValueEvent = new EventEmitter();
+        this.searchEvent = new EventEmitter();
+        this.fields = [];
+        this.ofFieldTempates = [];
+    }
+    get value() {
+        var _a;
+        return (_a = this.form) === null || _a === void 0 ? void 0 : _a.getRawValue();
+    }
+    ngOnInit() {
+        this.fields = this.schemaModel.fields || [];
+        this.form = this.createCtrlService.createControl(this.fields);
+        this.schemaModel.form = this.form;
+        this.init$();
+    }
+    reBuilderForm() {
+        this.fields = this.schemaModel.fields || [];
+        this.createCtrlService.updateControl(this.fields, this.form);
+        this.schemaModel.form = this.form;
+    }
+    init$() {
+        this.schemaModel.rebuilder$.pipe(takeUntil(this.destroy$), distinctUntilChanged(), filter(x => x > 0))
+            .subscribe(() => {
+            this.reBuilderForm();
+        });
+    }
+    trackByField(index, field) {
+        return field.dataField;
+    }
+    onSubmit(isCheckValid = true) {
+        this.schemaModel.submitted = true;
+        if (!isCheckValid) {
+            this.submitValueEvent.emit(this.value);
+            return this.value;
+        }
+        _.forEach(this.fields, (field) => {
+            const f = this.form.controls[field.dataField];
+            if (f) {
+                if (field.hidden) {
+                    f.setValidators(null);
+                }
+                else {
+                    f.setValidators(this.createCtrlService.bindValidations(field));
+                }
+            }
+        });
+        if (this.form.valid) {
+            this.submitValueEvent.emit(this.value);
+            return this.value;
+        }
+        else {
+            setTimeout(() => {
+                this.validatorService.focusControlItem(this.schemaModel.id);
+            }, 500);
+            return null;
+        }
+    }
+    ngAfterViewInit() {
+        setTimeout(() => {
+            this.validatorService.focusFirst(this.schemaModel.id);
+        }, 500);
+    }
+    onClickSearchBtn() {
+        this.schemaModel.searchBtnBusy = true;
+        this.searchEvent.emit(this.value);
+        this.schemaModel.searchEvent$.next(this.value);
+    }
+    disableAll(f = true) {
+        this.schemaModel.disableAll(f);
+    }
+    disableField(name, f = true) {
+        this.schemaModel.disableField(name, f);
+    }
+    addOfFieldTempates(d) {
+        this.ofFieldTempates.push(d);
+    }
+}
+OfDynamicComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'of',
+                template: "<form class=\"dynamic-form\" [formGroup]=\"form\">\r\n  <div nz-row [nzGutter]=\"[18, 6]\" [id]=\"schemaModel.id\">\r\n    <ng-content select=\"[topContent]\"></ng-content>\r\n    <ng-container *ngFor=\"let field of fields;trackBy:trackByField\">\r\n      <div nz-col *ngIf=\"!field.hidden\" [nzSpan]=\"field.width\" [ngClass]=\"field.css\">\r\n        <nz-form-label [nzRequired]=\"field.required\" [hidden]=\"field.hiddenLabel\">\r\n          <span [innerHTML]=\"field.label\"></span>\r\n        </nz-form-label>\r\n        <div ofDynamicField [schemaModel]=\"schemaModel\" [field]=\"field\" [group]=\"form\"\r\n             [ofFieldTempates]=\"ofFieldTempates\" (searchEvent)=\"searchEvent.emit($event)\">\r\n        </div>\r\n        <span class=\"form-control-err text-danger\">\r\n              {{this.form.controls[field.dataField]?.errors | showValidationError : field?.validations : schemaModel.submitted}}\r\n        </span>\r\n        <div [innerHTML]=\"field.bottomHtml\"></div>\r\n      </div>\r\n    </ng-container>\r\n    <div *ngIf=\"schemaModel.isSearchBox\" nz-col class=\"gutter-row of-btn-search ord-form-control\" [nzSpan]=\"2\">\r\n      <button nz-button nzType=\"primary\"\r\n              [nzLoading]=\"schemaModel.searchBtnBusy\"\r\n              (click)=\"onClickSearchBtn()\">T\u00ECm ki\u1EBFm\r\n      </button>\r\n    </div>\r\n    <ng-content select=\"[bottomContent]\"></ng-content>\r\n  </div>\r\n</form>\r\n",
+                encapsulation: ViewEncapsulation.None,
+                providers: [DestroyRxjsService],
+                styles: [".of-btn-search{max-width:109px}.of-btn-search button{margin-top:25px!important}.ant-form-item-label{padding:0!important;height:25px!important}.ant-form-item-label>label:after{content:\"\"!important}"]
+            },] }
+];
+OfDynamicComponent.ctorParameters = () => [
+    { type: FormBuilder },
+    { type: OfCreateControlFormService },
+    { type: OfValidatorService },
+    { type: DestroyRxjsService }
+];
+OfDynamicComponent.propDecorators = {
+    schemaModel: [{ type: Input }],
+    submitValueEvent: [{ type: Output }],
+    searchEvent: [{ type: Output }]
+};
+
+class OfFieldComponent {
+    constructor(ofDynamic) {
+        this.ofDynamic = ofDynamic;
+        // map với dataField
+        this.id = '';
+        this.ofDynamic.addOfFieldTempates(this);
+    }
+}
+OfFieldComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'of-field',
+                template: ``
+            },] }
+];
+OfFieldComponent.ctorParameters = () => [
+    { type: OfDynamicComponent }
+];
+OfFieldComponent.propDecorators = {
+    id: [{ type: Input }],
+    controlTemplate: [{ type: ContentChild, args: ['control',] }]
+};
 
 class OfService {
     constructor(restService) {
@@ -33305,14 +32777,15 @@ class OfService {
         // );
     }
 }
-OfService.ɵfac = function OfService_Factory(t) { return new (t || OfService)(i0.ɵɵinject(i1$2.RestService)); };
-OfService.ɵprov = i0.ɵɵdefineInjectable({ token: OfService, factory: OfService.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfService, [{
-        type: Injectable,
-        args: [{
+OfService.ɵprov = i0.ɵɵdefineInjectable({ factory: function OfService_Factory() { return new OfService(i0.ɵɵinject(i1$1.RestService)); }, token: OfService, providedIn: "root" });
+OfService.decorators = [
+    { type: Injectable, args: [{
                 providedIn: 'root',
-            }]
-    }], function () { return [{ type: i1$2.RestService }]; }, null); })();
+            },] }
+];
+OfService.ctorParameters = () => [
+    { type: RestService }
+];
 
 const routes = [
     {
@@ -33329,20 +32802,24 @@ const routes = [
 ];
 class OfRoutingModule {
 }
-OfRoutingModule.ɵmod = i0.ɵɵdefineNgModule({ type: OfRoutingModule });
-OfRoutingModule.ɵinj = i0.ɵɵdefineInjector({ factory: function OfRoutingModule_Factory(t) { return new (t || OfRoutingModule)(); }, imports: [[RouterModule.forChild(routes)], RouterModule] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(OfRoutingModule, { imports: [i1$3.RouterModule], exports: [RouterModule] }); })();
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfRoutingModule, [{
-        type: NgModule,
-        args: [{
+OfRoutingModule.decorators = [
+    { type: NgModule, args: [{
                 imports: [RouterModule.forChild(routes)],
                 exports: [RouterModule],
-            }]
-    }], null, null); })();
+            },] }
+];
 
 registerLocaleData(vi);
 const antDesignIcons = AllIcons;
-const icons = Object.keys(antDesignIcons).map(key => antDesignIcons[key]);
+class Icon {
+    static icons() {
+        const ret = [];
+        for (const key of Object.keys(antDesignIcons)) {
+            ret.push(antDesignIcons[key]);
+        }
+        return ret;
+    }
+}
 const antModule = [
     NzAffixModule,
     NzAlertModule,
@@ -33411,157 +32888,20 @@ const antModule = [
     NzResizableModule,
     NzSpaceModule
 ];
+const ɵ0 = vi_VN, ɵ1 = Icon.icons(), ɵ2 = vi$1;
 class AntDesignModule {
 }
-AntDesignModule.ɵmod = i0.ɵɵdefineNgModule({ type: AntDesignModule });
-AntDesignModule.ɵinj = i0.ɵɵdefineInjector({ factory: function AntDesignModule_Factory(t) { return new (t || AntDesignModule)(); }, providers: [
-        { provide: NZ_I18N, useValue: vi_VN },
-        { provide: NZ_ICONS, useValue: icons },
-        { provide: NZ_DATE_LOCALE, useValue: vi$1 }
-    ], imports: [NzAffixModule,
-        NzAlertModule,
-        NzAnchorModule,
-        NzAutocompleteModule,
-        NzAvatarModule,
-        NzBackTopModule,
-        NzBadgeModule,
-        NzButtonModule,
-        NzBreadCrumbModule,
-        NzCalendarModule,
-        NzCardModule,
-        NzCarouselModule,
-        NzCascaderModule,
-        NzCheckboxModule,
-        NzCollapseModule,
-        NzCommentModule,
-        NzDatePickerModule,
-        NzDescriptionsModule,
-        NzDividerModule,
-        NzDrawerModule,
-        NzDropDownModule,
-        NzEmptyModule,
-        NzFormModule,
-        NzGridModule,
-        NzI18nModule,
-        NzIconModule,
-        NzInputModule,
-        NzInputNumberModule,
-        NzLayoutModule,
-        NzListModule,
-        NzMentionModule,
-        NzMenuModule,
-        NzMessageModule,
-        NzModalModule,
-        NzNoAnimationModule,
-        NzNotificationModule,
-        NzPageHeaderModule,
-        NzPaginationModule,
-        NzPopconfirmModule,
-        NzPopoverModule,
-        NzProgressModule,
-        NzRadioModule,
-        NzRateModule,
-        NzResultModule,
-        NzSelectModule,
-        NzSkeletonModule,
-        NzSliderModule,
-        NzSpinModule,
-        NzStatisticModule,
-        NzStepsModule,
-        NzSwitchModule,
-        NzTableModule,
-        NzTabsModule,
-        NzTagModule,
-        NzTimePickerModule,
-        NzTimelineModule,
-        NzToolTipModule,
-        NzTransButtonModule,
-        NzTransferModule,
-        NzTreeModule,
-        NzTreeSelectModule,
-        NzTypographyModule,
-        NzUploadModule,
-        NzWaveModule,
-        NzResizableModule,
-        NzSpaceModule] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(AntDesignModule, { exports: [NzAffixModule,
-        NzAlertModule,
-        NzAnchorModule,
-        NzAutocompleteModule,
-        NzAvatarModule,
-        NzBackTopModule,
-        NzBadgeModule,
-        NzButtonModule,
-        NzBreadCrumbModule,
-        NzCalendarModule,
-        NzCardModule,
-        NzCarouselModule,
-        NzCascaderModule,
-        NzCheckboxModule,
-        NzCollapseModule,
-        NzCommentModule,
-        NzDatePickerModule,
-        NzDescriptionsModule,
-        NzDividerModule,
-        NzDrawerModule,
-        NzDropDownModule,
-        NzEmptyModule,
-        NzFormModule,
-        NzGridModule,
-        NzI18nModule,
-        NzIconModule,
-        NzInputModule,
-        NzInputNumberModule,
-        NzLayoutModule,
-        NzListModule,
-        NzMentionModule,
-        NzMenuModule,
-        NzMessageModule,
-        NzModalModule,
-        NzNoAnimationModule,
-        NzNotificationModule,
-        NzPageHeaderModule,
-        NzPaginationModule,
-        NzPopconfirmModule,
-        NzPopoverModule,
-        NzProgressModule,
-        NzRadioModule,
-        NzRateModule,
-        NzResultModule,
-        NzSelectModule,
-        NzSkeletonModule,
-        NzSliderModule,
-        NzSpinModule,
-        NzStatisticModule,
-        NzStepsModule,
-        NzSwitchModule,
-        NzTableModule,
-        NzTabsModule,
-        NzTagModule,
-        NzTimePickerModule,
-        NzTimelineModule,
-        NzToolTipModule,
-        NzTransButtonModule,
-        NzTransferModule,
-        NzTreeModule,
-        NzTreeSelectModule,
-        NzTypographyModule,
-        NzUploadModule,
-        NzWaveModule,
-        NzResizableModule,
-        NzSpaceModule] }); })();
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AntDesignModule, [{
-        type: NgModule,
-        args: [{
+AntDesignModule.decorators = [
+    { type: NgModule, args: [{
                 declarations: [],
                 exports: [antModule],
                 providers: [
-                    { provide: NZ_I18N, useValue: vi_VN },
-                    { provide: NZ_ICONS, useValue: icons },
-                    { provide: NZ_DATE_LOCALE, useValue: vi$1 }
+                    { provide: NZ_I18N, useValue: ɵ0 },
+                    { provide: NZ_ICONS, useValue: ɵ1 },
+                    { provide: NZ_DATE_LOCALE, useValue: ɵ2 }
                 ]
-            }]
-    }], null, null); })();
+            },] }
+];
 
 class OfCheckBoxComponent {
     constructor() {
@@ -33569,23 +32909,8 @@ class OfCheckBoxComponent {
     ngOnInit() {
     }
 }
-OfCheckBoxComponent.ɵfac = function OfCheckBoxComponent_Factory(t) { return new (t || OfCheckBoxComponent)(); };
-OfCheckBoxComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfCheckBoxComponent, selectors: [["of-check-box"]], decls: 3, vars: 3, consts: [[3, "formGroup"], ["nz-checkbox", "", 3, "formControlName"]], template: function OfCheckBoxComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelementStart(1, "label", 1);
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField);
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(ctx.field.checkBoxLabel);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2$1.NzCheckboxComponent, i1$1.NgControlStatus, i1$1.FormControlName], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfCheckBoxComponent, [{
-        type: Component,
-        args: [{
+OfCheckBoxComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-check-box',
                 template: `
       <form [formGroup]="group">
@@ -33593,8 +32918,9 @@ OfCheckBoxComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfCheckBoxComponent, 
       </form>
   `,
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return []; }, null); })();
+            },] }
+];
+OfCheckBoxComponent.ctorParameters = () => [];
 
 var ofCheckBox_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -33749,25 +33075,24 @@ class DynamicFieldDirective {
         }
     }
 }
-DynamicFieldDirective.ɵfac = function DynamicFieldDirective_Factory(t) { return new (t || DynamicFieldDirective)(i0.ɵɵdirectiveInject(i0.ComponentFactoryResolver), i0.ɵɵdirectiveInject(i0.ViewContainerRef), i0.ɵɵdirectiveInject(DestroyRxjsService)); };
-DynamicFieldDirective.ɵdir = i0.ɵɵdefineDirective({ type: DynamicFieldDirective, selectors: [["", "ofDynamicField", ""]], inputs: { schemaModel: "schemaModel", field: "field", group: "group", ofFieldTempates: "ofFieldTempates" }, outputs: { searchEvent: "searchEvent" }, features: [i0.ɵɵProvidersFeature([DestroyRxjsService])] });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DynamicFieldDirective, [{
-        type: Directive,
-        args: [{
+DynamicFieldDirective.decorators = [
+    { type: Directive, args: [{
                 selector: '[ofDynamicField]',
                 providers: [DestroyRxjsService]
-            }]
-    }], function () { return [{ type: i0.ComponentFactoryResolver }, { type: i0.ViewContainerRef }, { type: DestroyRxjsService }]; }, { schemaModel: [{
-            type: Input
-        }], field: [{
-            type: Input
-        }], group: [{
-            type: Input
-        }], ofFieldTempates: [{
-            type: Input
-        }], searchEvent: [{
-            type: Output
-        }] }); })();
+            },] }
+];
+DynamicFieldDirective.ctorParameters = () => [
+    { type: ComponentFactoryResolver },
+    { type: ViewContainerRef },
+    { type: DestroyRxjsService }
+];
+DynamicFieldDirective.propDecorators = {
+    schemaModel: [{ type: Input }],
+    field: [{ type: Input }],
+    group: [{ type: Input }],
+    ofFieldTempates: [{ type: Input }],
+    searchEvent: [{ type: Output }]
+};
 
 class OfTextComponent {
     constructor(destroy$) {
@@ -33794,25 +33119,8 @@ class OfTextComponent {
         }
     }
 }
-OfTextComponent.ɵfac = function OfTextComponent_Factory(t) { return new (t || OfTextComponent)(i0.ɵɵdirectiveInject(DestroyRxjsService)); };
-OfTextComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfTextComponent, selectors: [["of-text"]], outputs: { searchEvent: "searchEvent" }, features: [i0.ɵɵProvidersFeature([DestroyRxjsService])], decls: 3, vars: 6, consts: [[3, "nzSpinning"], [3, "formGroup", "keyup.enter"], ["nz-input", "", 3, "formControlName", "disabled", "placeholder", "maxlength"]], template: function OfTextComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "nz-spin", 0);
-        i0.ɵɵelementStart(1, "form", 1);
-        i0.ɵɵlistener("keyup.enter", function OfTextComponent_Template_form_keyup_enter_1_listener() { return ctx.onKeyEnterControl(); });
-        i0.ɵɵelement(2, "input", 2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("nzSpinning", ctx.nzSpinning);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵpropertyInterpolate("maxlength", ctx.field == null ? null : ctx.field.maxLength);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField)("disabled", true)("placeholder", ctx.field.placeholder);
-    } }, directives: [i2$2.NzSpinComponent, i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2.NzInputDirective, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlName, i1$1.MaxLengthValidator], encapsulation: 2 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfTextComponent, [{
-        type: Component,
-        args: [{
+OfTextComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-text',
                 template: `
       <nz-spin [nzSpinning]="nzSpinning">
@@ -33824,10 +33132,14 @@ OfTextComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfTextComponent, selector
 
   `,
                 providers: [DestroyRxjsService]
-            }]
-    }], function () { return [{ type: DestroyRxjsService }]; }, { searchEvent: [{
-            type: Output
-        }] }); })();
+            },] }
+];
+OfTextComponent.ctorParameters = () => [
+    { type: DestroyRxjsService }
+];
+OfTextComponent.propDecorators = {
+    searchEvent: [{ type: Output }]
+};
 
 var ofText_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -33848,19 +33160,8 @@ class OfCurrencyComponent {
         };
     }
 }
-OfCurrencyComponent.ɵfac = function OfCurrencyComponent_Factory(t) { return new (t || OfCurrencyComponent)(); };
-OfCurrencyComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfCurrencyComponent, selectors: [["of-currency"]], decls: 2, vars: 5, consts: [[3, "formGroup"], ["currencyMask", "", "nz-input", "", 1, "ord-dynamic-input", 3, "formControlName", "disabled", "placeholder", "options"]], template: function OfCurrencyComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelement(1, "input", 1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField)("disabled", ctx.field.disabled)("placeholder", ctx.field.placeholder)("options", ctx.field);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2.NzInputDirective, i1$1.DefaultValueAccessor, i3$1.CurrencyMaskDirective, i1$1.NgControlStatus, i1$1.FormControlName], styles: ["input[_ngcontent-%COMP%]::placeholder {\n          text-align: left;\n      }"], changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfCurrencyComponent, [{
-        type: Component,
-        args: [{
+OfCurrencyComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-currency',
                 template: `
       <form [formGroup]="group">
@@ -33881,17 +33182,194 @@ OfCurrencyComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfCurrencyComponent, 
           text-align: left;
       }
   `]
-            }]
-    }], function () { return []; }, null); })();
+            },] }
+];
+OfCurrencyComponent.ctorParameters = () => [];
 
 var ofCurrency_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OfCurrencyComponent: OfCurrencyComponent
 });
 
-const _c0$5 = ["refDate"];
-const _c1$1 = ["refInput"];
-const _c2 = function (a0) { return { mask: a0 }; };
+class OfDatePickerComponent {
+    constructor(destroy$, cdr) {
+        this.destroy$ = destroy$;
+        this.cdr = cdr;
+        this.disabledDate = (current) => {
+            var _a;
+            if (((_a = this.field) === null || _a === void 0 ? void 0 : _a.dateNotGreaterThanCurrent) && !this.maxDate) {
+                this.maxDate = new Date();
+            }
+            let check = false;
+            if (this.minDate) {
+                check = check || differenceInCalendarDays(current, this.minDate) < 0;
+            }
+            if (this.maxDate) {
+                check = check || differenceInCalendarDays(current, this.maxDate) > 0;
+            }
+            return check;
+        };
+    }
+    ngOnInit() {
+        this.minDate = this.field.minDate;
+        this.maxDate = this.field.maxDate;
+        if (this.field.minDateAsync) {
+            this.field.minDateAsync.pipe(takeUntil(this.destroy$))
+                .subscribe(min => {
+                this.setMinDate(min);
+            });
+        }
+        if (this.field.maxDateAsync) {
+            this.field.maxDateAsync.pipe(takeUntil(this.destroy$)).subscribe(max => {
+                this.setMaxDate(max);
+            });
+        }
+        this.schemaModel.subRender(this.cdr, this.destroy$);
+    }
+    setMinDate(min) {
+        const d = this.convertDate(min);
+        if (AppUtilityService.isNullOrEmpty(this.field.minDate)) {
+            this.minDate = d;
+        }
+        else if (AppUtilityService.isNotNull(d) && differenceInCalendarDays(d, this.field.minDate) > 0) {
+            this.minDate = d;
+        }
+        else {
+            this.minDate = this.field.minDate;
+        }
+        this.cdr.detectChanges();
+    }
+    setMaxDate(max) {
+        const d = this.convertDate(max);
+        if (AppUtilityService.isNullOrEmpty(this.field.maxDate)) {
+            this.maxDate = d;
+        }
+        else if (AppUtilityService.isNotNull(d) && differenceInCalendarDays(d, this.field.maxDate) < 0) {
+            this.maxDate = d;
+        }
+        else {
+            this.maxDate = this.field.maxDate;
+        }
+        this.cdr.detectChanges();
+    }
+    convertDate(date) {
+        if (moment.isMoment(date)) {
+            return date.toDate();
+        }
+        else {
+            return date;
+        }
+    }
+    get f() {
+        return this.group.get(this.field.dataField);
+    }
+    handlerTuNgayChange() {
+        if (AppUtilityService.isNotNull(this.field.tuNgayDataField) && this.group.get(this.field.tuNgayDataField)) {
+            this.group.get(this.field.tuNgayDataField).valueChanges
+                .pipe(takeUntil(this.destroy$)).subscribe(min => {
+                this.setMinDate(min);
+            });
+        }
+    }
+    handlerDenNgayChange() {
+        if (AppUtilityService.isNotNull(this.field.denNgayDataField) && this.group.get(this.field.denNgayDataField)) {
+            this.group.get(this.field.denNgayDataField).valueChanges
+                .pipe(takeUntil(this.destroy$)).subscribe(max => {
+                this.setMaxDate(max);
+            });
+        }
+    }
+    ngAfterContentChecked() {
+        this.handlerDenNgayChange();
+        this.handlerTuNgayChange();
+    }
+}
+OfDatePickerComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'of-date-picker',
+                template: `
+      <form [formGroup]="group">
+          <of-date-picker-ctrl #vcDatePicker [formControlName]="field.dataField"
+                               [disabled]="field.disabled"
+                               [disabledDate]="disabledDate"></of-date-picker-ctrl>
+      </form>
+  `,
+                providers: [DestroyRxjsService],
+                changeDetection: ChangeDetectionStrategy.OnPush
+            },] }
+];
+OfDatePickerComponent.ctorParameters = () => [
+    { type: DestroyRxjsService },
+    { type: ChangeDetectorRef }
+];
+OfDatePickerComponent.propDecorators = {
+    vcDatePicker: [{ type: ViewChild, args: ['vcDatePicker',] }]
+};
+
+var ofDatePicker_component = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    OfDatePickerComponent: OfDatePickerComponent
+});
+
+class OfNumberInputComponent {
+    constructor() {
+    }
+    ngOnInit() {
+    }
+}
+OfNumberInputComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'of-number-input',
+                template: `
+      <form [formGroup]="group">
+          <input nz-input *ngIf="field.onlyKeyNumber;else tplNumberInput"
+                 numbersOnlyInput [formControlName]="field.dataField"
+                 [placeholder]="field.placeholder"
+                 maxlength="{{ field.maxlength }}"
+          />
+          <ng-template #tplNumberInput>
+              <nz-input-number [formControlName]="field.dataField"
+                               [nzPlaceHolder]="field.placeholder"
+                               style="width: 100%"
+                               [nzMin]="field.min"
+                               [nzMax]="field.max"
+                               [nzStep]="field.step">
+              </nz-input-number>
+          </ng-template>
+      </form>
+  `,
+                changeDetection: ChangeDetectionStrategy.OnPush
+            },] }
+];
+OfNumberInputComponent.ctorParameters = () => [];
+
+var ofNumberInput_component = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    OfNumberInputComponent: OfNumberInputComponent
+});
+
+class OfTextAreaComponent {
+}
+OfTextAreaComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'of-text-area',
+                template: `
+      <form [formGroup]="group">
+          <textarea nz-input
+                    [formControlName]="field.dataField"
+                    [placeholder]="field.placeholder"
+                    [rows]="field.rows"
+                    maxlength="{{field.maxLength}}"></textarea>
+      </form>
+  `
+            },] }
+];
+
+var ofTextArea_component = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    OfTextAreaComponent: OfTextAreaComponent
+});
+
 const VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => OfDataPickerControlComponent),
@@ -34070,37 +33548,8 @@ class OfDataPickerControlComponent {
         this.control.setValue(null);
     }
 }
-OfDataPickerControlComponent.ɵfac = function OfDataPickerControlComponent_Factory(t) { return new (t || OfDataPickerControlComponent)(); };
-OfDataPickerControlComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfDataPickerControlComponent, selectors: [["of-date-picker-ctrl"]], viewQuery: function OfDataPickerControlComponent_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0$5, true);
-        i0.ɵɵviewQuery(_c1$1, true);
-    } if (rf & 2) {
-        let _t;
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.refDate = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.refInput = _t.first);
-    } }, inputs: { disabledDate: "disabledDate", placeHolder: "placeHolder", disabled: "disabled", control: "control" }, features: [i0.ɵɵProvidersFeature([VALUE_ACCESSOR])], decls: 7, vars: 12, consts: [[1, "main-ora-date", 3, "mouseenter", "mouseleave"], ["tabindex", "-1", "nzFormat", "dd/MM/yyyy", 1, "ora-date", 2, "width", "100%", 3, "nzPlaceHolder", "nzDisabled", "nzDisabledDate", "formControl"], ["refDate", ""], ["nz-input", "", 1, "ora-input-date", 3, "placeholder", "formControl", "textMask", "focusout"], ["refInput", ""], ["nz-icon", "", "nzTheme", "outline", 1, "ora-calendar", 3, "nzType", "click"]], template: function OfDataPickerControlComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 0);
-        i0.ɵɵlistener("mouseenter", function OfDataPickerControlComponent_Template_div_mouseenter_0_listener() { return ctx.mouseEnterMain(); })("mouseleave", function OfDataPickerControlComponent_Template_div_mouseleave_0_listener() { return ctx.mouseLeaveMain(); });
-        i0.ɵɵelement(1, "nz-date-picker", 1, 2);
-        i0.ɵɵelementStart(3, "input", 3, 4);
-        i0.ɵɵlistener("focusout", function OfDataPickerControlComponent_Template_input_focusout_3_listener() { return ctx.onFocusOutInputMask(); });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "i", 5);
-        i0.ɵɵlistener("click", function OfDataPickerControlComponent_Template_i_click_5_listener() { return ctx.onClickIcon(); });
-        i0.ɵɵpipe(6, "async");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("nzPlaceHolder", ctx.placeHolder)("nzDisabled", ctx.disabled)("nzDisabledDate", ctx.disabledDate)("formControl", ctx.control);
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("placeholder", ctx.placeHolder)("formControl", ctx.inputValue)("textMask", i0.ɵɵpureFunction1(10, _c2, ctx.mask));
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("nzType", i0.ɵɵpipeBind1(6, 8, ctx.nzIcon$));
-    } }, directives: [i1$4.NzDatePickerComponent, i1$1.NgControlStatus, i1$1.FormControlDirective, i2.NzInputDirective, i1$1.DefaultValueAccessor, i4$1.MaskedInputDirective, i3$2.ɵNzTransitionPatchDirective, i4$2.NzIconDirective], pipes: [i4.AsyncPipe], styles: [".main-ora-date {\n      position: relative;\n  }\n\n  .ora-date {\n      border: 0;\n  }\n\n  .ora-input-date {\n      position: absolute;\n      top: 0;\n      left: 0\n  }\n\n  .ora-close {\n      position: absolute;\n      top: 7px;\n      right: 5px;\n  }\n\n  .ora-calendar {\n      position: absolute;\n      top: 7px;\n      right: 5px;\n  }"], encapsulation: 2 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfDataPickerControlComponent, [{
-        type: Component,
-        args: [{
+OfDataPickerControlComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-date-picker-ctrl',
                 template: `
       <div class="main-ora-date" (mouseenter)="mouseEnterMain()" (mouseleave)="mouseLeaveMain()">
@@ -34119,6 +33568,8 @@ OfDataPickerControlComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfDataPicker
              nzTheme="outline"></i>
       </div>
   `,
+                encapsulation: ViewEncapsulation.None,
+                providers: [VALUE_ACCESSOR],
                 styles: [`.main-ora-date {
       position: relative;
   }
@@ -34143,157 +33594,38 @@ OfDataPickerControlComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfDataPicker
       position: absolute;
       top: 7px;
       right: 5px;
-  }`],
-                encapsulation: ViewEncapsulation.None,
-                providers: [VALUE_ACCESSOR]
-            }]
-    }], function () { return []; }, { refDate: [{
-            type: ViewChild,
-            args: ['refDate']
-        }], refInput: [{
-            type: ViewChild,
-            args: ['refInput']
-        }], disabledDate: [{
-            type: Input
-        }], placeHolder: [{
-            type: Input
-        }], disabled: [{
-            type: Input
-        }], control: [{
-            type: Input
-        }] }); })();
+  }`]
+            },] }
+];
+OfDataPickerControlComponent.ctorParameters = () => [];
+OfDataPickerControlComponent.propDecorators = {
+    refDate: [{ type: ViewChild, args: ['refDate',] }],
+    refInput: [{ type: ViewChild, args: ['refInput',] }],
+    disabledDate: [{ type: Input }],
+    placeHolder: [{ type: Input }],
+    disabled: [{ type: Input }],
+    control: [{ type: Input }]
+};
 
-const _c0$4 = ["vcDatePicker"];
-class OfDatePickerComponent {
-    constructor(destroy$, cdr) {
-        this.destroy$ = destroy$;
-        this.cdr = cdr;
-        this.disabledDate = (current) => {
-            var _a;
-            if (((_a = this.field) === null || _a === void 0 ? void 0 : _a.dateNotGreaterThanCurrent) && !this.maxDate) {
-                this.maxDate = new Date();
-            }
-            let check = false;
-            if (this.minDate) {
-                check = check || differenceInCalendarDays(current, this.minDate) < 0;
-            }
-            if (this.maxDate) {
-                check = check || differenceInCalendarDays(current, this.maxDate) > 0;
-            }
-            return check;
-        };
+class OfContentHtmlComponent {
+    constructor() {
     }
     ngOnInit() {
-        this.minDate = this.field.minDate;
-        this.maxDate = this.field.maxDate;
-        if (this.field.minDateAsync) {
-            this.field.minDateAsync.pipe(takeUntil(this.destroy$))
-                .subscribe(min => {
-                this.setMinDate(min);
-            });
-        }
-        if (this.field.maxDateAsync) {
-            this.field.maxDateAsync.pipe(takeUntil(this.destroy$)).subscribe(max => {
-                this.setMaxDate(max);
-            });
-        }
-        this.schemaModel.subRender(this.cdr, this.destroy$);
-    }
-    setMinDate(min) {
-        const d = this.convertDate(min);
-        if (AppUtilityService.isNullOrEmpty(this.field.minDate)) {
-            this.minDate = d;
-        }
-        else if (AppUtilityService.isNotNull(d) && differenceInCalendarDays(d, this.field.minDate) > 0) {
-            this.minDate = d;
-        }
-        else {
-            this.minDate = this.field.minDate;
-        }
-        this.cdr.detectChanges();
-    }
-    setMaxDate(max) {
-        const d = this.convertDate(max);
-        if (AppUtilityService.isNullOrEmpty(this.field.maxDate)) {
-            this.maxDate = d;
-        }
-        else if (AppUtilityService.isNotNull(d) && differenceInCalendarDays(d, this.field.maxDate) < 0) {
-            this.maxDate = d;
-        }
-        else {
-            this.maxDate = this.field.maxDate;
-        }
-        this.cdr.detectChanges();
-    }
-    convertDate(date) {
-        if (moment.isMoment(date)) {
-            return date.toDate();
-        }
-        else {
-            return date;
-        }
-    }
-    get f() {
-        return this.group.get(this.field.dataField);
-    }
-    handlerTuNgayChange() {
-        if (AppUtilityService.isNotNull(this.field.tuNgayDataField) && this.group.get(this.field.tuNgayDataField)) {
-            this.group.get(this.field.tuNgayDataField).valueChanges
-                .pipe(takeUntil(this.destroy$)).subscribe(min => {
-                this.setMinDate(min);
-            });
-        }
-    }
-    handlerDenNgayChange() {
-        if (AppUtilityService.isNotNull(this.field.denNgayDataField) && this.group.get(this.field.denNgayDataField)) {
-            this.group.get(this.field.denNgayDataField).valueChanges
-                .pipe(takeUntil(this.destroy$)).subscribe(max => {
-                this.setMaxDate(max);
-            });
-        }
-    }
-    ngAfterContentChecked() {
-        this.handlerDenNgayChange();
-        this.handlerTuNgayChange();
     }
 }
-OfDatePickerComponent.ɵfac = function OfDatePickerComponent_Factory(t) { return new (t || OfDatePickerComponent)(i0.ɵɵdirectiveInject(DestroyRxjsService), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
-OfDatePickerComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfDatePickerComponent, selectors: [["of-date-picker"]], viewQuery: function OfDatePickerComponent_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0$4, true);
-    } if (rf & 2) {
-        let _t;
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.vcDatePicker = _t.first);
-    } }, features: [i0.ɵɵProvidersFeature([DestroyRxjsService])], decls: 3, vars: 4, consts: [[3, "formGroup"], [3, "formControlName", "disabled", "disabledDate"], ["vcDatePicker", ""]], template: function OfDatePickerComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelement(1, "of-date-picker-ctrl", 1, 2);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField)("disabled", ctx.field.disabled)("disabledDate", ctx.disabledDate);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, OfDataPickerControlComponent, i1$1.NgControlStatus, i1$1.FormControlName], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfDatePickerComponent, [{
-        type: Component,
-        args: [{
-                selector: 'of-date-picker',
+OfContentHtmlComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'of-content-html',
                 template: `
-      <form [formGroup]="group">
-          <of-date-picker-ctrl #vcDatePicker [formControlName]="field.dataField"
-                               [disabled]="field.disabled"
-                               [disabledDate]="disabledDate"></of-date-picker-ctrl>
-      </form>
-  `,
-                providers: [DestroyRxjsService],
+      <div [innerHTML]="field.content"></div>`,
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return [{ type: DestroyRxjsService }, { type: i0.ChangeDetectorRef }]; }, { vcDatePicker: [{
-            type: ViewChild,
-            args: ['vcDatePicker']
-        }] }); })();
+            },] }
+];
+OfContentHtmlComponent.ctorParameters = () => [];
 
-var ofDatePicker_component = /*#__PURE__*/Object.freeze({
+var ofContentHtml_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    OfDatePickerComponent: OfDatePickerComponent
+    OfContentHtmlComponent: OfContentHtmlComponent
 });
 
 class NumbersOnlyDirective {
@@ -34309,152 +33641,18 @@ class NumbersOnlyDirective {
         }
     }
 }
-NumbersOnlyDirective.ɵfac = function NumbersOnlyDirective_Factory(t) { return new (t || NumbersOnlyDirective)(i0.ɵɵdirectiveInject(i0.ElementRef)); };
-NumbersOnlyDirective.ɵdir = i0.ɵɵdefineDirective({ type: NumbersOnlyDirective, selectors: [["input", "numbersOnlyInput", ""]], hostBindings: function NumbersOnlyDirective_HostBindings(rf, ctx) { if (rf & 1) {
-        i0.ɵɵlistener("input", function NumbersOnlyDirective_input_HostBindingHandler($event) { return ctx.onInputChange($event); });
-    } } });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NumbersOnlyDirective, [{
-        type: Directive,
-        args: [{
+NumbersOnlyDirective.decorators = [
+    { type: Directive, args: [{
                 selector: 'input[numbersOnlyInput]'
-            }]
-    }], function () { return [{ type: i0.ElementRef }]; }, { onInputChange: [{
-            type: HostListener,
-            args: ['input', ['$event']]
-        }] }); })();
+            },] }
+];
+NumbersOnlyDirective.ctorParameters = () => [
+    { type: ElementRef }
+];
+NumbersOnlyDirective.propDecorators = {
+    onInputChange: [{ type: HostListener, args: ['input', ['$event'],] }]
+};
 
-function OfNumberInputComponent_input_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "input", 3);
-} if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵpropertyInterpolate("maxlength", ctx_r0.field.maxlength);
-    i0.ɵɵproperty("formControlName", ctx_r0.field.dataField)("placeholder", ctx_r0.field.placeholder);
-} }
-function OfNumberInputComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "nz-input-number", 4);
-} if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("formControlName", ctx_r2.field.dataField)("nzPlaceHolder", ctx_r2.field.placeholder)("nzMin", ctx_r2.field.min)("nzMax", ctx_r2.field.max)("nzStep", ctx_r2.field.step);
-} }
-class OfNumberInputComponent {
-    constructor() {
-    }
-    ngOnInit() {
-    }
-}
-OfNumberInputComponent.ɵfac = function OfNumberInputComponent_Factory(t) { return new (t || OfNumberInputComponent)(); };
-OfNumberInputComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfNumberInputComponent, selectors: [["of-number-input"]], decls: 4, vars: 3, consts: [[3, "formGroup"], ["nz-input", "", "numbersOnlyInput", "", 3, "formControlName", "placeholder", "maxlength", 4, "ngIf", "ngIfElse"], ["tplNumberInput", ""], ["nz-input", "", "numbersOnlyInput", "", 3, "formControlName", "placeholder", "maxlength"], [2, "width", "100%", 3, "formControlName", "nzPlaceHolder", "nzMin", "nzMax", "nzStep"]], template: function OfNumberInputComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵtemplate(1, OfNumberInputComponent_input_1_Template, 1, 3, "input", 1);
-        i0.ɵɵtemplate(2, OfNumberInputComponent_ng_template_2_Template, 1, 5, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r1 = i0.ɵɵreference(3);
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx.field.onlyKeyNumber)("ngIfElse", _r1);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i4.NgIf, i2.NzInputDirective, NumbersOnlyDirective, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlName, i1$1.MaxLengthValidator, i5.NzInputNumberComponent], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfNumberInputComponent, [{
-        type: Component,
-        args: [{
-                selector: 'of-number-input',
-                template: `
-      <form [formGroup]="group">
-          <input nz-input *ngIf="field.onlyKeyNumber;else tplNumberInput"
-                 numbersOnlyInput [formControlName]="field.dataField"
-                 [placeholder]="field.placeholder"
-                 maxlength="{{ field.maxlength }}"
-          />
-          <ng-template #tplNumberInput>
-              <nz-input-number [formControlName]="field.dataField"
-                               [nzPlaceHolder]="field.placeholder"
-                               style="width: 100%"
-                               [nzMin]="field.min"
-                               [nzMax]="field.max"
-                               [nzStep]="field.step">
-              </nz-input-number>
-          </ng-template>
-      </form>
-  `,
-                changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return []; }, null); })();
-
-var ofNumberInput_component = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    OfNumberInputComponent: OfNumberInputComponent
-});
-
-class OfTextAreaComponent {
-}
-OfTextAreaComponent.ɵfac = function OfTextAreaComponent_Factory(t) { return new (t || OfTextAreaComponent)(); };
-OfTextAreaComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfTextAreaComponent, selectors: [["of-text-area"]], decls: 2, vars: 5, consts: [[3, "formGroup"], ["nz-input", "", 3, "formControlName", "placeholder", "rows", "maxlength"]], template: function OfTextAreaComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelement(1, "textarea", 1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵpropertyInterpolate("maxlength", ctx.field.maxLength);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField)("placeholder", ctx.field.placeholder)("rows", ctx.field.rows);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2.NzInputDirective, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlName, i1$1.MaxLengthValidator], encapsulation: 2 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfTextAreaComponent, [{
-        type: Component,
-        args: [{
-                selector: 'of-text-area',
-                template: `
-      <form [formGroup]="group">
-          <textarea nz-input
-                    [formControlName]="field.dataField"
-                    [placeholder]="field.placeholder"
-                    [rows]="field.rows"
-                    maxlength="{{field.maxLength}}"></textarea>
-      </form>
-  `
-            }]
-    }], null, null); })();
-
-var ofTextArea_component = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    OfTextAreaComponent: OfTextAreaComponent
-});
-
-class OfContentHtmlComponent {
-    constructor() {
-    }
-    ngOnInit() {
-    }
-}
-OfContentHtmlComponent.ɵfac = function OfContentHtmlComponent_Factory(t) { return new (t || OfContentHtmlComponent)(); };
-OfContentHtmlComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfContentHtmlComponent, selectors: [["of-content-html"]], decls: 1, vars: 1, consts: [[3, "innerHTML"]], template: function OfContentHtmlComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelement(0, "div", 0);
-    } if (rf & 2) {
-        i0.ɵɵproperty("innerHTML", ctx.field.content, i0.ɵɵsanitizeHtml);
-    } }, encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfContentHtmlComponent, [{
-        type: Component,
-        args: [{
-                selector: 'of-content-html',
-                template: `
-      <div [innerHTML]="field.content"></div>`,
-                changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return []; }, null); })();
-
-var ofContentHtml_component = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    OfContentHtmlComponent: OfContentHtmlComponent
-});
-
-function OfPasswordComponent_ng_template_3_Template(rf, ctx) { if (rf & 1) {
-    const _r3 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "i", 4);
-    i0.ɵɵlistener("click", function OfPasswordComponent_ng_template_3_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r3); const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.passwordVisible = !ctx_r2.passwordVisible; });
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("nzType", ctx_r1.passwordVisible ? "eye-invisible" : "eye");
-} }
 class OfPasswordComponent {
     constructor() {
         this.passwordVisible = false;
@@ -34463,26 +33661,8 @@ class OfPasswordComponent {
         this.field.placeholder = this.field.placeholder || 'Nhập mật khẩu';
     }
 }
-OfPasswordComponent.ɵfac = function OfPasswordComponent_Factory(t) { return new (t || OfPasswordComponent)(); };
-OfPasswordComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfPasswordComponent, selectors: [["of-password"]], decls: 5, vars: 5, consts: [[3, "formGroup"], ["nzPrefixIcon", "lock", 3, "nzSuffix"], ["nz-input", "", 3, "type", "placeholder", "formControlName"], ["suffixTemplate", ""], ["nz-icon", "", 3, "nzType", "click"]], template: function OfPasswordComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelementStart(1, "nz-input-group", 1);
-        i0.ɵɵelement(2, "input", 2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(3, OfPasswordComponent_ng_template_3_Template, 1, 1, "ng-template", null, 3, i0.ɵɵtemplateRefExtractor);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(4);
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("nzSuffix", _r0);
-        i0.ɵɵadvance(1);
-        i0.ɵɵpropertyInterpolate("placeholder", ctx.field.placeholder);
-        i0.ɵɵproperty("type", ctx.passwordVisible ? "text" : "password")("formControlName", ctx.field.dataField);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2.NzInputGroupComponent, i2.NzInputGroupWhitSuffixOrPrefixDirective, i2.NzInputDirective, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlName, i3$2.ɵNzTransitionPatchDirective, i4$2.NzIconDirective], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfPasswordComponent, [{
-        type: Component,
-        args: [{
+OfPasswordComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-password',
                 template: `
       <form [formGroup]="group">
@@ -34497,47 +33677,23 @@ OfPasswordComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfPasswordComponent, 
       </form>
   `,
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return []; }, null); })();
+            },] }
+];
+OfPasswordComponent.ctorParameters = () => [];
 
 var ofPassword_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OfPasswordComponent: OfPasswordComponent
 });
 
-function OfRadioComponent_label_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "label", 3);
-    i0.ɵɵtext(1);
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const op_r1 = ctx.$implicit;
-    i0.ɵɵproperty("nzValue", op_r1.value);
-    i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate(op_r1.label);
-} }
 class OfRadioComponent {
     constructor() {
     }
     ngOnInit() {
     }
 }
-OfRadioComponent.ɵfac = function OfRadioComponent_Factory(t) { return new (t || OfRadioComponent)(); };
-OfRadioComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfRadioComponent, selectors: [["of-radio"]], decls: 3, vars: 4, consts: [[3, "formGroup"], [2, "width", "100%", 3, "formControlName", "nzDisabled"], ["nz-radio", "", 3, "nzValue", 4, "ngFor", "ngForOf"], ["nz-radio", "", 3, "nzValue"]], template: function OfRadioComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelementStart(1, "nz-radio-group", 1);
-        i0.ɵɵtemplate(2, OfRadioComponent_label_2_Template, 2, 2, "label", 2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField)("nzDisabled", ctx.field.disabled);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx.field.items);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2$3.NzRadioGroupComponent, i1$1.NgControlStatus, i1$1.FormControlName, i4.NgForOf, i2$3.NzRadioComponent], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfRadioComponent, [{
-        type: Component,
-        args: [{
+OfRadioComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-radio',
                 template: `
       <form [formGroup]="group">
@@ -34549,44 +33705,23 @@ OfRadioComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfRadioComponent, select
       </form>
   `,
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return []; }, null); })();
+            },] }
+];
+OfRadioComponent.ctorParameters = () => [];
 
 var ofRadio_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OfRadioComponent: OfRadioComponent
 });
 
-function OfSwitchComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "i", 4);
-} }
-function OfSwitchComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "i", 5);
-} }
 class OfSwitchComponent {
     constructor() {
     }
     ngOnInit() {
     }
 }
-OfSwitchComponent.ɵfac = function OfSwitchComponent_Factory(t) { return new (t || OfSwitchComponent)(); };
-OfSwitchComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfSwitchComponent, selectors: [["of-switch"]], decls: 6, vars: 5, consts: [[3, "formGroup"], [3, "formControlName", "nzCheckedChildren", "nzUnCheckedChildren", "nzDisabled"], ["checkedTemplate", ""], ["unCheckedTemplate", ""], ["nz-icon", "", "nzType", "check"], ["nz-icon", "", "nzType", "close"]], template: function OfSwitchComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelementStart(1, "nz-switch", 1);
-        i0.ɵɵtemplate(2, OfSwitchComponent_ng_template_2_Template, 1, 0, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
-        i0.ɵɵtemplate(4, OfSwitchComponent_ng_template_4_Template, 1, 0, "ng-template", null, 3, i0.ɵɵtemplateRefExtractor);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(3);
-        const _r2 = i0.ɵɵreference(5);
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField)("nzCheckedChildren", ctx.field.yesText ? ctx.field.yesText : _r0)("nzUnCheckedChildren", ctx.field.noText ? ctx.field.noText : _r2)("nzDisabled", ctx.field.disabled);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2$4.NzSwitchComponent, i1$1.NgControlStatus, i1$1.FormControlName, i3$2.ɵNzTransitionPatchDirective, i4$2.NzIconDirective], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfSwitchComponent, [{
-        type: Component,
-        args: [{
+OfSwitchComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-switch',
                 template: `
       <form [formGroup]="group">
@@ -34601,98 +33736,15 @@ OfSwitchComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfSwitchComponent, sele
       </form>
   `,
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return []; }, null); })();
+            },] }
+];
+OfSwitchComponent.ctorParameters = () => [];
 
 var ofSwitch_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OfSwitchComponent: OfSwitchComponent
 });
 
-class OfSelectRenderOptionPipe {
-    transform(displayText, field, option) {
-        return typeof (field.renderOptionFunc) === 'function' ? field === null || field === void 0 ? void 0 : field.renderOptionFunc(option) : displayText;
-    }
-}
-OfSelectRenderOptionPipe.ɵfac = function OfSelectRenderOptionPipe_Factory(t) { return new (t || OfSelectRenderOptionPipe)(); };
-OfSelectRenderOptionPipe.ɵpipe = i0.ɵɵdefinePipe({ name: "ofSelectRenderOption", type: OfSelectRenderOptionPipe, pure: true });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfSelectRenderOptionPipe, [{
-        type: Pipe,
-        args: [{
-                name: 'ofSelectRenderOption'
-            }]
-    }], null, null); })();
-
-class OfOptionSelectedPipe {
-    transform(value, label, field) {
-        if (AppUtilityService.isNotNull(value)) {
-            if (typeof field.renderSelectedFunc === 'function') {
-                if (field === null || field === void 0 ? void 0 : field.itemSelected) {
-                    return field.renderSelectedFunc(field === null || field === void 0 ? void 0 : field.itemSelected);
-                }
-                return '';
-            }
-            else {
-                return label;
-            }
-        }
-        return null;
-    }
-}
-OfOptionSelectedPipe.ɵfac = function OfOptionSelectedPipe_Factory(t) { return new (t || OfOptionSelectedPipe)(); };
-OfOptionSelectedPipe.ɵpipe = i0.ɵɵdefinePipe({ name: "ofOptionSelected", type: OfOptionSelectedPipe, pure: false });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfOptionSelectedPipe, [{
-        type: Pipe,
-        args: [{
-                name: 'ofOptionSelected',
-                pure: false
-            }]
-    }], null, null); })();
-
-function OfSelectSearchServerComponent_nz_option_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "nz-option", 5);
-    i0.ɵɵelement(1, "span", 6);
-    i0.ɵɵpipe(2, "ofSelectRenderOption");
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const option_r5 = ctx.$implicit;
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("nzCustomContent", true)("nzLabel", option_r5.displayText)("nzValue", option_r5.value);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind3(2, 4, option_r5.displayText, ctx_r0.field, option_r5), i0.ɵɵsanitizeHtml);
-} }
-function OfSelectSearchServerComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "span", 6);
-    i0.ɵɵpipe(1, "ofOptionSelected");
-} if (rf & 2) {
-    const selected_r6 = ctx.$implicit;
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind3(1, 1, selected_r6.nzValue, selected_r6.nzLabel, ctx_r2.field), i0.ɵɵsanitizeHtml);
-} }
-function OfSelectSearchServerComponent_ng_template_6_div_0_Template(rf, ctx) { if (rf & 1) {
-    const _r10 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div", 9);
-    i0.ɵɵelementStart(1, "nz-pagination", 10);
-    i0.ɵɵlistener("nzPageIndexChange", function OfSelectSearchServerComponent_ng_template_6_div_0_Template_nz_pagination_nzPageIndexChange_1_listener($event) { i0.ɵɵrestoreView(_r10); const ctx_r9 = i0.ɵɵnextContext(2); return ctx_r9.nzPageIndex = $event; })("nzPageIndexChange", function OfSelectSearchServerComponent_ng_template_6_div_0_Template_nz_pagination_nzPageIndexChange_1_listener() { i0.ɵɵrestoreView(_r10); const ctx_r11 = i0.ɵɵnextContext(2); return ctx_r11.nzPageIndexChange(); });
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const ctx_r7 = i0.ɵɵnextContext(2);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("nzPageSize", ctx_r7.maxResultCount)("nzPageIndex", ctx_r7.nzPageIndex)("nzTotal", ctx_r7.totalItems);
-} }
-function OfSelectSearchServerComponent_ng_template_6_nz_spin_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "nz-spin");
-} }
-function OfSelectSearchServerComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵtemplate(0, OfSelectSearchServerComponent_ng_template_6_div_0_Template, 2, 3, "div", 7);
-    i0.ɵɵtemplate(1, OfSelectSearchServerComponent_ng_template_6_nz_spin_1_Template, 1, 0, "nz-spin", 8);
-} if (rf & 2) {
-    const ctx_r4 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("ngIf", ctx_r4.field.showPagination);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r4.isLoading);
-} }
 class OfSelectSearchServerComponent {
     constructor(destroy$, cdr) {
         this.destroy$ = destroy$;
@@ -34865,50 +33917,26 @@ class OfSelectSearchServerComponent {
         this.getOptionsFromBE(this.txtSearch);
     }
 }
-OfSelectSearchServerComponent.ɵfac = function OfSelectSearchServerComponent_Factory(t) { return new (t || OfSelectSearchServerComponent)(i0.ɵɵdirectiveInject(DestroyRxjsService), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
-OfSelectSearchServerComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfSelectSearchServerComponent, selectors: [["of-select-search-server"]], features: [i0.ɵɵProvidersFeature([DestroyRxjsService])], decls: 8, vars: 14, consts: [[3, "formGroup"], ["nzShowSearch", "", "nzServerSearch", "", 2, "width", "100%", 3, "formControlName", "nzCustomTemplate", "nzOptionHeightPx", "nzPlaceHolder", "nzMode", "nzAllowClear", "nzMaxMultipleCount", "nzMaxTagCount", "nzDropdownRender", "nzOpenChange", "nzScrollToBottom", "nzOnSearch"], [3, "nzCustomContent", "nzLabel", "nzValue", 4, "ngFor", "ngForOf", "ngForTrackBy"], ["tplSelectedView", ""], ["renderTemplate", ""], [3, "nzCustomContent", "nzLabel", "nzValue"], [3, "innerHTML"], ["class", "select-pagination", 4, "ngIf"], [4, "ngIf"], [1, "select-pagination"], ["nzSize", "small", 3, "nzPageSize", "nzPageIndex", "nzTotal", "nzPageIndexChange"]], template: function OfSelectSearchServerComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelementStart(1, "nz-select", 1);
-        i0.ɵɵlistener("nzOpenChange", function OfSelectSearchServerComponent_Template_nz_select_nzOpenChange_1_listener($event) { return ctx.nzOpenChange($event); })("nzScrollToBottom", function OfSelectSearchServerComponent_Template_nz_select_nzScrollToBottom_1_listener() { return ctx.loadMore(); })("nzOnSearch", function OfSelectSearchServerComponent_Template_nz_select_nzOnSearch_1_listener($event) { return ctx.search($event); });
-        i0.ɵɵtemplate(2, OfSelectSearchServerComponent_nz_option_2_Template, 3, 8, "nz-option", 2);
-        i0.ɵɵpipe(3, "async");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(4, OfSelectSearchServerComponent_ng_template_4_Template, 2, 5, "ng-template", null, 3, i0.ɵɵtemplateRefExtractor);
-        i0.ɵɵtemplate(6, OfSelectSearchServerComponent_ng_template_6_Template, 2, 2, "ng-template", null, 4, i0.ɵɵtemplateRefExtractor);
-    } if (rf & 2) {
-        const _r1 = i0.ɵɵreference(5);
-        const _r3 = i0.ɵɵreference(7);
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField)("nzCustomTemplate", _r1)("nzOptionHeightPx", 26)("nzPlaceHolder", ctx.field.placeholder)("nzMode", ctx.field.nzMode)("nzAllowClear", ctx.field.nzAllowClear)("nzMaxMultipleCount", ctx.field == null ? null : ctx.field.nzMaxMultipleCount)("nzMaxTagCount", ctx.field == null ? null : ctx.field.nzMaxTagCount)("nzDropdownRender", _r3);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(3, 12, ctx.optionDebound$))("ngForTrackBy", ctx.trackBySelect);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i3.NzSelectComponent, i1$1.NgControlStatus, i1$1.FormControlName, i4.NgForOf, i3.NzOptionComponent, i4.NgIf, i5$1.NzPaginationComponent, i2$2.NzSpinComponent], pipes: [i4.AsyncPipe, OfSelectRenderOptionPipe, OfOptionSelectedPipe], styles: [":host ::ng-deep .cdk-virtual-scroll-viewport{min-height:120px!important}.select-pagination{margin-top:8px;margin-bottom:3px}"], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfSelectSearchServerComponent, [{
-        type: Component,
-        args: [{
+OfSelectSearchServerComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-select-search-server',
-                templateUrl: './of-select-search-server.component.html',
+                template: "<form [formGroup]=\"group\">\r\n  <nz-select [formControlName]=\"field.dataField\" style=\" width: 100%;\"\r\n             (nzOpenChange)=\"nzOpenChange($event)\"\r\n             (nzScrollToBottom)=\"loadMore()\"\r\n             [nzCustomTemplate]=\"tplSelectedView\"\r\n             [nzOptionHeightPx]=\"26\"\r\n             [nzPlaceHolder]=\"field.placeholder\"\r\n             [nzMode]=\"field.nzMode\" [nzAllowClear]=\"field.nzAllowClear\"\r\n             nzShowSearch nzServerSearch (nzOnSearch)=\"search($event)\"\r\n             [nzMaxMultipleCount]=\"field?.nzMaxMultipleCount\" [nzMaxTagCount]=\"field?.nzMaxTagCount\"\r\n             [nzDropdownRender]=\"renderTemplate\">\r\n    <nz-option [nzCustomContent]=\"true\" *ngFor=\"let option of optionDebound$ | async;trackBy:trackBySelect\"\r\n               [nzLabel]=\"option.displayText\"\r\n               [nzValue]=\"option.value\"\r\n    >\r\n      <span [innerHTML]=\"option.displayText | ofSelectRenderOption: field: option\">\r\n      </span>\r\n    </nz-option>\r\n  </nz-select>\r\n</form>\r\n<ng-template #tplSelectedView let-selected>\r\n  <span [innerHTML]=\"selected.nzValue | ofOptionSelected:selected.nzLabel:field\"></span>\r\n</ng-template>\r\n<ng-template #renderTemplate>\r\n\r\n  <div class=\"select-pagination\" *ngIf=\"field.showPagination\">\r\n    <nz-pagination nzSize=\"small\" [nzPageSize]=\"maxResultCount\" [(nzPageIndex)]=\"nzPageIndex\"\r\n                   (nzPageIndexChange)=\"nzPageIndexChange()\"\r\n                   [nzTotal]=\"totalItems\"></nz-pagination>\r\n  </div>\r\n  <nz-spin *ngIf=\"isLoading\"></nz-spin>\r\n</ng-template>\r\n",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 providers: [DestroyRxjsService],
                 encapsulation: ViewEncapsulation.None,
-                styleUrls: ['./of-select-search-server.component.scss']
-            }]
-    }], function () { return [{ type: DestroyRxjsService }, { type: i0.ChangeDetectorRef }]; }, null); })();
+                styles: [":host ::ng-deep .cdk-virtual-scroll-viewport{min-height:120px!important}.select-pagination{margin-top:8px;margin-bottom:3px}"]
+            },] }
+];
+OfSelectSearchServerComponent.ctorParameters = () => [
+    { type: DestroyRxjsService },
+    { type: ChangeDetectorRef }
+];
 
 var ofSelectSearchServer_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OfSelectSearchServerComponent: OfSelectSearchServerComponent
 });
 
-function OfTemplateRefComponent_span_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "span", 2);
-    i0.ɵɵtext(1, "Ch\u01B0a c\u00F3 tempate");
-    i0.ɵɵelementEnd();
-} }
-const _c0$3 = function (a0) { return { value: a0 }; };
-const _c1 = function (a0, a1, a2) { return { $implicit: a0, group: a1, field: a2 }; };
 class OfTemplateRefComponent {
     constructor(formService) {
         this.formService = formService;
@@ -34921,26 +33949,19 @@ class OfTemplateRefComponent {
         this.templateRef = (_a = this.ofFieldTempates.find(x => x.id === this.field.dataField)) === null || _a === void 0 ? void 0 : _a.controlTemplate;
     }
 }
-OfTemplateRefComponent.ɵfac = function OfTemplateRefComponent_Factory(t) { return new (t || OfTemplateRefComponent)(i0.ɵɵdirectiveInject(OfCreateControlFormService)); };
-OfTemplateRefComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfTemplateRefComponent, selectors: [["of-template-ref"]], decls: 2, vars: 9, consts: [[3, "ngTemplateOutlet", "ngTemplateOutletContext"], ["class", "text-danger", 4, "ngIf"], [1, "text-danger"]], template: function OfTemplateRefComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementContainer(0, 0);
-        i0.ɵɵtemplate(1, OfTemplateRefComponent_span_1_Template, 2, 0, "span", 1);
-    } if (rf & 2) {
-        i0.ɵɵproperty("ngTemplateOutlet", ctx.templateRef)("ngTemplateOutletContext", i0.ɵɵpureFunction3(5, _c1, i0.ɵɵpureFunction1(3, _c0$3, ctx.id), ctx.group, ctx.field));
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", !ctx.templateRef);
-    } }, directives: [i4.NgTemplateOutlet, i4.NgIf], encapsulation: 2 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfTemplateRefComponent, [{
-        type: Component,
-        args: [{
+OfTemplateRefComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-template-ref',
                 template: `
       <ng-container [ngTemplateOutlet]="templateRef"
                     [ngTemplateOutletContext]="{ $implicit: { value: id }, group: group,field: field }"></ng-container>
       <span *ngIf="!templateRef" class="text-danger">Chưa có tempate</span>
   `
-            }]
-    }], function () { return [{ type: OfCreateControlFormService }]; }, null); })();
+            },] }
+];
+OfTemplateRefComponent.ctorParameters = () => [
+    { type: OfCreateControlFormService }
+];
 
 var ofTemplateRef_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -34964,59 +33985,46 @@ class ShowValidationErrorPipe {
         return err;
     }
 }
-ShowValidationErrorPipe.ɵfac = function ShowValidationErrorPipe_Factory(t) { return new (t || ShowValidationErrorPipe)(); };
-ShowValidationErrorPipe.ɵpipe = i0.ɵɵdefinePipe({ name: "showValidationError", type: ShowValidationErrorPipe, pure: true });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ShowValidationErrorPipe, [{
-        type: Pipe,
-        args: [{
+ShowValidationErrorPipe.decorators = [
+    { type: Pipe, args: [{
                 name: 'showValidationError'
-            }]
-    }], null, null); })();
+            },] }
+];
 
-function OfSelectComponent_nz_option_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "nz-option", 5);
-    i0.ɵɵelement(1, "span", 6);
-    i0.ɵɵpipe(2, "ofSelectRenderOption");
-    i0.ɵɵelementEnd();
-} if (rf & 2) {
-    const option_r5 = ctx.$implicit;
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("nzCustomContent", true)("nzLabel", option_r5.displayText)("nzValue", option_r5.value);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind3(2, 4, option_r5.displayText, ctx_r0.field, option_r5), i0.ɵɵsanitizeHtml);
-} }
-function OfSelectComponent_ng_template_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "span", 6);
-    i0.ɵɵpipe(1, "ofOptionSelected");
-} if (rf & 2) {
-    const selected_r6 = ctx.$implicit;
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("innerHTML", i0.ɵɵpipeBind3(1, 1, selected_r6.nzValue, selected_r6.nzLabel, ctx_r2.field), i0.ɵɵsanitizeHtml);
-} }
-function OfSelectComponent_ng_template_5_div_0_Template(rf, ctx) { if (rf & 1) {
-    const _r9 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "div");
-    i0.ɵɵelement(1, "nz-divider");
-    i0.ɵɵelementStart(2, "div", 8);
-    i0.ɵɵelementStart(3, "button", 9);
-    i0.ɵɵlistener("click", function OfSelectComponent_ng_template_5_div_0_Template_button_click_3_listener() { i0.ɵɵrestoreView(_r9); const ctx_r8 = i0.ɵɵnextContext(2); return ctx_r8.selectAll(); });
-    i0.ɵɵelement(4, "i", 10);
-    i0.ɵɵtext(5, " Ch\u1ECDn t\u1EA5t c\u1EA3 ");
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(6, "button", 11);
-    i0.ɵɵlistener("click", function OfSelectComponent_ng_template_5_div_0_Template_button_click_6_listener() { i0.ɵɵrestoreView(_r9); const ctx_r10 = i0.ɵɵnextContext(2); return ctx_r10.unSelectAll(); });
-    i0.ɵɵelement(7, "i", 12);
-    i0.ɵɵtext(8, " B\u1ECF ch\u1ECDn ");
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementEnd();
-} }
-function OfSelectComponent_ng_template_5_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵtemplate(0, OfSelectComponent_ng_template_5_div_0_Template, 9, 0, "div", 7);
-} if (rf & 2) {
-    const ctx_r4 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("ngIf", ctx_r4.field.nzMode === "multiple" && (ctx_r4.field.options == null ? null : ctx_r4.field.options.length) > 3);
-} }
+class OfOptionSelectedPipe {
+    transform(value, label, field) {
+        if (AppUtilityService.isNotNull(value)) {
+            if (typeof field.renderSelectedFunc === 'function') {
+                if (field === null || field === void 0 ? void 0 : field.itemSelected) {
+                    return field.renderSelectedFunc(field === null || field === void 0 ? void 0 : field.itemSelected);
+                }
+                return '';
+            }
+            else {
+                return label;
+            }
+        }
+        return null;
+    }
+}
+OfOptionSelectedPipe.decorators = [
+    { type: Pipe, args: [{
+                name: 'ofOptionSelected',
+                pure: false
+            },] }
+];
+
+class OfSelectRenderOptionPipe {
+    transform(displayText, field, option) {
+        return typeof (field.renderOptionFunc) === 'function' ? field === null || field === void 0 ? void 0 : field.renderOptionFunc(option) : displayText;
+    }
+}
+OfSelectRenderOptionPipe.decorators = [
+    { type: Pipe, args: [{
+                name: 'ofSelectRenderOption'
+            },] }
+];
+
 class OfSelectComponent {
     constructor(cdr, destroy$) {
         this.cdr = cdr;
@@ -35092,47 +34100,29 @@ class OfSelectComponent {
         this.handlerValueDataFieldChange();
     }
 }
-OfSelectComponent.ɵfac = function OfSelectComponent_Factory(t) { return new (t || OfSelectComponent)(i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(DestroyRxjsService)); };
-OfSelectComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfSelectComponent, selectors: [["of-select"]], inputs: { schemaModel: "schemaModel", field: "field", group: "group" }, features: [i0.ɵɵProvidersFeature([DestroyRxjsService])], decls: 7, vars: 11, consts: [[3, "formGroup"], ["nzShowSearch", "", "nzServerSearch", "", 2, "width", "100%", 3, "formControlName", "nzCustomTemplate", "nzPlaceHolder", "nzMode", "nzAllowClear", "nzMaxMultipleCount", "nzMaxTagCount", "nzDropdownRender", "nzOnSearch"], [3, "nzCustomContent", "nzLabel", "nzValue", 4, "ngFor", "ngForOf", "ngForTrackBy"], ["tplSelectedView", ""], ["nzDropdownRenderTpl", ""], [3, "nzCustomContent", "nzLabel", "nzValue"], [3, "innerHTML"], [4, "ngIf"], [1, "margin-top-10", "margin-left-10", "margin-bottom-5"], ["nz-button", "", "nzType", "primary", "nzSize", "small", 3, "click"], ["nz-icon", "", "nzType", "plus"], ["nz-button", "", "nzType", "default", "nzSize", "small", 3, "click"], ["nz-icon", "", "nzType", "minus"]], template: function OfSelectComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "form", 0);
-        i0.ɵɵelementStart(1, "nz-select", 1);
-        i0.ɵɵlistener("nzOnSearch", function OfSelectComponent_Template_nz_select_nzOnSearch_1_listener($event) { return ctx.search($event); });
-        i0.ɵɵtemplate(2, OfSelectComponent_nz_option_2_Template, 3, 8, "nz-option", 2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(3, OfSelectComponent_ng_template_3_Template, 2, 5, "ng-template", null, 3, i0.ɵɵtemplateRefExtractor);
-        i0.ɵɵtemplate(5, OfSelectComponent_ng_template_5_Template, 1, 1, "ng-template", null, 4, i0.ɵɵtemplateRefExtractor);
-    } if (rf & 2) {
-        const _r1 = i0.ɵɵreference(4);
-        const _r3 = i0.ɵɵreference(6);
-        i0.ɵɵproperty("formGroup", ctx.group);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formControlName", ctx.field.dataField)("nzCustomTemplate", _r1)("nzPlaceHolder", ctx.field.placeholder)("nzMode", ctx.field.nzMode)("nzAllowClear", ctx.field.nzAllowClear)("nzMaxMultipleCount", ctx.field == null ? null : ctx.field.nzMaxMultipleCount)("nzMaxTagCount", ctx.field == null ? null : ctx.field.nzMaxTagCount)("nzDropdownRender", _r3);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx.options)("ngForTrackBy", ctx.trackBySelect);
-    } }, directives: [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i3.NzSelectComponent, i1$1.NgControlStatus, i1$1.FormControlName, i4.NgForOf, i3.NzOptionComponent, i4.NgIf, i5$2.NzDividerComponent, i6.NzButtonComponent, i7.NzWaveDirective, i3$2.ɵNzTransitionPatchDirective, i4$2.NzIconDirective], pipes: [OfSelectRenderOptionPipe, OfOptionSelectedPipe], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfSelectComponent, [{
-        type: Component,
-        args: [{
+OfSelectComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-select',
-                templateUrl: './of-select.component.html',
+                template: "<form [formGroup]=\"group\">\n  <nz-select [formControlName]=\"field.dataField\" style=\"width: 100%\"\n             [nzCustomTemplate]=\"tplSelectedView\"\n             [nzPlaceHolder]=\"field.placeholder\"\n             [nzMode]=\"field.nzMode\" [nzAllowClear]=\"field.nzAllowClear\"\n             nzShowSearch nzServerSearch (nzOnSearch)=\"search($event)\"\n             [nzMaxMultipleCount]=\"field?.nzMaxMultipleCount\" [nzMaxTagCount]=\"field?.nzMaxTagCount\"\n             [nzDropdownRender]=\"nzDropdownRenderTpl\">\n    <nz-option [nzCustomContent]=\"true\" *ngFor=\"let option of options;trackBy:trackBySelect\"\n               [nzLabel]=\"option.displayText\"\n               [nzValue]=\"option.value\"\n    >\n      <span [innerHTML]=\"option.displayText | ofSelectRenderOption: field: option\">\n      </span>\n    </nz-option>\n  </nz-select>\n</form>\n<ng-template #tplSelectedView let-selected>\n  <span [innerHTML]=\"selected.nzValue | ofOptionSelected:selected.nzLabel:field\"></span>\n</ng-template>\n\n<ng-template #nzDropdownRenderTpl>\n  <div *ngIf=\"field.nzMode === 'multiple' && field.options?.length > 3\">\n    <nz-divider></nz-divider>\n    <div class=\"margin-top-10 margin-left-10 margin-bottom-5\">\n      <button nz-button nzType=\"primary\" (click)=\"selectAll()\" nzSize=\"small\"><i nz-icon nzType=\"plus\"></i> Ch\u1ECDn t\u1EA5t c\u1EA3\n      </button>\n      <button nz-button nzType=\"default\" (click)=\"unSelectAll()\" nzSize=\"small\"><i nz-icon nzType=\"minus\"></i> B\u1ECF ch\u1ECDn\n      </button>\n    </div>\n  </div>\n</ng-template>\n",
                 providers: [DestroyRxjsService],
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return [{ type: i0.ChangeDetectorRef }, { type: DestroyRxjsService }]; }, { schemaModel: [{
-            type: Input
-        }], field: [{
-            type: Input
-        }], group: [{
-            type: Input
-        }] }); })();
+            },] }
+];
+OfSelectComponent.ctorParameters = () => [
+    { type: ChangeDetectorRef },
+    { type: DestroyRxjsService }
+];
+OfSelectComponent.propDecorators = {
+    schemaModel: [{ type: Input }],
+    field: [{ type: Input }],
+    group: [{ type: Input }]
+};
 
 var ofSelect_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OfSelectComponent: OfSelectComponent
 });
 
-const _c0$2 = ["vcSelect"];
 class OfSelectAsyncComponent {
     constructor(destroy$) {
         this.destroy$ = destroy$;
@@ -35148,37 +34138,27 @@ class OfSelectAsyncComponent {
         });
     }
 }
-OfSelectAsyncComponent.ɵfac = function OfSelectAsyncComponent_Factory(t) { return new (t || OfSelectAsyncComponent)(i0.ɵɵdirectiveInject(DestroyRxjsService)); };
-OfSelectAsyncComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfSelectAsyncComponent, selectors: [["select-async"]], viewQuery: function OfSelectAsyncComponent_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0$2, true);
-    } if (rf & 2) {
-        let _t;
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.vcSelect = _t.first);
-    } }, features: [i0.ɵɵProvidersFeature([DestroyRxjsService])], decls: 2, vars: 3, consts: [[3, "schemaModel", "group", "field"], ["vcSelect", ""]], template: function OfSelectAsyncComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelement(0, "of-select", 0, 1);
-    } if (rf & 2) {
-        i0.ɵɵproperty("schemaModel", ctx.schemaModel)("group", ctx.group)("field", ctx.field);
-    } }, directives: [OfSelectComponent], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfSelectAsyncComponent, [{
-        type: Component,
-        args: [{
+OfSelectAsyncComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'select-async',
                 template: `
       <of-select #vcSelect [schemaModel]="schemaModel" [group]="group" [field]="field"></of-select>`,
                 providers: [DestroyRxjsService],
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return [{ type: DestroyRxjsService }]; }, { vcSelect: [{
-            type: ViewChild,
-            args: ['vcSelect']
-        }] }); })();
+            },] }
+];
+OfSelectAsyncComponent.ctorParameters = () => [
+    { type: DestroyRxjsService }
+];
+OfSelectAsyncComponent.propDecorators = {
+    vcSelect: [{ type: ViewChild, args: ['vcSelect',] }]
+};
 
 var ofSelectAsync_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OfSelectAsyncComponent: OfSelectAsyncComponent
 });
 
-const _c0$1 = ["vcSelect"];
 class OfSelectApiComponent {
     constructor(destroy$) {
         this.destroy$ = destroy$;
@@ -35213,37 +34193,27 @@ class OfSelectApiComponent {
         });
     }
 }
-OfSelectApiComponent.ɵfac = function OfSelectApiComponent_Factory(t) { return new (t || OfSelectApiComponent)(i0.ɵɵdirectiveInject(DestroyRxjsService)); };
-OfSelectApiComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfSelectApiComponent, selectors: [["lib-of-select-api"]], viewQuery: function OfSelectApiComponent_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0$1, true);
-    } if (rf & 2) {
-        let _t;
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.vcSelect = _t.first);
-    } }, features: [i0.ɵɵProvidersFeature([DestroyRxjsService])], decls: 2, vars: 3, consts: [[3, "schemaModel", "group", "field"], ["vcSelect", ""]], template: function OfSelectApiComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelement(0, "of-select", 0, 1);
-    } if (rf & 2) {
-        i0.ɵɵproperty("schemaModel", ctx.schemaModel)("group", ctx.group)("field", ctx.field);
-    } }, directives: [OfSelectComponent], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfSelectApiComponent, [{
-        type: Component,
-        args: [{
+OfSelectApiComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'lib-of-select-api',
                 template: `
       <of-select #vcSelect [schemaModel]="schemaModel" [group]="group" [field]="field"></of-select>`,
                 providers: [DestroyRxjsService],
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return [{ type: DestroyRxjsService }]; }, { vcSelect: [{
-            type: ViewChild,
-            args: ['vcSelect']
-        }] }); })();
+            },] }
+];
+OfSelectApiComponent.ctorParameters = () => [
+    { type: DestroyRxjsService }
+];
+OfSelectApiComponent.propDecorators = {
+    vcSelect: [{ type: ViewChild, args: ['vcSelect',] }]
+};
 
 var ofSelectApi_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OfSelectApiComponent: OfSelectApiComponent
 });
 
-const _c0 = ["vcSelect"];
 class OfSelectCascadeComponent {
     constructor(destroy$) {
         this.destroy$ = destroy$;
@@ -35331,30 +34301,21 @@ class OfSelectCascadeComponent {
         }, 300);
     }
 }
-OfSelectCascadeComponent.ɵfac = function OfSelectCascadeComponent_Factory(t) { return new (t || OfSelectCascadeComponent)(i0.ɵɵdirectiveInject(DestroyRxjsService)); };
-OfSelectCascadeComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OfSelectCascadeComponent, selectors: [["of-select-cascade"]], viewQuery: function OfSelectCascadeComponent_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0, true);
-    } if (rf & 2) {
-        let _t;
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.vcSelect = _t.first);
-    } }, features: [i0.ɵɵProvidersFeature([DestroyRxjsService])], decls: 2, vars: 3, consts: [[3, "schemaModel", "group", "field"], ["vcSelect", ""]], template: function OfSelectCascadeComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelement(0, "of-select", 0, 1);
-    } if (rf & 2) {
-        i0.ɵɵproperty("schemaModel", ctx.schemaModel)("group", ctx.group)("field", ctx.field);
-    } }, directives: [OfSelectComponent], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfSelectCascadeComponent, [{
-        type: Component,
-        args: [{
+OfSelectCascadeComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'of-select-cascade',
                 template: `
       <of-select #vcSelect [schemaModel]="schemaModel" [group]="group" [field]="field"></of-select>`,
                 providers: [DestroyRxjsService],
                 changeDetection: ChangeDetectionStrategy.OnPush
-            }]
-    }], function () { return [{ type: DestroyRxjsService }]; }, { vcSelect: [{
-            type: ViewChild,
-            args: ['vcSelect']
-        }] }); })();
+            },] }
+];
+OfSelectCascadeComponent.ctorParameters = () => [
+    { type: DestroyRxjsService }
+];
+OfSelectCascadeComponent.propDecorators = {
+    vcSelect: [{ type: ViewChild, args: ['vcSelect',] }]
+};
 
 var ofSelectCascade_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -35398,47 +34359,8 @@ class OfModule {
         return new LazyModuleFactory(OfModule.forChild());
     }
 }
-OfModule.ɵmod = i0.ɵɵdefineNgModule({ type: OfModule });
-OfModule.ɵinj = i0.ɵɵdefineInjector({ factory: function OfModule_Factory(t) { return new (t || OfModule)(); }, imports: [[CoreModule,
-            ThemeSharedModule,
-            OfRoutingModule,
-            AntDesignModule,
-            CurrencyMaskModule,
-            TextMaskModule]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(OfModule, { declarations: [OfComponent, OfDynamicComponent,
-        DynamicFieldDirective,
-        OfTextComponent,
-        ShowValidationErrorPipe,
-        OfCheckBoxComponent,
-        OfCurrencyComponent,
-        OfDatePickerComponent,
-        OfDataPickerControlComponent,
-        OfTextAreaComponent,
-        OfContentHtmlComponent,
-        OfNumberInputComponent,
-        NumbersOnlyDirective,
-        OfPasswordComponent,
-        OfRadioComponent,
-        OfSwitchComponent,
-        OfOptionSelectedPipe,
-        OfSelectRenderOptionPipe,
-        OfSelectSearchServerComponent,
-        OfTemplateRefComponent,
-        OfFieldComponent,
-        OfSelectComponent,
-        OfSelectAsyncComponent,
-        OfSelectApiComponent,
-        OfSelectCascadeComponent], imports: [CoreModule,
-        ThemeSharedModule,
-        OfRoutingModule,
-        AntDesignModule,
-        CurrencyMaskModule,
-        TextMaskModule], exports: [OfComponent,
-        OfDynamicComponent,
-        OfFieldComponent] }); })();
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfModule, [{
-        type: NgModule,
-        args: [{
+OfModule.decorators = [
+    { type: NgModule, args: [{
                 declarations: [OfComponent, Of],
                 imports: [CoreModule,
                     ThemeSharedModule,
@@ -35451,9 +34373,8 @@ OfModule.ɵinj = i0.ɵɵdefineInjector({ factory: function OfModule_Factory(t) {
                     OfDynamicComponent,
                     OfFieldComponent
                 ]
-            }]
-    }], null, null); })();
-i0.ɵɵsetComponentScope(OfDynamicComponent, [i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2$5.NzRowDirective, i4.NgForOf, i4.NgIf, i2$5.NzColDirective, i4.NgClass, i4$3.NzFormLabelComponent, DynamicFieldDirective, i6.NzButtonComponent, i7.NzWaveDirective, i3$2.ɵNzTransitionPatchDirective], [ShowValidationErrorPipe]);
+            },] }
+];
 
 /*
  * Public API Surface of of
@@ -35463,5 +34384,5 @@ i0.ɵɵsetComponentScope(OfDynamicComponent, [i1$1.ɵangular_packages_forms_form
  * Generated bundle index. Do not edit.
  */
 
-export { OfCheckBoxModel, OfComponent, OfComponentRefModel, OfContentHtmlModel, OfControlModel, OfCurrencyModel, OfDateModel, OfDynamicComponent, OfExtendControlModel, OfFieldComponent, OfModule, OfNumberModel, OfPwdModel, OfRadioModel, OfSchemaModel, OfSelectApiModel, OfSelectAsyncModel, OfSelectCascadeModel, OfSelectModel, OfSelectSearchServerModel, OfService, OfSwitchModel, OfTemplateRefModel, OfTextAreaModel, OfTextModel };
+export { OfCheckBoxModel, OfComponent, OfComponentRefModel, OfContentHtmlModel, OfControlModel, OfCurrencyModel, OfDateModel, OfDynamicComponent, OfExtendControlModel, OfFieldComponent, OfModule, OfNumberModel, OfPwdModel, OfRadioModel, OfSchemaModel, OfSelectApiModel, OfSelectAsyncModel, OfSelectCascadeModel, OfSelectModel, OfSelectSearchServerModel, OfService, OfSwitchModel, OfTemplateRefModel, OfTextAreaModel, OfTextModel, SelectoptionServiceProxy as ɵa, SelectsearchserverServiceProxy as ɵb, OfSelectCascadeComponent as ɵba, OfRoutingModule as ɵbb, Icon as ɵbc, AntDesignModule as ɵbd, OfControlModel as ɵbe, OfSelectBaseModel as ɵbg, DestroyRxjsService as ɵc, OfCreateControlFormService as ɵd, OfValidatorService as ɵe, DynamicFieldDirective as ɵf, OfTextComponent as ɵg, ShowValidationErrorPipe as ɵh, OfCheckBoxComponent as ɵi, OfCurrencyComponent as ɵj, OfDatePickerComponent as ɵk, OfDataPickerControlComponent as ɵl, OfTextAreaComponent as ɵm, OfContentHtmlComponent as ɵn, OfNumberInputComponent as ɵo, NumbersOnlyDirective as ɵp, OfPasswordComponent as ɵq, OfRadioComponent as ɵr, OfSwitchComponent as ɵs, OfOptionSelectedPipe as ɵt, OfSelectRenderOptionPipe as ɵu, OfSelectSearchServerComponent as ɵv, OfTemplateRefComponent as ɵw, OfSelectComponent as ɵx, OfSelectAsyncComponent as ɵy, OfSelectApiComponent as ɵz };
 //# sourceMappingURL=of.js.map

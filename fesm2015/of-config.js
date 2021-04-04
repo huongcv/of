@@ -1,4 +1,3 @@
-import * as i0 from '@angular/core';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { RoutesService } from '@abp/ng.core';
 
@@ -32,15 +31,13 @@ class OfConfigModule {
         };
     }
 }
-OfConfigModule.ɵmod = i0.ɵɵdefineNgModule({ type: OfConfigModule });
-OfConfigModule.ɵinj = i0.ɵɵdefineInjector({ factory: function OfConfigModule_Factory(t) { return new (t || OfConfigModule)(); } });
-/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OfConfigModule, [{
-        type: NgModule
-    }], null, null); })();
+OfConfigModule.decorators = [
+    { type: NgModule }
+];
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { OF_ROUTE_PROVIDERS, OfConfigModule, configureRoutes };
+export { OF_ROUTE_PROVIDERS, OfConfigModule, configureRoutes, OF_ROUTE_PROVIDERS as ɵa, configureRoutes as ɵb };
 //# sourceMappingURL=of-config.js.map

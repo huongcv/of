@@ -4,4 +4,3 @@ export * from './lib/components/of-dynamic/of-dynamic.component';
 export * from './lib/services/of.service';
 export * from './lib/of.module';
 export * from './lib/models/index';
-//# sourceMappingURL=public-api.d.ts.map

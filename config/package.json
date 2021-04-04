@@ -5,6 +5,7 @@
   "esm2015": "../esm2015/config/of-config.js",
   "fesm2015": "../fesm2015/of-config.js",
   "typings": "of-config.d.ts",
+  "metadata": "of-config.metadata.json",
   "sideEffects": false,
   "name": "@of/config"
 }

@@ -4,7 +4,6 @@ import { DestroyRxjsService } from '../../services/destroy-rxjs.service';
 import { IOfSelectOptionDto, OfSchemaModel } from '../../models';
 import { OfSelectSearchServerModel } from './of-select-search-server.model';
 import { BehaviorSubject, Subject } from 'rxjs';
-import * as i0 from "@angular/core";
 export declare class OfSelectSearchServerComponent implements OnInit, AfterViewInit {
     private destroy$;
     private cdr;
@@ -39,7 +38,4 @@ export declare class OfSelectSearchServerComponent implements OnInit, AfterViewI
     triggerDetectChanges(): void;
     loadMore(): void;
     nzPageIndexChange(): void;
-    static ɵfac: i0.ɵɵFactoryDef<OfSelectSearchServerComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<OfSelectSearchServerComponent, "of-select-search-server", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=of-select-search-server.component.d.ts.map

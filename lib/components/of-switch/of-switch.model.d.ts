@@ -8,4 +8,3 @@ export declare class OfSwitchModel extends OfControlModel {
     noText: string | null;
     constructor(config: OfSwitchModelConfig);
 }
-//# sourceMappingURL=of-switch.model.d.ts.map

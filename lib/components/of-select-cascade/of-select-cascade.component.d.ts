@@ -5,7 +5,6 @@ import { IOfSelectOptionDto, OfSchemaModel } from '../../models';
 import { FormGroup } from '@angular/forms';
 import { OfSelectCascadeModel } from './of-select-cascade-model';
 import { Observable } from 'rxjs';
-import * as i0 from "@angular/core";
 export declare class OfSelectCascadeComponent implements AfterViewInit {
     private destroy$;
     vcSelect: OfSelectComponent;
@@ -22,7 +21,4 @@ export declare class OfSelectCascadeComponent implements AfterViewInit {
     checkCurrentValue(options: IOfSelectOptionDto[]): void;
     handlerCascadeChange(): void;
     ngAfterViewInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<OfSelectCascadeComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<OfSelectCascadeComponent, "of-select-cascade", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=of-select-cascade.component.d.ts.map

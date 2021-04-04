@@ -10,4 +10,3 @@ export declare class OfCurrencyModel extends OfControlModel {
     precision: number | null;
     constructor(config: OfCurrencyModelConfig);
 }
-//# sourceMappingURL=of-currency.model.d.ts.map

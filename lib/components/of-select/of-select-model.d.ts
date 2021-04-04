@@ -6,4 +6,3 @@ export interface OfSelectModelConfig extends OfSelectBaseModelConfig {
 export declare class OfSelectModel extends OfSelectBaseModel {
     constructor(config: OfSelectModelConfig);
 }
-//# sourceMappingURL=of-select-model.d.ts.map

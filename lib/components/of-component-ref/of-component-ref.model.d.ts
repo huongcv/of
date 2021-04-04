@@ -7,4 +7,3 @@ export declare class OfComponentRefModel<T> extends OfControlModel {
     componentRef: Type<T>;
     constructor(config: OfComponentRefModelConfig<T>);
 }
-//# sourceMappingURL=of-component-ref.model.d.ts.map
