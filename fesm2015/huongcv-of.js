@@ -1871,12 +1871,6 @@ const Of = [
     OfSelectCascadeComponent
 ];
 class OfModule {
-    static forChild() {
-        return {
-            ngModule: OfModule,
-            providers: []
-        };
-    }
 }
 OfModule.decorators = [
     { type: NgModule, args: [{
@@ -1891,7 +1885,28 @@ OfModule.decorators = [
                 ],
                 exports: [
                     OfDynamicComponent,
-                    OfFieldComponent
+                    OfFieldComponent,
+                    ReactiveFormsModule,
+                    FormsModule,
+                    CommonModule
+                ],
+                entryComponents: [
+                    OfCheckBoxComponent,
+                    OfTextAreaComponent,
+                    OfTextComponent,
+                    OfSelectComponent,
+                    OfSelectAsyncComponent,
+                    OfSelectApiComponent,
+                    OfSelectCascadeComponent,
+                    OfSelectSearchServerComponent,
+                    OfCurrencyComponent,
+                    OfDatePickerComponent,
+                    OfContentHtmlComponent,
+                    OfNumberInputComponent,
+                    OfPasswordComponent,
+                    OfRadioComponent,
+                    OfSwitchComponent,
+                    OfTemplateRefComponent
                 ]
             },] }
 ];

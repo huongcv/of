@@ -2240,12 +2240,6 @@
     var OfModule = /** @class */ (function () {
         function OfModule() {
         }
-        OfModule.forChild = function () {
-            return {
-                ngModule: OfModule,
-                providers: []
-            };
-        };
         return OfModule;
     }());
     OfModule.decorators = [
@@ -2261,7 +2255,28 @@
                     ],
                     exports: [
                         OfDynamicComponent,
-                        OfFieldComponent
+                        OfFieldComponent,
+                        i1.ReactiveFormsModule,
+                        i1.FormsModule,
+                        common.CommonModule
+                    ],
+                    entryComponents: [
+                        OfCheckBoxComponent,
+                        OfTextAreaComponent,
+                        OfTextComponent,
+                        OfSelectComponent,
+                        OfSelectAsyncComponent,
+                        OfSelectApiComponent,
+                        OfSelectCascadeComponent,
+                        OfSelectSearchServerComponent,
+                        OfCurrencyComponent,
+                        OfDatePickerComponent,
+                        OfContentHtmlComponent,
+                        OfNumberInputComponent,
+                        OfPasswordComponent,
+                        OfRadioComponent,
+                        OfSwitchComponent,
+                        OfTemplateRefComponent
                     ]
                 },] }
     ];
