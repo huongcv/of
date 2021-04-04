@@ -527,10 +527,23 @@
                 group.addControl(field.dataField, control);
             });
         };
+        OfCreateControlFormService.prototype.getDataFieldAndNameConstrols = function (fields) {
+            var ret = [];
+            ___namespace.forEach(fields, function (f) {
+                ret.push(f.dataField);
+                if (f === null || f === void 0 ? void 0 : f.controls) {
+                    ___namespace.forEach(f.controls, function (ctrl) {
+                        ret.push(ctrl.dataField);
+                    });
+                }
+            });
+            return ret;
+        };
         OfCreateControlFormService.prototype.updateControl = function (fields, group) {
             var _this = this;
+            var lstNameField = this.getDataFieldAndNameConstrols(fields);
             Object.keys(group.controls).forEach(function (key) {
-                var fDataField = fields.find(function (x) { return x.dataField === key; });
+                var fDataField = lstNameField.indexOf(key) > -1;
                 if (!fDataField) {
                     group.removeControl(key);
                 }
@@ -2237,6 +2250,24 @@
         OfSelectApiComponent,
         OfSelectCascadeComponent
     ];
+    var entryComponents = [
+        OfCheckBoxComponent,
+        OfTextAreaComponent,
+        OfTextComponent,
+        OfSelectComponent,
+        OfSelectAsyncComponent,
+        OfSelectApiComponent,
+        OfSelectCascadeComponent,
+        OfSelectSearchServerComponent,
+        OfCurrencyComponent,
+        OfDatePickerComponent,
+        OfContentHtmlComponent,
+        OfNumberInputComponent,
+        OfPasswordComponent,
+        OfRadioComponent,
+        OfSwitchComponent,
+        OfTemplateRefComponent
+    ];
     var OfModule = /** @class */ (function () {
         function OfModule() {
         }
@@ -2259,24 +2290,6 @@
                         i1.ReactiveFormsModule,
                         i1.FormsModule,
                         common.CommonModule
-                    ],
-                    entryComponents: [
-                        OfCheckBoxComponent,
-                        OfTextAreaComponent,
-                        OfTextComponent,
-                        OfSelectComponent,
-                        OfSelectAsyncComponent,
-                        OfSelectApiComponent,
-                        OfSelectCascadeComponent,
-                        OfSelectSearchServerComponent,
-                        OfCurrencyComponent,
-                        OfDatePickerComponent,
-                        OfContentHtmlComponent,
-                        OfNumberInputComponent,
-                        OfPasswordComponent,
-                        OfRadioComponent,
-                        OfSwitchComponent,
-                        OfTemplateRefComponent
                     ]
                 },] }
     ];

@@ -7,6 +7,7 @@ export declare class OfCreateControlFormService {
     constructor(fb: FormBuilder, validatorService: OfValidatorService);
     createControl(fields: OfControlModel[]): FormGroup;
     createExtendControl(group: FormGroup, controls: OfExtendControlModel[]): void;
+    getDataFieldAndNameConstrols(fields: OfControlModel[]): any[];
     updateControl(fields: OfControlModel[], group: FormGroup): void;
     private createField;
     createValidations(field: OfControlModel | OfExtendControlModel): void;

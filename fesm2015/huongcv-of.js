@@ -193,9 +193,22 @@ class OfCreateControlFormService {
             group.addControl(field.dataField, control);
         });
     }
+    getDataFieldAndNameConstrols(fields) {
+        const ret = [];
+        _.forEach(fields, (f) => {
+            ret.push(f.dataField);
+            if (f === null || f === void 0 ? void 0 : f.controls) {
+                _.forEach(f.controls, ctrl => {
+                    ret.push(ctrl.dataField);
+                });
+            }
+        });
+        return ret;
+    }
     updateControl(fields, group) {
+        const lstNameField = this.getDataFieldAndNameConstrols(fields);
         Object.keys(group.controls).forEach(key => {
-            const fDataField = fields.find(x => x.dataField === key);
+            const fDataField = lstNameField.indexOf(key) > -1;
             if (!fDataField) {
                 group.removeControl(key);
             }
@@ -1870,6 +1883,24 @@ const Of = [
     OfSelectApiComponent,
     OfSelectCascadeComponent
 ];
+const entryComponents = [
+    OfCheckBoxComponent,
+    OfTextAreaComponent,
+    OfTextComponent,
+    OfSelectComponent,
+    OfSelectAsyncComponent,
+    OfSelectApiComponent,
+    OfSelectCascadeComponent,
+    OfSelectSearchServerComponent,
+    OfCurrencyComponent,
+    OfDatePickerComponent,
+    OfContentHtmlComponent,
+    OfNumberInputComponent,
+    OfPasswordComponent,
+    OfRadioComponent,
+    OfSwitchComponent,
+    OfTemplateRefComponent
+];
 class OfModule {
 }
 OfModule.decorators = [
@@ -1889,24 +1920,6 @@ OfModule.decorators = [
                     ReactiveFormsModule,
                     FormsModule,
                     CommonModule
-                ],
-                entryComponents: [
-                    OfCheckBoxComponent,
-                    OfTextAreaComponent,
-                    OfTextComponent,
-                    OfSelectComponent,
-                    OfSelectAsyncComponent,
-                    OfSelectApiComponent,
-                    OfSelectCascadeComponent,
-                    OfSelectSearchServerComponent,
-                    OfCurrencyComponent,
-                    OfDatePickerComponent,
-                    OfContentHtmlComponent,
-                    OfNumberInputComponent,
-                    OfPasswordComponent,
-                    OfRadioComponent,
-                    OfSwitchComponent,
-                    OfTemplateRefComponent
                 ]
             },] }
 ];
