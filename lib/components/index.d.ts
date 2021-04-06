@@ -11,6 +11,7 @@ export * from './of-select-api/of-select-api-model';
 export * from './of-select-async/of-select-async-model';
 export * from './of-select-cascade/of-select-cascade-model';
 export * from './of-select-search-server/of-select-search-server.model';
+export * from './of-select-advanced-search/of-select-advanced-search.model';
 export * from './of-switch/of-switch.model';
 export * from './of-template-ref/of-template-ref.model';
 export * from './of-text/of-text.model';

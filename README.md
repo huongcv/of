@@ -134,6 +134,35 @@ schemaModel = new OfSchemaModel({
         },
         showPagination: true
       }),
+        new OfSelectAdvancedSearchModel({
+            label: 'Quận huyện search advanced',
+            dataField: 'huyenSelectAdvancedSearchId',
+            functionService: (dto) => {
+              return this.searchSp.getoptions({
+                ...dto,
+                type: SelectSearchServerType.Huyen
+              } as any);
+            },
+            showPagination: true,
+            componentAdvanced: HomeComponent
+          }),
+      new OfSelectAdvancedSearchModel({
+        label: 'Quận huyện search advanced modal',
+        dataField: 'huyenSelectAdvancedSearchModalId',
+        functionService: (dto) => {
+          return this.searchSp.getoptions({
+            ...dto,
+            type: SelectSearchServerType.Huyen
+          } as any);
+        },
+        showPagination: true,
+        componentAdvanced: SearchModalComponent,
+        nzModalConfig: {
+          nzFooter: null,
+          nzStyle: { top: '20px' }
+        },
+        showComponentType: 'modal'
+      }),
       new OfCheckBoxModel({
         label: '',
         dataField: 'checkBox',

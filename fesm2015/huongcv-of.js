@@ -12,7 +12,7 @@ import { vi as vi$1 } from 'date-fns/locale';
 import { registerLocaleData, CommonModule } from '@angular/common';
 import vi from '@angular/common/locales/vi';
 import * as AllIcons from '@ant-design/icons-angular/icons';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { NgZorroAntdModule, NzDrawerService, NzModalService } from 'ng-zorro-antd';
 import { __awaiter } from 'tslib';
 import differenceInCalendarDays from 'date-fns/differenceInCalendarDays';
 import * as moment from 'moment';
@@ -369,7 +369,7 @@ class OfDynamicComponent {
 OfDynamicComponent.decorators = [
     { type: Component, args: [{
                 selector: 'of',
-                template: "<form class=\"dynamic-form\" [formGroup]=\"form\">\r\n  <div nz-row [nzGutter]=\"[18, 6]\" [id]=\"schemaModel.id\">\r\n    <ng-content select=\"[topContent]\"></ng-content>\r\n    <ng-container *ngFor=\"let field of fields;trackBy:trackByField\">\r\n      <div nz-col *ngIf=\"!field.hidden\" [nzSpan]=\"field.width\" [ngClass]=\"field.css\">\r\n        <nz-form-label [nzRequired]=\"field.required\" [hidden]=\"field.hiddenLabel\">\r\n          <span [innerHTML]=\"field.label\"></span>\r\n        </nz-form-label>\r\n        <div ofDynamicField [schemaModel]=\"schemaModel\" [field]=\"field\" [group]=\"form\"\r\n             [ofFieldTempates]=\"ofFieldTempates\" (searchEvent)=\"searchEvent.emit($event)\">\r\n        </div>\r\n        <span class=\"form-control-err text-danger\">\r\n              {{this.form.controls[field.dataField]?.errors | showValidationError : field?.validations : schemaModel.submitted}}\r\n        </span>\r\n        <div [innerHTML]=\"field.bottomHtml\"></div>\r\n      </div>\r\n    </ng-container>\r\n    <div *ngIf=\"schemaModel.isSearchBox\" nz-col class=\"gutter-row of-btn-search ord-form-control\" [nzSpan]=\"2\">\r\n      <button nz-button nzType=\"primary\"\r\n              [nzLoading]=\"schemaModel.searchBtnBusy\"\r\n              (click)=\"onClickSearchBtn()\">T\u00ECm ki\u1EBFm\r\n      </button>\r\n    </div>\r\n    <ng-content select=\"[bottomContent]\"></ng-content>\r\n  </div>\r\n</form>\r\n",
+                template: "<form class=\"dynamic-form\" [formGroup]=\"form\">\r\n  <div nz-row [nzGutter]=\"[18, 6]\" [id]=\"schemaModel.id\">\r\n    <ng-content select=\"[topContent]\"></ng-content>\r\n    <ng-container *ngFor=\"let field of fields;trackBy:trackByField\">\r\n      <div nz-col *ngIf=\"!field.hidden\" [nzSpan]=\"field.width\" [ngClass]=\"field.css\">\r\n        <nz-form-label [nzRequired]=\"field.required\" [hidden]=\"field.hiddenLabel\">\r\n          <span [innerHTML]=\"field.label\"></span>\r\n        </nz-form-label>\r\n        <div ofDynamicField [schemaModel]=\"schemaModel\" [field]=\"field\" [group]=\"form\"\r\n             [ofFieldTempates]=\"ofFieldTempates\" (searchEvent)=\"searchEvent.emit($event)\">\r\n        </div>\r\n        <of-valid-error [controlName]=\"field.dataField\"\r\n                        [validations]=\"field?.validations\"\r\n                        [form]=\"form\"\r\n                        [submitted]=\"schemaModel.submitted\"\r\n        ></of-valid-error>\r\n        <!--        <span class=\"form-control-err text-danger\">-->\r\n        <!--              {{this.form.controls[field.dataField]?.errors | showValidationError : field?.validations : schemaModel.submitted}}-->\r\n        <!--        </span>-->\r\n        <div [innerHTML]=\"field.bottomHtml\"></div>\r\n      </div>\r\n    </ng-container>\r\n    <div *ngIf=\"schemaModel.isSearchBox\" nz-col class=\"gutter-row of-btn-search ord-form-control\" [nzSpan]=\"2\">\r\n      <button nz-button nzType=\"primary\"\r\n              [nzLoading]=\"schemaModel.searchBtnBusy\"\r\n              (click)=\"onClickSearchBtn()\">T\u00ECm ki\u1EBFm\r\n      </button>\r\n    </div>\r\n    <ng-content select=\"[bottomContent]\"></ng-content>\r\n  </div>\r\n</form>\r\n",
                 encapsulation: ViewEncapsulation.None,
                 providers: [DestroyRxjsService],
                 styles: [".of-btn-search{max-width:109px}.of-btn-search button{margin-top:25px!important}.ant-form-item-label{padding:0!important;height:25px!important}.ant-form-item-label>label:after{content:\"\"!important}"]
@@ -526,6 +526,10 @@ class DynamicFieldDirective {
                 case 'selectSearchServer':
                     const { OfSelectSearchServerComponent } = yield Promise.resolve().then(function () { return ofSelectSearchServer_component; });
                     this.component = OfSelectSearchServerComponent;
+                    break;
+                case 'selectAdvancedSearch':
+                    const { OfSelectAdvancedSearchComponent } = yield Promise.resolve().then(function () { return ofSelectAdvancedSearch_component; });
+                    this.component = OfSelectAdvancedSearchComponent;
                     break;
                 case 'currencyInput':
                     const { OfCurrencyComponent } = yield Promise.resolve().then(function () { return ofCurrency_component; });
@@ -1466,6 +1470,11 @@ OfSelectSearchServerComponent.ctorParameters = () => [
     { type: DestroyRxjsService },
     { type: ChangeDetectorRef }
 ];
+OfSelectSearchServerComponent.propDecorators = {
+    schemaModel: [{ type: Input }],
+    field: [{ type: Input }],
+    group: [{ type: Input }]
+};
 
 var ofSelectSearchServer_component = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -1490,7 +1499,7 @@ OfTemplateRefComponent.decorators = [
                 template: `
       <ng-container [ngTemplateOutlet]="templateRef"
                     [ngTemplateOutletContext]="{ $implicit: { value: id }, group: group,field: field }"></ng-container>
-      <span *ngIf="!templateRef" class="text-danger">Chưa có tempate</span>
+      <span *ngIf="!templateRef" class="text-danger">Chưa có template</span>
   `
             },] }
 ];
@@ -1857,6 +1866,79 @@ var ofSelectCascade_component = /*#__PURE__*/Object.freeze({
     OfSelectCascadeComponent: OfSelectCascadeComponent
 });
 
+class OfValidErrorComponent {
+    constructor() {
+        this.submitted = false;
+        this.validations = [];
+        this.controlName = '';
+    }
+    get f() {
+        return this.form.controls[this.controlName];
+    }
+}
+OfValidErrorComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'of-valid-error',
+                template: `
+      <span class="form-control-err text-danger" *ngIf="validations && submitted">
+              {{f?.errors | showValidationError : validations : submitted}}
+        </span>
+  `
+            },] }
+];
+OfValidErrorComponent.propDecorators = {
+    submitted: [{ type: Input }],
+    validations: [{ type: Input }],
+    form: [{ type: Input }],
+    controlName: [{ type: Input }]
+};
+
+class OfSelectAdvancedSearchComponent {
+    constructor(drawerService, modalService) {
+        this.drawerService = drawerService;
+        this.modalService = modalService;
+    }
+    ngOnInit() {
+    }
+    onClickAdvancedBtn() {
+        if (this.field.showComponentType === 'drawer') {
+            this.openDrawer();
+            return;
+        }
+        if (this.field.showComponentType === 'modal') {
+            this.openModal();
+            return;
+        }
+    }
+    openDrawer() {
+        const drawerRef = this.drawerService.create(Object.assign({ nzTitle: 'Tìm kiếm nâng cao', nzContent: this.field.componentAdvanced, nzPlacement: 'bottom', nzMaskClosable: false, nzHeight: '68vh' }, this.field.nzDrawerOptions));
+        drawerRef.afterClose.subscribe(data => {
+            this.group.get(this.field.dataField).patchValue(data);
+        });
+    }
+    openModal() {
+        const modalRef = this.modalService.create(Object.assign({ nzTitle: 'Tìm kiếm nâng cao', nzContent: this.field.componentAdvanced, nzMaskClosable: false }, this.field.nzModalConfig));
+        modalRef.afterClose.subscribe(data => {
+            this.group.get(this.field.dataField).patchValue(data);
+        });
+    }
+}
+OfSelectAdvancedSearchComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'of-select-advanced-search',
+                template: "<div nz-row>\n  <div nz-col nzFlex=\"1 1 100px\">\n    <of-select-search-server [schemaModel]=\"schemaModel\" [group]=\"group\" [field]=\"field\"></of-select-search-server>\n  </div>\n  <div nz-col nzFlex=\"0 1 32px\">\n    <button nz-button (click)=\"onClickAdvancedBtn()\"\n            style=\"margin-left: -2px;\"\n            [disabled]=\"field.disabled\"\n            nzType=\"primary\" nzSearch>\n      <i nz-icon nzType=\"search\"></i></button>\n  </div>\n</div>\n"
+            },] }
+];
+OfSelectAdvancedSearchComponent.ctorParameters = () => [
+    { type: NzDrawerService },
+    { type: NzModalService }
+];
+
+var ofSelectAdvancedSearch_component = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    OfSelectAdvancedSearchComponent: OfSelectAdvancedSearchComponent
+});
+
 const Of = [
     OfDynamicComponent,
     DynamicFieldDirective,
@@ -1905,7 +1987,7 @@ class OfModule {
 }
 OfModule.decorators = [
     { type: NgModule, args: [{
-                declarations: [Of],
+                declarations: [Of, OfValidErrorComponent, OfSelectAdvancedSearchComponent],
                 imports: [
                     CommonModule,
                     ReactiveFormsModule,
@@ -1919,7 +2001,8 @@ OfModule.decorators = [
                     OfFieldComponent,
                     ReactiveFormsModule,
                     FormsModule,
-                    CommonModule
+                    CommonModule,
+                    OfValidErrorComponent
                 ]
             },] }
 ];
@@ -2251,8 +2334,8 @@ class OfSelectModel extends OfSelectBaseModel {
 class OfSelectApiModel extends OfSelectBaseModel {
     constructor(config) {
         super(config);
-        this.dataExtend = {};
         this.type = 'selectApi';
+        this.keyCache = config.keyCache;
         this.functionService = config.functionService;
     }
 }
@@ -2286,6 +2369,21 @@ class OfSelectSearchServerModel extends OfSelectBaseModel {
         this.type = 'selectSearchServer';
         this.showPagination = config.showPagination || false;
         this.functionService = config.functionService;
+    }
+}
+
+class OfSelectAdvancedSearchModel extends OfSelectBaseModel {
+    constructor(config) {
+        super(config);
+        this.showPagination = false;
+        this.showComponentType = 'drawer';
+        this.type = 'selectAdvancedSearch';
+        this.showPagination = config.showPagination || false;
+        this.functionService = config.functionService;
+        this.componentAdvanced = config.componentAdvanced;
+        this.showComponentType = (config === null || config === void 0 ? void 0 : config.showComponentType) || 'drawer';
+        this.nzDrawerOptions = (config === null || config === void 0 ? void 0 : config.nzDrawerOptions) || null;
+        this.nzModalConfig = (config === null || config === void 0 ? void 0 : config.nzModalConfig) || null;
     }
 }
 
@@ -2336,5 +2434,5 @@ class OfTextAreaModel extends OfControlModel {
  * Generated bundle index. Do not edit.
  */
 
-export { OfCheckBoxModel, OfComponentRefModel, OfContentHtmlModel, OfControlModel, OfCurrencyModel, OfDateModel, OfDynamicComponent, OfExtendControlModel, OfFieldComponent, OfModule, OfNumberModel, OfPwdModel, OfRadioModel, OfSchemaModel, OfSelectApiModel, OfSelectAsyncModel, OfSelectCascadeModel, OfSelectModel, OfSelectSearchServerModel, OfSwitchModel, OfTemplateRefModel, OfTextAreaModel, OfTextModel, DestroyRxjsService as ɵa, OfCreateControlFormService as ɵb, AntIconService as ɵba, OfControlModel as ɵbb, OfSelectBaseModel as ɵbd, OfValidatorService as ɵc, DynamicFieldDirective as ɵd, OfTextComponent as ɵe, ShowValidationErrorPipe as ɵf, OfCheckBoxComponent as ɵg, OfCurrencyComponent as ɵh, OfDatePickerComponent as ɵi, OfDataPickerControlComponent as ɵj, OfTextAreaComponent as ɵk, OfContentHtmlComponent as ɵl, OfNumberInputComponent as ɵm, NumbersOnlyDirective as ɵn, OfPasswordComponent as ɵo, OfRadioComponent as ɵp, OfSwitchComponent as ɵq, OfOptionSelectedPipe as ɵr, OfSelectRenderOptionPipe as ɵs, OfSelectSearchServerComponent as ɵt, OfTemplateRefComponent as ɵu, OfSelectComponent as ɵv, OfSelectAsyncComponent as ɵw, OfSelectApiComponent as ɵx, OfSelectCascadeComponent as ɵy, AntDesignModule as ɵz };
+export { DestroyRxjsService, OfCheckBoxModel, OfComponentRefModel, OfContentHtmlModel, OfControlModel, OfCurrencyModel, OfDateModel, OfDynamicComponent, OfExtendControlModel, OfFieldComponent, OfModule, OfNumberModel, OfPwdModel, OfRadioModel, OfSchemaModel, OfSelectAdvancedSearchModel, OfSelectApiModel, OfSelectAsyncModel, OfSelectCascadeModel, OfSelectModel, OfSelectSearchServerModel, OfSwitchModel, OfTemplateRefModel, OfTextAreaModel, OfTextModel, OfValidErrorComponent, OfCreateControlFormService as ɵa, OfValidatorService as ɵb, AntIconService as ɵba, OfControlModel as ɵbb, OfSelectBaseModel as ɵbd, DynamicFieldDirective as ɵc, OfTextComponent as ɵd, ShowValidationErrorPipe as ɵe, OfCheckBoxComponent as ɵf, OfCurrencyComponent as ɵg, OfDatePickerComponent as ɵh, OfDataPickerControlComponent as ɵi, OfTextAreaComponent as ɵj, OfContentHtmlComponent as ɵk, OfNumberInputComponent as ɵl, NumbersOnlyDirective as ɵm, OfPasswordComponent as ɵn, OfRadioComponent as ɵo, OfSwitchComponent as ɵp, OfOptionSelectedPipe as ɵq, OfSelectRenderOptionPipe as ɵr, OfSelectSearchServerComponent as ɵs, OfTemplateRefComponent as ɵt, OfSelectComponent as ɵu, OfSelectAsyncComponent as ɵv, OfSelectApiComponent as ɵw, OfSelectCascadeComponent as ɵx, OfSelectAdvancedSearchComponent as ɵy, AntDesignModule as ɵz };
 //# sourceMappingURL=huongcv-of.js.map

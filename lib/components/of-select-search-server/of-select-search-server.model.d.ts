@@ -13,10 +13,10 @@ export interface ISelectSearchServerDto {
 }
 export interface OfSelectSearchServerModelConfig extends OfSelectBaseModelConfig {
     showPagination?: boolean;
-    functionService: (ISelectSearchServerDto: any) => Observable<PagedResultDtoOfSelectOption>;
+    functionService: (dto: ISelectSearchServerDto) => Observable<PagedResultDtoOfSelectOption>;
 }
 export declare class OfSelectSearchServerModel extends OfSelectBaseModel {
     showPagination: boolean;
-    functionService: (ISelectSearchServerDto: any) => Observable<PagedResultDtoOfSelectOption>;
+    functionService: (dto: ISelectSearchServerDto) => Observable<PagedResultDtoOfSelectOption>;
     constructor(config: OfSelectSearchServerModelConfig);
 }
